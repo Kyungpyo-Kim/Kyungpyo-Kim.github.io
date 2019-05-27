@@ -1,7 +1,7 @@
 # Site wide configuration
 
-title: "Kyungpyo Kim"
-description: "Kyungpyo Kim's blog"
+title: "My Site"
+description: "This is a description of my awesome site."
 logo: # 120x120 px default image used for Twitter summary card
 teaser: # 400x250 px default teaser image used in image archive grid
 locale: en
@@ -25,9 +25,9 @@ gems:
 
 
 # Site owner
-owner: "Kyungpyo Kim"
-  name: "Kyungpyo Kim"
-  email: "Kyungpyo94@gmail.com"
+owner:
+  name:
+  email:
   twitter:
   google:
     ad-client:
@@ -62,3 +62,4 @@ exclude:
   - package.json
   - spec
   - tmp
+© 2019 GitHub, Inc.
