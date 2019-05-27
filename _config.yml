@@ -25,9 +25,9 @@ gems:
 
 
 # Site owner
-owner: Kyungpyo Kim
-  name: Kyungpyo Kim
-  email: Kyungpyo94@gmail.com
+owner: "Kyungpyo Kim"
+  name: "Kyungpyo Kim"
+  email: "Kyungpyo94@gmail.com"
   twitter:
   google:
     ad-client:
