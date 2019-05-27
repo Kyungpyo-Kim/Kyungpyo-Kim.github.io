@@ -2,8 +2,8 @@
 
 title: "Kyungpyo Kim"
 description: "Kyungpyo Kim's blog"
-logo: # 120x120 px default image used for Twitter summary card
-teaser: # 400x250 px default teaser image used in image archive grid
+logo: 120x120.gif # 120x120 px default image used for Twitter summary card
+teaser: 400x250.gif # 400x250 px default teaser image used in image archive grid
 locale: en
 url:
 feed:
@@ -26,8 +26,8 @@ gems:
 
 # Site owner
 owner:
-  name:
-  email:
+  name: "Kyungpyo Kim"
+  email: "kyungpyo94@gmail.com"
   twitter:
   google:
     ad-client:
