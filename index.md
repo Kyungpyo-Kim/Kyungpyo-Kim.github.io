@@ -1,7 +1,8 @@
 ---
-layout: archive
+layout: home
 permalink: /
-title: "Latest Posts"
+image:
+	feature: wood-texture-1600x800.jpg
 ---
 
 <div class="tiles">
