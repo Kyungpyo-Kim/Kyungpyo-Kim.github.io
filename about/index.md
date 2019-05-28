@@ -12,6 +12,34 @@ share: false
 ads: false
 ---
 
-This is a work in progress.
+#### ControlWorks Inc. (㈜ 컨트롤웍스)
 
-Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup.
+February 2019 ~ 
+
+Assistant Research Engineer
+
+R&D Center (https://www.control-works.co.kr)
+* e: kyungpyo.kim@control-works.co.kr
+* a: #401, 13, Eonju-ro 81-gil, Gangnam-gu, Seoul 06222, Rep.of Korea 
+
+
+#### Hanyang University (한양대학교 대학원)
+
+March 2017 ~ February 2019
+
+M.S., Department of Automotive Engineering
+
+Automotive Control and Electronics Labortory (https://acelab.org)
+ * LiDAR-based recognition
+ * Deep learning for point cloud data
+ * Autonomous driving system
+
+#### Seoul National University of Science and Technology (서울과학기술대학교)
+
+March 2013 ~ February 2017
+
+B.S., Department of Electrical and Information Engineering
+
+Digital Control System Labortory (http://mpc.seoultech.ac.kr)
+ * Torque/Speed Control of Induction Motors
+ * Power Train Control of Electrical Vehicle
