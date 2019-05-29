@@ -1,4 +1,16 @@
 # Footer navigation links
 
-- title:
-  url:
+- title: Study
+  url: /study/
+
+- title: Life
+  url: /life/
+
+- title: About
+  url: /about/
+
+- title: Search
+  url: /search/
+
+- title: Tags
+  url: /tags/

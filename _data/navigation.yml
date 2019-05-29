@@ -9,13 +9,18 @@
   url: /life/
   excerpt: "Examples of long form posts."
   image: 400x250.gif
-
-# - title: Event
-#   url: /event/
-#   excerpt: "Examples of media posts perfect for showcasing work, photographs, etc."
-#   image: 400x250.gif
-
+  
 - title: About
   url: /about/
   excerpt: "All about Skinny Bones for Jekyll."
+  image: 400x250.gif
+
+- title: Search
+  url: /search/
+  excerpt: "Examples of media posts perfect for showcasing work, photographs, etc."
+  image: 400x250.gif
+
+- title: Tags
+  url: /tags/
+  excerpt: "Examples of media posts perfect for showcasing work, photographs, etc."
   image: 400x250.gif
