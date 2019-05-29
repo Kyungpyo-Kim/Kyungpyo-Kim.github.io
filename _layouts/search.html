@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <!-- jquery 불러오기 -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- 검색 상자 -->
+    <form id="searchform" class="searchbox" action="#">
+      <input id="searchtext" name="searchtext" type="text" placeholder="Search...">
+    </form>
+    <!-- 검색어 submit 이벤트 처리 -->
+    <script>
+      $(document).ready(function(){
+        $("#searchform").on("submit", function(e){
+          e.preventDefault();
+          var url = encodeURIComponent($("#searchtext").val());
+          location.href = "./result.html?q=" + url;
+        });
+      });
+    </script>
+  </body>
+</html>

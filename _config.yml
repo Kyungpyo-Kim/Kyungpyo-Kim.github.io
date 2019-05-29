@@ -36,6 +36,20 @@ owner:
   avatar: bio-photo.jpg # 160x160 px image for author byline
   disqus-shortname:
 
+# Tagging
+# ref: http://tech.kakao.com/2016/07/07/tech-blog-story/
+# _tags 디렉토리 안에 있는 파일 목록을 수집해서 
+# /tags/...로 서비스되도록 HTML 파일을 생성하라는 설정
+# collections:
+#   tags:
+#     output: true
+#     permalink: /tags/:path/
+# defaults:
+#   - scope: 
+#       path: ''
+#       type: tags
+#     values:
+#       layout: tag
 
 include:
   - .htaccess

@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <!-- jquery 불러오기 -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+    <title>검색 결과</title>
+  </head>
+  <body>
+    <!-- 검색 결과 제목 -->
+    <h1 id="page_title">검색 결과</h1>
+    <script>
+      function getUrlVars() // 쿼리 스트링을 파싱하는 함수
+      {
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for(var i = 0; i < hashes.length; i++)
+        {
+          hash = hashes[i].split('=');
+          vars.push(hash[0]);
+          vars[hash[0]] = hash[1];
+        }
+        return vars;
+      }
+      $(document).ready(function(){ // 쿼리 스트링에서 'q'파라미터를 읽어 창 제목과 표시 제목을 바꿈
+        var txt_title = "'" + decodeURIComponent(getUrlVars()['q']) + "' - 검색 결과"
+        $("#page_title").text(txt_title);
+        document.title = txt_title;
+      });
+      (function() {
+        var cx = '002267226179977525052:vje0yq04l24';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:searchresults-only></gcse:searchresults-only>
+  </body>
+</html>
+
+
+

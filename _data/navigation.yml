@@ -2,7 +2,7 @@
 
 - title: Study
   url: /study/
-  excerpt: "Everything you need to know to get started with Skinny Bones and Jekyll."
+  excerpt: "Python, Engineering"
   image: 400x250.gif
 
 - title: Life
@@ -10,10 +10,10 @@
   excerpt: "Examples of long form posts."
   image: 400x250.gif
 
-- title: Event
-  url: /event/
-  excerpt: "Examples of media posts perfect for showcasing work, photographs, etc."
-  image: 400x250.gif
+# - title: Event
+#   url: /event/
+#   excerpt: "Examples of media posts perfect for showcasing work, photographs, etc."
+#   image: 400x250.gif
 
 - title: About
   url: /about/
