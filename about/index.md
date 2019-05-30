@@ -12,7 +12,12 @@ share: false
 ads: false
 ---
 
-#### ControlWorks Inc.
+{% include author-profile.html %}
+
+
+#
+#### Careers
+##### @ControlWorks Inc.
 
 February 2019 ~ 
 
@@ -23,7 +28,7 @@ R&D Center (https://www.control-works.co.kr)
 * a: #401, 13, Eonju-ro 81-gil, Gangnam-gu, Seoul 06222, Rep.of Korea 
 
 
-#### Hanyang University
+##### @Hanyang University
 
 March 2017 ~ February 2019
 
@@ -34,7 +39,7 @@ Automotive Control and Electronics Labortory (https://acelab.org)
  * Deep learning for point cloud data
  * Autonomous driving system
 
-#### Seoul National University of Science and Technology
+##### @Seoul National University of Science and Technology
 
 March 2013 ~ February 2017
 

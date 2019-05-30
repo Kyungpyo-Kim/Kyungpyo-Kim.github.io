@@ -51,6 +51,37 @@ owner:
 #     values:
 #       layout: tag
 
+# Site Author
+author:
+  avatar           : bio-photo.jpg
+  name             : Kyungpyo Kim
+  bio              : "Just another boring, tattooed, time traveling, designer."
+  location         : "Seoul or Jeju, Korea"
+  email            :
+  uri              : "https://kyungpyo-kim.github.io"
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         : 
+  foursquare       :
+  github           : "kyungpyo-kim"
+  google_plus      :
+  keybase          :
+  instagram        : "kyungpyo-kim"
+  lastfm           :
+  linkedin         :
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  steam            :
+  tumblr           :
+  twitter          : 
+  vine             :
+  weibo            :
+  xing             :
+  youtube          :
+
 include:
   - .htaccess
 exclude:
@@ -76,3 +107,6 @@ exclude:
   - package.json
   - spec
   - tmp
+  # - js/plugins
+  # - js/_main.js
+  # - js/vendor
