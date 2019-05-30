@@ -1,7 +1,7 @@
 ---
 layout: article
 permalink: /tags/
-title: Tag
+title: Tags
 ---
 
 <ul class="tag-cloud">
@@ -10,11 +10,11 @@ title: Tag
     <!-- tag_name 변수 지정: 태그명은 소문자화(slugize) 한다 -->
     {% capture tag_name %}{{tag|first|slugize}}{% endcapture %}
     <!-- font_size 변수 지정: 태그숫자/전체태그숫자 * 100 + 50 -->
-    {% capture font_size %}{{tag|last|size| times:100 | divided_by:site.tags.size | plus: 50 }}%{% endcapture %}
+    <!-- {% capture font_size %}{{tag|last|size| times:100 | divided_by:site.tags.size | plus: 50 }}%{% endcapture %} -->
     <!-- tag_size 변수 지정-->
-    {% capture tag_size %}{{tag|last|size}}{% endcapture %}
+    <!-- {% capture tag_size %}{{tag|last|size}}{% endcapture %} -->
 
-    <li style="font-size:{{font_size}}">
+    <li style="font-size:16">
         <a href="#{{tag_name}}" onclick="showTag('#{{tag_name}}')">
             {{tag_name}} ({{tag_size}})
         </a>
