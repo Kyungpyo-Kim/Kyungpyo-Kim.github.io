@@ -3,12 +3,12 @@
 - title: Study
   url: /study/
   excerpt: "Python, Engineering"
-  image: 400x250.gif
+  image: teaser/study001.jpg
 
 - title: Life
   url: /life/
   excerpt: "Examples of long form posts."
-  image: 400x250.gif
+  image: teaser/book004.jpg
   
 - title: About
   url: /about/
