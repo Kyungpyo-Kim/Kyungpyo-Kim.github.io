@@ -6,7 +6,7 @@ modified:
 excerpt: "A collection of thoughts, inspiration, mistakes, and other minutia."
 tags: []
 image:
-  feature:
+  feature: teaser/book004.jpg
   teaser:
 ---
 
