@@ -5,6 +5,9 @@ modified:
 categories: {{ dir }}
 excerpt:
 tags: []
+ads: true
+comments: true
+disqus: true
 image:
   feature:
   teaser:
