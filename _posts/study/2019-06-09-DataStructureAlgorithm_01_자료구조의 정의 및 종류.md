@@ -9,7 +9,7 @@ tags: [자료구조, 알고리즘]
 ads: true
 image:
   feature:
-  teaser: teaser/study001.jpg
+  teaser: teaser/study002.jpg
   thumb:
 ---
 

@@ -9,7 +9,7 @@ tags: [자료구조, 알고리즘, 배열, 리스트, 연결리스트]
 ads: true
 image:
   feature:
-  teaser: teaser/study001.jpg
+  teaser: teaser/study002.jpg
   thumb:
 ---
 
@@ -131,7 +131,7 @@ while node:
     4
 
 코드 설명: Node class 를 선언하고 이를 이용해
-  1. 연결 리스트를 생성하고,
+  * 연결 리스트를 생성하고,
   * 데이터를 삭제,
   * 데이터를 삽입,
   * 최종 결과를 출력 한다.
