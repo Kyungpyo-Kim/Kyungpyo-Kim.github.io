@@ -14,8 +14,6 @@ ads: false
 
 {% include author-profile.html %}
 
-
-#
 #### Careers
 ##### @ControlWorks Inc.
 
