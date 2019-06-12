@@ -33,7 +33,7 @@ owner:
     ad-client:
     ad-slot:
   bio:
-  avatar: bio-photo.jpg # 160x160 px image for author byline
+  avatar: bio_kkp.jpg # 160x160 px image for author byline
   disqus-shortname:
 
 # Tagging
@@ -53,9 +53,9 @@ owner:
 
 # Site Author
 author:
-  avatar           : bio-photo.jpg
+  avatar           : bio_kkp.jpg
   name             : Kyungpyo Kim
-  bio              : "Just another boring, tattooed, time traveling, designer."
+  bio              : "Developer, reader, runner, bicycle rider, and swimmer."
   location         : "Seoul or Jeju, Korea"
   email            :
   uri              : "https://kyungpyo-kim.github.io"
