@@ -13,6 +13,9 @@ image:
   thumb:
 ---
 
+!TODO
+https://opentutorials.org/module/1335/8821 여기 자료 참고하여 내용 보강하기
+
 # 자료구조의 구현
 
 ### List 형 자료구조
