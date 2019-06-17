@@ -2,25 +2,25 @@
 
 - title: Study
   url: /study/
-  excerpt: "Python, Engineering"
+  excerpt: "Python, Engineering, ROS"
   image: teaser/study001.jpg
 
 - title: Life
   url: /life/
-  excerpt: "Examples of long form posts."
+  excerpt: "Book reviews, Riding."
   image: teaser/book004.jpg
   
 - title: About
   url: /about/
-  excerpt: "All about Skinny Bones for Jekyll."
+  excerpt: "About Kyungpyo Kim."
   image: 400x250.gif
 
 - title: Search
   url: /search/
-  excerpt: "Examples of media posts perfect for showcasing work, photographs, etc."
+  excerpt: "Searching."
   image: 400x250.gif
 
 - title: Tags
   url: /tags/
-  excerpt: "Examples of media posts perfect for showcasing work, photographs, etc."
+  excerpt: "Categoized by tags."
   image: 400x250.gif
