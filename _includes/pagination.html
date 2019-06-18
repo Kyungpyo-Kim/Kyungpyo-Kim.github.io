@@ -1,3 +1,4 @@
+<p>
 <nav class="pagination">
   {% capture category_name %}{{ page.categories | first }}{% endcapture %}
   {% for post in site.categories.[category_name] %}
@@ -10,6 +11,7 @@
     {% if post_index0 == forloop.index %}{% assign next_post = post %}{% endif %}
     {% if post_index1 == forloop.index0 %}{% assign prev_post = post %}{% endif %}
   {% endfor %}
-  {% if prev_post %}<a class="prev" href="{{ site.url }}{{ prev_post.url }}">{{ prev_post.title }}</a>{% endif %}
-  {% if next_post %}<a class="next" href="{{ site.url }}{{ next_post.url }}">{{ next_post.title }}</a>{% endif %}
+  {% if prev_post %}<a class="prev" href="prev: {{ site.url }}{{ prev_post.url }}">{{ prev_post.title }}</a>{% endif %}
+  {% if next_post %}<a class="next" href="next: {{ site.url }}{{ next_post.url }}">{{ next_post.title }}</a>{% endif %}
 </nav>
+</p>
