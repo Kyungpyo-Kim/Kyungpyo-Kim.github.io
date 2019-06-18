@@ -8,8 +8,8 @@
         <!-- tag_size 변수 지정-->
         <!-- {% capture tag_size %}{{tag|last|size}}{% endcapture %} -->
     
-        <li style="font-size:10">
-            <a href="#{{tag_name}}">
+        <li style="font-size:16">
+            <a href="#{{tag_name}}" onclick="showTag('#{{tag_name}}')">
                 {{tag_name}} ({{tag_size}})
             </a>
         </li>
