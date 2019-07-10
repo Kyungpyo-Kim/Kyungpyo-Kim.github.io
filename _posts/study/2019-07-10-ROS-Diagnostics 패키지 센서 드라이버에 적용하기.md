@@ -12,8 +12,6 @@ image:
   teaser: teaser/study002.jpg
   thumb:
 ---
-# ROS Diagnostics 패키지 센서 드라이버에 적용하기
-
 아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.
 
 #### Getting Started
@@ -33,7 +31,7 @@ roslaunch launch/all.launch
 파이썬 코드를 좀 더 들여다 보자.
 (IMU 드라이버는 c++ 코드로 구현되어 있고, [nlamprian](http://nlamprian.me/blog/software/ros/2018/03/21/ros-diagnostics/)를 참고하였다. 해당 블로그에 코드도 잘 설명되어 있다!)
 
-## **"TopicDiagnostic"** 를 이용한 Topic 관리 기능
+#### **"TopicDiagnostic"** 를 이용한 Topic 관리 기능
 ```python
 class GpsNode():
     def __init__(self):
@@ -76,7 +74,7 @@ def pub(self):
 동작은 위와같이 publish 와 tick 생성을 같이 수행하므로써, frequency 에는 이상이 없는지, timestamp 는 문제 없는지 모니터링 할 수 있게 해준다.
 
 
-## **"DiagnosticTask"** 를 이용한 task 관리 기능
+#### **"DiagnosticTask"** 를 이용한 task 관리 기능
 ```python
 # gps_node.py
 class GpsDiagnosticTask(diagnostic_updater.DiagnosticTask):
@@ -113,15 +111,14 @@ class GpsNode():
 
 실제 사용을 위해서는 run 함수에서 알고리즘/센서처리로직을 수행하고, 그 결과에 대한 status와 설명을 추가하여 task 를 관리할 수 있게 된다.
 
-
-## Summary
+#### Summary
 * **"TopicDiagnostic"** 를 이용해 publish 되는 topic 관리
   + frequency monitoring
   + timestamp monitoring
 * **"DiagnosticTask"** 를 이용한 함수 오버로딩을 통한
   + 모니터링을 위한 status 및 message 생성
 
-  ## Reference
+#### Reference
 * http://nlamprian.me/blog/software/ros/2018/03/21/ros-diagnostics/
 * http://wiki.ros.org/diagnostics
 * https://github.com/ros/diagnostics
