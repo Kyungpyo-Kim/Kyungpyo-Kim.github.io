@@ -11,6 +11,9 @@ image:
   feature:
   teaser: teaser/study002.jpg
   thumb:
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 [diagnostic](http://wiki.ros.org/diagnostics) 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 **드라이버**가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다.
 

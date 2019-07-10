@@ -11,6 +11,9 @@ image:
   feature:
   teaser: teaser/study001.jpg
   thumb:
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 편미분방정식. 말이 익숙해서 배웠는데 내가 공업수학에서 배우고 까먹은 건줄 알았는데 알고보니 수업에서는 배우지 않았다...
