@@ -1,5 +1,4 @@
 ---
-layout: article
 title: Partial different equation
 categories: study
 comments: true
