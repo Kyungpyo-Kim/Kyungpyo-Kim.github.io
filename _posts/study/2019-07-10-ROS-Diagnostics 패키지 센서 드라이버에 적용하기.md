@@ -13,6 +13,9 @@ image:
 sitemap :
   changefreq : daily
   priority : 1.0
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "cog"
 ---
 아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.
 
