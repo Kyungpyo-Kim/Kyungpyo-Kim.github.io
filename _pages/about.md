@@ -33,6 +33,9 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
 author_profile: true
+path: ""
+type: posts
+related: true
 ---
 ## @ControlWorks Inc.
 February 2019 ~ 
