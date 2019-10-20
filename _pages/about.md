@@ -62,10 +62,10 @@ Automotive Control and Electronics Labortory [(https://acelab.org)](https://www.
  * Deep learning based dynamic object classification augmented by the point cloud accumulation of the 3D LiDAR 
    - KSAE 2018 Annual Autumn Conference & Exhibition
     <figure>
-      <img src='{{ "/assets/images/about/KSAE_Abstraction_kyungpyo_ver_final_revision/slide1.jpg" | relative_url }}' alt='absolute'>
+      <img src='{{ "/assets/images/about/slide1.jpg" | relative_url }}' alt='absolute'>
     </figure>
     <figure>
-      <img src='{{ "/assets/images/about/KSAE_Abstraction_kyungpyo_ver_final_revision/slide1.jpg" | relative_url }}' alt='absolute'>
+      <img src='{{ "/assets/images/about/slide1.jpg" | relative_url }}' alt='absolute'>
     </figure>
 ---
 ## @Seoul National University of Science and Technology (B.S.)
