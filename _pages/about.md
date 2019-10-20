@@ -1,19 +1,85 @@
 ---
 permalink: /about/
 title: "About"
-# excerpt: "Minimal Mistakes is a flexible two-column Jekyll theme."
-# layouts_gallery:
-#   - url: /assets/images/mm-layout-splash.png
-#     image_path: /assets/images/mm-layout-splash.png
-#     alt: "splash layout example"
-#   - url: /assets/images/mm-layout-single-meta.png
-#     image_path: /assets/images/mm-layout-single-meta.png
-#     alt: "single layout with comments and related posts"
-#   - url: /assets/images/mm-layout-archive.png
-#     image_path: /assets/images/mm-layout-archive.png
-#     alt: "archive layout example"
-# last_modified_at: 2019-08-27T15:46:43-04:00
+layout: single
+classes: wide
 toc: true
+toc_label: "Career"
+toc_icon: "cog"
+# sidebar:
+#   - title: "Kyungpyo Kim"
+#     image: /assets/images/about/bio.jpg
+#     image_alt: "image"
+author:
+  name             : "Kyungpyo Kim"
+  avatar           : /assets/images/about/bio.jpg
+  bio              : "Developer, reader, runner, bicycle rider, surfer and swimmer."
+  location         : "Seoul or Jeju, Korea"
+  email            : kyungpyo94@gmail.com
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://kyungpyo-kim.github.io"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Kyungpyo-Kim"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/kyung_py"
+    - label: "Youtube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/channel/UC-UakJ0yCC7oigEl_WDBEtQ"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
+author_profile: true
 ---
+## @ControlWorks Inc.
+February 2019 ~ 
 
-Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
+Assistant Research Engineer
+* Perception system design for autonomous driving vehicle
+* System design and integration of autonomous driving vehicle
+* Power grid design with [KEPRI](https://www.kepri.re.kr)
+
+R&D Center (https://www.control-works.co.kr)
+* e: kyungpyo.kim@control-works.co.kr
+* a: #401, 13, Eonju-ro 81-gil, Gangnam-gu, Seoul 06222, Rep.of Korea 
+ 
+---
+## @Hanyang University (M.S.)
+
+March 2017 ~ February 2019
+
+M.S., Department of Automotive Engineering
+
+Automotive Control and Electronics Labortory [(https://acelab.org)](https://www.acelab.org/smart-car-research-group)
+ * Autonomous driving system
+ * MPC-based vehicle control (Udacity)
+    {% include video id="I2hWcN-5mHM" provider="youtube" %}
+ * LiDAR-based recognition
+ * Deep learning for point cloud data
+ * Deep learning based dynamic object classification augmented by the point cloud accumulation of the 3D LiDAR 
+    - KSAE 2018 Annual Autumn Conference & Exhibition
+    <figure class="KSAE_Abstraction_kyungpyo_ver_final_revision">
+      <img src="/assets/images/about/KSAE_Abstraction_kyungpyo_ver_final_revision/slide1.jpg">
+      <img src="/assets/images/about/KSAE_Abstraction_kyungpyo_ver_final_revision/slide2.jpg">
+    </figure>
+     
+---
+## @Seoul National University of Science and Technology (B.S.)
+
+March 2013 ~ February 2017
+
+B.S., Department of Electrical and Information Engineering
+
+Term project
+ * Inverted pemdulum
+    {% include video id="Tvy59H769R4" provider="youtube" %}
+
+Digital Control System Labortory (http://mpc.seoultech.ac.kr)
+ * Torque/Speed Control of Induction Motors
+ * Power Train Control of Electrical Vehicle
+ * Development of high voltage/current motor driver
+      {% include video id="7VFgsH3A_D0" provider="youtube" %}
+      {% include video id="Y0Jqy8mTjYY" provider="youtube" %}

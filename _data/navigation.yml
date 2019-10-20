@@ -4,12 +4,16 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
     url: /about/
-  - title: "Study"
-    url: /categories/study/
-  - title: "Life"
-    url: /categories/life/
-  - title: "Sitemap"
-    url: /sitemap/
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "Gellery"
+    url: /gellery/
+  - title: "Posts by year"
+    url: /year-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
 
 # documentation links
 docs:
