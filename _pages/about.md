@@ -65,6 +65,8 @@ Automotive Control and Electronics Labortory [(https://acelab.org)](https://www.
       <img src="/assets/images/about/KSAE_Abstraction_kyungpyo_ver_final_revision/slide1.jpg">
       <img src="/assets/images/about/KSAE_Abstraction_kyungpyo_ver_final_revision/slide2.jpg">
     </figure>
+    ![slide1](/assets/images/about/KSAE_Abstraction_kyungpyo_ver_final_revision/slide1.jpg)
+    ![slide2](/assets/images/about/KSAE_Abstraction_kyungpyo_ver_final_revision/slide2.jpg)
      
 ---
 ## @Seoul National University of Science and Technology (B.S.)
