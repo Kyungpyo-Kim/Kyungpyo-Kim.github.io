@@ -56,13 +56,13 @@ March 2017 ~ February 2019
 
 M.S., Department of Automotive Engineering
 
-Automotive Control and Electronics Labortory [(https://acelab.org)](https://www.acelab.org/smart-car-research-group)
+Automotive Control and Electronics Laboratory [(https://acelab.org)](https://www.acelab.org/smart-car-research-group)
  * Autonomous driving system
  * MPC-based vehicle control (Udacity)
     {% include video id="I2hWcN-5mHM" provider="youtube" %}
  * LiDAR-based recognition
  * Deep learning for point cloud data
- * Deep learning based dynamic object classification augmented by the point cloud accumulation of the 3D LiDAR 
+ * Deep learning-based dynamic object classification augmented by the point cloud accumulation of the 3D LiDAR 
    - KSAE 2018 Annual Autumn Conference & Exhibition
     <figure>
       <img src='{{ "/assets/images/about/slide1.jpg" | relative_url }}' alt='absolute'>
@@ -81,7 +81,7 @@ Term project
  * Inverted pemdulum
     {% include video id="Tvy59H769R4" provider="youtube" %}
 
-Digital Control System Labortory (http://mpc.seoultech.ac.kr)
+Digital Control System Laboratory (http://mpc.seoultech.ac.kr)
  * Torque/Speed Control of Induction Motors
  * Power Train Control of Electrical Vehicle
  * Development of high voltage/current motor driver
