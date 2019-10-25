@@ -1,7 +1,7 @@
 ---
-title: Gellery
+title: Gallery
 layout: collection
-permalink: /gellery/
-collection: gellery
+permalink: /gallery/
+collection: gallery
 entries_layout: grid
 ---

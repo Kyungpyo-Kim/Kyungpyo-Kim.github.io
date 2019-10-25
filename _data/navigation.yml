@@ -8,8 +8,8 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "Gellery"
-    url: /gellery/
+  - title: "Gallery"
+    url: /gallery/
   - title: "Posts by year"
     url: /year-archive/
   # - title: "Sitemap"
