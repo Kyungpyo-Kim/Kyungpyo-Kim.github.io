@@ -41,12 +41,14 @@ related: true
 February 2019 ~ 
 
 Assistant Research Engineer
+* Vehicle controller design and development based on the dymanics and non-linear characteristics
 * Perception system design for autonomous driving vehicle
-* System design and integration of autonomous driving vehicle
+* Sensor system design and integration of autonomous driving vehicle
 * Power grid design with [KEPRI](https://www.kepri.re.kr)
 
-R&D Center (https://www.control-works.co.kr)
+R&D Center ([https://www.control-works.co.kr](https://www.control-works.co.kr))
 * e: kyungpyo.kim@control-works.co.kr
+* p: +82.2.555.1231
 * a: #401, 13, Eonju-ro 81-gil, Gangnam-gu, Seoul 06222, Rep.of Korea 
  
 ---
