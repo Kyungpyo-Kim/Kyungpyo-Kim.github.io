@@ -6,10 +6,6 @@ classes: wide
 toc: true
 toc_label: "Career"
 toc_icon: "cog"
-# sidebar:
-#   - title: "Kyungpyo Kim"
-#     image: /assets/images/about/bio.jpg
-#     image_alt: "image"
 author:
   name             : "Kyungpyo Kim"
   avatar           : /assets/images/about/bio.jpg
@@ -60,7 +56,10 @@ March 2017 ~ February 2019
 M.S., Department of Automotive Engineering
 
 Automotive Control and Electronics Laboratory [(https://acelab.org)](https://www.acelab.org/smart-car-research-group)
- * Autonomous driving system
+ * Autonomous driving vehicle
+    {% include video id="8cJaI7oBvug" provider="youtube" %}
+    {% include video id="iB1ZWtezMYU" provider="youtube" %}
+    {% include video id="wfhSAUQrpN0" provider="youtube" %}
  * MPC-based vehicle control (Udacity)
     {% include video id="I2hWcN-5mHM" provider="youtube" %}
  * LiDAR-based recognition
