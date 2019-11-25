@@ -1,9 +1,7 @@
 ---
 title: Gallery
-layout: posts
+layout: collection
 permalink: /gallery/
-entries_layout: grid
-#classes: wide
 ---
 
 ## Instagram
