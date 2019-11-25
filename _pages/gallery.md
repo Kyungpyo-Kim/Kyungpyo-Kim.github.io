@@ -1,6 +1,6 @@
 ---
 title: Gallery
-layout: collection
+layout: default
 permalink: /gallery/
 entries_layout: grid
 classes: wide
