@@ -37,7 +37,8 @@ related: true
 February 2019 ~ 
 
 Assistant Research Engineer
-* Vehicle controller design and development based on the dymanics and non-linear characteristics
+* Position-based vehicle controller design and development
+   {% include video id="47bARHP1-L4" provider="youtube" %}
 * Perception system design for autonomous driving vehicle
 * Sensor system design and integration of autonomous driving vehicle
 * Power grid design with [KEPRI](https://www.kepri.re.kr)
