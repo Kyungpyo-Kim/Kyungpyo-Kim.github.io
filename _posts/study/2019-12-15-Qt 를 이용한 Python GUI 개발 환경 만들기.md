@@ -1,5 +1,5 @@
 ---
-title: 알고리즘문제-전기버스
+title: QT 를 이용한 Python GUI 개발 환경 만들기
 categories: study
 modified: 
 tags: [Qt, GUI, python]
@@ -16,4 +16,5 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 ---
-[github_readme repo="octalmage/Marknote"]
+
+https://raw.githubusercontent.com/coreyti/showdown/master/README.md
