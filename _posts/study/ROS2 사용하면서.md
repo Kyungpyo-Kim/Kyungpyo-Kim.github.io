@@ -18,7 +18,7 @@ toc_icon: "cog"
 ---
 
 ## ROS2 사용하면서 ROS1과 다른점, 장/단점.
----
+
 ## roscore 가 필요 없다.
 
 #### 왜 roscore 가 사라졌을까?
