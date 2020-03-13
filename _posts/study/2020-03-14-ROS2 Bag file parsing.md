@@ -99,7 +99,8 @@ while reader.has_next():
 먼저 bag 파일을 열고 읽는 API를 찾아 보았다.
 먼저 파일이 필요하고, 파일 형태가 필요하고, serialization 포맷 형태가 필요하다.
 
-ROS2 에서는 여러 임베디드 시스템에서 상호호환 가능한 설계에 중점을 두었다. 그래서 이를 위한 통신의 serialziation에 많은 신경을 쓰는 듯 하다. 이때 이를 위해 **rosidl_typesupport**, **rmw(ROS MiddleWare)** 인터페이스와 같은 기능들이 구현되어 있다. {: .notice}
+ROS2 에서는 여러 임베디드 시스템에서 상호호환 가능한 설계에 중점을 두었다. 그래서 이를 위한 통신의 serialziation에 많은 신경을 쓰는 듯 하다. 이때 이를 위해 **rosidl_typesupport**, **rmw(ROS MiddleWare)** 인터페이스와 같은 기능들이 구현되어 있다. 
+{: .notice}
 
 1. Open
   ```c++
