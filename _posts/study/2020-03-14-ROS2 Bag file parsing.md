@@ -103,6 +103,7 @@ ROS2 에서는 여러 임베디드 시스템에서 상호호환 가능한 설계
 {: .notice}
 
 1. Open
+
   ```c++
   rosbag2::SequentialReader reader;
   rosbag2::StorageOptions storage_options{};
@@ -119,6 +120,7 @@ ROS2 에서는 여러 임베디드 시스템에서 상호호환 가능한 설계
   파일을 열기 위해서는 bag data(```bag_data```)와 ros2에서 제공하는 bag data format 정보 ```sqlite3``` 그리고 serialization farmat ```cdr``` 방법이 필요한다.
 
 2. Read
+
   ```c++
     // read and deserialize "serialized data"
   if (reader.has_next()){
@@ -131,6 +133,7 @@ ROS2 에서는 여러 임베디드 시스템에서 상호호환 가능한 설계
   이 메세지 스트럭쳐에는 토픽, 타입, 그리고 serialization된 내용의 data가 포함되어 있다. 이제 남은 단계는 이 serialization 된 메세지를 **deserialization**하는 것이다.
 
 3. Deserialize
+
   ```c++
   // deserialization and conversion to ros message
   dev_cpp_pkg::msg::GpsRx msg;
