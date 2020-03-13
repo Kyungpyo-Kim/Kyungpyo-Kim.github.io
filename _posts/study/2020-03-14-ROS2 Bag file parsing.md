@@ -2,7 +2,7 @@
 title: ROS2 Bag file parsing
 categories: study
 modified: 
-tags: [ROS]
+tags: [ROS, c++, python]
 ads: true
 excerpt:
 image:
