@@ -25,6 +25,7 @@ toc_icon: "cog"
 ## Tensorflow, Cuda, cuDNN, TensorRT Version compatibility check
 
 ## Tensorflow model 만들기
+ICNet 돌려보기: https://github.com/hellochick/ICNet-tensorflow
 
 ## TensorRT 로 최적화하기
 
