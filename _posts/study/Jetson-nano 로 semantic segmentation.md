@@ -70,6 +70,7 @@ Average time: 0.5310, about 1.883186 fps
 2. Segnet Tensorflow 버전 돌려보기
 
 ## Tensorflow model 만들기
+ICNet 돌려보기: https://github.com/hellochick/ICNet-tensorflow
 
 ## TensorRT 로 최적화하기
 
