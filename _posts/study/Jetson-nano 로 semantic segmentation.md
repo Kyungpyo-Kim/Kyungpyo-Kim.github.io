@@ -25,43 +25,7 @@ toc_icon: "cog"
 * 개발 언어는 모델을 직접 구현할 경우 python 을 이용하려고 한다.
 
 
-### My PC Info
-* Ubuntu18.04
-* NVIDIA GTX1650
-
-### CUDA 10.0 Installation
-```bash
-sudo cuda_10.0.130_410.48_linux.run
-$ export PATH=/usr/local/cuda-10.0/bin:$PATH
-$ export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64:$LD_LIBRARY_PATH
-```
-### cuDNN 7.4.2 Installation
-```bash
-sudo dpkg -i ./libcudnn7-dev_7.4.2.24-1+cuda10.0_amd64.deb 
-sudo dpkg -i ./libcudnn7-doc_7.4.2.24-1+cuda10.0_amd64.deb 
-sudo dpkg -i ./libcudnn7_7.4.2.24-1+cuda10.0_amd64.deb 
-```
-### cupti
-```bash
-sudo apt install libcupti-dev -y
-```
-
-### Tensorflow-gpu 1.14
-```
-pip3 install tensorflow-gpu opencv-python jupyter matplotlib tqdm scipy googledrivedownloader
-pip3 uninstall numpy
-pip3 install --upgrade numpy==1.16.1
-```
-
-```python
->>> import tensorflow as tf
->>> hello = tf.constant(‘Hello, TensorFlow!’)
->>> sess = tf.Session()
->>> sess.run(hello)
-b’Hello, TensorFlow!’
-```
-
-### Demo results: 
+### [ICNet](https://github.com/hellochick/ICNet-tensorflow) Demo results: 
 Test inference speed
 Average time: 0.5310, about 1.883186 fps
 
@@ -69,8 +33,26 @@ Average time: 0.5310, about 1.883186 fps
 1. 성능이 좀 떨어지더라도 모델의 속도를 높일 수 있는 방법 알아보기
 2. Segnet Tensorflow 버전 돌려보기
 
-## Tensorflow model 만들기
-ICNet 돌려보기: https://github.com/hellochick/ICNet-tensorflow
+### [Real-time Semantic Segmentation Comparative Study](https://github.com/MSiam/TFSegmentation) 
+model training --> 수행 완료
+model 돌려보기
+  * 이미지 실행
+  * 결과 overlap
+  * fps 측정
+    - x_batch shape:  (1, 512, 1024, 3)
+      ```
+      Statistics of the FPSMeter
+      Frame per second: 5.80 fps
+      Milliseconds per frame: 172.40 ms in one frame
+      These statistics are calculated based on
+      500 Frames and the whole taken time is 86.2022 Seconds
+      ```
+
+ICNet 보다는 훨씬 높은 FPS를 보여주었다.
+
+Jetson Nano Cuda core: 128
+Jetson TX2 Cuda core: 256
+GTX1660 Cuda core: 896  
 
 ## TensorRT 로 최적화하기
 
