@@ -1,5 +1,5 @@
 ---
-title: [Setup]Ubuntu18.04 + Cuda10.0 + cuDNN7.4.2 + TF1.14.0
+title: Setup - Ubuntu18.04 + Cuda10.0 + cuDNN7.4.2 + TF1.14.0
 categories: study
 modified: 
 tags: [AI, ubuntu]
