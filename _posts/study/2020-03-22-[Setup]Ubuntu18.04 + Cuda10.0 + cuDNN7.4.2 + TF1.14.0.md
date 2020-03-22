@@ -52,15 +52,13 @@ sudo dpkg -i ./libcudnn7_7.4.2.24-1+cuda10.0_amd64.deb
 
 [**CUPTI**](https://docs.nvidia.com/cuda/cupti/index.html)
 The CUDA Profiling Tools Interface (CUPTI) enables the creation of profiling and tracing tools that target CUDA applications.
-
 CUPTI provides the following APIs:
-the Activity API,
-the Callback API,
-the Event API,
-the Metric API, and
-the Profiler API.
+* the Activity API,
+* the Callback API,
+* the Event API,
+* the Metric API, and
+* the Profiler API.
 Using these APIs, you can develop profiling tools that give insight into the CPU and GPU behavior of CUDA applications.
-
 CUPTI is delivered as a dynamic library on all platforms supported by CUDA.
 
 **install**
