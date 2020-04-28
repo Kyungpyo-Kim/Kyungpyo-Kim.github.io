@@ -33,8 +33,7 @@ Average time: 0.5310, about 1.883186 fps
 1. 성능이 좀 떨어지더라도 모델의 속도를 높일 수 있는 방법 알아보기
 2. Segnet Tensorflow 버전 돌려보기
 
-### [Real-time Semantic Segmentation Comparative Study](https://github.com/MSiam/TFSegmentation) 
-model training --> 수행 완료
+### [Real-time Semantic Segmentation Comparative Study](https://github.com/MSiam/TFSegmentation) Demo results: 
 model 돌려보기
   * 이미지 실행
   * 결과 overlap
@@ -48,12 +47,15 @@ model 돌려보기
       500 Frames and the whole taken time is 86.2022 Seconds
       ```
 
-ICNet 보다는 훨씬 높은 FPS를 보여주었다.
+ICNet 보다는 2배 이상 높은 FPS를 보여주었다.
 
-Jetson Nano Cuda core: 128
-Jetson TX2 Cuda core: 256
-GTX1660 Cuda core: 896  
+## Computing device
+* Jetson Nano Cuda core: 128
+* Jetson TX2 Cuda core: 256
+* GTX1660 Cuda core: 896  
 
 ## TensorRT 로 최적화하기
+https://hiseon.me/data-analytics/tensorflow/tensorflow-tensorrt/
+
 
 ## Jetson nano 에서 돌려보기
