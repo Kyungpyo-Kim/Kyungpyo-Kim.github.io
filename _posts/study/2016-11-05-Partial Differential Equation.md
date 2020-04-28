@@ -4,7 +4,7 @@ categories: study
 comments: true
 disqus: true
 modified: 
-tags: [선형대수, 편미분방정식, 공업수학]
+tags: [공업수학]
 ads: true
 image:
   feature:

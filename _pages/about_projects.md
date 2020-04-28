@@ -6,8 +6,8 @@ toc: true
 author:
   name             : "Kyungpyo Kim"
   avatar           : /assets/images/about/bio.jpg
-  bio              : "Developer, reader, runner, bicycle rider, surfer and swimmer."
-  location         : "Seoul or Jeju, Korea"
+  bio              : "Autonomous Driving System Engineer"
+  location         : "Korea"
   email            : kyungpyo94@gmail.com
   links:
     - label: "Website"
@@ -26,7 +26,6 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
 author_profile: true
-path: ""
 type: posts
 ---
 Projects...

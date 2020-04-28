@@ -6,8 +6,8 @@ toc: true
 author:
   name             : "Kyungpyo Kim"
   avatar           : /assets/images/about/bio.jpg
-  bio              : "Developer, reader, runner, bicycle rider, surfer and swimmer."
-  location         : "Seoul or Jeju, Korea"
+  bio              : "Autonomous Driving System Engineer"
+  location         : "Korea"
   email            : kyungpyo94@gmail.com
   links:
     - label: "Website"
@@ -26,23 +26,13 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
 author_profile: true
-path: ""
 type: posts
 ---
-## @ControlWorks Inc.
-February 2019 ~ 
+* **Research**: 자율주행, 인공지능, 차량제어, 경로생성, 시스템설계&구현, 환경인식
+* **Sensors**: 라이다, 카메라, 초음파 센서
+* **Study**: 검출 및 추정, 적응제어공학, 전력전자, 전력공학, 공업수학
+* **Tools**: 
+  * **Development**: [C/C++](../../tags/#c), [Python](../../tags/#python), [ROS](../../tags/#ros), [PCL](../../tags/#pcl), [Ubuntu](../../tags/#ubuntu), [Matlab(Simulink)](../../tags/#matlab), [LabVIEW](../../tags/#labview)
+  * **Management**: [ASANA](../../tags/#asana), [Notion](../../tags/#notion), [Draw.Io](../../tags/#drawio), [MS Office](.)
 
-Assistant Research Engineer
-* Position-based vehicle controller design and development
-   {% include video id="47bARHP1-L4" provider="youtube" %}
-* Perception system design for autonomous driving vehicle
-* Sensor system design and integration of autonomous driving vehicle
-* Power grid design with [KEPRI](https://www.kepri.re.kr)
-
-R&D Center ([https://www.control-works.co.kr](https://www.control-works.co.kr))
-* e: kyungpyo.kim@control-works.co.kr
-* p: +82.2.555.1231
-* a: #401, 13, Eonju-ro 81-gil, Gangnam-gu, Seoul 06222, Rep.of Korea 
- 
----
-skills...
+Tools 사용 수준
