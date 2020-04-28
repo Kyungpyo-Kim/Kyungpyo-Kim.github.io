@@ -4,7 +4,6 @@ title: "About"
 layout: single
 classes: wide
 toc: true
-toc_label: "Career"
 toc_icon: "cog"
 author:
   name             : "Kyungpyo Kim"
@@ -31,64 +30,39 @@ author:
 author_profile: true
 path: ""
 type: posts
-related: true
+# related: true
 ---
-## @ControlWorks Inc.
-February 2019 ~ 
+## Skills
 
-Assistant Research Engineer
-* Position-based vehicle controller design and development
-   {% include video id="47bARHP1-L4" provider="youtube" %}
-* Perception system design for autonomous driving vehicle
-* Sensor system design and integration of autonomous driving vehicle
-* Power grid design with [KEPRI](https://www.kepri.re.kr)
+[see more details...](./skills)
 
-R&D Center ([https://www.control-works.co.kr](https://www.control-works.co.kr))
+## Projects
+
+[see more details...](./projects)
+
+## Experience and Education
+* ControlWorks Inc. (February 2019 ~) 
+  * Assistant Research Engineer
+  * 자율주행시스템, 차량제어, 환경인식, 전력그리드모델링
+
+{% capture notice-text %}
+R&D Center [(ControlWorks)](https://www.control-works.co.kr)
 * e: kyungpyo.kim@control-works.co.kr
 * p: +82.2.555.1231
-* a: #401, 13, Eonju-ro 81-gil, Gangnam-gu, Seoul 06222, Rep.of Korea 
+* a: #401, 13, Eonju-ro 81-gil, Gangnam-gu, Seoul 06222, Rep.of Korea
+{% endcapture %}
+
+<div class="notice--info">
+  {{ notice-text | markdownify }}
+</div>
  
----
- 
-## @Hanyang University (M.S.)
+* Hanyang University (March 2017 ~ February 2019)
+  * M.S., Department of Automotive Engineering
+  * Automotive Control and Electronics Laboratory [(ACELab)](https://www.acelab.org/smart-car-research-group)
+  * 자율주행, 라이다, 환경인식, 인공지능
+* Seoul National University of Science and Technology (March 2013 ~ February 2017)
+  * B.S., Department of Electrical and Information Engineering
+  * Digital Control System Laboratory (http://mpc.seoultech.ac.kr)
+  * 모터 제어, 전력전자, 전력전자, 전력공학, 제어공학
 
-March 2017 ~ February 2019
-
-M.S., Department of Automotive Engineering
-
-Automotive Control and Electronics Laboratory [(https://acelab.org)](https://www.acelab.org/smart-car-research-group)
- * Autonomous driving vehicle
-    {% include video id="8cJaI7oBvug" provider="youtube" %}
-    {% include video id="iB1ZWtezMYU" provider="youtube" %}
-    {% include video id="wfhSAUQrpN0" provider="youtube" %}
- * MPC-based vehicle control (Udacity)
-    {% include video id="I2hWcN-5mHM" provider="youtube" %}
- * LiDAR-based recognition
- * Deep learning for point cloud data
- * Deep learning-based dynamic object classification augmented by the point cloud accumulation of the 3D LiDAR 
-   - KSAE 2018 Annual Autumn Conference & Exhibition
-    <figure>
-      <img src='https://raw.githubusercontent.com/Kyungpyo-Kim/Kyungpyo-Kim.github.io/master/assets/images/about/slide1.JPG'>
-    </figure>
-    <figure>
-      <img src='https://raw.githubusercontent.com/Kyungpyo-Kim/Kyungpyo-Kim.github.io/master/assets/images/about/slide2.JPG'>
-    </figure>
- 
----
- 
-## @Seoul National University of Science and Technology (B.S.)
-
-March 2013 ~ February 2017
-
-B.S., Department of Electrical and Information Engineering
-
-Term project
- * Inverted pemdulum
-    {% include video id="Tvy59H769R4" provider="youtube" %}
-
-Digital Control System Laboratory (http://mpc.seoultech.ac.kr)
- * Torque/Speed Control of Induction Motors
- * Power Train Control of Electrical Vehicle
- * Development of high voltage/current motor driver
-      {% include video id="7VFgsH3A_D0" provider="youtube" %}
-      {% include video id="Y0Jqy8mTjYY" provider="youtube" %}
+[see more details...](./ex_edu)
