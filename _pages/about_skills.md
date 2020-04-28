@@ -35,4 +35,8 @@ type: posts
   * **Development**: [C/C++](../../tags/#c), [Python](../../tags/#python), [ROS](../../tags/#ros), [PCL](../../tags/#pcl), [Ubuntu](../../tags/#ubuntu), [Matlab(Simulink)](../../tags/#matlab), [LabVIEW](../../tags/#labview)
   * **Management**: [ASANA](../../tags/#asana), [Notion](../../tags/#notion), [Draw.Io](../../tags/#drawio), [MS Office](.)
 
-Tools 사용 수준
+<figure>
+  <img src="/assets/images/금반지.jpg" alt="this is a placeholder image">
+  <figcaption>서울과학기술대학교 정보통신공학과 단과대학 수석 졸업 증정 뱃지. 지금은 녹아 어머니의 반지가 되었다...</figcaption>
+</figure>
+제어공학, 메카트로닉스, 전력전자, 전력공학, 공업수학 등등 전공공부에 우수함
