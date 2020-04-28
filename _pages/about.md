@@ -41,14 +41,14 @@ Autonomous Driving System Engineer
   * **Development**: [C/C++](../../tags/#c), [Python](../../tags/#python), [ROS](../../tags/#ros), [PCL](../../tags/#pcl), [Ubuntu](../../tags/#ubuntu), [Matlab(Simulink)](../../tags/#matlab), [LabVIEW](../../tags/#labview)
   * **Management**: [ASANA](../../tags/#asana), [Notion](../../tags/#notion), [Draw.Io](../../tags/#drawio), [MS Office](../../tags/#ms)
 
-[details...](./skills){: .btn .btn--info}
+[details...](/about/skills){: .btn .btn--info}
 
 ## Projects
 * 자율주행을 위한 차량 제어 시스템, 알고리즘 개발
 * 특장차 자율주행 시스템 개발
 * 농기구 자율주행을 위한 환경인식 시스템 개발
 
-[details...](./projects){: .btn .btn--info}
+[details...](/about/projects){: .btn .btn--info}
 
 ## Experience and Education
 * **ControlWorks Inc.** (February 2019 ~)
@@ -75,4 +75,4 @@ R&D Center [(ControlWorks)](https://www.control-works.co.kr)
   * Digital Control System Laboratory (http://mpc.seoultech.ac.kr)
   * 모터 제어, 제어공학, 전력전자, 전력공학, 공업수학
 
-[details...](./ex_edu){: .btn .btn--info}
+[details...](/about/ex_edu){: .btn .btn--info}
