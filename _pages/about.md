@@ -30,18 +30,29 @@ author:
 author_profile: true
 path: ""
 type: posts
-# related: true
 ---
-## Skills
+## 김경표 (Kyungpyo Kim)
+Autonomous Driving System Engineer
 
-[see more details...](./skills)
+## Skills
+* **Research**: 자율주행, 인공지능, 차량제어, 경로생성, 시스템설계&구현, 환경인식
+* **Sensors**: 라이다, 카메라, 초음파 센서
+* **Study**: 검출 및 추정, 적응제어공학, 전력전자, 전력공학, 공업수학
+* **Tools**: 
+  * **Development**: C++, Python, ROS, PCL, Ubuntu, Matlab(Simulink), LabVIEW
+  * **Management**: ASANA, Notion, Draw.Io, MS Office
+
+[details...](./skills){: .btn .btn--info}
 
 ## Projects
+* 자율주행을 위한 차량 제어 시스템, 알고리즘 개발
+* 특장차 자율주행 시스템 개발
+* 농기구 자율주행을 위한 환경인식 시스템 개발
 
-[see more details...](./projects)
+[details...](./projects){: .btn .btn--info}
 
 ## Experience and Education
-* ControlWorks Inc. (February 2019 ~) 
+* **ControlWorks Inc.** (February 2019 ~)
   * Assistant Research Engineer
   * 자율주행시스템, 차량제어, 환경인식, 전력그리드모델링
 
@@ -56,13 +67,13 @@ R&D Center [(ControlWorks)](https://www.control-works.co.kr)
   {{ notice-text | markdownify }}
 </div>
  
-* Hanyang University (March 2017 ~ February 2019)
+* **Hanyang University** (March 2017 ~ February 2019)
   * M.S., Department of Automotive Engineering
   * Automotive Control and Electronics Laboratory [(ACELab)](https://www.acelab.org/smart-car-research-group)
   * 자율주행, 라이다, 환경인식, 인공지능
-* Seoul National University of Science and Technology (March 2013 ~ February 2017)
+* **Seoul National University of Science and Technology** (March 2013 ~ February 2017)
   * B.S., Department of Electrical and Information Engineering
   * Digital Control System Laboratory (http://mpc.seoultech.ac.kr)
-  * 모터 제어, 전력전자, 전력전자, 전력공학, 제어공학
+  * 모터 제어, 제어공학, 전력전자, 전력공학, 공업수학
 
-[see more details...](./ex_edu)
+[details...](./ex_edu){: .btn .btn--info}

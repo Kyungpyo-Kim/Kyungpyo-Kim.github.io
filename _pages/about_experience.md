@@ -2,10 +2,7 @@
 permalink: /about/ex_edu
 title: "Experience and Education"
 layout: single
-classes: wide
 toc: true
-toc_label: "Experience and Education"
-toc_icon: "cog"
 author:
   name             : "Kyungpyo Kim"
   avatar           : /assets/images/about/bio.jpg
