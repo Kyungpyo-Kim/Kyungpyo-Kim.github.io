@@ -13,7 +13,7 @@ url                      : "https://kyungpyo-kim.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : kyungpyo-kim
 teaser                   : assets/images/400x250.gif # 400x250 px default teaser image used in image archive grid
-logo                     : assets/images/120x120.gif # 120x120 px default image used for Twitter summary card
+logo                     : assets/images/블로그 로고.png # 120x120 px default image used for Twitter summary card
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true #, false (default)
 words_per_minute         : 200

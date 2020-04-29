@@ -72,7 +72,7 @@ R&D Center [(ControlWorks)](https://www.control-works.co.kr)
   * 자율주행, 라이다, 환경인식, 인공지능
 * **Seoul National University of Science and Technology** (March 2013 ~ February 2017)
   * B.S., Department of Electrical and Information Engineering
-  * Digital Control System Laboratory (http://mpc.seoultech.ac.kr)
+  * Digital Control System Laboratory [(DCSL)](http://mpc.seoultech.ac.kr)
   * 모터 제어, 제어공학, 전력전자, 전력공학, 공업수학
 
 [details...](/about/ex_edu){: .btn .btn--info}
