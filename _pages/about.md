@@ -73,6 +73,6 @@ R&D Center [(ControlWorks)](https://www.control-works.co.kr)
 * **Seoul National University of Science and Technology** (March 2013 ~ February 2017)
   * 학위: B.S., Department of Electrical and Information Engineering
   * 연구실: Digital Control System Laboratory [(DCSL)](http://mpc.seoultech.ac.kr)
-  * 모터 제어, 제어공학, 전력전자, 전력공학, 공업수학
+  * 분야: 모터 제어, 제어공학, 전력전자, 전력공학, 공업수학
 
 [details...](/about/ex_edu){: .btn .btn--info}
