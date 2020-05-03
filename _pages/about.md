@@ -67,12 +67,12 @@ R&D Center [(ControlWorks)](https://www.control-works.co.kr)
 </div>
  
 * **Hanyang University** (March 2017 ~ February 2019)
-  * M.S., Department of Automotive Engineering
-  * Automotive Control and Electronics Laboratory [(ACELab)](https://www.acelab.org/smart-car-research-group)
-  * 자율주행, 라이다, 환경인식, 인공지능
+  * 학위: M.S., Department of Automotive Engineering
+  * 연구실: Automotive Control and Electronics Laboratory [(ACELab)](https://www.acelab.org/smart-car-research-group)
+  * 분야: 자율주행, 라이다, 환경인식, 인공지능
 * **Seoul National University of Science and Technology** (March 2013 ~ February 2017)
-  * B.S., Department of Electrical and Information Engineering
-  * Digital Control System Laboratory [(DCSL)](http://mpc.seoultech.ac.kr)
+  * 학위: B.S., Department of Electrical and Information Engineering
+  * 연구실: Digital Control System Laboratory [(DCSL)](http://mpc.seoultech.ac.kr)
   * 모터 제어, 제어공학, 전력전자, 전력공학, 공업수학
 
 [details...](/about/ex_edu){: .btn .btn--info}
