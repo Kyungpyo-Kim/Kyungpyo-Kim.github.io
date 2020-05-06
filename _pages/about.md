@@ -36,7 +36,7 @@ Autonomous Driving System Engineer
 ## Skills
 * **Research**: [자율주행](../../tags/#자율주행), [인공지능](../../tags/#ai), 차량제어, 경로생성, 시스템설계&구현, 환경인식
 * **Sensors**: 라이다, 카메라, 초음파 센서
-* **Study**: 검출 및 추정, 적응제어공학, 전력전자, 전력공학, [공업수학](../../tags/#공업수학)
+* **Study**: 검출 및 추정, [적응제어공학](../../tags/#제어공학), 전력전자, 전력공학, [공업수학](../../tags/#공업수학)
 * **Tools**: 
   * **Development**: [C/C++](../../tags/#c), [Python](../../tags/#python), [ROS](../../tags/#ros), [PCL](../../tags/#pcl), [Ubuntu](../../tags/#ubuntu), [Matlab(Simulink)](../../tags/#matlab), [LabVIEW](../../tags/#labview)
   * **Management**: [ASANA](../../tags/#asana), [Notion](../../tags/#notion), [Draw.Io](../../tags/#drawio), [MS Office](../../tags/#ms)
