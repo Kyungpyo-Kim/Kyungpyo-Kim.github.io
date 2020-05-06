@@ -21,8 +21,8 @@ toc_icon: "cog"
 
 ## roscore 가 필요 없다.
 
-#### 왜 roscore 가 사라졌을까?
+### 왜 roscore 가 사라졌을까?
 
-#### 장점, 단점
+### 장점, 단점
 
 ## rosbag plugin 이 없다...
