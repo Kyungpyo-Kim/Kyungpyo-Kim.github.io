@@ -31,7 +31,12 @@ author_profile: true
 type: posts
 ---
 ## 김경표 (Kyungpyo Kim)
+
 Autonomous Driving System Engineer
+
+새로운 것을 찾아 현실에 적용할 수 있는 엔지니어로 성장하기 위해 노력하고 있습니다. 
+현재는 **자율주행을 위한 시스템을 구성**하고, 구성 요소 중 **상위제어**, **환경인식** 알고리즘을 개발하고 실제 어플리케이션에 적용하는 일을 하고 있습니다.
+{: .notice--info}
 
 ## Skills
 * **Research**: [자율주행](../../tags/#자율주행), [인공지능](../../tags/#ai), 차량제어, 경로생성, 시스템설계&구현, 환경인식
@@ -43,12 +48,14 @@ Autonomous Driving System Engineer
 
 [details...](/about/skills){: .btn .btn--info}
 
+
 ## Projects
 * 자율주행을 위한 차량 제어 시스템, 알고리즘 개발
 * 특장차 자율주행 시스템 개발
 * 농기구 자율주행을 위한 환경인식 시스템 개발
 
 [details...](/about/projects){: .btn .btn--info}
+
 
 ## Experience and Education
 * **ControlWorks Inc.** (February 2019 ~)
