@@ -8,3 +8,5 @@ sudo add-apt-repository ppa:peek-developers/stable
 sudo apt update
 sudo apt install peek
 ```
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=kyungpyo-kim)](https://github.com/ryo-ma/github-profile-trophy)
