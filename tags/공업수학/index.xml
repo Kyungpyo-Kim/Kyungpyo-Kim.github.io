@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>공업수학 on Website of Kyungpyo Kim</title>
-    <link>/tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/</link>
+    <link>https://example.com/tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/</link>
     <description>Recent content in 공업수학 on Website of Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 05 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Partial different equation</title>
-      <link>/post/2016-11-05-partial-differential-equation/</link>
+      <link>https://example.com/study/2016-11-05-partial-differential-equation/</link>
       <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/post/2016-11-05-partial-differential-equation/</guid>
+      <guid>https://example.com/study/2016-11-05-partial-differential-equation/</guid>
       <description>편미분방정식. 말이 익숙해서 배웠는데 내가 공업수학에서 배우고 까먹은 건줄 알았는데 알고보니 수업에서는 배우지 않았다&amp;hellip; 대학원 면접때 공업수학 준비를 못해서 물어볼 줄 예상도 못했고&amp;hellip; 다시 공부해야겠다 싶어 책을 들었다!</description>
     </item>
     

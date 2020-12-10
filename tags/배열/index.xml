@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>배열 on Website of Kyungpyo Kim</title>
-    <link>/tags/%EB%B0%B0%EC%97%B4/</link>
+    <link>https://example.com/tags/%EB%B0%B0%EC%97%B4/</link>
     <description>Recent content in 배열 on Website of Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%EB%B0%B0%EC%97%B4/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/%EB%B0%B0%EC%97%B4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>자료구조의 구현</title>
-      <link>/post/2019-06-09-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</link>
+      <link>https://example.com/study/2019-06-09-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</link>
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/2019-06-09-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</guid>
+      <guid>https://example.com/study/2019-06-09-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</guid>
       <description>List 형 자료구조  배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동  Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) print ( &amp;#34; delete:&amp;#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 43 The sales result = 56 The sales result = 98 delete: 43 The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 56 The sales result = 98  코드 설명: List 를 생성하고 삭제, 출력 예시</description>
     </item>
     

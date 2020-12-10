@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> kyungpyo-kim | ROS Diagnostics 패키지 센서 드라이버에 적용하기 </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="새로운 것을 찾아">
+    <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r">
+    
+    <link rel="stylesheet"
+          href="https://example.com/css/style.min.ae4af30f6a89627b05def70e914c14cbb53a71d28a88ec8d87a40ecc7c2778e2.css"
+          integrity="sha256-rkrzD2qJYnsF3vcOkUwUy7U6cdKKiOyNh6QOzHwneOI="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://example.com/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://example.com/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://example.com/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://example.com/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://example.com/study/2019-07-10-ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://example.com/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="ROS Diagnostics 패키지 센서 드라이버에 적용하기"/>
+<meta name="twitter:description" content="아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다."/>
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://example.com/images/kyungpyo.jpeg" alt="profile picture">
+            <h3 title=""><a href="/">Kyungpyo Kim</a></h3>
+            <div class="description">
+                <p>새로운 것을 찾아</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/Kyungpyo-Kim" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instagram.com/kyung_py" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:kyungpyo94@gmail.com" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; kyungpyo-kim 2020 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/life/"
+                        
+                   title="">Life</a></li>
+        
+            
+            <li><a 
+                   href="/study/"
+                        
+                   title="">Study</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+
+            <div class="post-title">
+                <h3>ROS Diagnostics 패키지 센서 드라이버에 적용하기</h3>
+                
+            </div>
+
+            <p>아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.</p>
+<h4 id="getting-started">Getting Started</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/Kyungpyo-Kim/ros_diagnostics.git
+cd ros_diagnostics
+catkin_make
+source devel/setup.bash
+roslaunch launch/all.launch
+</code></pre></div><p>센서 드라이버에 적용된 diagnostics 기능은</p>
+<ul>
+<li><strong>&ldquo;TopicDiagnostic&rdquo;</strong> 를 이용한 topic 관리 기능,</li>
+<li><strong>&ldquo;DiagnosticTask&rdquo;</strong> 를 이용한 task 관리 기능이다.</li>
+</ul>
+<p>파이썬 코드를 좀 더 들여다 보자.
+(IMU 드라이버는 c++ 코드로 구현되어 있고, <a href="http://nlamprian.me/blog/software/ros/2018/03/21/ros-diagnostics/">nlamprian</a>를 참고하였다. 해당 블로그에 코드도 잘 설명되어 있다!)</p>
+<h4 id="topicdiagnostic-를-이용한-topic-관리-기능"><strong>&ldquo;TopicDiagnostic&rdquo;</strong> 를 이용한 Topic 관리 기능</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GpsNode</span>():
+    <span style="color:#66d9ef">def</span> __init__(self):
+
+        rospy<span style="color:#f92672">.</span>init_node(<span style="color:#e6db74">&#34;gps_node&#34;</span>)
+
+        <span style="color:#75715e">## publish</span>
+        self<span style="color:#f92672">.</span>pub_nav_fix <span style="color:#f92672">=</span> rospy<span style="color:#f92672">.</span>Publisher(<span style="color:#e6db74">&#39;gps/fix&#39;</span>, NavSatFix, queue_size<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+        
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        ...
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+
+        freq_bounds <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;min&#39;</span>:<span style="color:#ae81ff">18.</span>, <span style="color:#e6db74">&#39;max&#39;</span>:<span style="color:#ae81ff">22.</span>} <span style="color:#75715e"># If you update these values, the</span>
+        self<span style="color:#f92672">.</span>nav_fix_freq <span style="color:#f92672">=</span> diagnostic_updater<span style="color:#f92672">.</span>TopicDiagnostic(<span style="color:#e6db74">&#34;/gps/fix&#34;</span>, self<span style="color:#f92672">.</span>updater,
+            diagnostic_updater<span style="color:#f92672">.</span>FrequencyStatusParam(freq_bounds, <span style="color:#ae81ff">0.02</span>, <span style="color:#ae81ff">10</span>),  
+            diagnostic_updater<span style="color:#f92672">.</span>TimeStampStatusParam(min_acceptable <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, max_acceptable <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>))
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        ...
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</code></pre></div><p>위의 코드에서 self.pub_nav_fix 와 self.nav_fix_freq 두개의 publisher 를 생성하였다. self.pub_nav_fix 는 실제 드라이버에서 publish 할 topic publisher 이고, self.nav_fix_freq 는 이와 함께 tick 을 만들어서 publisher 가 잘 동작하는지 확인할 수 있도록하는 diagnostic 기능을 제공하는 역할을 한다. c++ 에서는 이부분을 하나의 객체로 연결하여 사용할 수 있게 되어 있지만, python 에서는 따로 분리되어 있는 예제만 확인하였다. Topic 이름을 같이 사용하여 기능적으로는 동일하게 확인할 수 있도록 한 것 같다.</p>
+<p>TopicDiagnostic 객체의 생성 파라미터는  frequency 와 timestamp 에 관한 파라미터가 있으며, 각각 최대/최소, 시간에 대해서는 얼만큼에 시간에 대해서 tolerance 를 갖게 하는지 설정할 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pub</span>(self):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    ...
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+
+    self<span style="color:#f92672">.</span>pub_nav_fix<span style="color:#f92672">.</span>publish(msg_nav_sat_fix)
+    self<span style="color:#f92672">.</span>nav_fix_freq<span style="color:#f92672">.</span>tick(msg_nav_sat_fix<span style="color:#f92672">.</span>header<span style="color:#f92672">.</span>stamp)
+
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    ...
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</code></pre></div><p>동작은 위와같이 publish 와 tick 생성을 같이 수행하므로써, frequency 에는 이상이 없는지, timestamp 는 문제 없는지 모니터링 할 수 있게 해준다.</p>
+<h4 id="diagnostictask-를-이용한-task-관리-기능"><strong>&ldquo;DiagnosticTask&rdquo;</strong> 를 이용한 task 관리 기능</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># gps_node.py</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GpsDiagnosticTask</span>(diagnostic_updater<span style="color:#f92672">.</span>DiagnosticTask):
+    <span style="color:#66d9ef">def</span> __init__(self):
+        diagnostic_updater<span style="color:#f92672">.</span>DiagnosticTask<span style="color:#f92672">.</span>__init__(self,
+            <span style="color:#e6db74">&#34;Updater Derived from DiagnosticTask&#34;</span>) <span style="color:#75715e">## task 이름</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>(self, stat):
+        stat<span style="color:#f92672">.</span>summary(diagnostic_msgs<span style="color:#f92672">.</span>msg<span style="color:#f92672">.</span>DiagnosticStatus<span style="color:#f92672">.</span>WARN,
+            <span style="color:#e6db74">&#34;This is another silly updater.&#34;</span>) <span style="color:#75715e">## task 상태 업데이트</span>
+        stat<span style="color:#f92672">.</span>add(<span style="color:#e6db74">&#34;Stupidicity of this updater&#34;</span>, <span style="color:#ae81ff">2000.</span>)
+        <span style="color:#66d9ef">return</span> stat
+</code></pre></div><p>코드를 보면 초기화 및 run 함수를 통해서 task 의 이름, task 의 상태를 업데이트 할 수 있다.
+stat.summary() 를 통해서 DiagnosticStatus 를 지정하고, task 의 상태에 대한 설명을 추가할 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GpsNode</span>():
+    <span style="color:#66d9ef">def</span> __init__(self):
+
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        ...
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#75715e">## diagnostics updater</span>
+        self<span style="color:#f92672">.</span>updater <span style="color:#f92672">=</span> diagnostic_updater<span style="color:#f92672">.</span>Updater()
+        self<span style="color:#f92672">.</span>updater<span style="color:#f92672">.</span>setHardwareID(<span style="color:#e6db74">&#34;gps&#34;</span>)
+    
+        gdt <span style="color:#f92672">=</span> GpsDiagnosticTask()
+        self<span style="color:#f92672">.</span>updater<span style="color:#f92672">.</span>add(gdt)
+</code></pre></div><p>그리고 Updater() 객체를 생성하고 여기에 <strong>add</strong> method를 이용하여 <strong>GpsDiagnosticTask()</strong> 클래스의 객체를 추가하면 updater 가 update 를 수행할 때 마다 run 함수를 호출할 수 있게 한다.</p>
+<p>실제 사용을 위해서는 run 함수에서 알고리즘/센서처리로직을 수행하고, 그 결과에 대한 status와 설명을 추가하여 task 를 관리할 수 있게 된다.</p>
+<h4 id="summary">Summary</h4>
+<ul>
+<li><strong>&ldquo;TopicDiagnostic&rdquo;</strong> 를 이용해 publish 되는 topic 관리
+<ul>
+<li>frequency monitoring</li>
+<li>timestamp monitoring</li>
+</ul>
+</li>
+<li><strong>&ldquo;DiagnosticTask&rdquo;</strong> 를 이용한 함수 오버로딩을 통한
+<ul>
+<li>모니터링을 위한 status 및 message 생성</li>
+</ul>
+</li>
+</ul>
+<h4 id="reference">Reference</h4>
+<ul>
+<li><a href="http://nlamprian.me/blog/software/ros/2018/03/21/ros-diagnostics/">http://nlamprian.me/blog/software/ros/2018/03/21/ros-diagnostics/</a></li>
+<li><a href="http://wiki.ros.org/diagnostics">http://wiki.ros.org/diagnostics</a></li>
+<li><a href="https://github.com/ros/diagnostics">https://github.com/ros/diagnostics</a></li>
+</ul>
+
+        </div>
+        <div class="post-footer">
+            <div class="info">
+                
+                <span class="separator"><a class="tag" href="/tags/ros/">ROS</a><a class="tag" href="/tags/diagnostics/">Diagnostics</a><a class="tag" href="/tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/">자율주행</a></span>
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://example.com/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://example.com/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://example.com/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>
