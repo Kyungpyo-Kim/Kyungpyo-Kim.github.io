@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c&#43;&#43; on Website of Kyungpyo Kim</title>
+    <link>https://example.com/tags/c&#43;&#43;/</link>
+    <description>Recent content in c&#43;&#43; on Website of Kyungpyo Kim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ROS2 Bag file parsing</title>
+      <link>https://example.com/post/2020-03-14-ros2-bag-file-parsing/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/2020-03-14-ros2-bag-file-parsing/</guid>
+      <description>ROS2 Bag File Parsing 하기 ROS의 강력한 도구중 하나가 rosbag 패키지였다.</description>
+    </item>
+    
+    <item>
+      <title>ROS2 시작하기</title>
+      <link>https://example.com/post/2020-02-04-ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/2020-02-04-ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+      <description>ROS2_Exercise ROS2 INSTALLATION https://index.ros.org/doc/ros2/Installation/#installationguide https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/
+  Version: ROS 2 Eloquent Elusor</description>
+    </item>
+    
+  </channel>
+</rss>
