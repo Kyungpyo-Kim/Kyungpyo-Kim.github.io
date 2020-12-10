@@ -2,242 +2,242 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Website of Kyungpyo Kim</title>
-    <link>https://example.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Website of Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>독서</title>
-      <link>https://example.com/tags/%EB%8F%85%EC%84%9C/</link>
+      <link>/tags/%EB%8F%85%EC%84%9C/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%EB%8F%85%EC%84%9C/</guid>
+      <guid>/tags/%EB%8F%85%EC%84%9C/</guid>
       <description></description>
     </item>
     
     <item>
       <title>제어공학</title>
-      <link>https://example.com/tags/%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%99/</link>
+      <link>/tags/%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%99/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%99/</guid>
+      <guid>/tags/%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%99/</guid>
       <description></description>
     </item>
     
     <item>
       <title>big data</title>
-      <link>https://example.com/tags/big-data/</link>
+      <link>/tags/big-data/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/big-data/</guid>
+      <guid>/tags/big-data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>https://example.com/tags/python/</link>
+      <link>/tags/python/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/python/</guid>
+      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AI</title>
-      <link>https://example.com/tags/ai/</link>
+      <link>/tags/ai/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/ai/</guid>
+      <guid>/tags/ai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ubuntu</title>
-      <link>https://example.com/tags/ubuntu/</link>
+      <link>/tags/ubuntu/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/ubuntu/</guid>
+      <guid>/tags/ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>c&#43;&#43;</title>
-      <link>https://example.com/tags/c&#43;&#43;/</link>
+      <link>/tags/c&#43;&#43;/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/c&#43;&#43;/</guid>
+      <guid>/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ROS</title>
-      <link>https://example.com/tags/ros/</link>
+      <link>/tags/ros/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/ros/</guid>
+      <guid>/tags/ros/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ROS2</title>
-      <link>https://example.com/tags/ros2/</link>
+      <link>/tags/ros2/</link>
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/ros2/</guid>
+      <guid>/tags/ros2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GUI</title>
-      <link>https://example.com/tags/gui/</link>
+      <link>/tags/gui/</link>
       <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/gui/</guid>
+      <guid>/tags/gui/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Qt</title>
-      <link>https://example.com/tags/qt/</link>
+      <link>/tags/qt/</link>
       <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/qt/</guid>
+      <guid>/tags/qt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>list</title>
-      <link>https://example.com/tags/list/</link>
+      <link>/tags/list/</link>
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/list/</guid>
+      <guid>/tags/list/</guid>
       <description></description>
     </item>
     
     <item>
       <title>알고리즘</title>
-      <link>https://example.com/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
+      <link>/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
+      <guid>/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Diagnostics</title>
-      <link>https://example.com/tags/diagnostics/</link>
+      <link>/tags/diagnostics/</link>
       <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/diagnostics/</guid>
+      <guid>/tags/diagnostics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>자율주행</title>
-      <link>https://example.com/tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/</link>
+      <link>/tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/</link>
       <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/</guid>
+      <guid>/tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/</guid>
       <description></description>
     </item>
     
     <item>
       <title>러닝</title>
-      <link>https://example.com/tags/%EB%9F%AC%EB%8B%9D/</link>
+      <link>/tags/%EB%9F%AC%EB%8B%9D/</link>
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%EB%9F%AC%EB%8B%9D/</guid>
+      <guid>/tags/%EB%9F%AC%EB%8B%9D/</guid>
       <description></description>
     </item>
     
     <item>
       <title>라이딩</title>
-      <link>https://example.com/tags/%EB%9D%BC%EC%9D%B4%EB%94%A9/</link>
+      <link>/tags/%EB%9D%BC%EC%9D%B4%EB%94%A9/</link>
       <pubDate>Sun, 16 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%EB%9D%BC%EC%9D%B4%EB%94%A9/</guid>
+      <guid>/tags/%EB%9D%BC%EC%9D%B4%EB%94%A9/</guid>
       <description></description>
     </item>
     
     <item>
       <title>리스트</title>
-      <link>https://example.com/tags/%EB%A6%AC%EC%8A%A4%ED%8A%B8/</link>
+      <link>/tags/%EB%A6%AC%EC%8A%A4%ED%8A%B8/</link>
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%EB%A6%AC%EC%8A%A4%ED%8A%B8/</guid>
+      <guid>/tags/%EB%A6%AC%EC%8A%A4%ED%8A%B8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>배열</title>
-      <link>https://example.com/tags/%EB%B0%B0%EC%97%B4/</link>
+      <link>/tags/%EB%B0%B0%EC%97%B4/</link>
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%EB%B0%B0%EC%97%B4/</guid>
+      <guid>/tags/%EB%B0%B0%EC%97%B4/</guid>
       <description></description>
     </item>
     
     <item>
       <title>연결리스트</title>
-      <link>https://example.com/tags/%EC%97%B0%EA%B2%B0%EB%A6%AC%EC%8A%A4%ED%8A%B8/</link>
+      <link>/tags/%EC%97%B0%EA%B2%B0%EB%A6%AC%EC%8A%A4%ED%8A%B8/</link>
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%EC%97%B0%EA%B2%B0%EB%A6%AC%EC%8A%A4%ED%8A%B8/</guid>
+      <guid>/tags/%EC%97%B0%EA%B2%B0%EB%A6%AC%EC%8A%A4%ED%8A%B8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>자료구조</title>
-      <link>https://example.com/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</link>
+      <link>/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</link>
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</guid>
+      <guid>/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hash</title>
-      <link>https://example.com/tags/hash/</link>
+      <link>/tags/hash/</link>
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/hash/</guid>
+      <guid>/tags/hash/</guid>
       <description></description>
     </item>
     
     <item>
       <title>key</title>
-      <link>https://example.com/tags/key/</link>
+      <link>/tags/key/</link>
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/key/</guid>
+      <guid>/tags/key/</guid>
       <description></description>
     </item>
     
     <item>
       <title>license</title>
-      <link>https://example.com/tags/license/</link>
+      <link>/tags/license/</link>
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/license/</guid>
+      <guid>/tags/license/</guid>
       <description></description>
     </item>
     
     <item>
       <title>보안</title>
-      <link>https://example.com/tags/%EB%B3%B4%EC%95%88/</link>
+      <link>/tags/%EB%B3%B4%EC%95%88/</link>
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%EB%B3%B4%EC%95%88/</guid>
+      <guid>/tags/%EB%B3%B4%EC%95%88/</guid>
       <description></description>
     </item>
     
     <item>
       <title>공업수학</title>
-      <link>https://example.com/tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/</link>
+      <link>/tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/</link>
       <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/</guid>
+      <guid>/tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/</guid>
       <description></description>
     </item>
     
