@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ubuntu on Website of Kyungpyo Kim</title>
-    <link>/tags/ubuntu/</link>
+    <link>https://kyungpyo-kim.github.io/tags/ubuntu/</link>
     <description>Recent content in ubuntu on Website of Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup - Ubuntu18.04 &#43; Cuda10.0 &#43; cuDNN7.4.2 &#43; TF1.14.0</title>
-      <link>/study/2020-03-22-setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</link>
+      <link>https://kyungpyo-kim.github.io/study/2020-03-22-setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/study/2020-03-22-setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/2020-03-22-setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</guid>
       <description>AI, Deep Learning 환경 준비하기 My PC Info  Ubuntu18.04 NVIDIA GTX1650  CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다.</description>
     </item>
     
     <item>
       <title>Ubuntu 18.04 - Swap Caps lock and Ctrl</title>
-      <link>/study/2020-03-13-ubuntu-18.04-swap-caps-lock-and-ctrl/</link>
+      <link>https://kyungpyo-kim.github.io/study/2020-03-13-ubuntu-18.04-swap-caps-lock-and-ctrl/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/study/2020-03-13-ubuntu-18.04-swap-caps-lock-and-ctrl/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/2020-03-13-ubuntu-18.04-swap-caps-lock-and-ctrl/</guid>
       <description>Ubuntu 18.04, Swap Caps lock and Ctrl - No installation   Open ~/.</description>
     </item>
     
     <item>
       <title>Ubuntu 18.04 installation (dual boot)</title>
-      <link>/study/2020-02-23-ubuntu-18.04-installation-dual-boot/</link>
+      <link>https://kyungpyo-kim.github.io/study/2020-02-23-ubuntu-18.04-installation-dual-boot/</link>
       <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/study/2020-02-23-ubuntu-18.04-installation-dual-boot/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/2020-02-23-ubuntu-18.04-installation-dual-boot/</guid>
       <description>Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는)  준비물:</description>
     </item>
     
