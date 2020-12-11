@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> kyungpyo-kim | ROS2 Bag file parsing </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="새로운 것을 찾아">
+    <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r">
+    
+    <link rel="stylesheet"
+          href="https://kyungpyo-kim.github.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
+          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://kyungpyo-kim.github.io/faviconsfavicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://kyungpyo-kim.github.io/faviconsapple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://kyungpyo-kim.github.io/faviconsfavicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://kyungpyo-kim.github.io/faviconsfavicon-16x16.png">
+
+    <link rel="canonical" href="https://kyungpyo-kim.github.io/study/ros2-bag-file-parsing/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://kyungpyo-kim.github.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="ROS2 Bag file parsing"/>
+<meta name="twitter:description" content="ROS2 Bag File Parsing 하기 ROS의 강력한 도구중 하나가 rosbag 패키지였다."/>
+
+</head>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://kyungpyo-kim.github.io/images/kyungpyo.jpeg" alt="profile picture">
+            <h3 title=""><a href="/">Kyungpyo Kim</a></h3>
+            <div class="description">
+                <p>새로운 것을 찾아</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/Kyungpyo-Kim" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instagram.com/kyung_py" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:kyungpyo94@gmail.com" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; kyungpyo-kim 2020 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/life/"
+                        
+                   title="">Life</a></li>
+        
+            
+            <li><a 
+                   href="/study/"
+                        
+                   title="">Study</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post animated fadeInDown">
+        <div class="post-content">
+
+            <div class="post-title">
+                <h3>ROS2 Bag file parsing</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Sat, Mar 14, 2020</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">3-minute read</span>
+                    </div>
+                
+            </div>
+
+            <h2 id="ros2-bag-file-parsing-하기">ROS2 Bag File Parsing 하기</h2>
+<p>ROS의 강력한 도구중 하나가 rosbag 패키지였다. ROS1의 rosbag 패키지는 Logging 과 Replay 기능 뿐만 아니라 rqt 플러그인을 통해서 시스템 개발에 필요한 여러가지 디버깅 기능을 제공하였다. 하지만 아직 ROS2에서는 rosbag(rosbag2) 의 record(logging) play, 그리고 info 기능밖에 구현이 안되어 있다. 게다가 bag파일이 sqlite 등 다른 형태로 저장되어 ROS1의 rosbag 기능을 사용할 수 없는 상태이다.</p>
+<p>그도 그럴것이 rosbag2의 개발중인 API들이 정리되어 있지 않은 상태여서 로깅된 데이터를 분석하는데 많은 어려움이 있었다. 하지만 C++ 로 구현되어있는 패키지와 개발중인 <a href="https://github.com/ros2/rosbag2/issues/232#issuecomment-572818291">Python API</a>를 토대로 rosbag2 의 데이터 베이스 파싱 방법을 찾아냈고, 이러한 과정에서 rosbag2 의 몇가지 개념들을 함께 이해하게 되었다.</p>
+<h2 id="development-environment">Development environment</h2>
+<ul>
+<li>
+<p>OS: Ubuntu18.04</p>
+</li>
+<li>
+<p>ROS:</p>
+<ol>
+<li>Install ros1 melodic</li>
+<li>Install ros2 dashing</li>
+<li>Install rosbag2 packages</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install ros-dashing-rosbag2* ros-dashing-ros2bag*
+</code></pre></div></li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/Kyungpyo-Kim/ROS2BagFileParsing.git
+cd ROS2BagFileParsing/dev_ws
+colcon build
+. install/setup.bash
+ros2 run dev_cpp_pkg dev_cpp_node
+</code></pre></div><pre><code class="language-results" data-lang="results">[INFO] [rosbag2_storage]: Opened database '/home/kyungpyo/git/ROS2BagFileParsing/rosbag2_test_data'.
+meta name: /rosout
+meta type: rcl_interfaces/msg/Log
+meta serialization_format: cdr
+meta name: /parameter_events
+meta type: rcl_interfaces/msg/ParameterEvent
+meta serialization_format: cdr
+meta name: /r2dpac/drv/sp/gps
+meta type: r2dpac_msgs/msg/GpsRx
+meta serialization_format: cdr
+
+37.4999
+127.043
+46.0831
+</code></pre><h2 id="how">How?</h2>
+<h3 id="1-python-api">1. Python API</h3>
+<p>ROS2 bag 파일 parsing 방법을 알아 보던 중, 다음의 코드를 발견하였다.</p>
+<p>Reference: <a href="https://github.com/ros2/rosbag2/issues/232#issuecomment-572818291">Python API</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> rosidl_runtime_py.utilities <span style="color:#f92672">import</span> get_message
+
+<span style="color:#f92672">import</span> rosbag2_py._rosbag2_py <span style="color:#f92672">as</span> rosbag2_py
+<span style="color:#f92672">from</span> rclpy.serialization <span style="color:#f92672">import</span> deserialize_message
+
+
+reader <span style="color:#f92672">=</span> rosbag2_py<span style="color:#f92672">.</span>SequentialReader()
+reader<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;rosbag2_2020_01_06-14_58_37&#39;</span>)
+i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> 
+type_map <span style="color:#f92672">=</span> reader<span style="color:#f92672">.</span>get_all_topics_and_types()
+<span style="color:#66d9ef">while</span> reader<span style="color:#f92672">.</span>has_next():
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;{i}&#39;</span>)
+    i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    topic, data <span style="color:#f92672">=</span> reader<span style="color:#f92672">.</span>read_next()
+    msg_type <span style="color:#f92672">=</span> get_message(type_map[topic])
+    msg <span style="color:#f92672">=</span> deserialize_message(data, msg_type)
+    <span style="color:#66d9ef">print</span>(msg)
+</code></pre></div><p>현재 개발중이어서 dashing 버전에서는 사용할 수 없지만, 두가지 포인트를 확인할 수 있었다.</p>
+<ol>
+<li>bag 파일을 열고 읽을 수 있는 <strong>SeqeuntialReader</strong></li>
+<li>토픽 데이터를 parsing 해주는 <strong>deserializae_message</strong></li>
+</ol>
+<p>그리고 위의 함수들은 c/c++로 구현되었고 이를 python으로 wrap-up한 코드라는 것을 알 수 있었다.
+따라서 c++ API만 동일하게 사용하면 된다!</p>
+<h3 id="2-c-api">2. C++ API</h3>
+<p>먼저 bag 파일을 열고 읽는 API를 찾아 보았다.
+먼저 파일이 필요하고, 파일 형태가 필요하고, serialization 포맷 형태가 필요하다.</p>
+<p>ROS2 에서는 여러 임베디드 시스템에서 상호호환 가능한 인터페이스 설계에 중점을 두었다. 그래서 이를 위한 통신의 serialziation에 많은 신경을 쓰는 듯 하다. 이를 위해 <strong>rosidl_typesupport</strong>, <strong>rmw(ROS MiddleWare)</strong> 인터페이스와 같은 기능들이 구현되어 있다.
+{: .notice}</p>
+<ol>
+<li>Open</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">rosbag2<span style="color:#f92672">::</span>SequentialReader reader;
+rosbag2<span style="color:#f92672">::</span>StorageOptions storage_options{};
+
+storage_options.uri <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bag_data&#34;</span>;
+storage_options.storage_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;sqlite3&#34;</span>;
+
+rosbag2<span style="color:#f92672">::</span>ConverterOptions converter_options{};
+converter_options.input_serialization_format <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cdr&#34;</span>;
+converter_options.output_serialization_format <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cdr&#34;</span>;
+reader.open(storage_options, converter_options);
+</code></pre></div><p>파일을 열기 위해서는 bag data(<code>bag_data</code>)와 ros2에서 제공하는 bag data format 정보 <code>sqlite3</code> 그리고 serialization farmat <code>cdr</code> 방법이 필요한다.</p>
+<ol start="2">
+<li>Read</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">  <span style="color:#75715e">// read and deserialize &#34;serialized data&#34;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (reader.has_next()){
+
+  <span style="color:#75715e">// serialized data
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">auto</span> serialized_message <span style="color:#f92672">=</span> reader.read_next();
+</code></pre></div><p><strong>SequentialReader</strong> 라는 클래스 이름과 같이 <code>read_next</code> 함수를 통해 serialization된 메세지를 얻을 수 있다.
+이 메세지 스트럭쳐에는 토픽, 타입, 그리고 serialization된 내용의 data가 포함되어 있다. 이제 남은 단계는 이 serialization 된 메세지를 <strong>deserialization</strong>하는 것이다.</p>
+<ol start="3">
+<li>Deserialize</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// deserialization and conversion to ros message
+</span><span style="color:#75715e"></span>dev_cpp_pkg<span style="color:#f92672">::</span>msg<span style="color:#f92672">::</span>GpsRx msg;
+<span style="color:#66d9ef">auto</span> ros_message <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>make_shared<span style="color:#f92672">&lt;</span>rosbag2_introspection_message_t<span style="color:#f92672">&gt;</span>();
+ros_message<span style="color:#f92672">-&gt;</span>time_stamp <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+ros_message<span style="color:#f92672">-&gt;</span>message <span style="color:#f92672">=</span> <span style="color:#66d9ef">nullptr</span>;
+ros_message<span style="color:#f92672">-&gt;</span>allocator <span style="color:#f92672">=</span> rcutils_get_default_allocator();
+ros_message<span style="color:#f92672">-&gt;</span>message <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>msg;
+<span style="color:#66d9ef">auto</span> type_support <span style="color:#f92672">=</span> rosbag2<span style="color:#f92672">::</span>get_typesupport(<span style="color:#e6db74">&#34;dev_cpp_pkg/msg/GpsRx&#34;</span>, <span style="color:#e6db74">&#34;rosidl_typesupport_cpp&#34;</span>);
+
+rosbag2<span style="color:#f92672">::</span>SerializationFormatConverterFactory factory;
+std<span style="color:#f92672">::</span>unique_ptr<span style="color:#f92672">&lt;</span>rosbag2<span style="color:#f92672">::</span>converter_interfaces<span style="color:#f92672">::</span>SerializationFormatDeserializer<span style="color:#f92672">&gt;</span> cdr_deserializer_;
+cdr_deserializer_ <span style="color:#f92672">=</span> factory.load_deserializer(<span style="color:#e6db74">&#34;cdr&#34;</span>);
+
+cdr_deserializer_<span style="color:#f92672">-&gt;</span>deserialize(serialized_message, type_support, ros_message);
+</code></pre></div><p>Deserialization 과정은 약간 까다로웠는데 그 이유가 ROS2에서 인터페이스 되는 데이터들의 serialization/deserialization 에 신경을 쓰다 보니, 이 부분이 custom 가능한데서 신경써야 할 부분이 늘어난 것 같다. 그래도 기본적인 <code>cdr</code> 형태의 serialization 데이터는 parsing 할 수 있도록 defualt로 제공한다. 위 코드는 <code>cdr</code> 포맷으로 serialization된 데이터를 deserication하여 원래의 ROS message 로 변환하는 과정이다.
+<code>cdr_deserializer_-&gt;deserialize(serialized_message, type_support, ros_message);</code> 이후에 <code>msg</code>에 저장된 정보를 확인해보면 데이터가 정확히 parsing 된 것을 확인할 수 있다!</p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>ROS2의 데이터를 parsing 하기 위한 방법을 알아보았다.</li>
+<li>Parsing 하는 과정에서 다종의 임베디드 시스템에 rmw 인터페이스가 어떻게 적용되는지 알수 있었다.</li>
+<li>그리고 아직 ros2 개발이 안된 부분이 많다&hellip;</li>
+</ul>
+
+        </div>
+        <div class="post-footer">
+            <div class="info">
+                
+                <span class="separator"><a class="tag" href="/tags/ros/">ROS</a><a class="tag" href="/tags/c&#43;&#43;/">c&#43;&#43;</a><a class="tag" href="/tags/python/">python</a></span>
+
+            </div>
+        </div>
+
+        
+            <div id="fb_comments_container">
+                    <h2>comments</h2>
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kyungpyokim" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://kyungpyo-kim.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://kyungpyo-kim.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://kyungpyo-kim.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

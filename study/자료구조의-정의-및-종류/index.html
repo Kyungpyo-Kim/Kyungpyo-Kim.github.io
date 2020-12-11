@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> kyungpyo-kim | 자료구조의 정의 및 종류 </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="새로운 것을 찾아">
+    <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r">
+    
+    <link rel="stylesheet"
+          href="https://kyungpyo-kim.github.io/css/style.min.2b188541d728e8afd69a6f1b8b83f89f2b138d671fb728eff20ff3f3dcf5b55e.css"
+          integrity="sha256-KxiFQdco6K/Wmm8bi4P4nysTjWcftyjv8g/z89z1tV4="
+          crossorigin="anonymous"
+          type="text/css"><link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://kyungpyo-kim.github.io/faviconsfavicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://kyungpyo-kim.github.io/faviconsapple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://kyungpyo-kim.github.io/faviconsfavicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://kyungpyo-kim.github.io/faviconsfavicon-16x16.png">
+
+    <link rel="canonical" href="https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EC%A0%95%EC%9D%98-%EB%B0%8F-%EC%A2%85%EB%A5%98/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://kyungpyo-kim.github.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="자료구조의 정의 및 종류"/>
+<meta name="twitter:description" content="자료구조와 알고리즘 공부 프로젝트
+목적  자료구조와 알고리즘 공부 Python, Java, C&#43;&#43; 을 이용한 구현 꾸준히 공부하기  자료구조의 정의 및 종류 자료구조를 물리적으로 구현하는 방법"/>
+
+</head>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://kyungpyo-kim.github.io/images/kyungpyo.jpeg" alt="profile picture">
+            <h3 title=""><a href="/">Kyungpyo Kim</a></h3>
+            <div class="description">
+                <p>새로운 것을 찾아</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/Kyungpyo-Kim" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instagram.com/kyung_py" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:kyungpyo94@gmail.com" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; kyungpyo-kim 2020 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/life/"
+                        
+                   title="">Life</a></li>
+        
+            
+            <li><a 
+                   href="/study/"
+                        
+                   title="">Study</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post animated fadeInDown">
+        <div class="post-content">
+
+            <div class="post-title">
+                <h3>자료구조의 정의 및 종류</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">Sun, Jun 9, 2019</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">One-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>자료구조와 알고리즘 공부 프로젝트</p>
+<h4 id="목적">목적</h4>
+<ul>
+<li>자료구조와 알고리즘 공부</li>
+<li>Python, Java, C++ 을 이용한 구현</li>
+<li>꾸준히 공부하기</li>
+</ul>
+<h4 id="자료구조의-정의-및-종류">자료구조의 정의 및 종류</h4>
+<p>자료구조를 물리적으로 구현하는 방법</p>
+<ul>
+<li>List</li>
+<li>Linked list</li>
+</ul>
+<p>이를 이용하여 구현된 자료구조의 종류</p>
+<ul>
+<li>List</li>
+<li>Linked list</li>
+</ul>
+<p>아래는 <strong>List</strong>, <strong>Linked list</strong> 로 구현이 가능하고,</p>
+<ul>
+<li>Array</li>
+<li>Stack</li>
+<li>Queue</li>
+<li>Tree</li>
+<li>Heap</li>
+<li>Graph</li>
+</ul>
+<p>데크는 <strong>List</strong> 로 구현이 가능하다.</p>
+<ul>
+<li>Deque</li>
+</ul>
+<h4 id="자료구조의-분류">자료구조의 분류</h4>
+<p>자료구조</p>
+<ul>
+<li>단순구조</li>
+</ul>
+<ul>
+<li>2진수, 정수, 실수, 문자, 문자열 &ndash;&gt; 배열, 구조체, 클래스 등 사용자 정의 자료형으로 사용</li>
+</ul>
+<ul>
+<li>선형구조
+_ 리스트</li>
+</ul>
+<ul>
+<li>연결 리스트 &ndash;&gt; 단순 연결, 이중 연결, 원형 연결 리스트</li>
+<li>데크</li>
+<li>스택</li>
+<li>큐</li>
+</ul>
+<ul>
+<li>비선형구조</li>
+</ul>
+<ul>
+<li>트리 &ndash;&gt; 일반 트리, 이진 트리</li>
+<li>그래프 &ndash;&gt; 방향 그래프, 무방향 그래프</li>
+</ul>
+<ul>
+<li>파일구조</li>
+</ul>
+<ul>
+<li>순차파일</li>
+<li>색인파일</li>
+<li>직접파일</li>
+</ul>
+<h4 id="reference">Reference</h4>
+<ul>
+<li><strong>그림으로 정리한 알고리즘과 자료구조</strong>, 조민호 지음</li>
+</ul>
+
+        </div>
+        <div class="post-footer">
+            <div class="info">
+                
+                <span class="separator"><a class="tag" href="/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/">자료구조</a><a class="tag" href="/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</a></span>
+
+            </div>
+        </div>
+
+        
+            <div id="fb_comments_container">
+                    <h2>comments</h2>
+                    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kyungpyokim" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://kyungpyo-kim.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://kyungpyo-kim.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://kyungpyo-kim.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

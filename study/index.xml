@@ -9,166 +9,166 @@
     <lastBuildDate>Wed, 06 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/study/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>제어공학1</title>
-      <link>https://kyungpyo-kim.github.io/study/2020-05-06-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%991/</link>
+      <link>https://kyungpyo-kim.github.io/study/%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%991/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2020-05-06-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%991/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%991/</guid>
       <description>소개  서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다.</description>
     </item>
     
     <item>
       <title>제어공학2</title>
-      <link>https://kyungpyo-kim.github.io/study/2020-05-06-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%992/</link>
+      <link>https://kyungpyo-kim.github.io/study/%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%992/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2020-05-06-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%992/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%992/</guid>
       <description>소개  서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다.</description>
     </item>
     
     <item>
       <title>제어공학3</title>
-      <link>https://kyungpyo-kim.github.io/study/2020-05-06-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%993/</link>
+      <link>https://kyungpyo-kim.github.io/study/%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%993/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2020-05-06-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%993/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%993/</guid>
       <description>소개  서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다.</description>
     </item>
     
     <item>
       <title>제어공학4</title>
-      <link>https://kyungpyo-kim.github.io/study/2020-05-06-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%994/</link>
+      <link>https://kyungpyo-kim.github.io/study/%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%994/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2020-05-06-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%994/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%994/</guid>
       <description>소개  서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다.</description>
     </item>
     
     <item>
       <title>Dash plotly 설치부터 튜토리얼까지</title>
-      <link>https://kyungpyo-kim.github.io/study/2020-04-29-dash-plotly-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
+      <link>https://kyungpyo-kim.github.io/study/dash-plotly-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2020-04-29-dash-plotly-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/dash-plotly-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
       <description>데이터 시각화 및 분석 라이브러리 Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다.</description>
     </item>
     
     <item>
       <title>Setup - Ubuntu18.04 &#43; Cuda10.0 &#43; cuDNN7.4.2 &#43; TF1.14.0</title>
-      <link>https://kyungpyo-kim.github.io/study/2020-03-22-setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</link>
+      <link>https://kyungpyo-kim.github.io/study/setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2020-03-22-setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</guid>
       <description>AI, Deep Learning 환경 준비하기 My PC Info  Ubuntu18.04 NVIDIA GTX1650  CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다.</description>
     </item>
     
     <item>
       <title>ROS2 Bag file parsing</title>
-      <link>https://kyungpyo-kim.github.io/study/2020-03-14-ros2-bag-file-parsing/</link>
+      <link>https://kyungpyo-kim.github.io/study/ros2-bag-file-parsing/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2020-03-14-ros2-bag-file-parsing/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/ros2-bag-file-parsing/</guid>
       <description>ROS2 Bag File Parsing 하기 ROS의 강력한 도구중 하나가 rosbag 패키지였다.</description>
     </item>
     
     <item>
       <title>Ubuntu 18.04 - Swap Caps lock and Ctrl</title>
-      <link>https://kyungpyo-kim.github.io/study/2020-03-13-ubuntu-18.04-swap-caps-lock-and-ctrl/</link>
+      <link>https://kyungpyo-kim.github.io/study/ubuntu-18.04-swap-caps-lock-and-ctrl/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2020-03-13-ubuntu-18.04-swap-caps-lock-and-ctrl/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04-swap-caps-lock-and-ctrl/</guid>
       <description>Ubuntu 18.04, Swap Caps lock and Ctrl - No installation   Open ~/.</description>
     </item>
     
     <item>
       <title>Ubuntu 18.04 installation (dual boot)</title>
-      <link>https://kyungpyo-kim.github.io/study/2020-02-23-ubuntu-18.04-installation-dual-boot/</link>
+      <link>https://kyungpyo-kim.github.io/study/ubuntu-18.04-installation-dual-boot/</link>
       <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2020-02-23-ubuntu-18.04-installation-dual-boot/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04-installation-dual-boot/</guid>
       <description>Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는)  준비물:</description>
     </item>
     
     <item>
       <title>ROS2 시작하기</title>
-      <link>https://kyungpyo-kim.github.io/study/2020-02-04-ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <link>https://kyungpyo-kim.github.io/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2020-02-04-ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
       <description>ROS2_Exercise ROS2 INSTALLATION https://index.ros.org/doc/ros2/Installation/#installationguide https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/
   Version: ROS 2 Eloquent Elusor</description>
     </item>
     
     <item>
       <title>QT 를 이용한 Python GUI 개발 환경 만들기</title>
-      <link>https://kyungpyo-kim.github.io/study/2019-12-15-qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+      <link>https://kyungpyo-kim.github.io/study/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
       <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2019-12-15-qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
       <description>PyGUIDevTemplate GUI development template for python
 Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위한 custom class 활용 PyInstaller 를 이용한 파일 배포  Getting Started ## clonning repository git clone https://github.</description>
     </item>
     
     <item>
       <title>알고리즘문제-전기버스</title>
-      <link>https://kyungpyo-kim.github.io/study/2019-10-28-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/</link>
+      <link>https://kyungpyo-kim.github.io/study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/</link>
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2019-10-28-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/</guid>
       <description>전기버스 알고리즘  SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스 문제링크 문제의 저작권은 SW Expert Academy에 있습니다.</description>
     </item>
     
     <item>
       <title>ROS Diagnostics 패키지 센서 드라이버에 적용하기</title>
-      <link>https://kyungpyo-kim.github.io/study/2019-07-10-ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
+      <link>https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
       <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2019-07-10-ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
       <description>아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.</description>
     </item>
     
     <item>
       <title>ROS Diagnostics 패키지 이해하기</title>
-      <link>https://kyungpyo-kim.github.io/study/2019-07-10-ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0/</link>
+      <link>https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0/</link>
       <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2019-07-10-ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0/</guid>
       <description>ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 diagnostic 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 드라이버가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다.</description>
     </item>
     
     <item>
       <title>자료구조의 구현</title>
-      <link>https://kyungpyo-kim.github.io/study/2019-06-09-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</link>
+      <link>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</link>
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2019-06-09-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</guid>
       <description>List 형 자료구조  배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동  Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) print ( &amp;#34; delete:&amp;#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 43 The sales result = 56 The sales result = 98 delete: 43 The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 56 The sales result = 98  코드 설명: List 를 생성하고 삭제, 출력 예시</description>
     </item>
     
     <item>
       <title>자료구조의 정의 및 종류</title>
-      <link>https://kyungpyo-kim.github.io/study/2019-06-09-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EC%A0%95%EC%9D%98-%EB%B0%8F-%EC%A2%85%EB%A5%98/</link>
+      <link>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EC%A0%95%EC%9D%98-%EB%B0%8F-%EC%A2%85%EB%A5%98/</link>
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2019-06-09-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EC%A0%95%EC%9D%98-%EB%B0%8F-%EC%A2%85%EB%A5%98/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EC%A0%95%EC%9D%98-%EB%B0%8F-%EC%A2%85%EB%A5%98/</guid>
       <description>자료구조와 알고리즘 공부 프로젝트
 목적  자료구조와 알고리즘 공부 Python, Java, C++ 을 이용한 구현 꾸준히 공부하기  자료구조의 정의 및 종류 자료구조를 물리적으로 구현하는 방법</description>
     </item>
     
     <item>
       <title>Hash 를 이용한 라이센스 키 생성</title>
-      <link>https://kyungpyo-kim.github.io/study/2019-05-29-hash-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%9D%BC%EC%9D%B4%EC%84%BC%EC%8A%A4-%ED%82%A4-%EC%83%9D%EC%84%B1/</link>
+      <link>https://kyungpyo-kim.github.io/study/hash-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%9D%BC%EC%9D%B4%EC%84%BC%EC%8A%A4-%ED%82%A4-%EC%83%9D%EC%84%B1/</link>
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2019-05-29-hash-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%9D%BC%EC%9D%B4%EC%84%BC%EC%8A%A4-%ED%82%A4-%EC%83%9D%EC%84%B1/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/hash-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%9D%BC%EC%9D%B4%EC%84%BC%EC%8A%A4-%ED%82%A4-%EC%83%9D%EC%84%B1/</guid>
       <description>Hash 를 이용한 라이센스 키 생성  Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트 MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고, 생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다.</description>
     </item>
     
     <item>
       <title>Partial different equation</title>
-      <link>https://kyungpyo-kim.github.io/study/2016-11-05-partial-differential-equation/</link>
+      <link>https://kyungpyo-kim.github.io/study/partial-differential-equation/</link>
       <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2016-11-05-partial-differential-equation/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/partial-differential-equation/</guid>
       <description>편미분방정식. 말이 익숙해서 배웠는데 내가 공업수학에서 배우고 까먹은 건줄 알았는데 알고보니 수업에서는 배우지 않았다&amp;hellip; 대학원 면접때 공업수학 준비를 못해서 물어볼 줄 예상도 못했고&amp;hellip; 다시 공부해야겠다 싶어 책을 들었다!</description>
     </item>
     

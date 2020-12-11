@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 15 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/gui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>QT 를 이용한 Python GUI 개발 환경 만들기</title>
-      <link>https://kyungpyo-kim.github.io/study/2019-12-15-qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+      <link>https://kyungpyo-kim.github.io/study/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
       <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/2019-12-15-qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
       <description>PyGUIDevTemplate GUI development template for python
 Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위한 custom class 활용 PyInstaller 를 이용한 파일 배포  Getting Started ## clonning repository git clone https://github.</description>
     </item>
