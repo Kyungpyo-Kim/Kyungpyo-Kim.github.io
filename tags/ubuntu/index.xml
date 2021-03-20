@@ -6,7 +6,16 @@
     <description>Recent content in ubuntu on Website of Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu20.04 에 Tensorflow GPU 설치 1분 설명</title>
+      <link>https://kyungpyo-kim.github.io/study/tensorflow-gpu-installation-on-ubuntu20.04/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/tensorflow-gpu-installation-on-ubuntu20.04/</guid>
+      <description>Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.</description>
+    </item>
+    
     <item>
       <title>Setup - Ubuntu18.04 &#43; Cuda10.0 &#43; cuDNN7.4.2 &#43; TF1.14.0</title>
       <link>https://kyungpyo-kim.github.io/study/setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</link>

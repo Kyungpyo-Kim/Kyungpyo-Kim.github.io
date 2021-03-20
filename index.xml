@@ -6,7 +6,16 @@
     <description>Recent content on Website of Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu20.04 에 Tensorflow GPU 설치 1분 설명</title>
+      <link>https://kyungpyo-kim.github.io/study/tensorflow-gpu-installation-on-ubuntu20.04/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/tensorflow-gpu-installation-on-ubuntu20.04/</guid>
+      <description>Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.</description>
+    </item>
+    
     <item>
       <title>철학은 어떻게 삶의 무기가 되는가</title>
       <link>https://kyungpyo-kim.github.io/life/%EC%B2%A0%ED%95%99%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%82%B6%EC%9D%98-%EB%AC%B4%EA%B8%B0%EA%B0%80-%EB%90%98%EB%8A%94%EA%B0%80/</link>
@@ -23,6 +32,15 @@
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%A7%80%EC%A0%81%EB%8C%80%ED%99%94%EB%A5%BC-%EC%9C%84%ED%95%9C-%EB%84%93%EA%B3%A0-%EC%96%95%EC%9D%80-%EC%A7%80%EC%8B%9D-0/</guid>
       <description>지적 대화를 위한 넓고 얕은 지식 0 (제로) 파잔 (Phajaan)  파잔(phajaan)은 코끼리의 영혼을 파괴하는 의식이다.</description>
+    </item>
+    
+    <item>
+      <title>Modern Control Systems 제어공학</title>
+      <link>https://kyungpyo-kim.github.io/study/modern-control-systems-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%99-c1c11c2ee9e7445489ddedf783d7ce01/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/modern-control-systems-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%99-c1c11c2ee9e7445489ddedf783d7ce01/</guid>
+      <description>소개  서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다.</description>
     </item>
     
     <item>

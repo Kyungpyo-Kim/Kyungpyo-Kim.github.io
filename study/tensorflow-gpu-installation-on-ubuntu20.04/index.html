@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme=""><head>
-    <title> kyungpyo-kim | 야간 러닝 </title>
+    <title> kyungpyo-kim | Ubuntu20.04 에 Tensorflow GPU 설치 1분 설명 </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://kyungpyo-kim.github.io/faviconsfavicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://kyungpyo-kim.github.io/faviconsfavicon-16x16.png">
 
-    <link rel="canonical" href="https://kyungpyo-kim.github.io/life/%EC%95%BC%EA%B0%84-%EB%9F%AC%EB%8B%9D/">
+    <link rel="canonical" href="https://kyungpyo-kim.github.io/study/tensorflow-gpu-installation-on-ubuntu20.04/">
 
     
     
@@ -35,8 +35,8 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
 
-<meta name="twitter:title" content="야간 러닝"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Ubuntu20.04 에 Tensorflow GPU 설치 1분 설명"/>
+<meta name="twitter:description" content="Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다."/>
 
 </head>
 <body><div class="sidebar animated fadeInDown">
@@ -129,24 +129,74 @@
         <div class="post-content">
 
             <div class="post-title">
-                <h3>야간 러닝</h3>
+                <h3>Ubuntu20.04 에 Tensorflow GPU 설치 1분 설명</h3>
                 
                     <div class="info">
                         <em class="fas fa-calendar-day"></em>
-                        <span class="date">Mon, Jun 17, 2019</span>
+                        <span class="date">Sat, Mar 20, 2021</span>
                         <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">0-minute read</span>
+                        <span class="reading-time">One-minute read</span>
                     </div>
                 
             </div>
 
-            <!-- raw HTML omitted -->
+            <p>Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.</p>
+<ol>
+<li>
+<p>그래서 먼저 자신의 PC에 맞는 CUDA 를 설치하고 설치된 버전을 확인한다.</p>
+</li>
+<li>
+<p>그리고 CUDA 버전과 사용할 Tensorflow GPU 버전에 맞는 cuDNN 을 설치해야 한다.</p>
+<p>예를 들어 내가 설치한 CUDA는 버전이 10.1 이고 사용한 Tensorflow GPU 버전은 2.3.0 이기 때문에 cuDNN은 7.6.5를 설치한다.</p>
+<ul>
+<li>
+<p>Tensorflow GPU 버전 확인 방법: <a href="https://www.tensorflow.org/install/source#tested_build_configurations">Build from source | TensorFlow</a></p>
+</li>
+<li>
+<p>CUDA 버전에 맞는 cuDNN 다운로드를 위한 cuDNN Archive: <a href="https://developer.nvidia.com/rdp/cudnn-archive">cuDNN Archive</a></p>
+</li>
+</ul>
+</li>
+</ol>
+<p>위에 방법에 따라 차근 차근 설치하면 되고, 터미널에 아래의 명령어들을 입력하여 설치할 수 있다.</p>
+<ul>
+<li>
+<p><strong>CUDA 설치</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">## install cuda</span>
+sudo apt install nvidia-cuda-toolkit
+nvcc -V <span style="color:#75715e">## check cuda version, 10.1</span>
+whereis cuda <span style="color:#75715e">## cuda: /usr/lib/cuda /usr/include/cuda.h</span>
+</code></pre></div></li>
+<li>
+<p><strong>cuDNN 설치</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">## install cudnn</span>
+tar -xvzf cudnn-10.1-linux-x64-v7.6.5.32.tgz <span style="color:#75715e">## need tensorflow version check</span>
+sudo cp cuda/include/cudnn.h /usr/lib/cuda/include/
+sudo cp cuda/lib64/libcudnn* /usr/lib/cuda/lib64/
+
+sudo chmod a+r /usr/lib/cuda/include/cudnn.h
+sudo chmod a+r /usr/lib/cuda/lib64/libcudnn*
+
+echo <span style="color:#e6db74">&#39;export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH&#39;</span> &gt;&gt; ~/.bashrc
+echo <span style="color:#e6db74">&#39;export LD_LIBRARY_PATH=/usr/lib/cuda/include:$LD_LIBRARY_PATH&#39;</span> &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre></div></li>
+<li>
+<p><strong>Tensorflow 설치</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># pip install tensorflow-gpu==2.1.0 ## need version check</span>
+pip3 install tensorflow-gpu<span style="color:#f92672">==</span>2.3.0 <span style="color:#75715e">## need version check</span>
+
+python3
+&gt;&gt;&gt; import tensorflow as tf
+&gt;&gt;&gt; tf.config.list_physical_devices<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;GPU&#34;</span><span style="color:#f92672">)</span>
+</code></pre></div></li>
+</ul>
 
         </div>
         <div class="post-footer">
             <div class="info">
                 
-                <span class="separator"><a class="tag" href="/tags/%EB%9F%AC%EB%8B%9D/">러닝</a></span>
+                <span class="separator"><a class="tag" href="/tags/python/">python</a><a class="tag" href="/tags/ubuntu/">ubuntu</a><a class="tag" href="/tags/tensorflow/">tensorflow</a></span>
 
             </div>
         </div>
