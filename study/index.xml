@@ -154,5 +154,14 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <description>편미분방정식. 말이 익숙해서 배웠는데 내가 공업수학에서 배우고 까먹은 건줄 알았는데 알고보니 수업에서는 배우지 않았다&amp;hellip; 대학원 면접때 공업수학 준비를 못해서 물어볼 줄 예상도 못했고&amp;hellip; 다시 공부해야겠다 싶어 책을 들었다!</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://kyungpyo-kim.github.io/study/c&#43;&#43;-thread-safety-of-unordered_map/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/c&#43;&#43;-thread-safety-of-unordered_map/</guid>
+      <description>[C++] Thread safety of unordered_map (shared_timed_mutex) Created: Jun 5, 2021 11:46 PM</description>
+    </item>
+    
   </channel>
 </rss>
