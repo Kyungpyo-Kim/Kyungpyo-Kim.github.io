@@ -43,6 +43,23 @@
   </url>
   
   <url>
+    <loc>https://kyungpyo-kim.github.io/life/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyungpyo-kim.github.io/tags/%EB%8F%85%EC%84%9C/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyungpyo-kim.github.io/life/the_millionaire_fastlane/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  
+  <url>
     <loc>https://kyungpyo-kim.github.io/tags/python/</loc>
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url>
@@ -62,16 +79,6 @@
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://kyungpyo-kim.github.io/life/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kyungpyo-kim.github.io/tags/%EB%8F%85%EC%84%9C/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
