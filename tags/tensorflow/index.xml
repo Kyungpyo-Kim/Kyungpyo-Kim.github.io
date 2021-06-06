@@ -13,7 +13,9 @@
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/tensorflow-gpu-installation-on-ubuntu20.04/</guid>
-      <description>Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.</description>
+      
+        <description>Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.</description>
+      
     </item>
     
   </channel>

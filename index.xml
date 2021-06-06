@@ -13,7 +13,9 @@
       <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/thread-safety-of-unordered_map/</guid>
-      <description>Prerequisite  Thread Mutex Thread safety  Problem unordered_map 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다.</description>
+      
+        <description>Prerequisite  Thread Mutex Thread safety  Problem unordered_map 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다.</description>
+      
     </item>
     
     <item>
@@ -22,7 +24,9 @@
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/tensorflow-gpu-installation-on-ubuntu20.04/</guid>
-      <description>Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.</description>
+      
+        <description>Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.</description>
+      
     </item>
     
     <item>
@@ -31,7 +35,9 @@
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%B2%A0%ED%95%99%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%82%B6%EC%9D%98-%EB%AC%B4%EA%B8%B0%EA%B0%80-%EB%90%98%EB%8A%94%EA%B0%80/</guid>
-      <description>왜 철학, 인문학을 공부해야하는가에 대한 대답을 줄 수 있는 책이었다.</description>
+      
+        <description>왜 철학, 인문학을 공부해야하는가에 대한 대답을 줄 수 있는 책이었다.</description>
+      
     </item>
     
     <item>
@@ -40,7 +46,9 @@
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%A7%80%EC%A0%81%EB%8C%80%ED%99%94%EB%A5%BC-%EC%9C%84%ED%95%9C-%EB%84%93%EA%B3%A0-%EC%96%95%EC%9D%80-%EC%A7%80%EC%8B%9D-0/</guid>
-      <description>지적 대화를 위한 넓고 얕은 지식 0 (제로) 파잔 (Phajaan)  파잔(phajaan)은 코끼리의 영혼을 파괴하는 의식이다.</description>
+      
+        <description>지적 대화를 위한 넓고 얕은 지식 0 (제로) 파잔 (Phajaan)  파잔(phajaan)은 코끼리의 영혼을 파괴하는 의식이다.</description>
+      
     </item>
     
     <item>
@@ -49,7 +57,9 @@
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/modern-control-systems-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%99-c1c11c2ee9e7445489ddedf783d7ce01/</guid>
-      <description>소개  서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다.</description>
+      
+        <description>소개  서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다.</description>
+      
     </item>
     
     <item>
@@ -58,7 +68,9 @@
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/dash-plotly-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
-      <description>데이터 시각화 및 분석 라이브러리 Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다.</description>
+      
+        <description>데이터 시각화 및 분석 라이브러리 Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다.</description>
+      
     </item>
     
     <item>
@@ -67,7 +79,9 @@
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%82%BC%EA%B5%AD%EC%A7%80/</guid>
-      <description>어플로 책을 읽었다. 요키카와 에이지의 삼국지를 읽었다. 총 10권으로 구성되어 있었다.</description>
+      
+        <description>어플로 책을 읽었다. 요키카와 에이지의 삼국지를 읽었다. 총 10권으로 구성되어 있었다.</description>
+      
     </item>
     
     <item>
@@ -76,7 +90,9 @@
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</guid>
-      <description>AI, Deep Learning 환경 준비하기 My PC Info  Ubuntu18.04 NVIDIA GTX1650  CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다.</description>
+      
+        <description>AI, Deep Learning 환경 준비하기 My PC Info  Ubuntu18.04 NVIDIA GTX1650  CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다.</description>
+      
     </item>
     
     <item>
@@ -85,7 +101,9 @@
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/ros2-bag-file-parsing/</guid>
-      <description>ROS2 Bag File Parsing 하기 ROS의 강력한 도구중 하나가 rosbag 패키지였다.</description>
+      
+        <description>ROS2 Bag File Parsing 하기 ROS의 강력한 도구중 하나가 rosbag 패키지였다.</description>
+      
     </item>
     
     <item>
@@ -94,7 +112,9 @@
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04-swap-caps-lock-and-ctrl/</guid>
-      <description>Ubuntu 18.04, Swap Caps lock and Ctrl - No installation   Open ~/.</description>
+      
+        <description>Ubuntu 18.04, Swap Caps lock and Ctrl - No installation   Open ~/.</description>
+      
     </item>
     
     <item>
@@ -103,7 +123,9 @@
       <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04-installation-dual-boot/</guid>
-      <description>Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는)  준비물:</description>
+      
+        <description>Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는)  준비물:</description>
+      
     </item>
     
     <item>
@@ -112,8 +134,10 @@
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
-      <description>ROS2_Exercise ROS2 INSTALLATION https://index.ros.org/doc/ros2/Installation/#installationguide https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/
+      
+        <description>ROS2_Exercise ROS2 INSTALLATION https://index.ros.org/doc/ros2/Installation/#installationguide https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/
   Version: ROS 2 Eloquent Elusor</description>
+      
     </item>
     
     <item>
@@ -122,8 +146,10 @@
       <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
-      <description>PyGUIDevTemplate GUI development template for python
+      
+        <description>PyGUIDevTemplate GUI development template for python
 Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위한 custom class 활용 PyInstaller 를 이용한 파일 배포  Getting Started ## clonning repository git clone https://github.</description>
+      
     </item>
     
     <item>
@@ -132,7 +158,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/</guid>
-      <description>전기버스 알고리즘  SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스 문제링크 문제의 저작권은 SW Expert Academy에 있습니다.</description>
+      
+        <description>전기버스 알고리즘  SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스 문제링크 문제의 저작권은 SW Expert Academy에 있습니다.</description>
+      
     </item>
     
     <item>
@@ -141,7 +169,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
-      <description>아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.</description>
+      
+        <description>아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.</description>
+      
     </item>
     
     <item>
@@ -150,7 +180,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0/</guid>
-      <description>ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 diagnostic 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 드라이버가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다.</description>
+      
+        <description>ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 diagnostic 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 드라이버가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다.</description>
+      
     </item>
     
     <item>
@@ -159,7 +191,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%95%BC%EA%B0%84-%EB%9F%AC%EB%8B%9D/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
@@ -168,7 +202,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Sun, 16 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%ED%95%9C%EA%B0%95-%EB%9D%BC%EC%9D%B4%EB%94%A9/</guid>
-      <description>소낙비가 내리고 난 뒤, 하늘이 유난히 맑고 구름은 유난히 희고 몽글몽글 했던날.</description>
+      
+        <description>소낙비가 내리고 난 뒤, 하늘이 유난히 맑고 구름은 유난히 희고 몽글몽글 했던날.</description>
+      
     </item>
     
     <item>
@@ -177,7 +213,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</guid>
-      <description>List 형 자료구조  배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동  Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) print ( &amp;#34; delete:&amp;#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 43 The sales result = 56 The sales result = 98 delete: 43 The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 56 The sales result = 98  코드 설명: List 를 생성하고 삭제, 출력 예시</description>
+      
+        <description>List 형 자료구조  배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동  Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) print ( &amp;#34; delete:&amp;#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 43 The sales result = 56 The sales result = 98 delete: 43 The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 56 The sales result = 98  코드 설명: List 를 생성하고 삭제, 출력 예시</description>
+      
     </item>
     
     <item>
@@ -186,8 +224,10 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EC%A0%95%EC%9D%98-%EB%B0%8F-%EC%A2%85%EB%A5%98/</guid>
-      <description>자료구조와 알고리즘 공부 프로젝트
+      
+        <description>자료구조와 알고리즘 공부 프로젝트
 목적  자료구조와 알고리즘 공부 Python, Java, C++ 을 이용한 구현 꾸준히 공부하기  자료구조의 정의 및 종류 자료구조를 물리적으로 구현하는 방법</description>
+      
     </item>
     
     <item>
@@ -196,7 +236,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/hash-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%9D%BC%EC%9D%B4%EC%84%BC%EC%8A%A4-%ED%82%A4-%EC%83%9D%EC%84%B1/</guid>
-      <description>Hash 를 이용한 라이센스 키 생성  Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트 MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고, 생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다.</description>
+      
+        <description>Hash 를 이용한 라이센스 키 생성  Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트 MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고, 생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다.</description>
+      
     </item>
     
     <item>
@@ -205,7 +247,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/archives/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
@@ -214,7 +258,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Sun, 13 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%88%A8%EC%89%AC%EB%93%AF-%EA%B0%80%EB%B3%8D%EA%B2%8C/</guid>
-      <description>즐겨듣는 팟캐스트 라디오 &amp;lsquo;지적대화를 위한 넓고 얕은 지식&amp;rsquo; 의 진행자 김도인의 저서 숨쉬듯 가볍게를 읽었다.</description>
+      
+        <description>즐겨듣는 팟캐스트 라디오 &amp;lsquo;지적대화를 위한 넓고 얕은 지식&amp;rsquo; 의 진행자 김도인의 저서 숨쉬듯 가볍게를 읽었다.</description>
+      
     </item>
     
     <item>
@@ -223,7 +269,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/partial-differential-equation/</guid>
-      <description>편미분방정식. 말이 익숙해서 배웠는데 내가 공업수학에서 배우고 까먹은 건줄 알았는데 알고보니 수업에서는 배우지 않았다&amp;hellip; 대학원 면접때 공업수학 준비를 못해서 물어볼 줄 예상도 못했고&amp;hellip; 다시 공부해야겠다 싶어 책을 들었다!</description>
+      
+        <description>편미분방정식. 말이 익숙해서 배웠는데 내가 공업수학에서 배우고 까먹은 건줄 알았는데 알고보니 수업에서는 배우지 않았다&amp;hellip; 대학원 면접때 공업수학 준비를 못해서 물어볼 줄 예상도 못했고&amp;hellip; 다시 공부해야겠다 싶어 책을 들었다!</description>
+      
     </item>
     
     <item>
@@ -232,7 +280,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Tue, 18 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%9D%B4%EB%A0%87%EA%B2%8C-%EC%82%B4%EC%95%84%EA%B0%80%EB%8F%84-%EA%B4%9C%EC%B0%AE%EC%9D%80%EA%B0%80/</guid>
-      <description>역사의 종말 후쿠야마는 그의 저서 역사의 종말 에서 자유민주주의 자유기업의 사회형태를 모두가 받아들이는 것이야 말로 역사의 종말이라고 주장한다.</description>
+      
+        <description>역사의 종말 후쿠야마는 그의 저서 역사의 종말 에서 자유민주주의 자유기업의 사회형태를 모두가 받아들이는 것이야 말로 역사의 종말이라고 주장한다.</description>
+      
     </item>
     
     <item>
@@ -241,7 +291,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Mon, 17 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%A0%95%EC%9D%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80/</guid>
-      <description>2장; 벤담의 공리주의와 이에 대한 두 반박을 정리하시오. 벤담이 말하는 도덕의 최고원칙은 행복을 극대화하는 것, 쾌락이 고통을 넘어서도록 하여 전반적으로 조화를 이루는 것이다.</description>
+      
+        <description>2장; 벤담의 공리주의와 이에 대한 두 반박을 정리하시오. 벤담이 말하는 도덕의 최고원칙은 행복을 극대화하는 것, 쾌락이 고통을 넘어서도록 하여 전반적으로 조화를 이루는 것이다.</description>
+      
     </item>
     
     <item>
@@ -250,7 +302,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Sat, 09 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%A7%80%EB%8C%80%EB%84%93%EC%96%95/</guid>
-      <description>이 책을 표지만 보고 접할때는 기본적인 인문학적 교양들을 간단하게 소개하는 내용일 줄 알았다.</description>
+      
+        <description>이 책을 표지만 보고 접할때는 기본적인 인문학적 교양들을 간단하게 소개하는 내용일 줄 알았다.</description>
+      
     </item>
     
     <item>
@@ -259,7 +313,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Fri, 04 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%ED%95%80%ED%85%8C%ED%81%AC-%EC%A0%84%EC%9F%81/</guid>
-      <description>핀테크전쟁 - 브렛 킹 지음 이 책에서 나타나는 핀테크의 주요 발전 방향은 크게 대출분야와 디지털화폐, 그리고 페이먼트분야가 주를 이루는 것 같다.</description>
+      
+        <description>핀테크전쟁 - 브렛 킹 지음 이 책에서 나타나는 핀테크의 주요 발전 방향은 크게 대출분야와 디지털화폐, 그리고 페이먼트분야가 주를 이루는 것 같다.</description>
+      
     </item>
     
     <item>
@@ -268,7 +324,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%8B%A4%ED%96%89%EC%9D%B4-%EB%8B%B5%EC%9D%B4%EB%8B%A4/</guid>
-      <description>1장 결심 - 목적지를 확실히 정하라 로드맵을 그려보라. 지름길이 보인다. 꿈에 이르기 위한 인생 로드맵을 만들어 보자.</description>
+      
+        <description>1장 결심 - 목적지를 확실히 정하라 로드맵을 그려보라. 지름길이 보인다. 꿈에 이르기 위한 인생 로드맵을 만들어 보자.</description>
+      
     </item>
     
     <item>
@@ -277,8 +335,10 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Tue, 28 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%82%AC%EB%9E%8C%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9C%BC%EB%A1%9C-%EC%84%B1%EC%9E%A5%ED%95%98%EB%8A%94%EA%B0%80/</guid>
-      <description>사람은 무엇으로 성장하는가
+      
+        <description>사람은 무엇으로 성장하는가
 융합사 독서 목록 첫 번째 도서다. 독서후기를 내일까지 써야 하는 탓에 깊이 정독하지는 못 했다.</description>
+      
     </item>
     
     <item>
@@ -287,8 +347,10 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Sat, 25 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%95%9C-%EC%83%9D%EA%B0%81%EB%93%A4/</guid>
-      <description>생각보다 읽기 지루한 책이었다.
+      
+        <description>생각보다 읽기 지루한 책이었다.
 하지만 어떤 중요한 선택을 해야하는 상황에 놓여있을 때 다시한번 보면 정말 큰 도움이 될 거 같아서 내용들을 하나씩 정리해 놓으려 한다.</description>
+      
     </item>
     
     <item>
@@ -297,7 +359,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%9D%B4%EC%95%BC%EA%B8%B0-%EC%9D%B8%EB%AC%B8%ED%95%99/</guid>
-      <description>공대생인 나에게는 제목부터 조금은 어려운 느낌이 들었던 책이지만, 재미있는 교양 상식들을 담고 있는 책인 거 같다.</description>
+      
+        <description>공대생인 나에게는 제목부터 조금은 어려운 느낌이 들었던 책이지만, 재미있는 교양 상식들을 담고 있는 책인 거 같다.</description>
+      
     </item>
     
     <item>
@@ -306,7 +370,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Fri, 08 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%B9%BC%EC%9D%98-%EB%85%B8%EB%9E%98/</guid>
-      <description>칼의 노래. 중학교 때 읽다가 너무 글이 어려워서 읽기를 포기했던 책이었다.</description>
+      
+        <description>칼의 노래. 중학교 때 읽다가 너무 글이 어려워서 읽기를 포기했던 책이었다.</description>
+      
     </item>
     
     <item>
@@ -315,7 +381,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%B0%BD%EB%AC%B8%EB%84%98%EC%96%B4-%EB%8F%84%EB%A7%9D%EC%B9%9C-100%EC%84%B8-%EB%85%B8%EC%9D%B8/</guid>
-      <description>풍자를 안에 담은 &amp;lsquo;알란 칼손&amp;rsquo; [창문 넘어 도망친 100세 노인 - 요나스 요나손] 창문을 넘어 도망친 100세 노인의 이야기.</description>
+      
+        <description>풍자를 안에 담은 &amp;lsquo;알란 칼손&amp;rsquo; [창문 넘어 도망친 100세 노인 - 요나스 요나손] 창문을 넘어 도망친 100세 노인의 이야기.</description>
+      
     </item>
     
     <item>
@@ -324,7 +392,9 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Sun, 27 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%97%B4%ED%98%88%EA%B5%90%EC%82%AC-%EB%8F%84%EC%A0%84%EA%B8%B0/</guid>
-      <description>2학년 1학기 중간시험이 끝났다. 생각보다 많이 실망스러운 시험 결과, 그리고 슬픔에 잠긴 나라 분위기까지, 내 몸과 정신까지 힘들게 했던 거 같다.</description>
+      
+        <description>2학년 1학기 중간시험이 끝났다. 생각보다 많이 실망스러운 시험 결과, 그리고 슬픔에 잠긴 나라 분위기까지, 내 몸과 정신까지 힘들게 했던 거 같다.</description>
+      
     </item>
     
     <item>
@@ -333,8 +403,10 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/about/</guid>
-      <description>Masterpiece (Korean) Masterpiece (English)
+      
+        <description>Masterpiece (Korean) Masterpiece (English)
 김 경 표 자율주행 시스템 연구원</description>
+      
     </item>
     
   </channel>
