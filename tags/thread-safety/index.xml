@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>thread safety on Website of Kyungpyo Kim</title>
+    <link>https://kyungpyo-kim.github.io/tags/thread-safety/</link>
+    <description>Recent content in thread safety on Website of Kyungpyo Kim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 06 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/thread-safety/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thread safety of unordered_map (shared_timed_mutex)</title>
+      <link>https://kyungpyo-kim.github.io/study/thread-safety-of-unordered_map/</link>
+      <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/thread-safety-of-unordered_map/</guid>
+      <description>Prerequisite  Thread Mutex Thread safety  Problem unordered_map 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다.</description>
+    </item>
+    
+  </channel>
+</rss>

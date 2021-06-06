@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme=""><head>
-    <title> kyungpyo-kim </title>
+    <title> kyungpyo-kim | Thread safety of unordered_map (shared_timed_mutex) </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://kyungpyo-kim.github.io/faviconsfavicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://kyungpyo-kim.github.io/faviconsfavicon-16x16.png">
 
-    <link rel="canonical" href="https://kyungpyo-kim.github.io/study/c&#43;&#43;-thread-safety-of-unordered_map/">
+    <link rel="canonical" href="https://kyungpyo-kim.github.io/study/thread-safety-of-unordered_map/">
 
     
     
@@ -35,8 +35,8 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
 
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="[C&#43;&#43;] Thread safety of unordered_map (shared_timed_mutex) Created: Jun 5, 2021 11:46 PM"/>
+<meta name="twitter:title" content="Thread safety of unordered_map (shared_timed_mutex)"/>
+<meta name="twitter:description" content="Prerequisite  Thread Mutex Thread safety  Problem unordered_map 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다."/>
 
 </head>
 <body><div class="sidebar animated fadeInDown">
@@ -129,20 +129,18 @@
         <div class="post-content">
 
             <div class="post-title">
-                <h3></h3>
+                <h3>Thread safety of unordered_map (shared_timed_mutex)</h3>
                 
                     <div class="info">
                         <em class="fas fa-calendar-day"></em>
-                        <span class="date">Mon, Jan 1, 0001</span>
+                        <span class="date">Sun, Jun 6, 2021</span>
                         <em class="fas fa-stopwatch"></em>
                         <span class="reading-time">2-minute read</span>
                     </div>
                 
             </div>
 
-            <h1 id="c-thread-safety-of-unordered_map-shared_timed_mutex">[C++] Thread safety of unordered_map (shared_timed_mutex)</h1>
-<p>Created: Jun 5, 2021 11:46 PM</p>
-<h2 id="prerequisite">Prerequisite</h2>
+            <h2 id="prerequisite">Prerequisite</h2>
 <ul>
 <li>Thread</li>
 <li>Mutex</li>
@@ -203,7 +201,8 @@ std<span style="color:#f92672">::</span>unordered_map<span style="color:#f92672"
         <div class="post-footer">
             <div class="info">
                 
-                
+                <span class="separator"><a class="tag" href="/tags/c&#43;&#43;/">c&#43;&#43;</a><a class="tag" href="/tags/unordered_map/">unordered_map</a><a class="tag" href="/tags/thread-safety/">thread safety</a><a class="tag" href="/tags/shared_timed_mutex/">shared_timed_mutex</a></span>
+
             </div>
         </div>
 
