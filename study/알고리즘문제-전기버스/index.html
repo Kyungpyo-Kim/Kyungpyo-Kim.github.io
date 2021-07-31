@@ -1,166 +1,384 @@
 <!DOCTYPE html>
-<html  dir="ltr" lang="en" data-theme=""><head>
-    <title> kyungpyo-kim | 알고리즘문제-전기버스 </title>
-
-    
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="새로운 것을 찾아">
-    <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r">
-    
-    
-    
-    
-    <link rel="stylesheet"
-        href="/css/main.min.dffd6b2402f7f446a1c67600aedf73f95b7193004867c7d40daae2e502a376ed.css"
-        integrity="sha256-3/1rJAL39EahxnYArt9z&#43;VtxkwBIZ8fUDari5QKjdu0="
-        crossorigin="anonymous"
-        type="text/css">
-    
-    
-    <link rel="stylesheet"
-        href="/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
-        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
-        crossorigin="anonymous"
-        type="text/css">
-    
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
-    crossorigin="anonymous" />
-
-    
-    <link rel="shortcut icon" href="/faviconsfavicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/faviconsapple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/faviconsfavicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/faviconsfavicon-16x16.png">
-
-    <link rel="canonical" href="/study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/">
-
-    
-    
-    
-    
-    <script type="text/javascript"
-            src="/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
-            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
-            crossorigin="anonymous"></script>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+><head>
+  <title>
+    kyungpyo-kim
+      |
+      알고리즘문제-전기버스
 
 
     
-        
-        
-        <script type="text/javascript"
-                src="/js/anatole-theme-switcher.min.2c507695a28320822cee065375387eac9bc9f3dfd49d4dcf84bbaca2b8efb30c.js"
-                integrity="sha256-LFB2laKDIIIs7gZTdTh&#43;rJvJ89/UnU3PhLusorjvsww="
-                crossorigin="anonymous"></script>
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta
+    name="description"
+    content="
+      새로운 것을 찾아
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r" />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/main.min.747c2051c988c578be617a76ccc39f8ccfbe01837a9c2dffa1816ceee36333fa.css"
+    integrity="sha256-dHwgUcmIxXi&#43;YXp2zMOfjM&#43;&#43;AYN6nC3/oYFs7uNjM/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+    integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous"
+  />
+  
+  <link rel="shortcut icon" href="/faviconsfavicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/faviconsapple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/faviconsfavicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/faviconsfavicon-16x16.png" />
+
+  <link rel="canonical" href="/study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.413f798d8aa82610bef17a5ca1d7e962ec185be395f1aeb3f45d1891af568b65.js"
+    integrity="sha256-QT95jYqoJhC&#43;8XpcodfpYuwYW&#43;OV8a6z9F0Yka9Wi2U="
+    crossorigin="anonymous"
+  ></script>
+
+  
     
-    <meta name="twitter:card" content="summary_large_image"/>
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.fcf9526f15b3b4e08472de192969ab28a4cdcb32ac94f83e85a8b84e9b45acd2.js"
+      integrity="sha256-/PlSbxWztOCEct4ZKWmrKKTNyzKslPg&#43;hai4TptFrNI="
+      crossorigin="anonymous"
+    ></script>
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
 
 <meta name="twitter:title" content="알고리즘문제-전기버스"/>
 <meta name="twitter:description" content="전기버스 알고리즘  SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스 문제링크 문제의 저작권은 SW Expert Academy에 있습니다."/>
 
 
+
+  
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "study",
+        "name": "알고리즘문제-전기버스",
+        "headline": "알고리즘문제-전기버스",
+        "alternativeHeadline": "",
+        "description": "
+      
+        전기버스 알고리즘  SWEA 4831 - [파이썬 S\/W 문제해결 기본 1일차] LIST1 - 전기버스 문제링크 문제의 저작권은 SW Expert Academy에 있습니다.
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightYear" : "2019",
+        "dateCreated": "2019-10-28T00:00:00.00Z",
+        "datePublished": "2019-10-28T00:00:00.00Z",
+        "dateModified": "2019-10-28T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "kyungpyo-kim",
+            "url": "https://kyungpyo-kim.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/kyungpyo-kim.github.io\/faviconsfavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4\/",
+        "wordCount" : "364",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "알고리즘"
+
     
+      
+        ,
+
+      
+      "list"
+
+    
+      
+        ,
+
+      
+      "python"
+
+    ]
+    }
+  </script>
+
+
 
 </head>
-<body><div class="sidebar animated fadeInDown ">
+<body>
+    <header><div
+  class="page-top 
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+  <nav>
+    <ul class="nav__list" id="navMenu">
+      <div class="nav__links">
+        
+        
+          
+          <li>
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+        
+      </div>
+      <li>
+        
+          <a class="theme-switch" title="Switch Theme">
+            <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+          </a>
+
+        
+      </li>
+    </ul>
+  </nav>
+</div>
+</header>
+    <div class="wrapper">
+      <aside><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
     <div class="logo-title">
-        <div class="title">
-            <img src="/images/kyungpyo.jpeg" alt="profile picture">
-            <h3 title=""><a href="/">Kyungpyo Kim</a></h3>
-            <div class="description">
-                <p>새로운 것을 찾아</p>
-            </div>
+      <div class="title">
+        <img src="/images/kyungpyo.jpeg" alt="profile picture" />
+        <h3 title=""><a href="/">Kyungpyo Kim</a></h3>
+        <div class="description">
+          <p>새로운 것을 찾아</p>
         </div>
+      </div>
     </div>
     <ul class="social-links">
-        
-            <li>
-                <a href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/" rel="me" aria-label="Linkedin">
-                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://github.com/Kyungpyo-Kim" rel="me" aria-label="GitHub">
-                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://instagram.com/kyung_py" rel="me" aria-label="instagram">
-                    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="mailto:kyungpyo94@gmail.com" rel="me" aria-label="e-mail">
-                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-    <div class="footer">
-        <div class="by_farbox">&copy;  kyungpyo-kim 2021 </div>
-    </div>
-</div>
-<div class="main">
-    <div class="page-top  animated fadeInDown ">
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-    </a>
-    <ul class="nav" id="navMenu">
-        
-        
-            
-            <li><a 
-                   href="/"
-                        
-                   title="">Home</a></li>
-        
-            
-            <li><a 
-                   href="/life/"
-                        
-                   title="">Life</a></li>
-        
-            
-            <li><a 
-                   href="/study/"
-                        
-                   title="">Study</a></li>
-        
-            
-            <li><a 
-                   href="/about/"
-                        
-                   title="">About</a></li>
-        
-        
-        
-            <li class="theme-switch-item">
-                <a class="theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-</div>
+      
+        <li>
+          <a href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/" rel="me" aria-label="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
 
-    <div class="autopagerize_page_element">
-        <div class="content">
-    <div class="post  animated fadeInDown ">
-        <div class="post-content">
-            
-            <div class="post-title">
-                <h3>알고리즘문제-전기버스</h3>
-                
-            </div>
+      
+        <li>
+          <a href="https://github.com/Kyungpyo-Kim" rel="me" aria-label="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
 
-            <h2 id="전기버스-알고리즘">전기버스 알고리즘</h2>
+      
+        <li>
+          <a href="https://instagram.com/kyung_py" rel="me" aria-label="instagram">
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="mailto:kyungpyo94@gmail.com" rel="me" aria-label="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer--sidebar">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          kyungpyo-kim
+          2021
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
+    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</aside>
+      <main>
+        <div class="autopagerize_page_element">
+          <div class="content">
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    <div class="post-content">
+      
+      <div class="post-title">
+        <h1>알고리즘문제-전기버스</h1>
+        
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Mon, Oct 28, 2019
+
+
+              </span
+            >
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">2-minute read</span>
+          </div>
+
+        
+      </div><h2 id="전기버스-알고리즘">전기버스 알고리즘</h2>
 <ul>
 <li>SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스</li>
 <li><a href="https://swexpertacademy.com/main/learn/course/subjectList.do?courseId=AVuPDN86AAXw5UW6">문제링크</a></li>
@@ -172,47 +390,47 @@
 <li>먼저 버스가 도착할 수 있는지 확인하고,</li>
 <li>도착할 수 있을 경우 가장 적은 충전 횟수를 확인한다. (1과정에서 포함 가능하겠다)</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">T <span style="color:#f92672">=</span> int(input())
-<span style="color:#75715e"># 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.</span>
-<span style="color:#66d9ef">for</span> test_case <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, T <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
-    <span style="color:#75715e"># ///////////////////////////////////////////////////////////////////////////////////</span>
-    [k, n, m] <span style="color:#f92672">=</span> [int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> input()<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39; &#39;</span>)]
-    mm <span style="color:#f92672">=</span> [int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> input()<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39; &#39;</span>)]
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">T</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="c1"># 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.</span>
+<span class="k">for</span> <span class="n">test_case</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">T</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="c1"># ///////////////////////////////////////////////////////////////////////////////////</span>
+    <span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)]</span>
+    <span class="n">mm</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)]</span>
     
-    <span style="color:#75715e">## Possiblity test</span>
-    start <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-    arrive <span style="color:#f92672">=</span> False
-    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> mm:
-        <span style="color:#66d9ef">if</span> start <span style="color:#f92672">+</span> k <span style="color:#f92672">&gt;=</span> i:
-            start <span style="color:#f92672">=</span> i
-        <span style="color:#66d9ef">else</span>:
-            <span style="color:#66d9ef">break</span>
-        <span style="color:#66d9ef">if</span> start <span style="color:#f92672">+</span> k <span style="color:#f92672">&gt;=</span> n:
-            arrive <span style="color:#f92672">=</span> True
-            <span style="color:#66d9ef">break</span>
+    <span class="c1">## Possiblity test</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">arrive</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">mm</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">start</span> <span class="o">+</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="n">i</span><span class="p">:</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">if</span> <span class="n">start</span> <span class="o">+</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="n">n</span><span class="p">:</span>
+            <span class="n">arrive</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="k">break</span>
      
-    <span style="color:#66d9ef">if</span> arrive <span style="color:#f92672">==</span> False:
-        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;#&#34;</span> <span style="color:#f92672">+</span> str(test_case) , <span style="color:#ae81ff">0</span>)
-        <span style="color:#66d9ef">continue</span>
+    <span class="k">if</span> <span class="n">arrive</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;#&#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">test_case</span><span class="p">)</span> <span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">continue</span>
         
-    <span style="color:#75715e">## Brute-force search</span>
-    cnt_min <span style="color:#f92672">=</span> m
-    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(pow(<span style="color:#ae81ff">2</span>,m)):
+    <span class="c1">## Brute-force search</span>
+    <span class="n">cnt_min</span> <span class="o">=</span> <span class="n">m</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">m</span><span class="p">)):</span>
     
-        pos <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
         
-        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(m):
-            <span style="color:#66d9ef">if</span> ( (<span style="color:#ae81ff">1</span><span style="color:#f92672">&lt;&lt;</span>j) <span style="color:#f92672">&amp;</span> i ):
-                <span style="color:#66d9ef">if</span> pos <span style="color:#f92672">+</span> k <span style="color:#f92672">&gt;=</span> mm[j]:
-                    pos <span style="color:#f92672">=</span> mm[j]
-                    cnt <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">if</span> pos <span style="color:#f92672">+</span> k <span style="color:#f92672">&gt;=</span> n <span style="color:#f92672">and</span> cnt_min <span style="color:#f92672">&gt;</span> cnt:
-            cnt_min <span style="color:#f92672">=</span> cnt
-    <span style="color:#66d9ef">print</span>( <span style="color:#e6db74">&#34;#&#34;</span><span style="color:#f92672">+</span>str(test_case), cnt_min)
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">j</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">i</span> <span class="p">):</span>
+                <span class="k">if</span> <span class="n">pos</span> <span class="o">+</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="n">mm</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                    <span class="n">pos</span> <span class="o">=</span> <span class="n">mm</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                    <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">pos</span> <span class="o">+</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="n">n</span> <span class="ow">and</span> <span class="n">cnt_min</span> <span class="o">&gt;</span> <span class="n">cnt</span><span class="p">:</span>
+            <span class="n">cnt_min</span> <span class="o">=</span> <span class="n">cnt</span>
+    <span class="k">print</span><span class="p">(</span> <span class="s2">&#34;#&#34;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">test_case</span><span class="p">),</span> <span class="n">cnt_min</span><span class="p">)</span>
             
                     
-    <span style="color:#75715e"># ///////////////////////////////////////////////////////////////////////////////////</span>
+    <span class="c1"># ///////////////////////////////////////////////////////////////////////////////////</span>
 </code></pre></div><h2 id="문제풀이-2">문제풀이 2</h2>
 <p>Brute-force search 를 통하여 정답은 잘 찾을 수 있겠지만, 시간제한에 걸렸다&hellip;</p>
 <p>주어진 문제의 조건을 살펴보면,</p>
@@ -221,64 +439,111 @@
 <li>이때, k 번 안에 충전기를 찾지 못하면 실패</li>
 <li>목적지에 도달하기까지 충전 횟수가 정답이 될 것이다.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">T <span style="color:#f92672">=</span> int(input())
-<span style="color:#75715e"># 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.</span>
-<span style="color:#66d9ef">for</span> test_case <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, T <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
-    <span style="color:#75715e"># ///////////////////////////////////////////////////////////////////////////////////</span>
-    [k, n, m] <span style="color:#f92672">=</span> [int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> input()<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39; &#39;</span>)]
-    mm <span style="color:#f92672">=</span> [int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> input()<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39; &#39;</span>)]
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">T</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="c1"># 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.</span>
+<span class="k">for</span> <span class="n">test_case</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">T</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="c1"># ///////////////////////////////////////////////////////////////////////////////////</span>
+    <span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)]</span>
+    <span class="n">mm</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)]</span>
 
-    mm <span style="color:#f92672">=</span> [int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> input()<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39; &#39;</span>)]
-    nm <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+    <span class="n">mm</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)]</span>
+    <span class="n">nm</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
     
-    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> mm:
-        nm[i] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">mm</span><span class="p">:</span>
+        <span class="n">nm</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-    curpos <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-    endpos <span style="color:#f92672">=</span> k
-    <span style="color:#66d9ef">while</span> True:
-        kk <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(curpos<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, endpos<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
-            <span style="color:#66d9ef">if</span> nm[i] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
-                curpos <span style="color:#f92672">=</span> i
-            <span style="color:#66d9ef">else</span>:
-                kk<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+    <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">curpos</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">endpos</span> <span class="o">=</span> <span class="n">k</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">kk</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">curpos</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">endpos</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">nm</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">curpos</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">kk</span><span class="o">+=</span><span class="mi">1</span>
     
-        <span style="color:#66d9ef">if</span> kk <span style="color:#f92672">&gt;=</span> k:
-            cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-            <span style="color:#66d9ef">break</span>
+        <span class="k">if</span> <span class="n">kk</span> <span class="o">&gt;=</span> <span class="n">k</span><span class="p">:</span>
+            <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">break</span>
     
-        cnt <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
     
-        endpos <span style="color:#f92672">=</span> curpos <span style="color:#f92672">+</span> k
+        <span class="n">endpos</span> <span class="o">=</span> <span class="n">curpos</span> <span class="o">+</span> <span class="n">k</span>
     
-        <span style="color:#66d9ef">if</span> endpos <span style="color:#f92672">&gt;=</span> n:
-            <span style="color:#66d9ef">break</span>    
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;#&#34;</span><span style="color:#f92672">+</span>str(test_case), cnt)
+        <span class="k">if</span> <span class="n">endpos</span> <span class="o">&gt;=</span> <span class="n">n</span><span class="p">:</span>
+            <span class="k">break</span>    
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;#&#34;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">test_case</span><span class="p">),</span> <span class="n">cnt</span><span class="p">)</span>
 
-    <span style="color:#75715e"># ///////////////////////////////////////////////////////////////////////////////////</span>
+    <span class="c1"># ///////////////////////////////////////////////////////////////////////////////////</span>
 </code></pre></div><p>실행 결과 테스트를 통과 하였다!</p>
 </div>
-        <div class="post-footer">
-            <div class="info">
-                
-                <span class="separator"><a class="tag" href="/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</a><a class="tag" href="/tags/list/">list</a><a class="tag" href="/tags/python/">python</a></span>
-            </div>
-        </div>
+    <div class="post-footer">
+      <div class="info">
+        
 
         
+          <span class="separator"><a class="tag" href="/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</a><a class="tag" href="/tags/list/">list</a><a class="tag" href="/tags/python/">python</a></span>
+
+
+
+
+        
+      </div>
     </div>
 
-
+    <div id="fb_comments_container">
+          <h2>comments</h2>
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kyungpyo-kim" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </div>
-    </div>
-</div>
+  </div>
 
-<script type="text/javascript"
-        src="/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
-        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
-        crossorigin="anonymous"></script>
+
+          </div>
+        </div>
+      </main>
+    </div><footer class="footer footer--base">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          kyungpyo-kim
+          2021
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
+    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    crossorigin="anonymous"
+  ></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -290,5 +555,4 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 </body>
-
 </html>

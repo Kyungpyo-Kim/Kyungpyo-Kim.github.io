@@ -1,182 +1,414 @@
 <!DOCTYPE html>
-<html  dir="ltr" lang="en" data-theme=""><head>
-    <title> kyungpyo-kim | 자료구조의 구현 </title>
-
-    
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="새로운 것을 찾아">
-    <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r">
-    
-    
-    
-    
-    <link rel="stylesheet"
-        href="/css/main.min.dffd6b2402f7f446a1c67600aedf73f95b7193004867c7d40daae2e502a376ed.css"
-        integrity="sha256-3/1rJAL39EahxnYArt9z&#43;VtxkwBIZ8fUDari5QKjdu0="
-        crossorigin="anonymous"
-        type="text/css">
-    
-    
-    <link rel="stylesheet"
-        href="/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
-        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
-        crossorigin="anonymous"
-        type="text/css">
-    
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
-    crossorigin="anonymous" />
-
-    
-    <link rel="shortcut icon" href="/faviconsfavicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/faviconsapple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/faviconsfavicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/faviconsfavicon-16x16.png">
-
-    <link rel="canonical" href="/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/">
-
-    
-    
-    
-    
-    <script type="text/javascript"
-            src="/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
-            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
-            crossorigin="anonymous"></script>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+><head>
+  <title>
+    kyungpyo-kim
+      |
+      자료구조의 구현
 
 
     
-        
-        
-        <script type="text/javascript"
-                src="/js/anatole-theme-switcher.min.2c507695a28320822cee065375387eac9bc9f3dfd49d4dcf84bbaca2b8efb30c.js"
-                integrity="sha256-LFB2laKDIIIs7gZTdTh&#43;rJvJ89/UnU3PhLusorjvsww="
-                crossorigin="anonymous"></script>
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta
+    name="description"
+    content="
+      새로운 것을 찾아
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r" />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/main.min.747c2051c988c578be617a76ccc39f8ccfbe01837a9c2dffa1816ceee36333fa.css"
+    integrity="sha256-dHwgUcmIxXi&#43;YXp2zMOfjM&#43;&#43;AYN6nC3/oYFs7uNjM/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+    integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous"
+  />
+  
+  <link rel="shortcut icon" href="/faviconsfavicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/faviconsapple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/faviconsfavicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/faviconsfavicon-16x16.png" />
+
+  <link rel="canonical" href="/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.413f798d8aa82610bef17a5ca1d7e962ec185be395f1aeb3f45d1891af568b65.js"
+    integrity="sha256-QT95jYqoJhC&#43;8XpcodfpYuwYW&#43;OV8a6z9F0Yka9Wi2U="
+    crossorigin="anonymous"
+  ></script>
+
+  
     
-    <meta name="twitter:card" content="summary_large_image"/>
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.fcf9526f15b3b4e08472de192969ab28a4cdcb32ac94f83e85a8b84e9b45acd2.js"
+      integrity="sha256-/PlSbxWztOCEct4ZKWmrKKTNyzKslPg&#43;hai4TptFrNI="
+      crossorigin="anonymous"
+    ></script>
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
 
 <meta name="twitter:title" content="자료구조의 구현"/>
 <meta name="twitter:description" content="List 형 자료구조  배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동  Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( &#34;The sales result = %d&#34; % ( s ) ) print ( &#34; delete:&#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( &#34;The sales result = %d&#34; % ( s ) ) The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 43 The sales result = 56 The sales result = 98 delete: 43 The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 56 The sales result = 98  코드 설명: List 를 생성하고 삭제, 출력 예시"/>
 
 
+
+  
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "study",
+        "name": "자료구조의 구현",
+        "headline": "자료구조의 구현",
+        "alternativeHeadline": "",
+        "description": "
+      
+        List 형 자료구조  배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동  Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( \u0026#34;The sales result = %d\u0026#34; % ( s ) ) print ( \u0026#34; delete:\u0026#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( \u0026#34;The sales result = %d\u0026#34; % ( s ) ) The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 43 The sales result = 56 The sales result = 98 delete: 43 The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 56 The sales result = 98  코드 설명: List 를 생성하고 삭제, 출력 예시
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightYear" : "2019",
+        "dateCreated": "2019-06-09T00:00:00.00Z",
+        "datePublished": "2019-06-09T00:00:00.00Z",
+        "dateModified": "2019-06-09T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "kyungpyo-kim",
+            "url": "https://kyungpyo-kim.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/kyungpyo-kim.github.io\/faviconsfavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84\/",
+        "wordCount" : "537",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "자료구조"
+
     
+      
+        ,
+
+      
+      "알고리즘"
+
+    
+      
+        ,
+
+      
+      "배열"
+
+    
+      
+        ,
+
+      
+      "리스트"
+
+    
+      
+        ,
+
+      
+      "연결리스트"
+
+    ]
+    }
+  </script>
+
+
 
 </head>
-<body><div class="sidebar animated fadeInDown ">
+<body>
+    <header><div
+  class="page-top 
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+  <nav>
+    <ul class="nav__list" id="navMenu">
+      <div class="nav__links">
+        
+        
+          
+          <li>
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+        
+      </div>
+      <li>
+        
+          <a class="theme-switch" title="Switch Theme">
+            <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+          </a>
+
+        
+      </li>
+    </ul>
+  </nav>
+</div>
+</header>
+    <div class="wrapper">
+      <aside><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
     <div class="logo-title">
-        <div class="title">
-            <img src="/images/kyungpyo.jpeg" alt="profile picture">
-            <h3 title=""><a href="/">Kyungpyo Kim</a></h3>
-            <div class="description">
-                <p>새로운 것을 찾아</p>
-            </div>
+      <div class="title">
+        <img src="/images/kyungpyo.jpeg" alt="profile picture" />
+        <h3 title=""><a href="/">Kyungpyo Kim</a></h3>
+        <div class="description">
+          <p>새로운 것을 찾아</p>
         </div>
+      </div>
     </div>
     <ul class="social-links">
-        
-            <li>
-                <a href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/" rel="me" aria-label="Linkedin">
-                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://github.com/Kyungpyo-Kim" rel="me" aria-label="GitHub">
-                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://instagram.com/kyung_py" rel="me" aria-label="instagram">
-                    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="mailto:kyungpyo94@gmail.com" rel="me" aria-label="e-mail">
-                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-    <div class="footer">
-        <div class="by_farbox">&copy;  kyungpyo-kim 2021 </div>
-    </div>
-</div>
-<div class="main">
-    <div class="page-top  animated fadeInDown ">
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-    </a>
-    <ul class="nav" id="navMenu">
-        
-        
-            
-            <li><a 
-                   href="/"
-                        
-                   title="">Home</a></li>
-        
-            
-            <li><a 
-                   href="/life/"
-                        
-                   title="">Life</a></li>
-        
-            
-            <li><a 
-                   href="/study/"
-                        
-                   title="">Study</a></li>
-        
-            
-            <li><a 
-                   href="/about/"
-                        
-                   title="">About</a></li>
-        
-        
-        
-            <li class="theme-switch-item">
-                <a class="theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-</div>
+      
+        <li>
+          <a href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/" rel="me" aria-label="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
 
-    <div class="autopagerize_page_element">
-        <div class="content">
-    <div class="post  animated fadeInDown ">
-        <div class="post-content">
-            
-            <div class="post-title">
-                <h3>자료구조의 구현</h3>
-                
-            </div>
+      
+        <li>
+          <a href="https://github.com/Kyungpyo-Kim" rel="me" aria-label="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
 
-            <h4 id="list-형-자료구조">List 형 자료구조</h4>
+      
+        <li>
+          <a href="https://instagram.com/kyung_py" rel="me" aria-label="instagram">
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="mailto:kyungpyo94@gmail.com" rel="me" aria-label="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer--sidebar">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          kyungpyo-kim
+          2021
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
+    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</aside>
+      <main>
+        <div class="autopagerize_page_element">
+          <div class="content">
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    <div class="post-content">
+      
+      <div class="post-title">
+        <h1>자료구조의 구현</h1>
+        
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Sun, Jun 9, 2019
+
+
+              </span
+            >
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">3-minute read</span>
+          </div>
+
+        
+      </div><h4 id="list-형-자료구조">List 형 자료구조</h4>
 <ul>
 <li>배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정</li>
 <li>리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동</li>
 </ul>
 <h4 id="python-example">Python example</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Python List</span>
-sales_results <span style="color:#f92672">=</span> [<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">43</span>, <span style="color:#ae81ff">56</span>, <span style="color:#ae81ff">98</span>]
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Python List</span>
+<span class="n">sales_results</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">98</span><span class="p">]</span>
 
-<span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> sales_results:
-    <span style="color:#66d9ef">print</span> ( <span style="color:#e6db74">&#34;The sales result = </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> ( s ) )
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sales_results</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span> <span class="s2">&#34;The sales result = </span><span class="si">%d</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span> <span class="n">s</span> <span class="p">)</span> <span class="p">)</span>
 
-<span style="color:#66d9ef">print</span> ( <span style="color:#e6db74">&#34; delete:&#34;</span>, sales_results[<span style="color:#ae81ff">3</span>])
-<span style="color:#66d9ef">del</span> sales_results[<span style="color:#ae81ff">3</span>]
+<span class="k">print</span> <span class="p">(</span> <span class="s2">&#34; delete:&#34;</span><span class="p">,</span> <span class="n">sales_results</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="k">del</span> <span class="n">sales_results</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 
-<span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> sales_results:
-    <span style="color:#66d9ef">print</span> ( <span style="color:#e6db74">&#34;The sales result = </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> ( s ) )
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sales_results</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span> <span class="s2">&#34;The sales result = </span><span class="si">%d</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span> <span class="n">s</span> <span class="p">)</span> <span class="p">)</span>
 
 </code></pre></div><pre><code>The sales result = 12
 The sales result = 45
@@ -204,48 +436,48 @@ The sales result = 98
 <li>데이터를 서치하기는 불편</li>
 </ul>
 <h4 id="python-example-1">Python example</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Python Linked List</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Python Linked List</span>
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span>:
-    <span style="color:#66d9ef">def</span> __init__(self, data, next<span style="color:#f92672">=</span>None):
-        self<span style="color:#f92672">.</span>data <span style="color:#f92672">=</span> data
-        self<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> None <span style="color:#75715e"># 다음 data</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 1. 연결리스트 생성</span>
+<span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="nb">next</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="bp">None</span> <span class="c1"># 다음 data</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 1. 연결리스트 생성</span>
 
-node1 <span style="color:#f92672">=</span> Node(<span style="color:#ae81ff">1</span>)
-node2 <span style="color:#f92672">=</span> Node(<span style="color:#ae81ff">2</span>)
-node3 <span style="color:#f92672">=</span> Node(<span style="color:#ae81ff">3</span>)
-node4 <span style="color:#f92672">=</span> Node(<span style="color:#ae81ff">4</span>)
-node1<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> node2
-node2<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> node3
-node3<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> node4
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 2. 구성된 리스트에서 데이터 2 를 지우고 나머지를 연결</span>
+<span class="n">node1</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">node2</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">node3</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">node4</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">node1</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node2</span>
+<span class="n">node2</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node3</span>
+<span class="n">node3</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node4</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 2. 구성된 리스트에서 데이터 2 를 지우고 나머지를 연결</span>
 
-del_data <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+<span class="n">del_data</span> <span class="o">=</span> <span class="mi">2</span>
 
-pre_node <span style="color:#f92672">=</span> node1
-next_node <span style="color:#f92672">=</span> pre_node<span style="color:#f92672">.</span>next
+<span class="n">pre_node</span> <span class="o">=</span> <span class="n">node1</span>
+<span class="n">next_node</span> <span class="o">=</span> <span class="n">pre_node</span><span class="o">.</span><span class="n">next</span>
 
-<span style="color:#66d9ef">if</span> pre_node<span style="color:#f92672">.</span>data <span style="color:#f92672">==</span> del_data:
-    node1 <span style="color:#f92672">=</span> next_node
-    <span style="color:#66d9ef">del</span> pre_node
+<span class="k">if</span> <span class="n">pre_node</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">del_data</span><span class="p">:</span>
+    <span class="n">node1</span> <span class="o">=</span> <span class="n">next_node</span>
+    <span class="k">del</span> <span class="n">pre_node</span>
 
-<span style="color:#66d9ef">while</span> next_node:
-    <span style="color:#66d9ef">if</span> next_node<span style="color:#f92672">.</span>data <span style="color:#f92672">==</span> del_data:
-        pre_node<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> next_node<span style="color:#f92672">.</span>next
-        <span style="color:#66d9ef">del</span> next_node
-        <span style="color:#66d9ef">break</span>
-    pre_node <span style="color:#f92672">=</span> next_node
-    next_node <span style="color:#f92672">=</span> next_node<span style="color:#f92672">.</span>next
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 3. 구성된 리스트에서 데이터 9 를 삽입</span>
-new_node <span style="color:#f92672">=</span> Node(<span style="color:#ae81ff">9</span>)
-new_node<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> node1
-node1 <span style="color:#f92672">=</span> new_node
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 4. 결과 출력</span>
-node <span style="color:#f92672">=</span> node1
-<span style="color:#66d9ef">while</span> node:
-    <span style="color:#66d9ef">print</span>( node<span style="color:#f92672">.</span>data )
-    node <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span>next
+<span class="k">while</span> <span class="n">next_node</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">next_node</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">del_data</span><span class="p">:</span>
+        <span class="n">pre_node</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">next_node</span><span class="o">.</span><span class="n">next</span>
+        <span class="k">del</span> <span class="n">next_node</span>
+        <span class="k">break</span>
+    <span class="n">pre_node</span> <span class="o">=</span> <span class="n">next_node</span>
+    <span class="n">next_node</span> <span class="o">=</span> <span class="n">next_node</span><span class="o">.</span><span class="n">next</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 3. 구성된 리스트에서 데이터 9 를 삽입</span>
+<span class="n">new_node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">new_node</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">node1</span>
+<span class="n">node1</span> <span class="o">=</span> <span class="n">new_node</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 4. 결과 출력</span>
+<span class="n">node</span> <span class="o">=</span> <span class="n">node1</span>
+<span class="k">while</span> <span class="n">node</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span> <span class="n">node</span><span class="o">.</span><span class="n">data</span> <span class="p">)</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">next</span>
 
 </code></pre></div><pre><code>9
 1
@@ -261,63 +493,63 @@ node <span style="color:#f92672">=</span> node1
 </ul>
 <h4 id="연결리스트를-이용한-스택-구현">연결리스트를 이용한 스택 구현</h4>
 <h4 id="python-example-2">Python example</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Link class</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Link</span>:
-    <span style="color:#66d9ef">def</span> __init__(self, d1<span style="color:#f92672">=</span>None, d2<span style="color:#f92672">=</span>None):
-        self<span style="color:#f92672">.</span>data1 <span style="color:#f92672">=</span> d1
-        self<span style="color:#f92672">.</span>data2 <span style="color:#f92672">=</span> d2
-        self<span style="color:#f92672">.</span>next_link <span style="color:#f92672">=</span> None
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Link class</span>
+<span class="k">class</span> <span class="nc">Link</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d1</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">d2</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data1</span> <span class="o">=</span> <span class="n">d1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data2</span> <span class="o">=</span> <span class="n">d2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next_link</span> <span class="o">=</span> <span class="bp">None</span>
 
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printLink</span>(self):
-        <span style="color:#66d9ef">print</span> ( <span style="color:#e6db74">&#34;{&#34;</span>, self<span style="color:#f92672">.</span>data1, <span style="color:#e6db74">&#34;, &#34;</span>, self<span style="color:#f92672">.</span>data2, <span style="color:#e6db74">&#34;}&#34;</span>)
+    <span class="k">def</span> <span class="nf">printLink</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="p">(</span> <span class="s2">&#34;{&#34;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data1</span><span class="p">,</span> <span class="s2">&#34;, &#34;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data2</span><span class="p">,</span> <span class="s2">&#34;}&#34;</span><span class="p">)</span>
 
-<span style="color:#75715e"># LinkList class</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LinkList</span>:
-    <span style="color:#66d9ef">def</span> __init__(self):
-        self<span style="color:#f92672">.</span>first_link <span style="color:#f92672">=</span> None
+<span class="c1"># LinkList class</span>
+<span class="k">class</span> <span class="nc">LinkList</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_link</span> <span class="o">=</span> <span class="bp">None</span>
 
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isEmpty</span>(self):
-        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>first_link <span style="color:#f92672">==</span> None
+    <span class="k">def</span> <span class="nf">isEmpty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">first_link</span> <span class="o">==</span> <span class="bp">None</span>
 
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert</span>(self, d1, d2):
-        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>first_link <span style="color:#f92672">==</span> None :
-            self<span style="color:#f92672">.</span>first_link <span style="color:#f92672">=</span> Link( d1, d2 )
-        <span style="color:#66d9ef">else</span>:
-            tmp_next_link <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>first_link
-            self<span style="color:#f92672">.</span>first_link <span style="color:#f92672">=</span> Link( d1, d2 )
-            <span style="color:#75715e"># first_link 의 next_link 초기화됨</span>
-            self<span style="color:#f92672">.</span>first_link<span style="color:#f92672">.</span>next_link <span style="color:#f92672">=</span> tmp_next_link
+    <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">first_link</span> <span class="o">==</span> <span class="bp">None</span> <span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">first_link</span> <span class="o">=</span> <span class="n">Link</span><span class="p">(</span> <span class="n">d1</span><span class="p">,</span> <span class="n">d2</span> <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tmp_next_link</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">first_link</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">first_link</span> <span class="o">=</span> <span class="n">Link</span><span class="p">(</span> <span class="n">d1</span><span class="p">,</span> <span class="n">d2</span> <span class="p">)</span>
+            <span class="c1"># first_link 의 next_link 초기화됨</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">first_link</span><span class="o">.</span><span class="n">next_link</span> <span class="o">=</span> <span class="n">tmp_next_link</span>
 
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">delete</span>(self):
-        rlink <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>first_link
-        self<span style="color:#f92672">.</span>first_link <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>first_link<span style="color:#f92672">.</span>next_link
-        <span style="color:#66d9ef">return</span> rlink
+    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">rlink</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">first_link</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_link</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">first_link</span><span class="o">.</span><span class="n">next_link</span>
+        <span class="k">return</span> <span class="n">rlink</span>
 
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printList</span>(self):
-        curLink <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>first_link
-        <span style="color:#66d9ef">print</span> ( <span style="color:#e6db74">&#34;Link list&#34;</span> )
-        <span style="color:#66d9ef">while</span>(curLink <span style="color:#f92672">!=</span> None):
-            curLink<span style="color:#f92672">.</span>printLink()
-            curLink <span style="color:#f92672">=</span> curLink<span style="color:#f92672">.</span>next_link
+    <span class="k">def</span> <span class="nf">printList</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">curLink</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">first_link</span>
+        <span class="k">print</span> <span class="p">(</span> <span class="s2">&#34;Link list&#34;</span> <span class="p">)</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">curLink</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">):</span>
+            <span class="n">curLink</span><span class="o">.</span><span class="n">printLink</span><span class="p">()</span>
+            <span class="n">curLink</span> <span class="o">=</span> <span class="n">curLink</span><span class="o">.</span><span class="n">next_link</span>
 
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test</span>():
-    link_list <span style="color:#f92672">=</span> LinkList()
-    link_list<span style="color:#f92672">.</span>insert( <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100</span> )
-    link_list<span style="color:#f92672">.</span>insert( <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">200</span> )
-    link_list<span style="color:#f92672">.</span>insert( <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">300</span> )
-    link_list<span style="color:#f92672">.</span>insert( <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">400</span> )
-    link_list<span style="color:#f92672">.</span>insert( <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">500</span> )
+<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="n">link_list</span> <span class="o">=</span> <span class="n">LinkList</span><span class="p">()</span>
+    <span class="n">link_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span> <span class="p">)</span>
+    <span class="n">link_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">200</span> <span class="p">)</span>
+    <span class="n">link_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">300</span> <span class="p">)</span>
+    <span class="n">link_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">400</span> <span class="p">)</span>
+    <span class="n">link_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">500</span> <span class="p">)</span>
 
-    link_list<span style="color:#f92672">.</span>printList()
+    <span class="n">link_list</span><span class="o">.</span><span class="n">printList</span><span class="p">()</span>
 
-    <span style="color:#66d9ef">while</span>( <span style="color:#f92672">not</span> link_list<span style="color:#f92672">.</span>isEmpty() ):
-        deletedLink <span style="color:#f92672">=</span> link_list<span style="color:#f92672">.</span>delete()
-        <span style="color:#66d9ef">print</span> ( <span style="color:#e6db74">&#34;delete&#34;</span> )
-        deletedLink<span style="color:#f92672">.</span>printLink()
+    <span class="k">while</span><span class="p">(</span> <span class="ow">not</span> <span class="n">link_list</span><span class="o">.</span><span class="n">isEmpty</span><span class="p">()</span> <span class="p">):</span>
+        <span class="n">deletedLink</span> <span class="o">=</span> <span class="n">link_list</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+        <span class="k">print</span> <span class="p">(</span> <span class="s2">&#34;delete&#34;</span> <span class="p">)</span>
+        <span class="n">deletedLink</span><span class="o">.</span><span class="n">printLink</span><span class="p">()</span>
 
-    link_list<span style="color:#f92672">.</span>printList()
+    <span class="n">link_list</span><span class="o">.</span><span class="n">printList</span><span class="p">()</span>
 
-test()
+<span class="n">test</span><span class="p">()</span>
 </code></pre></div><pre><code>Link list
 { 5 ,  500 }
 { 4 ,  400 }
@@ -340,25 +572,72 @@ Link list
 <p>!TODO
 <a href="https://opentutorials.org/module/1335/8821">https://opentutorials.org/module/1335/8821</a> 여기 자료 참고하여 내용 보강하기</p>
 </div>
-        <div class="post-footer">
-            <div class="info">
-                
-                <span class="separator"><a class="tag" href="/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/">자료구조</a><a class="tag" href="/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</a><a class="tag" href="/tags/%EB%B0%B0%EC%97%B4/">배열</a><a class="tag" href="/tags/%EB%A6%AC%EC%8A%A4%ED%8A%B8/">리스트</a><a class="tag" href="/tags/%EC%97%B0%EA%B2%B0%EB%A6%AC%EC%8A%A4%ED%8A%B8/">연결리스트</a></span>
-            </div>
-        </div>
+    <div class="post-footer">
+      <div class="info">
+        
 
         
+          <span class="separator"><a class="tag" href="/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/">자료구조</a><a class="tag" href="/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</a><a class="tag" href="/tags/%EB%B0%B0%EC%97%B4/">배열</a><a class="tag" href="/tags/%EB%A6%AC%EC%8A%A4%ED%8A%B8/">리스트</a><a class="tag" href="/tags/%EC%97%B0%EA%B2%B0%EB%A6%AC%EC%8A%A4%ED%8A%B8/">연결리스트</a></span>
+
+
+
+
+        
+      </div>
     </div>
 
-
+    <div id="fb_comments_container">
+          <h2>comments</h2>
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kyungpyo-kim" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </div>
-    </div>
-</div>
+  </div>
 
-<script type="text/javascript"
-        src="/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
-        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
-        crossorigin="anonymous"></script>
+
+          </div>
+        </div>
+      </main>
+    </div><footer class="footer footer--base">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          kyungpyo-kim
+          2021
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
+    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    crossorigin="anonymous"
+  ></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -370,5 +649,4 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 </body>
-
 </html>
