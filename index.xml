@@ -6,7 +6,18 @@
     <description>Recent content on Website of Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Tyranny of Merit</title>
+      <link>https://kyungpyo-kim.github.io/life/%EA%B3%B5%EC%A0%95%ED%95%98%EB%8B%A4%EB%8A%94%EC%B0%A9%EA%B0%81/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/life/%EA%B3%B5%EC%A0%95%ED%95%98%EB%8B%A4%EB%8A%94%EC%B0%A9%EA%B0%81/</guid>
+      
+        <description>&amp;lsquo;정의란 무엇인가&amp;rsquo;의 저자 마이클 센델의 가장 최근 저서이다. 최근 미국 사회의 능력주의로 인한 문제점과 이에 관해 생각해 보아야 할 점들을 정리하였다.</description>
+      
+    </item>
+    
     <item>
       <title>Thread safety of unordered_map (shared_timed_mutex)</title>
       <link>https://kyungpyo-kim.github.io/study/thread-safety-of-unordered_map/</link>
