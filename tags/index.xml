@@ -6,7 +6,40 @@
     <description>Recent content in Tags on Website of Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kalman filter</title>
+      <link>https://kyungpyo-kim.github.io/tags/kalman-filter/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/kalman-filter/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>optimal state estimation</title>
+      <link>https://kyungpyo-kim.github.io/tags/optimal-state-estimation/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/optimal-state-estimation/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>자율주행</title>
+      <link>https://kyungpyo-kim.github.io/tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/</guid>
+      
+        <description></description>
+      
+    </item>
+    
     <item>
       <title>독서</title>
       <link>https://kyungpyo-kim.github.io/tags/%EB%8F%85%EC%84%9C/</link>
@@ -200,17 +233,6 @@
       <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/tags/diagnostics/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>자율주행</title>
-      <link>https://kyungpyo-kim.github.io/tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/</link>
-      <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://kyungpyo-kim.github.io/tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/</guid>
       
         <description></description>
       
