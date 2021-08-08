@@ -9,23 +9,24 @@
     <lastBuildDate>Sat, 07 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Effective Modern C&#43;&#43;</title>
-      <link>https://kyungpyo-kim.github.io/study/effective-modern-c&#43;&#43;-1636ae52bc4a47ea864c1b7fdeeed5c5/</link>
+      <link>https://kyungpyo-kim.github.io/study/effective-modern-c&#43;&#43;/</link>
       <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/effective-modern-c&#43;&#43;-1636ae52bc4a47ea864c1b7fdeeed5c5/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/effective-modern-c&#43;&#43;/</guid>
       
-        <description>C++14: C++ 14 표시가 없으면 C++11, C++14 모두 해당</description>
+        <description>Effective Modern C++ 도서를 읽고 정리한 효율적인 C++ 프로그래밍 방법</description>
       
     </item>
     
     <item>
       <title>Kalman Filter (작성중)</title>
-      <link>https://kyungpyo-kim.github.io/study/kalman-filter-05617ac9a82542c684387a2e8a8d940d/</link>
+      <link>https://kyungpyo-kim.github.io/study/kalman-filter/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/kalman-filter-05617ac9a82542c684387a2e8a8d940d/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/kalman-filter/</guid>
       
-        <description>이 글을 쓰는 목적 * 내가 아는 Kalman Filter 개념을 다시 정리하기 위해 * 다른 사람에게 설명할 때 유용한 자료로 활용하기 위해 Prerequisites  Least Square Method  Objective: Optimal state estimation 칼만 필터는 많은 분야에서 두루 사용되는 효율적이면서 강건한 알고리즘입니다.</description>
+        <description>자율주행 알고리즘 개발을 위한 칼만필터
+ @Remind * 내가 아는 Kalman Filter 개념을 다시 정리하기 위해 * 다른 사람에게 설명할 때 유용한 자료로 활용하기 위해 * 수식은 적게 그림은 많게 Prerequisites  Least Square Method Bayes theorem Gaussian distribution  Objective: Optimal state estimation 칼만 필터는 많은 분야에서 두루 사용되는 효율적이면서 강건한 알고리즘입니다.</description>
       
     </item>
     

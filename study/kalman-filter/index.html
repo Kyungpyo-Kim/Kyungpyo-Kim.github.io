@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+><head>
+  <title>
+    kyungpyo-kim
+      |
+      Kalman Filter (작성중)
+
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta
+    name="description"
+    content="
+      자율주행 알고리즘 개발을 위한 칼만필터
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r" />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/main.min.747c2051c988c578be617a76ccc39f8ccfbe01837a9c2dffa1816ceee36333fa.css"
+    integrity="sha256-dHwgUcmIxXi&#43;YXp2zMOfjM&#43;&#43;AYN6nC3/oYFs7uNjM/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+    integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous"
+  />
+  
+  <link rel="shortcut icon" href="/faviconsfavicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/faviconsapple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/faviconsfavicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/faviconsfavicon-16x16.png" />
+
+  <link rel="canonical" href="/study/kalman-filter/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.413f798d8aa82610bef17a5ca1d7e962ec185be395f1aeb3f45d1891af568b65.js"
+    integrity="sha256-QT95jYqoJhC&#43;8XpcodfpYuwYW&#43;OV8a6z9F0Yka9Wi2U="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.fcf9526f15b3b4e08472de192969ab28a4cdcb32ac94f83e85a8b84e9b45acd2.js"
+      integrity="sha256-/PlSbxWztOCEct4ZKWmrKKTNyzKslPg&#43;hai4TptFrNI="
+      crossorigin="anonymous"
+    ></script>
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Kalman Filter (작성중)"/>
+<meta name="twitter:description" content="자율주행 알고리즘 개발을 위한 칼만필터"/>
+
+
+
+  
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "study",
+        "name": "Kalman Filter (작성중)",
+        "headline": "Kalman Filter (작성중)",
+        "alternativeHeadline": "",
+        "description": "
+      자율주행 알고리즘 개발을 위한 칼만필터
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/kalman-filter\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Kyungpyo Kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Kyungpyo Kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Kyungpyo Kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Kyungpyo Kim"
+        },
+        "copyrightYear" : "2021",
+        "dateCreated": "2021-08-05T00:00:00.00Z",
+        "datePublished": "2021-08-05T00:00:00.00Z",
+        "dateModified": "2021-08-05T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Kyungpyo Kim",
+            "url": "https://kyungpyo-kim.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/kyungpyo-kim.github.io\/faviconsfavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/kalman-filter\/",
+        "wordCount" : "422",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "kalman filter"
+
+    
+      
+        ,
+
+      
+      "자율주행"
+
+    
+      
+        ,
+
+      
+      "optimal state estimation"
+
+    ]
+    }
+  </script>
+
+
+
+
+  
+  <script data-ad-client="ca-pub-7791328994969079" async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body>
+    <header><div
+  class="page-top 
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+  <nav>
+    <ul class="nav__list" id="navMenu">
+      <div class="nav__links">
+        
+        
+          
+          <li>
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+        
+      </div>
+      <li>
+        
+          <a class="theme-switch" title="Switch Theme">
+            <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+          </a>
+
+        
+      </li>
+    </ul>
+  </nav>
+</div>
+</header>
+    <div class="wrapper">
+      <aside><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="logo-title">
+      <div class="title">
+        <img src="/images/kyungpyo.jpeg" alt="profile picture" />
+        <h3 title=""><a href="/">Kyungpyo Kim</a></h3>
+        <div class="description">
+          <p>새로운 것을 찾아</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+      
+        <li>
+          <a href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/" rel="me" aria-label="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://github.com/Kyungpyo-Kim" rel="me" aria-label="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://instagram.com/kyung_py" rel="me" aria-label="instagram">
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="mailto:kyungpyo94@gmail.com" rel="me" aria-label="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer--sidebar">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          kyungpyo-kim
+          2021
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
+    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</aside>
+      <main>
+        <div class="autopagerize_page_element">
+          <div class="content">
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    <div class="post-content">
+      
+      <div class="post-title">
+        <h1>Kalman Filter (작성중)</h1>
+        
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Thu, Aug 5, 2021
+
+
+              </span
+            >
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">2-minute read</span>
+          </div>
+
+        
+      </div><hr>
+<p>자율주행 알고리즘 개발을 위한 칼만필터</p>
+<hr>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">@Remind
+* 내가 아는 Kalman Filter 개념을 다시 정리하기 위해
+* 다른 사람에게 설명할 때 유용한 자료로 활용하기 위해
+* 수식은 적게 그림은 많게
+</code></pre></div><h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Least Square Method</li>
+<li>Bayes theorem</li>
+<li>Gaussian distribution</li>
+</ul>
+<h2 id="objective-optimal-state-estimation">Objective: Optimal state estimation</h2>
+<p>칼만 필터는 많은 분야에서 두루 사용되는 효율적이면서 강건한 알고리즘입니다. 센서에서 측정된 결과로 부터 우리가 알고자 하는 정보를 뽑아내기 위해 사용됩니다.</p>
+<p>제가 주로 자율주행 분야의 연구 및 개발을 하면서는 주변 환경 정보를 인식해야 하는 경우가 많습니다. 주변에 있는 물체(차, 사람, 자전거 등)의 위치와 크기, 어떤 방향으로 움직이는지에 대한 정보가 적절하게 주어져야 안전하고 신뢰성 높은 자율주행이 가능합니다.</p>
+<ul>
+<li>위치</li>
+<li>크기</li>
+<li>방향</li>
+</ul>
+<p><img src="/images/kalmanfilter/sensor.png" alt="/images/kalmanfilter/sensor.png"></p>
+<p>이때 센서를 통해 얻어진 정보는 일시적인(temporary) 정보가 많습니다. 또한 주변 물체의 동특성을 반영하지 않는 경우가 많습니다. 센서의 정보가 직접적으로 우리가 관측하고자 하는 결과를 포함하지 않을때도 있습니다. 센서의 오차 역시 무시할 수 가 없습니다.</p>
+<p>이때 칼만필터는 연속적으로 측정된 <code>센서의 값(measurement)</code>과 우리가 <code>알고자 하는 값(state)</code>이 있을 때 <code>센서 측정값과 우리가 알고자하는 값 사이의 관계(measurement model)</code>, 측정값이 어떤 <code>동특성(transition model)</code>을 가지고 있는지를 정의하고 이 관계속에서 <code>가장 좋은(optimal) 값</code>을 찾는 것을 목표로 합니다.</p>
+<ul>
+<li>measurement</li>
+<li>state</li>
+<li>measurement model</li>
+<li>transition model</li>
+</ul>
+<h3 id="uncertainty-of-">Uncertainty of *</h3>
+<p>칼만필터를 통해 얻어지는 결과를 우리는 최적값(optimal state)이라고 합니다. 이때 간과해서 안되는 부분이 최적값은 정확한 값은 아니라는 것입니다. 칼만필터를 통해 얻어지는 결과는 센서의 불확실성(uncertainty of measurement), 관측하고자 하는 값 사이의 관계들의 불확실성(uncertainty of process)을 고려한 최적값입니다. 이러한 불확실성은 말 그대로 불확실하기 때문에 정확할 수 없고 따라서 얻어지는 최적값도 불확실성을 갖게 됩니다. 이러한 불확실성의 정도를 우리는 임의로 조정하게 되는데 여기서 칼만필터의 결과가 크게 달라지게 됩니다. 그래서 칼만필터를 제대로 활용하기 위해서는 이러한 불확실성이 어떻게 칼만필터에 영향을 주는지, 칼만필터는 이러한 불확실성을 어떻게 다루는지 잘 이해해야 합니다.</p>
+<h3 id="advantages-of-kalman-filter">Advantages of Kalman filter</h3>
+<p>제가 생각하는 칼만필터는 위의 서술한 내용만으로도 충분하며 다라고 해도 부족함이 없다고 생각합니다. 하지만 실무에 사용할 때에는 아래와 같은 장점들도 중요하게 여겨집니다. 본 글에서는 크게 다루지는 않을 예정입니다. 칼만필터를 이해하면 당연한 내용들이기 때문입니다.</p>
+<ul>
+<li>메모리 효율성</li>
+<li>빠른 계산</li>
+</ul>
+<h2 id="assumption">Assumption</h2>
+<p>예를 들어 차량의 속도를 측정하는 센서가 있다고 해봅시다. 센서에서 들어오는 속도는 많은 오차를 포함하고 있습니다. 그런데 우리는 차량의 가속도의 크기의 최대값 혹은 최소값을 알 수 있다면 이 말도 안되는 오차도 어느정도 줄일수 있지 않을까요? 혹은 센서에서 들어오는 속도값이 항상 일정한 비율의 오프셋이 있다거나 크기의 비가 조정되어 있다면 이런 부분을 고려해 좀 더 정확한 측정값을 유추해 볼 수 있겠죠? 문제는 이러한 가속도의 크기의 최대값/최소값, 센서의 속도의 오프셋, 스케일링 등과 같은 우리의 지식이 항상 정확하지 않다는 것입니다. 정확한 수식으로 나타낼 수 없죠. 칼만필터는 이러한 불확실성을 가우시안 분포로 가정을 합니다. 가우시안 분포로 가정하므로서 재귀적으로 보정과 예측의 단계를 통해 최적화된 값을 얻을 수 있게 합니다.</p>
+<ol>
+<li>시스템(model)은 선형이다.</li>
+<li>시스템(model)은 Gaussian distribution이다.</li>
+</ol>
+<h2 id="random-process">Random Process</h2>
+<h2 id="linear-system">Linear System</h2>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Kalman_filter">아직도 코드 짤때 찾아보는 위키백과</a>
+<a href="https://ko.wikipedia.org/wiki/%EC%B9%BC%EB%A7%8C_%ED%95%84%ED%84%B0">https://ko.wikipedia.org/wiki/칼만_필터</a></li>
+<li><a href="https://www.youtube.com/channel/UCa2-fpj6AV8T6JK1uTRuFpw">명강의</a></li>
+<li><a href="https://gaussian37.github.io/ad-ose-lkf_basic/">https://gaussian37.github.io/ad-ose-lkf_basic/</a></li>
+<li><a href="https://medium.com/@celinachild/kalman-filter-%EC%86%8C%EA%B0%9C-395c2016b4d6">https://medium.com/@celinachild/kalman-filter-소개-395c2016b4d6</a></li>
+</ul>
+<h2 id="pictures">Pictures</h2>
+<p><a href="https://docs.google.com/presentation/d/1t-30MNU8Su_qdQ7Sxgb_rgNfZNBcOCe22xZNVyr-9UQ/edit?usp=drivesdk">KalmanFilter</a></p>
+</div>
+    <div class="post-footer">
+      <div class="info">
+        
+
+        
+          <span class="separator"><a class="tag" href="/tags/kalman-filter/">kalman filter</a><a class="tag" href="/tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/">자율주행</a><a class="tag" href="/tags/optimal-state-estimation/">optimal state estimation</a></span>
+
+
+
+
+        
+      </div>
+    </div>
+
+    <div id="fb_comments_container">
+          <h2>comments</h2>
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kyungpyo-kim" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+  </div>
+
+
+          </div>
+        </div>
+      </main>
+    </div><footer class="footer footer--base">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          kyungpyo-kim
+          2021
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
+    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+</html>
