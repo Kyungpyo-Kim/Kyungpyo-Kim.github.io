@@ -15,7 +15,8 @@
       <guid>https://kyungpyo-kim.github.io/study/kalman-filter/</guid>
       
         <description>자율주행 알고리즘 개발을 위한 칼만필터
- @Remind * 내가 아는 Kalman Filter 개념을 다시 정리하기 위해 * 다른 사람에게 설명할 때 유용한 자료로 활용하기 위해 * 수식은 적게 그림은 많게 Prerequisites  Least Square Method Bayes theorem Gaussian distribution  Objective: Optimal state estimation 칼만 필터는 많은 분야에서 두루 사용되는 효율적이면서 강건한 알고리즘입니다.</description>
+  @Remind
+ 내가 아는 Kalman Filter 개념을 다시 정리하기 위해 다른 사람에게 설명할 때 유용한 자료로 활용하기 위해 수식은 적게 그림은 많게   Prerequisites  Least Square Method Bayes theorem Gaussian distribution  Objective: Optimal state estimation 칼만 필터는 많은 분야에서 두루 사용되는 효율적이면서 강건한 알고리즘입니다.</description>
       
     </item>
     
