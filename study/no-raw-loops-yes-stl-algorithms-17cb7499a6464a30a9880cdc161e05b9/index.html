@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+><head>
+  <title>
+    kyungpyo-kim
+      |
+      No raw loops! Yes STL algorithms!
+
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta
+    name="description"
+    content="
+      raw loop 를 쓰지 말아야 하는 이유, STL algorithms
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r" />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/main.min.747c2051c988c578be617a76ccc39f8ccfbe01837a9c2dffa1816ceee36333fa.css"
+    integrity="sha256-dHwgUcmIxXi&#43;YXp2zMOfjM&#43;&#43;AYN6nC3/oYFs7uNjM/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+    integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous"
+  />
+  
+  <link rel="shortcut icon" href="/faviconsfavicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/faviconsapple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/faviconsfavicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/faviconsfavicon-16x16.png" />
+
+  <link rel="canonical" href="/study/no-raw-loops-yes-stl-algorithms-17cb7499a6464a30a9880cdc161e05b9/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.413f798d8aa82610bef17a5ca1d7e962ec185be395f1aeb3f45d1891af568b65.js"
+    integrity="sha256-QT95jYqoJhC&#43;8XpcodfpYuwYW&#43;OV8a6z9F0Yka9Wi2U="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.fcf9526f15b3b4e08472de192969ab28a4cdcb32ac94f83e85a8b84e9b45acd2.js"
+      integrity="sha256-/PlSbxWztOCEct4ZKWmrKKTNyzKslPg&#43;hai4TptFrNI="
+      crossorigin="anonymous"
+    ></script>
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="No raw loops! Yes STL algorithms!"/>
+<meta name="twitter:description" content="raw loop 를 쓰지 말아야 하는 이유, STL algorithms"/>
+
+
+
+  
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "study",
+        "name": "No raw loops! Yes STL algorithms!",
+        "headline": "No raw loops! Yes STL algorithms!",
+        "alternativeHeadline": "",
+        "description": "
+      raw loop 를 쓰지 말아야 하는 이유, STL algorithms
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/no-raw-loops-yes-stl-algorithms-17cb7499a6464a30a9880cdc161e05b9\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Kyungpyo Kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Kyungpyo Kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Kyungpyo Kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Kyungpyo Kim"
+        },
+        "copyrightYear" : "2021",
+        "dateCreated": "2021-09-18T00:00:00.00Z",
+        "datePublished": "2021-09-18T00:00:00.00Z",
+        "dateModified": "2021-09-18T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Kyungpyo Kim",
+            "url": "https://kyungpyo-kim.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/kyungpyo-kim.github.io\/faviconsfavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/no-raw-loops-yes-stl-algorithms-17cb7499a6464a30a9880cdc161e05b9\/",
+        "wordCount" : "862",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "C\u002b\u002b"
+
+    
+      
+        ,
+
+      
+      "STL"
+
+    
+      
+        ,
+
+      
+      "Algorithm"
+
+    ]
+    }
+  </script>
+
+
+
+
+  
+  <script data-ad-client="ca-pub-7791328994969079" async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body>
+    <header><div
+  class="page-top 
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+  <nav>
+    <ul class="nav__list" id="navMenu">
+      <div class="nav__links">
+        
+        
+          
+          <li>
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+        
+      </div>
+      <li>
+        
+          <a class="theme-switch" title="Switch Theme">
+            <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+          </a>
+
+        
+      </li>
+    </ul>
+  </nav>
+</div>
+</header>
+    <div class="wrapper">
+      <aside><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="logo-title">
+      <div class="title">
+        <img src="/images/kyungpyo.jpeg" alt="profile picture" />
+        <h3 title=""><a href="/">Kyungpyo Kim</a></h3>
+        <div class="description">
+          <p>새로운 것을 찾아</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+      
+        <li>
+          <a href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/" rel="me" aria-label="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://github.com/Kyungpyo-Kim" rel="me" aria-label="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://instagram.com/kyung_py" rel="me" aria-label="instagram">
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="mailto:kyungpyo94@gmail.com" rel="me" aria-label="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer--sidebar">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          kyungpyo-kim
+          2021
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
+    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</aside>
+      <main>
+        <div class="autopagerize_page_element">
+          <div class="content">
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    <div class="post-content">
+      
+      <div class="post-title">
+        <h1>No raw loops! Yes STL algorithms!</h1>
+        
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Sat, Sep 18, 2021
+
+
+              </span
+            >
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">5-minute read</span>
+          </div>
+
+        
+      </div><p><img src="/images/No%20raw%20loops!%20Yes%20STL%20algorithms!%2017cb7499a6464a30a9880cdc161e05b9/Untitled.png" alt="unsplash"></p>
+<h1 id="what-are-raw-loops--algorithms">What are raw loops (↔ algorithms)?</h1>
+<ul>
+<li><code>for</code> loop</li>
+<li><code>while</code> loop</li>
+<li><code>do</code> <code>while</code> loop</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// Raw loop
+</span><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">my_vector</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// do something including erase, push, insert and break;
+</span><span class="c1"></span><span class="p">}</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">x</span> <span class="p">:</span> <span class="n">my_vector</span><span class="p">){</span>
+  <span class="c1">// do something
+</span><span class="c1"></span><span class="p">}</span>
+
+<span class="c1">// Algorithms
+</span><span class="c1"></span><span class="k">auto</span> <span class="n">it_found</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">find_if</span><span class="p">(</span><span class="n">cbegin</span><span class="p">(</span><span class="n">my_vector</span><span class="p">),</span> <span class="n">cend</span><span class="p">(</span><span class="n">my_vector</span><span class="p">),</span> 
+                             <span class="n">find_function</span><span class="p">);</span>
+<span class="k">auto</span> <span class="n">it_remove</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">remove_if</span><span class="p">(</span><span class="n">cbegin</span><span class="p">(</span><span class="n">my_vector</span><span class="p">),</span> <span class="n">cend</span><span class="p">(</span><span class="n">my_vector</span><span class="p">),</span>
+                                <span class="n">remove_function</span><span class="p">);</span>
+<span class="k">auto</span> <span class="n">it_fill</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">fill_n</span><span class="p">(</span><span class="n">my_vector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">count</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+</code></pre></div><h1 id="why-you-should-not-use-raw-loops">Why you should not use raw loops?</h1>
+<ul>
+<li>raw loop 는 한눈에 loop 의 목적을 파악하기가 어렵다.
+<ul>
+<li>raw loop 는 loop 안의 body를 확인해야 한다.</li>
+</ul>
+</li>
+<li>종료조건을 확인하기 어렵다.</li>
+<li>loop 의 time complexity 를 숨긴다
+<ul>
+<li>시스템의 성능 저하를 야기할 수 있다.</li>
+</ul>
+</li>
+<li>STL algorithms 을 적용하면 의도를 확인하기 쉬운 추상화된 코드로 작성이 가능하다.
+<ul>
+<li>가독성, 유지관리의 용이성 증가</li>
+</ul>
+</li>
+</ul>
+<h1 id="stl-algorithms-every-programmer-must-know">STL algorithms every programmer must know.</h1>
+<h3 id="upper_bound-lower_bound"><code>upper_bound, lower_bound</code></h3>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">template</span><span class="o">&lt;</span> <span class="k">class</span> <span class="nc">ForwardIt</span><span class="p">,</span> <span class="k">class</span> <span class="nc">T</span> <span class="o">&gt;</span>
+<span class="n">ForwardIt</span> <span class="n">upper_bound</span><span class="p">(</span> <span class="n">ForwardIt</span> <span class="n">first</span><span class="p">,</span> <span class="n">ForwardIt</span> <span class="n">last</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">value</span> <span class="p">);</span>
+
+<span class="k">template</span><span class="o">&lt;</span> <span class="k">class</span> <span class="nc">ForwardIt</span><span class="p">,</span> <span class="k">class</span> <span class="nc">T</span><span class="p">,</span> <span class="k">class</span> <span class="nc">Compare</span> <span class="o">&gt;</span>
+<span class="n">ForwardIt</span> <span class="n">upper_bound</span><span class="p">(</span> <span class="n">ForwardIt</span> <span class="n">first</span><span class="p">,</span> <span class="n">ForwardIt</span> <span class="n">last</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">value</span><span class="p">,</span> 
+                       <span class="n">Compare</span> <span class="n">comp</span> <span class="p">);</span>
+
+<span class="k">template</span><span class="o">&lt;</span> <span class="k">class</span> <span class="nc">ForwardIt</span><span class="p">,</span> <span class="k">class</span> <span class="nc">T</span> <span class="o">&gt;</span>
+<span class="n">ForwardIt</span> <span class="n">lower_bound</span><span class="p">(</span> <span class="n">ForwardIt</span> <span class="n">first</span><span class="p">,</span> <span class="n">ForwardIt</span> <span class="n">last</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">value</span> <span class="p">);</span>
+
+<span class="k">template</span><span class="o">&lt;</span> <span class="k">class</span> <span class="nc">ForwardIt</span><span class="p">,</span> <span class="k">class</span> <span class="nc">T</span><span class="p">,</span> <span class="k">class</span> <span class="nc">Compare</span> <span class="o">&gt;</span>
+<span class="n">ForwardIt</span> <span class="n">lower_bound</span><span class="p">(</span> <span class="n">ForwardIt</span> <span class="n">first</span><span class="p">,</span> <span class="n">ForwardIt</span> <span class="n">last</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">value</span><span class="p">,</span> 
+                       <span class="n">Compare</span> <span class="n">comp</span> <span class="p">);</span>
+
+<span class="c1">// * c++20 에서는 constexpr 버전이 추가되었다.
+</span></code></pre></div><ul>
+<li>
+<p><strong><code>upper_bound</code></strong></p>
+<ul>
+<li>용도 : 찾으려는 key 값을 초과하는 숫자가 배열 몇 번째에서 처음 등장하는지 찾기 위함</li>
+<li>범위 [first, last) 안의 원소들 중, value 보다 큰 첫 번째 원소를 리턴한다. 만일 그런 원소가 없다면 last 를 리턴한다. 이름 그대로 어떠한 값의 상한선 을 의미한다.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>lower_bound</code></strong></p>
+<ul>
+<li>용도 : 찾으려는 key 값보다 같거나 큰 숫자가 배열 몇 번째에서 처음 등장하는지 찾기 위함</li>
+<li>범위 [first, last) 안의 원소들 중, value 보다 작지 않은 (크거나 같은) 첫 번째 원소를 리턴한다. 만일 그런 원소가 없다면 last 를 리턴한다. 이름 그대로 어떠한 값의 하한선 을 의미한다.</li>
+</ul>
+</li>
+<li>
+<p><strong>Condition:</strong> 탐색을 진행할 배열 혹은 벡터는 오름차순 정렬되어 있어야 함</p>
+</li>
+<li>
+<p><strong>Time Complexity:</strong> <strong><code>O(log(N))</code></strong></p>
+</li>
+<li>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="kt">int</span> <span class="n">gfg</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span> <span class="p">};</span>
+   
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">(</span><span class="n">gfg</span><span class="p">,</span> <span class="n">gfg</span> <span class="o">+</span> <span class="mi">8</span><span class="p">);</span> <span class="c1">// 5 6 7 7 6 5 5 6
+</span><span class="c1"></span>   
+  <span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span> <span class="c1">// 5 5 5 6 6 6 7 7
+</span><span class="c1"></span>   
+  <span class="k">auto</span> <span class="n">lower</span> <span class="o">=</span> <span class="n">lower_bound</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="mi">6</span><span class="p">);</span>
+  <span class="k">auto</span> <span class="n">upper</span> <span class="o">=</span> <span class="n">upper_bound</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="mi">6</span><span class="p">);</span>
+
+  <span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream_iterator</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">));</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* output
+</span><span class="cm">6 6 6
+</span><span class="cm">*/</span>
+</code></pre></div></li>
+</ul>
+<h3 id="rotate"><code>rotate</code></h3>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">template</span><span class="o">&lt;</span> <span class="k">class</span> <span class="nc">ForwardIt</span> <span class="o">&gt;</span>
+<span class="n">ForwardIt</span> <span class="n">rotate</span><span class="p">(</span> <span class="n">ForwardIt</span> <span class="n">first</span><span class="p">,</span> <span class="n">ForwardIt</span> <span class="n">n_first</span><span class="p">,</span> <span class="n">ForwardIt</span> <span class="n">last</span> <span class="p">);</span>
+
+<span class="c1">// * c++20 에서는 constexpr, ExecutionPolicy 버전이 추가되었다.
+</span></code></pre></div><ul>
+<li>
+<p><strong><code>rotate</code></strong></p>
+<ul>
+<li>[first, last) 구간에서 n_first 만큼 회전시킨다. first 위치는 n_first 위치로 이동하게 된다.</li>
+<li>왼쪽으로 이동하며, 오른쪽으로 회전시키려면 reverse iterator 를 이용한다.</li>
+<li>first 가 이동한 위치를 리턴한다.</li>
+</ul>
+</li>
+<li>
+<p><strong>Time Complexity:</strong> <strong><code>O(N)</code></strong></p>
+</li>
+<li>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span><span class="cp"></span>   
+<span class="k">auto</span> <span class="n">print</span> <span class="o">=</span> <span class="p">[](</span><span class="k">auto</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">remark</span><span class="p">,</span> <span class="k">auto</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">remark</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream_iterator</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">));</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="p">};</span>
+   
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+   
+    <span class="n">print</span><span class="p">(</span><span class="s">&#34;before sort:</span><span class="se">\t\t</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
+   
+    <span class="c1">// insertion sort
+</span><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">i</span> <span class="o">=</span> <span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">rotate</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">upper_bound</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">i</span><span class="p">,</span> <span class="o">*</span><span class="n">i</span><span class="p">),</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+   
+    <span class="n">print</span><span class="p">(</span><span class="s">&#34;after sort:</span><span class="se">\t\t</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
+   
+    <span class="c1">// simple rotation to the left
+</span><span class="c1"></span>    <span class="n">std</span><span class="o">::</span><span class="n">rotate</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+   
+    <span class="n">print</span><span class="p">(</span><span class="s">&#34;simple rotate left:</span><span class="se">\t</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
+   
+    <span class="c1">// simple rotation to the right
+</span><span class="c1"></span>    <span class="n">std</span><span class="o">::</span><span class="n">rotate</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">rbegin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">rbegin</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">rend</span><span class="p">());</span>
+      
+    <span class="n">print</span><span class="p">(</span><span class="s">&#34;simple rotate right:</span><span class="se">\t</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
+      
+    <span class="c1">// rotate partially
+</span><span class="c1"></span>    <span class="n">std</span><span class="o">::</span><span class="n">rotate</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="mi">7</span><span class="p">);</span>
+      
+    <span class="n">print</span><span class="p">(</span><span class="s">&#34;rotate partially:</span><span class="se">\t</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/* output
+</span><span class="cm">before sort:         2 4 2 0 5 9 7 3 7 1 
+</span><span class="cm">after sort:          0 1 2 2 3 4 5 7 7 9 
+</span><span class="cm">simple rotate left:  1 2 2 3 4 5 7 7 9 0 
+</span><span class="cm">simple rotate right: 0 1 2 2 3 4 5 7 7 9 
+</span><span class="cm">rotate partially:    0 1 3 4 5 2 2 7 7 9
+</span><span class="cm">*/</span>
+</code></pre></div></li>
+</ul>
+<h3 id="partition"><code>partition</code></h3>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">template</span><span class="o">&lt;</span> <span class="k">class</span> <span class="nc">ForwardIt</span><span class="p">,</span> <span class="k">class</span> <span class="nc">UnaryPredicate</span> <span class="o">&gt;</span>
+<span class="n">ForwardIt</span> <span class="n">partition</span><span class="p">(</span> <span class="n">ForwardIt</span> <span class="n">first</span><span class="p">,</span> <span class="n">ForwardIt</span> <span class="n">last</span><span class="p">,</span> <span class="n">UnaryPredicate</span> <span class="n">p</span> <span class="p">);</span>
+
+<span class="c1">// * c++20 에서는 constexpr, ExecutionPolicy 버전이 추가되었다.
+</span></code></pre></div><ul>
+<li>
+<p><strong><code>partition</code></strong></p>
+<ul>
+<li>[first, last) 구간에서 <code>UnaryPredicate p</code> 를 만족하는 값은 앞쪽 그룹, 만족하지 않는 값은 뒤쪽 그룹으로 나누고 두번째 그룹의 시작점을 리턴한다.</li>
+<li><code>**stable_partition**</code> 함수는 partition 과 동일하게 동작하나 원래 값의 순서를 보장해 준다.</li>
+</ul>
+</li>
+<li>
+<p><strong>Time Complexity:</strong></p>
+<ul>
+<li>
+<p>Given <code>N = [std::distance](http://en.cppreference.com/w/cpp/iterator/distance)(first,last)</code></p>
+<p>1) Exactly N applications of the predicate. At most N/2 swaps if <code>ForwardIt</code> meets the requirements of <em><a href="https://en.cppreference.com/w/cpp/named_req/BidirectionalIterator">LegacyBidirectionalIterator</a></em>, and at most N swaps otherwise.</p>
+<p>2) <code>O(N log N)</code> swaps <code>and O(N)</code> applications of the predicate.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">};</span>
+      
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;partition (odd first): &#34;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">partition</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> 
+                                   <span class="p">[](</span><span class="k">auto</span> <span class="n">n</span><span class="p">){</span><span class="k">return</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">;});</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream_iterator</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">));</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;stable partition (even first): &#34;</span><span class="p">;</span>
+    <span class="k">auto</span> <span class="n">p</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">stable_partition</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> 
+                                   <span class="p">[](</span><span class="k">auto</span> <span class="n">n</span><span class="p">){</span><span class="k">return</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;});</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream_iterator</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">));</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;position: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">p</span> <span class="o">-</span> <span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* output
+</span><span class="cm">partition (odd first): 1 9 7 5 3 5 8 6 4 2 
+</span><span class="cm">stable partition (even first): 8 6 4 2 1 9 7 5 3 5 
+</span><span class="cm">position: 5
+</span><span class="cm">*/</span>
+
+</code></pre></div></li>
+</ul>
+<p><img src="/images/No%20raw%20loops!%20Yes%20STL%20algorithms!%2017cb7499a6464a30a9880cdc161e05b9/Untitled%201.png" alt="unsplash"></p>
+<h1 id="그래도-raw-loop-를-써야한다면">그래도 raw loop 를 써야한다면?</h1>
+<ul>
+<li>range-based loop 를 사용</li>
+<li>loop의 body 를 최대한 간결하게 사용</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">r</span><span class="p">)</span> <span class="n">f</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span>  <span class="nl">e</span> <span class="p">:</span> <span class="n">r</span><span class="p">)</span> <span class="n">e</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span> <span class="n">f</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="n">g</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="p">}</span>
+</code></pre></div><h1 id="reference">Reference</h1>
+<ul>
+<li><a href="https://belaycpp.com/2021/06/22/dont-use-raw-loops/">https://belaycpp.com/2021/06/22/dont-use-raw-loops/</a></li>
+<li><a href="https://www.youtube.com/watch?v=W2tWOdzgXHA">C++ Seasoning, Sean Parent (2013)</a></li>
+<li><a href="https://modoocode.com/">https://modoocode.com/</a>
+<ul>
+<li><a href="https://modoocode.com/256">https://modoocode.com/256</a></li>
+</ul>
+</li>
+<li><a href="https://en.cppreference.com/w/cpp/algorithm">https://en.cppreference.com/w/cpp/algorithm</a></li>
+<li><a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=kks227&amp;logNo=220315322874">https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=kks227&amp;logNo=220315322874</a></li>
+</ul>
+</div>
+    <div class="post-footer">
+      <div class="info">
+        
+
+        
+          <span class="separator"><a class="tag" href="/tags/c&#43;&#43;/">C&#43;&#43;</a><a class="tag" href="/tags/stl/">STL</a><a class="tag" href="/tags/algorithm/">Algorithm</a></span>
+
+
+
+
+        
+      </div>
+    </div>
+
+    <div id="fb_comments_container">
+          <h2>comments</h2>
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kyungpyo-kim" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+  </div>
+
+
+          </div>
+        </div>
+      </main>
+    </div><footer class="footer footer--base">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          kyungpyo-kim
+          2021
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
+    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+</html>
