@@ -6,7 +6,18 @@
     <description>Recent content in Tags on Website of Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>독서</title>
+      <link>https://kyungpyo-kim.github.io/tags/%EB%8F%85%EC%84%9C/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/%EB%8F%85%EC%84%9C/</guid>
+      
+        <description></description>
+      
+    </item>
+    
     <item>
       <title>Algorithm</title>
       <link>https://kyungpyo-kim.github.io/tags/algorithm/</link>
@@ -35,17 +46,6 @@
       <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/tags/stl/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>독서</title>
-      <link>https://kyungpyo-kim.github.io/tags/%EB%8F%85%EC%84%9C/</link>
-      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://kyungpyo-kim.github.io/tags/%EB%8F%85%EC%84%9C/</guid>
       
         <description></description>
       
