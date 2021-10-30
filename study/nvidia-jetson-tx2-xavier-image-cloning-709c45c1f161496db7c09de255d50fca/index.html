@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+><head>
+  <title>
+    kyungpyo-kim
+      |
+      NVIDIA Jetson TX2/Xavier Image Cloning
+
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta
+    name="description"
+    content="
+      NVIDIA Jetson 시리즈 제품들을 사용할 때 이미지를 clone 하고 flash 하는 방법들을 정리
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r" />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/main.min.747c2051c988c578be617a76ccc39f8ccfbe01837a9c2dffa1816ceee36333fa.css"
+    integrity="sha256-dHwgUcmIxXi&#43;YXp2zMOfjM&#43;&#43;AYN6nC3/oYFs7uNjM/o="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+    integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous"
+  />
+  
+  <link rel="shortcut icon" href="/faviconsfavicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/faviconsapple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/faviconsfavicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/faviconsfavicon-16x16.png" />
+
+  <link rel="canonical" href="/study/nvidia-jetson-tx2-xavier-image-cloning-709c45c1f161496db7c09de255d50fca/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.413f798d8aa82610bef17a5ca1d7e962ec185be395f1aeb3f45d1891af568b65.js"
+    integrity="sha256-QT95jYqoJhC&#43;8XpcodfpYuwYW&#43;OV8a6z9F0Yka9Wi2U="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.fcf9526f15b3b4e08472de192969ab28a4cdcb32ac94f83e85a8b84e9b45acd2.js"
+      integrity="sha256-/PlSbxWztOCEct4ZKWmrKKTNyzKslPg&#43;hai4TptFrNI="
+      crossorigin="anonymous"
+    ></script>
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="NVIDIA Jetson TX2/Xavier Image Cloning"/>
+<meta name="twitter:description" content="NVIDIA Jetson 시리즈 제품들을 사용할 때 이미지를 clone 하고 flash 하는 방법들을 정리"/>
+
+
+
+  
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "study",
+        "name": "NVIDIA Jetson TX2\/Xavier Image Cloning",
+        "headline": "NVIDIA Jetson TX2\/Xavier Image Cloning",
+        "alternativeHeadline": "",
+        "description": "
+      NVIDIA Jetson 시리즈 제품들을 사용할 때 이미지를 clone 하고 flash 하는 방법들을 정리
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/nvidia-jetson-tx2-xavier-image-cloning-709c45c1f161496db7c09de255d50fca\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Kyungpyo Kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Kyungpyo Kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Kyungpyo Kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Kyungpyo Kim"
+        },
+        "copyrightYear" : "2021",
+        "dateCreated": "2021-10-24T00:00:00.00Z",
+        "datePublished": "2021-10-24T00:00:00.00Z",
+        "dateModified": "2021-10-24T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Kyungpyo Kim",
+            "url": "https://kyungpyo-kim.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/kyungpyo-kim.github.io\/faviconsfavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/nvidia-jetson-tx2-xavier-image-cloning-709c45c1f161496db7c09de255d50fca\/",
+        "wordCount" : "422",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "NVIDIA"
+
+    
+      
+        ,
+
+      
+      "GPU"
+
+    
+      
+        ,
+
+      
+      "Jetson"
+
+    ]
+    }
+  </script>
+
+
+
+
+  
+  <script data-ad-client="ca-pub-7791328994969079" async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body>
+    <header><div
+  class="page-top 
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+  <nav>
+    <ul class="nav__list" id="navMenu">
+      <div class="nav__links">
+        
+        
+          
+          <li>
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+
+        
+          
+          <li>
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+        
+      </div>
+      <li>
+        
+          <a class="theme-switch" title="Switch Theme">
+            <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+          </a>
+
+        
+      </li>
+    </ul>
+  </nav>
+</div>
+</header>
+    <div class="wrapper">
+      <aside><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="logo-title">
+      <div class="title">
+        <img src="/images/kyungpyo.jpeg" alt="profile picture" />
+        <h3 title=""><a href="/">Kyungpyo Kim</a></h3>
+        <div class="description">
+          <p>새로운 것을 찾아</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+      
+        <li>
+          <a href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/" rel="me" aria-label="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://github.com/Kyungpyo-Kim" rel="me" aria-label="GitHub">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="https://instagram.com/kyung_py" rel="me" aria-label="instagram">
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li>
+          <a href="mailto:kyungpyo94@gmail.com" rel="me" aria-label="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer--sidebar">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          kyungpyo-kim
+          2021
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
+    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</aside>
+      <main>
+        <div class="autopagerize_page_element">
+          <div class="content">
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    <div class="post-content">
+      
+      <div class="post-title">
+        <h1>NVIDIA Jetson TX2/Xavier Image Cloning</h1>
+        
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Sun, Oct 24, 2021
+
+
+              </span
+            >
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">2-minute read</span>
+          </div>
+
+        
+      </div><h3 id="nvidia-jetson-">NVIDIA Jetson *</h3>
+<p>NVIDIA Jetson 시리즈 제품들은 GPU를 사용하는 어플리케이션(주로 AI Edge computing)을 개발하고 이를 임베디드 시스템에 적용할 때 필수적으로 사용하게 되는 제품들이다. 전에는 <code>Jetson TX2</code> 제품이 가성비로 많이 사용되었고, 최근에는 <code>Jetson AGX Xavier</code> 가 높은 GPU/CPU 성능으로 고사양이 필요한 어플리케이션에 사용되고 있다. <code>Jetson Xavier Nano</code> 는 낮은 가격으로 가벼운 어플리케이션에 많이 이용되고 있다.</p>
+<p>이러한 임베디드 플랫폼을 사용할 때 개발한 제품을 대량으로(2개 이상&hellip;?) 제작/생산해야 하는 경우, 제품을 하나하나를 연결하여 필요한 소프트웨어를 설치하고 개발한 어플리케이션을 설치하고 테스트하는 일들은 여간 번거로울 수 없다.</p>
+<p>그래서 이 글에서 NVIDIA Jetson 시리즈 제품들을 사용할 때 이미지를 clone 하고 flash 하는 방법들을 정리해본다.</p>
+<h3 id="환경-및-준비물">환경 및 준비물</h3>
+<p>clone 및 flash 를 위해서는 기본적인 Ubuntu Terminal CLI 와 SSH 사용에 대한 지식이 있어야 한다.</p>
+<ul>
+<li>환경
+<ul>
+<li>Host PC: Ubuntu 18.04</li>
+<li>SSH 연결: Host PC — NVIDIA Jetson *</li>
+</ul>
+</li>
+<li>준비물
+<ul>
+<li>
+<p><a href="https://developer.nvidia.com/nvidia-sdk-manager">NVIDIA sdk manager</a></p>
+<p><img src="/images/NVIDIA%20Jetson%20TX2%20Xavier%20Image%20Cloning%20709c45c1f161496db7c09de255d50fca/Untitled.png" alt="NVIDIA%20Jetson%20TX2%20Xavier%20Image%20Cloning%20709c45c1f161496db7c09de255d50fca/Untitled.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="image-cloning">Image Cloning</h3>
+<ol>
+<li>
+<p><strong>Image 를 cloning 하기 전에 모든 file system 을 read-only 모드로 변경한다. @Jetson</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo su
+<span class="nb">echo</span> u &gt; /proc/sysrq-trigger
+</code></pre></div></li>
+<li>
+<p><strong>dd 명령어를 통해 image 를 복사해준다. @Jetson</strong></p>
+<ol>
+<li>
+<p>Jetson 플랫폼에서 Host PC로 image 를 복사하는 경우</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">dd <span class="k">if</span><span class="o">=</span>/dev/mmcblk0p1 <span class="p">|</span> ssh user@hostpc dd <span class="nv">of</span><span class="o">=</span>/data/system.raw
+</code></pre></div></li>
+<li>
+<p>Jetson 플랫폼에서 특정 저장장치로 image 를 복사하는 경우</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">dd <span class="k">if</span><span class="o">=</span>/dev/mmcblk0p1 <span class="nv">of</span><span class="o">=</span>/path/system.raw
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p><strong>sparse image 만들기 @HostPC</strong></p>
+<p>2번 과정을 통해 만든 이미지는 image 의 불필요한(비어있는) 영역까지 포함하고 있어 용량이 매우 크다. 그래서 아래와 같이 이미지를 줄여준다. 이때 사용하고자 하는 Jetson 플랫폼의 sdk 가 있어야 한다. NVIDIA sdk manager 를 통해 받을 수 있으며 <code>JetPack_4.5.1_Linux_JETSON_AGX_XAVIER</code> 등과 같은 폴더이름을 같게 된다.</p>
+<p>sdk 가 준비가 되면 아래 명령어를 통해 <code>mksparse</code> 을 실행한다.</p>
+<p><a href="/images/NVIDIA%20Jetson%20TX2%20Xavier%20Image%20Cloning%20709c45c1f161496db7c09de255d50fca/mksparse.tar">mksparse.tar</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 기존에 있던 system.img 백업</span>
+mv system.img system.img.backup
+   
+<span class="c1"># [XXX] -&gt; 버전 정보</span>
+<span class="nb">cd</span> ~/nvidia/nvidia_sdk/JetPack_<span class="o">[</span>XXX<span class="o">]</span>_Linux_JETSON_<span class="o">[</span>XXX<span class="o">]</span>/Linux_for_Tegra/bootloader
+./mksparse -v --fillpattern<span class="o">=</span><span class="m">0</span> /data/system.raw system.img
+</code></pre></div></li>
+</ol>
+<h3 id="image-flash">Image flash</h3>
+<ol>
+<li>
+<p><strong>NVIDIA Jetson 제품을 Recovery mode 로 진입시키고 Host PC 와 연결한다.</strong></p>
+<ol>
+<li>
+<p>Recovery mode 진입 방법</p>
+<ul>
+<li>
+<p><strong>TX2</strong></p>
+<p><img src="/images/NVIDIA%20Jetson%20TX2%20Xavier%20Image%20Cloning%20709c45c1f161496db7c09de255d50fca/Untitled%201.png" alt="NVIDIA%20Jetson%20TX2%20Xavier%20Image%20Cloning%20709c45c1f161496db7c09de255d50fca/Untitled%201.png"></p>
+<ol>
+<li>전원 어댑터를 분리한다.</li>
+<li>전원 어댑터를 다시 연결한다.</li>
+<li>전원 버튼 클릭(1 초 이상 누른다.)한다.</li>
+<li>강제 복구 버튼을 누른 상태에서 리셋 버튼을 동시에 누른 상태로</li>
+<li>2초 후 리셋 버튼을 놓은 후 강제 복구 버튼을 순서대로 놓는다.</li>
+</ol>
+</li>
+<li>
+<p><strong>Xavier</strong></p>
+<p><img src="/images/NVIDIA%20Jetson%20TX2%20Xavier%20Image%20Cloning%20709c45c1f161496db7c09de255d50fca/Untitled%202.png" alt="Untitled"></p>
+<p>recovery 버튼을 누르고 전원을 키고 2~3초 뒤에 recovery 버튼에서 손을 뗀다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>연결 확인 방법</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsusb <span class="p">|</span> grep NVidia
+&gt;&gt; Bus <span class="m">001</span> Device 009: ID 0955:XXXX NVidia Corp.
+</code></pre></div></li>
+</ol>
+</li>
+<li>
+<p><strong>flash 방법</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># [XXX] -&gt; 버전 정보</span>
+   
+<span class="c1"># image 를 복사해와야 하는 경우</span>
+<span class="nb">cd</span> ~/nvidia/nvidia_sdk/JetPack_<span class="o">[</span>XXX<span class="o">]</span>_Linux_JETSON_<span class="o">[</span>XXX<span class="o">]</span>/Linux_for_Tegra
+sudo cp backup.img bootloader/system.img
+   
+<span class="c1"># flash</span>
+****cd ~/nvidia/nvidia_sdk/JetPack_<span class="o">[</span>XXX<span class="o">]</span>_Linux_JETSON_<span class="o">[</span>XXX<span class="o">]</span>/Linux_for_Tegra
+sudo ./flash.sh -r jetson-<span class="o">[</span>XXX<span class="o">]</span> mmcblk0p1
+</code></pre></div></li>
+</ol>
+<h3 id="tips">Tips!</h3>
+<p>image 파일을 통해 원하는 파일을 복사하거나 image 파일을 수정, 편집할 수 있다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo mount -o loop /where/ever/it/is/system.img /mnt
+<span class="nb">cd</span> /mnt
+ls
+<span class="c1"># explore, edit, so on</span>
+<span class="nb">cd</span>
+sudo umount /mnt
+sudo cp /where/ever/it/is/system.img /some/where/else/Linux_for_Tegra/bootloader/system.img
+<span class="c1"># ...then do the flash of rootfs as mentioned above.</span>
+</code></pre></div><h3 id="reference">Reference</h3>
+<ul>
+<li><a href="https://elinux.org/Jetson/AGX_Xavier_Alternative_II_For_Cloning">https://elinux.org/Jetson/AGX_Xavier_Alternative_II_For_Cloning</a></li>
+<li><a href="https://m.blog.naver.com/estern/221621632701">https://m.blog.naver.com/estern/221621632701</a></li>
+<li><a href="https://bigdata-analyst.tistory.com/228">https://bigdata-analyst.tistory.com/228</a></li>
+<li><a href="https://forums.developer.nvidia.com/t/xavier-cloning/65159/12">https://forums.developer.nvidia.com/t/xavier-cloning/65159/12</a></li>
+</ul>
+</div>
+    <div class="post-footer">
+      <div class="info">
+        
+
+        
+          <span class="separator"><a class="tag" href="/tags/nvidia/">NVIDIA</a><a class="tag" href="/tags/gpu/">GPU</a><a class="tag" href="/tags/jetson/">Jetson</a></span>
+
+
+
+
+        
+      </div>
+    </div>
+
+    <div id="fb_comments_container">
+          <h2>comments</h2>
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kyungpyo-kim" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+  </div>
+
+
+          </div>
+        </div>
+      </main>
+    </div><footer class="footer footer--base">
+  <div class="by_farbox">
+    <ul class="footer__list">
+      <li class="footer__item">
+        &copy;
+        
+          kyungpyo-kim
+          2021
+
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
+    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+</html>
