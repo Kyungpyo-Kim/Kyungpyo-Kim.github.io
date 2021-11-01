@@ -1,0 +1,13 @@
+---
+author: Kyungpyo Kim
+title: No raw loops! Yes STL algorithms!
+date: 2021-09-18
+description: raw loop 를 쓰지 말아야 하는 이유, STL algorithms
+tags:
+  - C++
+  - STL
+  - Algorithm
+type: 'post'
+series: 
+  - series-name
+---
