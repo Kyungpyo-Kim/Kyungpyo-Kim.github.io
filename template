@@ -8,6 +8,9 @@ tags:
   - STL
   - Algorithm
 type: 'post'
+sitemap:
+  changefreq: daily
+  priority: 1
 series: 
   - series-name
 ---
