@@ -14,7 +14,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/nvidia-jetson-tx2-xavier-image-cloning-709c45c1f161496db7c09de255d50fca/</guid>
       
-        <description>NVIDIA Jetson * NVIDIA Jetson 시리즈 제품들은 GPU를 사용하는 어플리케이션(주로 AI Edge computing)을 개발하고 이를 임베디드 시스템에 적용할 때 필수적으로 사용하게 되는 제품들이다.</description>
+        <description>NVIDIA Jetson 시리즈 제품들을 사용할 때 이미지를 clone 하고 flash 하는 방법들을 정리</description>
       
     </item>
     
@@ -25,7 +25,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/no-raw-loops-yes-stl-algorithms-17cb7499a6464a30a9880cdc161e05b9/</guid>
       
-        <description>What are raw loops (↔ algorithms)?  for loop while loop do while loop  // Raw loop for (size_t i=0; i &amp;lt; my_vector.</description>
+        <description>raw loop 를 쓰지 말아야 하는 이유, STL algorithms</description>
       
     </item>
     
@@ -36,7 +36,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/effective-modern-c&#43;&#43;/</guid>
       
-        <description>Effective Modern C++ 도서를 읽고 정리한 효율적인 C++ 프로그래밍 방법</description>
+        <description>Effective Modern C&#43;&#43; 정리</description>
       
     </item>
     
@@ -47,9 +47,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/kalman-filter/</guid>
       
-        <description>자율주행 알고리즘 개발을 위한 칼만필터
-  @Remind
- 내가 아는 Kalman Filter 개념을 다시 정리하기 위해 다른 사람에게 설명할 때 유용한 자료로 활용하기 위해 수식은 적게 그림은 많게   Prerequisites  Least Square Method Bayes theorem Gaussian distribution  Objective: Optimal state estimation 칼만 필터는 많은 분야에서 두루 사용되는 효율적이면서 강건한 알고리즘입니다.</description>
+        <description>자율주행 알고리즘 개발을 위한 칼만필터</description>
       
     </item>
     
@@ -205,7 +203,7 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</guid>
       
-        <description>List 형 자료구조  배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동  Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) print ( &amp;#34; delete:&amp;#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 43 The sales result = 56 The sales result = 98 delete: 43 The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 56 The sales result = 98  코드 설명: List 를 생성하고 삭제, 출력 예시</description>
+        <description>List 형 자료구조  배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동  Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) print ( &amp;#34; delete:&amp;#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) The sales result = 12The sales result = 45The sales result = 67The sales result = 43The sales result = 56The sales result = 98delete: 43The sales result = 12The sales result = 45The sales result = 67The sales result = 56The sales result = 98 코드 설명: List 를 생성하고 삭제, 출력 예시</description>
       
     </item>
     

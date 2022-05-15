@@ -3,19 +3,24 @@
   dir="ltr"
   lang="en"
   data-theme=""
+  class="html"
 ><head>
   <title>
-    kyungpyo-kim
-      |
-      ROS Diagnostics 패키지 센서 드라이버에 적용하기
+    
+      kyungpyo-kim
+        |
+        ROS Diagnostics 패키지 센서 드라이버에 적용하기
+
+
+      
 
 
     
-
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.98.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="kyungpyo-kim" />
   <meta
     name="description"
     content="
@@ -27,11 +32,23 @@
   
     <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r" />
   
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
   
   <link
     rel="stylesheet"
-    href="/css/main.min.52ef0b3fb5b19713638ceb72bcd20376fbc5e56ed5947aad6a77b9df7f1f3b16.css"
-    integrity="sha256-Uu8LP7WxlxNjjOtyvNIDdvvF5W7VlHqtane5338fOxY="
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
     crossorigin="anonymous"
     type="text/css"
   />
@@ -39,17 +56,26 @@
   
   <link
     rel="stylesheet"
-    href="/css/markupHighlight.min.67048b099b4a70431e83ffca9723ec650d79e4213f27f0a6595af7c2901fa938.css"
-    integrity="sha256-ZwSLCZtKcEMeg//KlyPsZQ155CE/J/CmWVr3wpAfqTg="
+    href="/fontawesome/css/fontawesome.min.1d14c463c20786ac959f4bd98e0ddc6056d936223bfc1dcbe7825ddc176121c1.css"
+    integrity="sha256-HRTEY8IHhqyVn0vZjg3cYFbZNiI7/B3L54Jd3BdhIcE="
     crossorigin="anonymous"
     type="text/css"
   />
   
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    href="/fontawesome/css/solid.min.dbef5d0848ad38377fc1031d9a05829ad77d1cdd54177a1e7063905b0876018a.css"
+    integrity="sha256-2&#43;9dCEitODd/wQMdmgWCmtd9HN1UF3oecGOQWwh2AYo="
     crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.bd884e18f3674c4c3ae3e69a8a6d7d29b822c5638132c1dc845abec77e955c3f.css"
+    integrity="sha256-vYhOGPNnTEw64&#43;aaim19KbgixWOBMsHchFq&#43;x36VXD8="
+    crossorigin="anonymous"
+    type="text/css"
   />
   
   <link rel="shortcut icon" href="/faviconsfavicon.ico" type="image/x-icon" />
@@ -57,7 +83,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/faviconsfavicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/faviconsfavicon-16x16.png" />
 
-  <link rel="canonical" href="/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/" />
+  <link rel="canonical" href="https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/" />
 
   
   
@@ -65,8 +91,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.413f798d8aa82610bef17a5ca1d7e962ec185be395f1aeb3f45d1891af568b65.js"
-    integrity="sha256-QT95jYqoJhC&#43;8XpcodfpYuwYW&#43;OV8a6z9F0Yka9Wi2U="
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
     crossorigin="anonymous"
   ></script>
 
@@ -75,10 +101,15 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.fcf9526f15b3b4e08472de192969ab28a4cdcb32ac94f83e85a8b84e9b45acd2.js"
-      integrity="sha256-/PlSbxWztOCEct4ZKWmrKKTNyzKslPg&#43;hai4TptFrNI="
+      src="/js/anatole-theme-switcher.min.560a26330d27ff44a44e83b53cd07a95d4230a65930d31c5c76a8d481e5b35bf.js"
+      integrity="sha256-VgomMw0n/0SkToO1PNB6ldQjCmWTDTHFx2qNSB5bNb8="
       crossorigin="anonymous"
     ></script>
+
+  
+
+  
+
 
   
   <meta name="twitter:card" content="summary_large_image"/>
@@ -89,13 +120,14 @@
 
 
 
+  
   <meta property="og:title" content="ROS Diagnostics 패키지 센서 드라이버에 적용하기" />
 <meta property="og:description" content="아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/" />
-<meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
+<meta property="og:url" content="https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/" /><meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/><meta property="article:section" content="study" />
 <meta property="article:published_time" content="2019-07-10T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-07-10T00:00:00+00:00" /><meta property="og:site_name" content="Kyungpyo Kim" />
+<meta property="og:see_also" content="https://kyungpyo-kim.github.io/study/ros2-bag-file-parsing/" /><meta property="og:see_also" content="https://kyungpyo-kim.github.io/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/" /><meta property="og:see_also" content="https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0/" />
 
 
 
@@ -201,154 +233,115 @@
   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
-<body>
-    <header><div
-  class="page-top 
-    animated fadeInDown
+<body
+    
+      class="body theme--light"
 
-  "
->
-  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-  </a>
-  <nav>
-    <ul class="nav__list" id="navMenu">
-      <div class="nav__links">
-        
-        
-          
-          <li>
-            <a
-              
-              href="/"
-              
-              title=""
-              >Home</a
-            >
-          </li>
-
-        
-          
-          <li>
-            <a
-              
-              href="/life/"
-              
-              title=""
-              >Life</a
-            >
-          </li>
-
-        
-          
-          <li>
-            <a
-              
-              href="/study/"
-              
-              title=""
-              >Study</a
-            >
-          </li>
-
-        
-          
-          <li>
-            <a
-              
-              href="/about/"
-              
-              title=""
-              >About</a
-            >
-          </li>
-
-        
-        
-      </div>
-      <li>
-        
-          <a class="theme-switch" title="Switch Theme">
-            <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-          </a>
-
-        
-      </li>
-    </ul>
-  </nav>
-</div>
-</header>
+    
+  >
     <div class="wrapper">
-      <aside><div
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
   class="sidebar
     animated fadeInDown
 
   "
 >
   <div class="sidebar__content">
-    <div class="logo-title">
-      <div class="title">
-        <img src="/images/kyungpyo.jpeg" alt="profile picture" />
-        <h3 title=""><a href="/">Kyungpyo Kim</a></h3>
-        <div class="description">
-          <p>새로운 것을 찾아</p>
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/kyungpyo.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Kyungpyo Kim</a>
         </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>새로운 것을 찾아</p>
       </div>
     </div>
-    <ul class="social-links">
+    <ul class="sidebar__list">
       
-        <li>
-          <a href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/" rel="me" aria-label="Linkedin">
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
             <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
           </a>
         </li>
 
       
-        <li>
-          <a href="https://github.com/Kyungpyo-Kim" rel="me" aria-label="GitHub">
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Kyungpyo-Kim"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
             <i class="fab fa-github fa-2x" aria-hidden="true"></i>
           </a>
         </li>
 
       
-        <li>
-          <a href="https://instagram.com/kyung_py" rel="me" aria-label="instagram">
+        <li class="sidebar__list-item">
+          <a
+            href="https://instagram.com/kyung_py"
+            target="_blank"
+            rel="noopener"
+            aria-label="instagram"
+            title="instagram"
+          >
             <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
           </a>
         </li>
 
       
-        <li>
-          <a href="mailto:kyungpyo94@gmail.com" rel="me" aria-label="e-mail">
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:kyungpyo94@gmail.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
             <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
           </a>
         </li>
 
       
     </ul>
-  </div><footer class="footer footer--sidebar">
-  <div class="by_farbox">
-    <ul class="footer__list">
-      <li class="footer__item">
-        &copy;
-        
-          kyungpyo-kim
-          2021
-
-
-        
-      </li>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
       
-    </ul>
-  </div>
+        kyungpyo-kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
 </footer>
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
-    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    src="/js/medium-zoom.min.9c062c557275acbaba71f0c7cd4024da3e3cc825d248bc4b2130811b0965330b.js"
+    integrity="sha256-nAYsVXJ1rLq6cfDHzUAk2j48yCXSSLxLITCBGwllMws="
     crossorigin="anonymous"
   ></script>
 <script type="application/javascript">
@@ -363,42 +356,143 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 </div>
 </aside>
-      <main>
-        <div class="autopagerize_page_element">
-          <div class="content">
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
   <div
     class="post 
       animated fadeInDown
 
     "
   >
-    <div class="post-content">
+    
+    <div class="post__content">
+      <h1>ROS Diagnostics 패키지 센서 드라이버에 적용하기</h1>
       
-      <div class="post-title">
-        <h1>ROS Diagnostics 패키지 센서 드라이버에 적용하기</h1>
-        
-          <div class="info">
-            <em class="fas fa-calendar-day"></em>
-            <span class="date"
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
               >
                 Wed, Jul 10, 2019
 
 
-              </span
-            >
-            <em class="fas fa-stopwatch"></em>
-            <span class="reading-time">2-minute read</span>
-          </div>
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">2-minute read</span>
+          </li>
+        </ul>
 
-        
-      </div><p>아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.</p>
+      <p>아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.</p>
 <h4 id="getting-started">Getting Started</h4>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/Kyungpyo-Kim/ros_diagnostics.git
-<span class="nb">cd</span> ros_diagnostics
-catkin_make
-<span class="nb">source</span> devel/setup.bash
-roslaunch launch/all.launch
-</code></pre></div><p>센서 드라이버에 적용된 diagnostics 기능은</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/Kyungpyo-Kim/ros_diagnostics.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ros_diagnostics
+</span></span><span class="line"><span class="cl">catkin_make
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> devel/setup.bash
+</span></span><span class="line"><span class="cl">roslaunch launch/all.launch
+</span></span></code></pre></div><p>센서 드라이버에 적용된 diagnostics 기능은</p>
 <ul>
 <li><strong>&ldquo;TopicDiagnostic&rdquo;</strong> 를 이용한 topic 관리 기능,</li>
 <li><strong>&ldquo;DiagnosticTask&rdquo;</strong> 를 이용한 task 관리 기능이다.</li>
@@ -406,66 +500,66 @@ roslaunch launch/all.launch
 <p>파이썬 코드를 좀 더 들여다 보자.
 (IMU 드라이버는 c++ 코드로 구현되어 있고, <a href="http://nlamprian.me/blog/software/ros/2018/03/21/ros-diagnostics/">nlamprian</a>를 참고하였다. 해당 블로그에 코드도 잘 설명되어 있다!)</p>
 <h4 id="topicdiagnostic-를-이용한-topic-관리-기능"><strong>&ldquo;TopicDiagnostic&rdquo;</strong> 를 이용한 Topic 관리 기능</h4>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">GpsNode</span><span class="p">():</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-        <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s2">&#34;gps_node&#34;</span><span class="p">)</span>
-
-        <span class="c1">## publish</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">pub_nav_fix</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;gps/fix&#39;</span><span class="p">,</span> <span class="n">NavSatFix</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-        
-        <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">        ...
-</span><span class="s2">        &#34;&#34;&#34;</span>
-
-        <span class="n">freq_bounds</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;min&#39;</span><span class="p">:</span><span class="mf">18.</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span><span class="mf">22.</span><span class="p">}</span> <span class="c1"># If you update these values, the</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">nav_fix_freq</span> <span class="o">=</span> <span class="n">diagnostic_updater</span><span class="o">.</span><span class="n">TopicDiagnostic</span><span class="p">(</span><span class="s2">&#34;/gps/fix&#34;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">updater</span><span class="p">,</span>
-            <span class="n">diagnostic_updater</span><span class="o">.</span><span class="n">FrequencyStatusParam</span><span class="p">(</span><span class="n">freq_bounds</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>  
-            <span class="n">diagnostic_updater</span><span class="o">.</span><span class="n">TimeStampStatusParam</span><span class="p">(</span><span class="n">min_acceptable</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_acceptable</span> <span class="o">=</span> <span class="mi">1</span><span class="p">))</span>
-        <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">        ...
-</span><span class="s2">        &#34;&#34;&#34;</span>
-</code></pre></div><p>위의 코드에서 self.pub_nav_fix 와 self.nav_fix_freq 두개의 publisher 를 생성하였다. self.pub_nav_fix 는 실제 드라이버에서 publish 할 topic publisher 이고, self.nav_fix_freq 는 이와 함께 tick 을 만들어서 publisher 가 잘 동작하는지 확인할 수 있도록하는 diagnostic 기능을 제공하는 역할을 한다. c++ 에서는 이부분을 하나의 객체로 연결하여 사용할 수 있게 되어 있지만, python 에서는 따로 분리되어 있는 예제만 확인하였다. Topic 이름을 같이 사용하여 기능적으로는 동일하게 확인할 수 있도록 한 것 같다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GpsNode</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s2">&#34;gps_node&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">## publish</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">pub_nav_fix</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;gps/fix&#39;</span><span class="p">,</span> <span class="n">NavSatFix</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        ...
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">freq_bounds</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;min&#39;</span><span class="p">:</span><span class="mf">18.</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span><span class="mf">22.</span><span class="p">}</span> <span class="c1"># If you update these values, the</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">nav_fix_freq</span> <span class="o">=</span> <span class="n">diagnostic_updater</span><span class="o">.</span><span class="n">TopicDiagnostic</span><span class="p">(</span><span class="s2">&#34;/gps/fix&#34;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">updater</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">diagnostic_updater</span><span class="o">.</span><span class="n">FrequencyStatusParam</span><span class="p">(</span><span class="n">freq_bounds</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>  
+</span></span><span class="line"><span class="cl">            <span class="n">diagnostic_updater</span><span class="o">.</span><span class="n">TimeStampStatusParam</span><span class="p">(</span><span class="n">min_acceptable</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_acceptable</span> <span class="o">=</span> <span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        ...
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
+</span></span></code></pre></div><p>위의 코드에서 self.pub_nav_fix 와 self.nav_fix_freq 두개의 publisher 를 생성하였다. self.pub_nav_fix 는 실제 드라이버에서 publish 할 topic publisher 이고, self.nav_fix_freq 는 이와 함께 tick 을 만들어서 publisher 가 잘 동작하는지 확인할 수 있도록하는 diagnostic 기능을 제공하는 역할을 한다. c++ 에서는 이부분을 하나의 객체로 연결하여 사용할 수 있게 되어 있지만, python 에서는 따로 분리되어 있는 예제만 확인하였다. Topic 이름을 같이 사용하여 기능적으로는 동일하게 확인할 수 있도록 한 것 같다.</p>
 <p>TopicDiagnostic 객체의 생성 파라미터는  frequency 와 timestamp 에 관한 파라미터가 있으며, 각각 최대/최소, 시간에 대해서는 얼만큼에 시간에 대해서 tolerance 를 갖게 하는지 설정할 수 있다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">pub</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">    ...
-</span><span class="s2">    &#34;&#34;&#34;</span>
-
-    <span class="bp">self</span><span class="o">.</span><span class="n">pub_nav_fix</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg_nav_sat_fix</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">nav_fix_freq</span><span class="o">.</span><span class="n">tick</span><span class="p">(</span><span class="n">msg_nav_sat_fix</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">stamp</span><span class="p">)</span>
-
-    <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">    ...
-</span><span class="s2">    &#34;&#34;&#34;</span>
-</code></pre></div><p>동작은 위와같이 publish 와 tick 생성을 같이 수행하므로써, frequency 에는 이상이 없는지, timestamp 는 문제 없는지 모니터링 할 수 있게 해준다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">pub</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ...
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">pub_nav_fix</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg_nav_sat_fix</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">nav_fix_freq</span><span class="o">.</span><span class="n">tick</span><span class="p">(</span><span class="n">msg_nav_sat_fix</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">stamp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ...
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span></code></pre></div><p>동작은 위와같이 publish 와 tick 생성을 같이 수행하므로써, frequency 에는 이상이 없는지, timestamp 는 문제 없는지 모니터링 할 수 있게 해준다.</p>
 <h4 id="diagnostictask-를-이용한-task-관리-기능"><strong>&ldquo;DiagnosticTask&rdquo;</strong> 를 이용한 task 관리 기능</h4>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># gps_node.py</span>
-<span class="k">class</span> <span class="nc">GpsDiagnosticTask</span><span class="p">(</span><span class="n">diagnostic_updater</span><span class="o">.</span><span class="n">DiagnosticTask</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">diagnostic_updater</span><span class="o">.</span><span class="n">DiagnosticTask</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-            <span class="s2">&#34;Updater Derived from DiagnosticTask&#34;</span><span class="p">)</span> <span class="c1">## task 이름</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stat</span><span class="p">):</span>
-        <span class="n">stat</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">diagnostic_msgs</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">DiagnosticStatus</span><span class="o">.</span><span class="n">WARN</span><span class="p">,</span>
-            <span class="s2">&#34;This is another silly updater.&#34;</span><span class="p">)</span> <span class="c1">## task 상태 업데이트</span>
-        <span class="n">stat</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&#34;Stupidicity of this updater&#34;</span><span class="p">,</span> <span class="mf">2000.</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">stat</span>
-</code></pre></div><p>코드를 보면 초기화 및 run 함수를 통해서 task 의 이름, task 의 상태를 업데이트 할 수 있다.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># gps_node.py</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GpsDiagnosticTask</span><span class="p">(</span><span class="n">diagnostic_updater</span><span class="o">.</span><span class="n">DiagnosticTask</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">diagnostic_updater</span><span class="o">.</span><span class="n">DiagnosticTask</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Updater Derived from DiagnosticTask&#34;</span><span class="p">)</span> <span class="c1">## task 이름</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stat</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stat</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">diagnostic_msgs</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">DiagnosticStatus</span><span class="o">.</span><span class="n">WARN</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;This is another silly updater.&#34;</span><span class="p">)</span> <span class="c1">## task 상태 업데이트</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stat</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&#34;Stupidicity of this updater&#34;</span><span class="p">,</span> <span class="mf">2000.</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">stat</span>
+</span></span></code></pre></div><p>코드를 보면 초기화 및 run 함수를 통해서 task 의 이름, task 의 상태를 업데이트 할 수 있다.
 stat.summary() 를 통해서 DiagnosticStatus 를 지정하고, task 의 상태에 대한 설명을 추가할 수 있다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">GpsNode</span><span class="p">():</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-        <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">        ...
-</span><span class="s2">        &#34;&#34;&#34;</span>
-        <span class="c1">## diagnostics updater</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">updater</span> <span class="o">=</span> <span class="n">diagnostic_updater</span><span class="o">.</span><span class="n">Updater</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">updater</span><span class="o">.</span><span class="n">setHardwareID</span><span class="p">(</span><span class="s2">&#34;gps&#34;</span><span class="p">)</span>
-    
-        <span class="n">gdt</span> <span class="o">=</span> <span class="n">GpsDiagnosticTask</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">updater</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">gdt</span><span class="p">)</span>
-</code></pre></div><p>그리고 Updater() 객체를 생성하고 여기에 <strong>add</strong> method를 이용하여 <strong>GpsDiagnosticTask()</strong> 클래스의 객체를 추가하면 updater 가 update 를 수행할 때 마다 run 함수를 호출할 수 있게 한다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GpsNode</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        ...
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">## diagnostics updater</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">updater</span> <span class="o">=</span> <span class="n">diagnostic_updater</span><span class="o">.</span><span class="n">Updater</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">updater</span><span class="o">.</span><span class="n">setHardwareID</span><span class="p">(</span><span class="s2">&#34;gps&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">        <span class="n">gdt</span> <span class="o">=</span> <span class="n">GpsDiagnosticTask</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">updater</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">gdt</span><span class="p">)</span>
+</span></span></code></pre></div><p>그리고 Updater() 객체를 생성하고 여기에 <strong>add</strong> method를 이용하여 <strong>GpsDiagnosticTask()</strong> 클래스의 객체를 추가하면 updater 가 update 를 수행할 때 마다 run 함수를 호출할 수 있게 한다.</p>
 <p>실제 사용을 위해서는 run 함수에서 알고리즘/센서처리로직을 수행하고, 그 결과에 대한 status와 설명을 추가하여 task 를 관리할 수 있게 된다.</p>
 <h4 id="summary">Summary</h4>
 <ul>
@@ -493,7 +587,7 @@ stat.summary() 를 통해서 DiagnosticStatus 를 지정하고, task 의 상태�
 <h3>Posts in this Series</h3>
 <ul>
   
-    <li><a href="/study/ros2-bag-file-parsing/">ROS2 Bag file parsing</a></li>
+    <li><a href="/study/ros2-bag-file-parsing/">ROS2 Bag File Parsing</a></li>
 
   
     <li><a href="/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">ROS2 시작하기</a></li>
@@ -507,25 +601,23 @@ stat.summary() 를 통해서 DiagnosticStatus 를 지정하고, task 의 상태�
   
 </ul>
 </div>
-    <div class="post-footer">
-      <div class="info">
-        
+    <div class="post__footer">
+      
 
-        
-          <span class="separator"><a class="tag" href="/tags/ros/">ROS</a><a class="tag" href="/tags/diagnostics/">Diagnostics</a><a class="tag" href="/tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/">자율주행</a></span>
-
+      
+        <span><a class="tag" href="/tags/ros/">ROS</a><a class="tag" href="/tags/diagnostics/">Diagnostics</a><a class="tag" href="/tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/">자율주행</a></span>
 
 
 
-        
-      </div>
+
+      
     </div>
 
-    <div id="fb_comments_container">
+    <div id="comment">
           <h2>comments</h2>
           <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -547,30 +639,26 @@ stat.summary() 를 통해서 DiagnosticStatus 를 지정하고, task 의 상태�
   </div>
 
 
-          </div>
-        </div>
       </main>
-    </div><footer class="footer footer--base">
-  <div class="by_farbox">
-    <ul class="footer__list">
-      <li class="footer__item">
-        &copy;
-        
-          kyungpyo-kim
-          2021
-
-
-        
-      </li>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
       
-    </ul>
-  </div>
+        kyungpyo-kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
 </footer>
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
-    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    src="/js/medium-zoom.min.9c062c557275acbaba71f0c7cd4024da3e3cc825d248bc4b2130811b0965330b.js"
+    integrity="sha256-nAYsVXJ1rLq6cfDHzUAk2j48yCXSSLxLITCBGwllMws="
     crossorigin="anonymous"
   ></script>
 <script type="application/javascript">

@@ -3,19 +3,24 @@
   dir="ltr"
   lang="en"
   data-theme=""
+  class="html"
 ><head>
   <title>
-    kyungpyo-kim
-      |
-      NVIDIA Jetson TX2/Xavier Image Cloning
+    
+      kyungpyo-kim
+        |
+        NVIDIA Jetson TX2/Xavier Image Cloning
+
+
+      
 
 
     
-
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.79.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.98.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="kyungpyo-kim" />
   <meta
     name="description"
     content="
@@ -27,11 +32,23 @@
   
     <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r" />
   
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
   
   <link
     rel="stylesheet"
-    href="/css/main.min.52ef0b3fb5b19713638ceb72bcd20376fbc5e56ed5947aad6a77b9df7f1f3b16.css"
-    integrity="sha256-Uu8LP7WxlxNjjOtyvNIDdvvF5W7VlHqtane5338fOxY="
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
     crossorigin="anonymous"
     type="text/css"
   />
@@ -39,17 +56,26 @@
   
   <link
     rel="stylesheet"
-    href="/css/markupHighlight.min.67048b099b4a70431e83ffca9723ec650d79e4213f27f0a6595af7c2901fa938.css"
-    integrity="sha256-ZwSLCZtKcEMeg//KlyPsZQ155CE/J/CmWVr3wpAfqTg="
+    href="/fontawesome/css/fontawesome.min.1d14c463c20786ac959f4bd98e0ddc6056d936223bfc1dcbe7825ddc176121c1.css"
+    integrity="sha256-HRTEY8IHhqyVn0vZjg3cYFbZNiI7/B3L54Jd3BdhIcE="
     crossorigin="anonymous"
     type="text/css"
   />
   
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    href="/fontawesome/css/solid.min.dbef5d0848ad38377fc1031d9a05829ad77d1cdd54177a1e7063905b0876018a.css"
+    integrity="sha256-2&#43;9dCEitODd/wQMdmgWCmtd9HN1UF3oecGOQWwh2AYo="
     crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.bd884e18f3674c4c3ae3e69a8a6d7d29b822c5638132c1dc845abec77e955c3f.css"
+    integrity="sha256-vYhOGPNnTEw64&#43;aaim19KbgixWOBMsHchFq&#43;x36VXD8="
+    crossorigin="anonymous"
+    type="text/css"
   />
   
   <link rel="shortcut icon" href="/faviconsfavicon.ico" type="image/x-icon" />
@@ -57,7 +83,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/faviconsfavicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/faviconsfavicon-16x16.png" />
 
-  <link rel="canonical" href="/study/nvidia-jetson-tx2-xavier-image-cloning-709c45c1f161496db7c09de255d50fca/" />
+  <link rel="canonical" href="https://kyungpyo-kim.github.io/study/nvidia-jetson-tx2-xavier-image-cloning-709c45c1f161496db7c09de255d50fca/" />
 
   
   
@@ -65,8 +91,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.413f798d8aa82610bef17a5ca1d7e962ec185be395f1aeb3f45d1891af568b65.js"
-    integrity="sha256-QT95jYqoJhC&#43;8XpcodfpYuwYW&#43;OV8a6z9F0Yka9Wi2U="
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
     crossorigin="anonymous"
   ></script>
 
@@ -75,10 +101,15 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.fcf9526f15b3b4e08472de192969ab28a4cdcb32ac94f83e85a8b84e9b45acd2.js"
-      integrity="sha256-/PlSbxWztOCEct4ZKWmrKKTNyzKslPg&#43;hai4TptFrNI="
+      src="/js/anatole-theme-switcher.min.560a26330d27ff44a44e83b53cd07a95d4230a65930d31c5c76a8d481e5b35bf.js"
+      integrity="sha256-VgomMw0n/0SkToO1PNB6ldQjCmWTDTHFx2qNSB5bNb8="
       crossorigin="anonymous"
     ></script>
+
+  
+
+  
+
 
   
   <meta name="twitter:card" content="summary_large_image"/>
@@ -89,13 +120,14 @@
 
 
 
+  
   <meta property="og:title" content="NVIDIA Jetson TX2/Xavier Image Cloning" />
 <meta property="og:description" content="NVIDIA Jetson 시리즈 제품들을 사용할 때 이미지를 clone 하고 flash 하는 방법들을 정리" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kyungpyo-kim.github.io/study/nvidia-jetson-tx2-xavier-image-cloning-709c45c1f161496db7c09de255d50fca/" />
-<meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
+<meta property="og:url" content="https://kyungpyo-kim.github.io/study/nvidia-jetson-tx2-xavier-image-cloning-709c45c1f161496db7c09de255d50fca/" /><meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/><meta property="article:section" content="study" />
 <meta property="article:published_time" content="2021-10-24T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-10-24T00:00:00+00:00" /><meta property="og:site_name" content="Kyungpyo Kim" />
+
 
 
 
@@ -196,154 +228,115 @@
   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
-<body>
-    <header><div
-  class="page-top 
-    animated fadeInDown
+<body
+    
+      class="body theme--light"
 
-  "
->
-  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-  </a>
-  <nav>
-    <ul class="nav__list" id="navMenu">
-      <div class="nav__links">
-        
-        
-          
-          <li>
-            <a
-              
-              href="/"
-              
-              title=""
-              >Home</a
-            >
-          </li>
-
-        
-          
-          <li>
-            <a
-              
-              href="/life/"
-              
-              title=""
-              >Life</a
-            >
-          </li>
-
-        
-          
-          <li>
-            <a
-              
-              href="/study/"
-              
-              title=""
-              >Study</a
-            >
-          </li>
-
-        
-          
-          <li>
-            <a
-              
-              href="/about/"
-              
-              title=""
-              >About</a
-            >
-          </li>
-
-        
-        
-      </div>
-      <li>
-        
-          <a class="theme-switch" title="Switch Theme">
-            <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-          </a>
-
-        
-      </li>
-    </ul>
-  </nav>
-</div>
-</header>
+    
+  >
     <div class="wrapper">
-      <aside><div
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
   class="sidebar
     animated fadeInDown
 
   "
 >
   <div class="sidebar__content">
-    <div class="logo-title">
-      <div class="title">
-        <img src="/images/kyungpyo.jpeg" alt="profile picture" />
-        <h3 title=""><a href="/">Kyungpyo Kim</a></h3>
-        <div class="description">
-          <p>새로운 것을 찾아</p>
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/kyungpyo.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Kyungpyo Kim</a>
         </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>새로운 것을 찾아</p>
       </div>
     </div>
-    <ul class="social-links">
+    <ul class="sidebar__list">
       
-        <li>
-          <a href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/" rel="me" aria-label="Linkedin">
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
             <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
           </a>
         </li>
 
       
-        <li>
-          <a href="https://github.com/Kyungpyo-Kim" rel="me" aria-label="GitHub">
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Kyungpyo-Kim"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
             <i class="fab fa-github fa-2x" aria-hidden="true"></i>
           </a>
         </li>
 
       
-        <li>
-          <a href="https://instagram.com/kyung_py" rel="me" aria-label="instagram">
+        <li class="sidebar__list-item">
+          <a
+            href="https://instagram.com/kyung_py"
+            target="_blank"
+            rel="noopener"
+            aria-label="instagram"
+            title="instagram"
+          >
             <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
           </a>
         </li>
 
       
-        <li>
-          <a href="mailto:kyungpyo94@gmail.com" rel="me" aria-label="e-mail">
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:kyungpyo94@gmail.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
             <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
           </a>
         </li>
 
       
     </ul>
-  </div><footer class="footer footer--sidebar">
-  <div class="by_farbox">
-    <ul class="footer__list">
-      <li class="footer__item">
-        &copy;
-        
-          kyungpyo-kim
-          2021
-
-
-        
-      </li>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
       
-    </ul>
-  </div>
+        kyungpyo-kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
 </footer>
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
-    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    src="/js/medium-zoom.min.9c062c557275acbaba71f0c7cd4024da3e3cc825d248bc4b2130811b0965330b.js"
+    integrity="sha256-nAYsVXJ1rLq6cfDHzUAk2j48yCXSSLxLITCBGwllMws="
     crossorigin="anonymous"
   ></script>
 <script type="application/javascript">
@@ -358,35 +351,136 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 </div>
 </aside>
-      <main>
-        <div class="autopagerize_page_element">
-          <div class="content">
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
   <div
     class="post 
       animated fadeInDown
 
     "
   >
-    <div class="post-content">
+    
+    <div class="post__content">
+      <h1>NVIDIA Jetson TX2/Xavier Image Cloning</h1>
       
-      <div class="post-title">
-        <h1>NVIDIA Jetson TX2/Xavier Image Cloning</h1>
-        
-          <div class="info">
-            <em class="fas fa-calendar-day"></em>
-            <span class="date"
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
               >
                 Sun, Oct 24, 2021
 
 
-              </span
-            >
-            <em class="fas fa-stopwatch"></em>
-            <span class="reading-time">2-minute read</span>
-          </div>
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">2-minute read</span>
+          </li>
+        </ul>
 
-        
-      </div><h3 id="nvidia-jetson-">NVIDIA Jetson *</h3>
+      <h3 id="nvidia-jetson-">NVIDIA Jetson *</h3>
 <p>NVIDIA Jetson 시리즈 제품들은 GPU를 사용하는 어플리케이션(주로 AI Edge computing)을 개발하고 이를 임베디드 시스템에 적용할 때 필수적으로 사용하게 되는 제품들이다. 전에는 <code>Jetson TX2</code> 제품이 가성비로 많이 사용되었고, 최근에는 <code>Jetson AGX Xavier</code> 가 높은 GPU/CPU 성능으로 고사양이 필요한 어플리케이션에 사용되고 있다. <code>Jetson Xavier Nano</code> 는 낮은 가격으로 가벼운 어플리케이션에 많이 이용되고 있다.</p>
 <p>이러한 임베디드 플랫폼을 사용할 때 개발한 제품을 대량으로(2개 이상&hellip;?) 제작/생산해야 하는 경우, 제품을 하나하나를 연결하여 필요한 소프트웨어를 설치하고 개발한 어플리케이션을 설치하고 테스트하는 일들은 여간 번거로울 수 없다.</p>
 <p>그래서 이 글에서 NVIDIA Jetson 시리즈 제품들을 사용할 때 이미지를 clone 하고 flash 하는 방법들을 정리해본다.</p>
@@ -412,20 +506,20 @@ if (!doNotTrack) {
 <ol>
 <li>
 <p><strong>Image 를 cloning 하기 전에 모든 file system 을 read-only 모드로 변경한다. @Jetson</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo su
-<span class="nb">echo</span> u &gt; /proc/sysrq-trigger
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo su
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> u &gt; /proc/sysrq-trigger
+</span></span></code></pre></div></li>
 <li>
 <p><strong>dd 명령어를 통해 image 를 복사해준다. @Jetson</strong></p>
 <ol>
 <li>
 <p>Jetson 플랫폼에서 Host PC로 image 를 복사하는 경우</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">dd <span class="k">if</span><span class="o">=</span>/dev/mmcblk0p1 <span class="p">|</span> ssh user@hostpc dd <span class="nv">of</span><span class="o">=</span>/data/system.raw
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dd <span class="k">if</span><span class="o">=</span>/dev/mmcblk0p1 <span class="p">|</span> ssh user@hostpc dd <span class="nv">of</span><span class="o">=</span>/data/system.raw
+</span></span></code></pre></div></li>
 <li>
 <p>Jetson 플랫폼에서 특정 저장장치로 image 를 복사하는 경우</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">dd <span class="k">if</span><span class="o">=</span>/dev/mmcblk0p1 <span class="nv">of</span><span class="o">=</span>/path/system.raw
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dd <span class="k">if</span><span class="o">=</span>/dev/mmcblk0p1 <span class="nv">of</span><span class="o">=</span>/path/system.raw
+</span></span></code></pre></div></li>
 </ol>
 </li>
 <li>
@@ -433,13 +527,13 @@ if (!doNotTrack) {
 <p>2번 과정을 통해 만든 이미지는 image 의 불필요한(비어있는) 영역까지 포함하고 있어 용량이 매우 크다. 그래서 아래와 같이 이미지를 줄여준다. 이때 사용하고자 하는 Jetson 플랫폼의 sdk 가 있어야 한다. NVIDIA sdk manager 를 통해 받을 수 있으며 <code>JetPack_4.5.1_Linux_JETSON_AGX_XAVIER</code> 등과 같은 폴더이름을 같게 된다.</p>
 <p>sdk 가 준비가 되면 아래 명령어를 통해 <code>mksparse</code> 을 실행한다.</p>
 <p><a href="/images/NVIDIA%20Jetson%20TX2%20Xavier%20Image%20Cloning%20709c45c1f161496db7c09de255d50fca/mksparse.tar">mksparse.tar</a></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 기존에 있던 system.img 백업</span>
-mv system.img system.img.backup
-   
-<span class="c1"># [XXX] -&gt; 버전 정보</span>
-<span class="nb">cd</span> ~/nvidia/nvidia_sdk/JetPack_<span class="o">[</span>XXX<span class="o">]</span>_Linux_JETSON_<span class="o">[</span>XXX<span class="o">]</span>/Linux_for_Tegra/bootloader
-./mksparse -v --fillpattern<span class="o">=</span><span class="m">0</span> /data/system.raw system.img
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 기존에 있던 system.img 백업</span>
+</span></span><span class="line"><span class="cl">mv system.img system.img.backup
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># [XXX] -&gt; 버전 정보</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/nvidia/nvidia_sdk/JetPack_<span class="o">[</span>XXX<span class="o">]</span>_Linux_JETSON_<span class="o">[</span>XXX<span class="o">]</span>/Linux_for_Tegra/bootloader
+</span></span><span class="line"><span class="cl">./mksparse -v --fillpattern<span class="o">=</span><span class="m">0</span> /data/system.raw system.img
+</span></span></code></pre></div></li>
 </ol>
 <h3 id="image-flash">Image flash</h3>
 <ol>
@@ -469,35 +563,35 @@ mv system.img system.img.backup
 </li>
 <li>
 <p>연결 확인 방법</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsusb <span class="p">|</span> grep NVidia
-&gt;&gt; Bus <span class="m">001</span> Device 009: ID 0955:XXXX NVidia Corp.
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsusb <span class="p">|</span> grep NVidia
+</span></span><span class="line"><span class="cl">&gt;&gt; Bus <span class="m">001</span> Device 009: ID 0955:XXXX NVidia Corp.
+</span></span></code></pre></div></li>
 </ol>
 </li>
 <li>
 <p><strong>flash 방법</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># [XXX] -&gt; 버전 정보</span>
-   
-<span class="c1"># image 를 복사해와야 하는 경우</span>
-<span class="nb">cd</span> ~/nvidia/nvidia_sdk/JetPack_<span class="o">[</span>XXX<span class="o">]</span>_Linux_JETSON_<span class="o">[</span>XXX<span class="o">]</span>/Linux_for_Tegra
-sudo cp backup.img bootloader/system.img
-   
-<span class="c1"># flash</span>
-****cd ~/nvidia/nvidia_sdk/JetPack_<span class="o">[</span>XXX<span class="o">]</span>_Linux_JETSON_<span class="o">[</span>XXX<span class="o">]</span>/Linux_for_Tegra
-sudo ./flash.sh -r jetson-<span class="o">[</span>XXX<span class="o">]</span> mmcblk0p1
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># [XXX] -&gt; 버전 정보</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># image 를 복사해와야 하는 경우</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/nvidia/nvidia_sdk/JetPack_<span class="o">[</span>XXX<span class="o">]</span>_Linux_JETSON_<span class="o">[</span>XXX<span class="o">]</span>/Linux_for_Tegra
+</span></span><span class="line"><span class="cl">sudo cp backup.img bootloader/system.img
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># flash</span>
+</span></span><span class="line"><span class="cl">****cd ~/nvidia/nvidia_sdk/JetPack_<span class="o">[</span>XXX<span class="o">]</span>_Linux_JETSON_<span class="o">[</span>XXX<span class="o">]</span>/Linux_for_Tegra
+</span></span><span class="line"><span class="cl">sudo ./flash.sh -r jetson-<span class="o">[</span>XXX<span class="o">]</span> mmcblk0p1
+</span></span></code></pre></div></li>
 </ol>
 <h3 id="tips">Tips!</h3>
 <p>image 파일을 통해 원하는 파일을 복사하거나 image 파일을 수정, 편집할 수 있다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo mount -o loop /where/ever/it/is/system.img /mnt
-<span class="nb">cd</span> /mnt
-ls
-<span class="c1"># explore, edit, so on</span>
-<span class="nb">cd</span>
-sudo umount /mnt
-sudo cp /where/ever/it/is/system.img /some/where/else/Linux_for_Tegra/bootloader/system.img
-<span class="c1"># ...then do the flash of rootfs as mentioned above.</span>
-</code></pre></div><h3 id="reference">Reference</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mount -o loop /where/ever/it/is/system.img /mnt
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /mnt
+</span></span><span class="line"><span class="cl">ls
+</span></span><span class="line"><span class="cl"><span class="c1"># explore, edit, so on</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span>
+</span></span><span class="line"><span class="cl">sudo umount /mnt
+</span></span><span class="line"><span class="cl">sudo cp /where/ever/it/is/system.img /some/where/else/Linux_for_Tegra/bootloader/system.img
+</span></span><span class="line"><span class="cl"><span class="c1"># ...then do the flash of rootfs as mentioned above.</span>
+</span></span></code></pre></div><h3 id="reference">Reference</h3>
 <ul>
 <li><a href="https://elinux.org/Jetson/AGX_Xavier_Alternative_II_For_Cloning">https://elinux.org/Jetson/AGX_Xavier_Alternative_II_For_Cloning</a></li>
 <li><a href="https://m.blog.naver.com/estern/221621632701">https://m.blog.naver.com/estern/221621632701</a></li>
@@ -505,25 +599,23 @@ sudo cp /where/ever/it/is/system.img /some/where/else/Linux_for_Tegra/bootloader
 <li><a href="https://forums.developer.nvidia.com/t/xavier-cloning/65159/12">https://forums.developer.nvidia.com/t/xavier-cloning/65159/12</a></li>
 </ul>
 </div>
-    <div class="post-footer">
-      <div class="info">
-        
+    <div class="post__footer">
+      
 
-        
-          <span class="separator"><a class="tag" href="/tags/nvidia/">NVIDIA</a><a class="tag" href="/tags/gpu/">GPU</a><a class="tag" href="/tags/jetson/">Jetson</a></span>
-
+      
+        <span><a class="tag" href="/tags/nvidia/">NVIDIA</a><a class="tag" href="/tags/gpu/">GPU</a><a class="tag" href="/tags/jetson/">Jetson</a></span>
 
 
 
-        
-      </div>
+
+      
     </div>
 
-    <div id="fb_comments_container">
+    <div id="comment">
           <h2>comments</h2>
           <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -545,30 +637,26 @@ sudo cp /where/ever/it/is/system.img /some/where/else/Linux_for_Tegra/bootloader
   </div>
 
 
-          </div>
-        </div>
       </main>
-    </div><footer class="footer footer--base">
-  <div class="by_farbox">
-    <ul class="footer__list">
-      <li class="footer__item">
-        &copy;
-        
-          kyungpyo-kim
-          2021
-
-
-        
-      </li>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
       
-    </ul>
-  </div>
+        kyungpyo-kim
+        2022
+
+
+      
+    </li>
+    
+  </ul>
 </footer>
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.bdc7b23aff63497a79433b3920b03e2473399d90ad4c2d87cf7c08d33d61966f.js"
-    integrity="sha256-vceyOv9jSXp5Qzs5ILA&#43;JHM5nZCtTC2Hz3wI0z1hlm8="
+    src="/js/medium-zoom.min.9c062c557275acbaba71f0c7cd4024da3e3cc825d248bc4b2130811b0965330b.js"
+    integrity="sha256-nAYsVXJ1rLq6cfDHzUAk2j48yCXSSLxLITCBGwllMws="
     crossorigin="anonymous"
   ></script>
 <script type="application/javascript">

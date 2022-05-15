@@ -14,7 +14,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/nvidia-jetson-tx2-xavier-image-cloning-709c45c1f161496db7c09de255d50fca/</guid>
       
-        <description>NVIDIA Jetson * NVIDIA Jetson 시리즈 제품들은 GPU를 사용하는 어플리케이션(주로 AI Edge computing)을 개발하고 이를 임베디드 시스템에 적용할 때 필수적으로 사용하게 되는 제품들이다.</description>
+        <description>NVIDIA Jetson 시리즈 제품들을 사용할 때 이미지를 clone 하고 flash 하는 방법들을 정리</description>
       
     </item>
     

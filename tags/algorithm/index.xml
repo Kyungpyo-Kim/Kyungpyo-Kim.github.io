@@ -14,7 +14,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/no-raw-loops-yes-stl-algorithms-17cb7499a6464a30a9880cdc161e05b9/</guid>
       
-        <description>What are raw loops (↔ algorithms)?  for loop while loop do while loop  // Raw loop for (size_t i=0; i &amp;lt; my_vector.</description>
+        <description>raw loop 를 쓰지 말아야 하는 이유, STL algorithms</description>
       
     </item>
     
