@@ -14,7 +14,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</guid>
       
-        <description>AI, Deep Learning 환경 준비하기 My PC Info  Ubuntu18.04 NVIDIA GTX1650  CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다.</description>
+        <description>AI, Deep Learning 환경 준비하기 My PC Info Ubuntu18.04 NVIDIA GTX1650 CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다.</description>
       
     </item>
     

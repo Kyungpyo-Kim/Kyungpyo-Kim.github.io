@@ -58,7 +58,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/thread-safety-of-unordered_map/</guid>
       
-        <description>Prerequisite  Thread Mutex Thread safety  Problem unordered_map 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다.</description>
+        <description>Prerequisite Thread Mutex Thread safety Problem unordered_map 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다.</description>
       
     </item>
     
@@ -80,7 +80,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/modern-control-systems-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%99-c1c11c2ee9e7445489ddedf783d7ce01/</guid>
       
-        <description>소개  서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다.</description>
+        <description>소개 서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다.</description>
       
     </item>
     
@@ -102,7 +102,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</guid>
       
-        <description>AI, Deep Learning 환경 준비하기 My PC Info  Ubuntu18.04 NVIDIA GTX1650  CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다.</description>
+        <description>AI, Deep Learning 환경 준비하기 My PC Info Ubuntu18.04 NVIDIA GTX1650 CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다.</description>
       
     </item>
     
@@ -124,7 +124,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04-swap-caps-lock-and-ctrl/</guid>
       
-        <description>Ubuntu 18.04, Swap Caps lock and Ctrl - No installation   Open ~/.</description>
+        <description>Ubuntu 18.04, Swap Caps lock and Ctrl - No installation Open ~/.</description>
       
     </item>
     
@@ -135,7 +135,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04-installation-dual-boot/</guid>
       
-        <description>Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는)  준비물:</description>
+        <description>Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는) 준비물:</description>
       
     </item>
     
@@ -147,7 +147,7 @@
       <guid>https://kyungpyo-kim.github.io/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
       
         <description>ROS2_Exercise ROS2 INSTALLATION https://index.ros.org/doc/ros2/Installation/#installationguide https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/
-  Version: ROS 2 Eloquent Elusor</description>
+Version: ROS 2 Eloquent Elusor</description>
       
     </item>
     
@@ -159,7 +159,7 @@
       <guid>https://kyungpyo-kim.github.io/study/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
       
         <description>PyGUIDevTemplate GUI development template for python
-Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위한 custom class 활용 PyInstaller 를 이용한 파일 배포  Getting Started ## clonning repository git clone https://github.</description>
+Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위한 custom class 활용 PyInstaller 를 이용한 파일 배포 Getting Started ## clonning repository git clone https://github.</description>
       
     </item>
     
@@ -170,7 +170,7 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/</guid>
       
-        <description>전기버스 알고리즘  SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스 문제링크 문제의 저작권은 SW Expert Academy에 있습니다.</description>
+        <description>전기버스 알고리즘 SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스 문제링크 문제의 저작권은 SW Expert Academy에 있습니다.</description>
       
     </item>
     
@@ -203,7 +203,7 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</guid>
       
-        <description>List 형 자료구조  배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동  Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) print ( &amp;#34; delete:&amp;#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) The sales result = 12The sales result = 45The sales result = 67The sales result = 43The sales result = 56The sales result = 98delete: 43The sales result = 12The sales result = 45The sales result = 67The sales result = 56The sales result = 98 코드 설명: List 를 생성하고 삭제, 출력 예시</description>
+        <description>List 형 자료구조 배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동 Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) print ( &amp;#34; delete:&amp;#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) The sales result = 12The sales result = 45The sales result = 67The sales result = 43The sales result = 56The sales result = 98delete: 43The sales result = 12The sales result = 45The sales result = 67The sales result = 56The sales result = 98코드 설명: List 를 생성하고 삭제, 출력 예시</description>
       
     </item>
     
@@ -215,7 +215,7 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       <guid>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EC%A0%95%EC%9D%98-%EB%B0%8F-%EC%A2%85%EB%A5%98/</guid>
       
         <description>자료구조와 알고리즘 공부 프로젝트
-목적  자료구조와 알고리즘 공부 Python, Java, C++ 을 이용한 구현 꾸준히 공부하기  자료구조의 정의 및 종류 자료구조를 물리적으로 구현하는 방법</description>
+목적 자료구조와 알고리즘 공부 Python, Java, C++ 을 이용한 구현 꾸준히 공부하기 자료구조의 정의 및 종류 자료구조를 물리적으로 구현하는 방법</description>
       
     </item>
     
@@ -226,7 +226,7 @@ Summary  QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위
       
       <guid>https://kyungpyo-kim.github.io/study/hash-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%9D%BC%EC%9D%B4%EC%84%BC%EC%8A%A4-%ED%82%A4-%EC%83%9D%EC%84%B1/</guid>
       
-        <description>Hash 를 이용한 라이센스 키 생성  Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트 MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고, 생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다.</description>
+        <description>Hash 를 이용한 라이센스 키 생성 Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트 MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고, 생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다.</description>
       
     </item>
     

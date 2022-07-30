@@ -36,7 +36,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/thread-safety-of-unordered_map/</guid>
       
-        <description>Prerequisite  Thread Mutex Thread safety  Problem unordered_map 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다.</description>
+        <description>Prerequisite Thread Mutex Thread safety Problem unordered_map 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다.</description>
       
     </item>
     
@@ -59,7 +59,7 @@
       <guid>https://kyungpyo-kim.github.io/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
       
         <description>ROS2_Exercise ROS2 INSTALLATION https://index.ros.org/doc/ros2/Installation/#installationguide https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/
-  Version: ROS 2 Eloquent Elusor</description>
+Version: ROS 2 Eloquent Elusor</description>
       
     </item>
     
