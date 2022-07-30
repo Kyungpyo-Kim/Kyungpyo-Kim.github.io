@@ -6,7 +6,7 @@
   class="html"
 ><head>
   <title>
-    kyungpyo-kim
+    
         |
         ROS Diagnostics 패키지 이해하기
 
@@ -20,13 +20,12 @@
 
   
   <meta charset="utf-8" /><meta name="generator" content="Hugo 0.98.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="author" content="kyungpyo-kim" />
+  <meta name="author" content="" />
   <meta
     name="description"
-    content="새로운 것을 찾아"
+    content=""
   />
   
-    <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r" />
   
     
     
@@ -82,10 +81,10 @@
     type="text/css"
   />
   
-  <link rel="shortcut icon" href="/faviconsfavicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/faviconsapple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/faviconsfavicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/faviconsfavicon-16x16.png" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
   <link rel="canonical" href="https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0/" />
 
@@ -116,9 +115,7 @@
 
 
   
-  <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
-
+  <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ROS Diagnostics 패키지 이해하기"/>
 <meta name="twitter:description" content="ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 diagnostic 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 드라이버가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다."/>
 
@@ -128,9 +125,9 @@
   <meta property="og:title" content="ROS Diagnostics 패키지 이해하기" />
 <meta property="og:description" content="ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 diagnostic 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 드라이버가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0/" /><meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/><meta property="article:section" content="study" />
+<meta property="og:url" content="https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0/" /><meta property="article:section" content="study" />
 <meta property="article:published_time" content="2019-07-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-07-10T00:00:00+00:00" /><meta property="og:site_name" content="Kyungpyo Kim" />
+<meta property="article:modified_time" content="2019-07-10T00:00:00+00:00" />
 <meta property="og:see_also" content="https://kyungpyo-kim.github.io/study/ros2-bag-file-parsing/" /><meta property="og:see_also" content="https://kyungpyo-kim.github.io/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/" /><meta property="og:see_also" content="https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/" />
 
 
@@ -165,19 +162,19 @@
         },
         "author" : {
             "@type": "Person",
-            "name": "kyungpyo-kim"
+            "name": ""
         },
         "creator" : {
             "@type": "Person",
-            "name": "kyungpyo-kim"
+            "name": ""
         },
         "accountablePerson" : {
             "@type": "Person",
-            "name": "kyungpyo-kim"
+            "name": ""
         },
         "copyrightHolder" : {
             "@type": "Person",
-            "name": "kyungpyo-kim"
+            "name": ""
         },
         "copyrightYear" : "2019",
         "dateCreated": "2019-07-10T00:00:00.00Z",
@@ -185,22 +182,17 @@
         "dateModified": "2019-07-10T00:00:00.00Z",
         "publisher":{
             "@type":"Organization",
-            "name": "kyungpyo-kim",
+            "name":  null ,
             "url": "https://kyungpyo-kim.github.io/",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https:\/\/kyungpyo-kim.github.io\/faviconsfavicon-32x32.png",
+                "url": "https:\/\/kyungpyo-kim.github.io\/favicon-32x32.png",
                 "width":"32",
                 "height":"32"
             }
         },
         "image": 
       [
-        
-        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
-
-
-      
       ]
 
     ,
@@ -264,17 +256,17 @@
     <div class="sidebar__introduction">
       <img
         class="sidebar__introduction-profileimage"
-        src="/images/kyungpyo.jpeg"
+        src="/"
         alt="profile picture"
       />
       
         <div class="sidebar__introduction-title">
-          <a href="/">Kyungpyo Kim</a>
+          <a href="/"></a>
         </div>
 
       
       <div class="sidebar__introduction-description">
-        <p>새로운 것을 찾아</p>
+        <p></p>
       </div>
     </div>
     <ul class="sidebar__list">
@@ -337,7 +329,9 @@
     <li class="footer__item">
       &copy;
       
-        Kyungpyo Kim 2022
+        
+        2022
+
 
       
     </li>
@@ -589,7 +583,9 @@ if (!doNotTrack) {
     <li class="footer__item">
       &copy;
       
-        Kyungpyo Kim 2022
+        
+        2022
+
 
       
     </li>
