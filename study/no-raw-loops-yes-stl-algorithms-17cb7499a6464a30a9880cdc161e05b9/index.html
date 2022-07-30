@@ -7,25 +7,22 @@
 ><head>
   <title>
     
-        |
-        No raw loops! Yes STL algorithms!
-
-
       
+        No raw loops! Yes STL algorithms! |
 
-
-    
+      kyungpyo-kim
 
   </title>
 
   
   <meta charset="utf-8" /><meta name="generator" content="Hugo 0.98.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="author" content="" />
+  <meta name="author" content="kyungpyo-kim" />
   <meta
     name="description"
     content="raw loop 를 쓰지 말아야 하는 이유, STL algorithms"
   />
   
+    <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r" />
   
     
     
@@ -81,10 +78,10 @@
     type="text/css"
   />
   
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
 
   <link rel="canonical" href="https://kyungpyo-kim.github.io/study/no-raw-loops-yes-stl-algorithms-17cb7499a6464a30a9880cdc161e05b9/" />
 
@@ -115,7 +112,9 @@
 
 
   
-  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
+
 <meta name="twitter:title" content="No raw loops! Yes STL algorithms!"/>
 <meta name="twitter:description" content="raw loop 를 쓰지 말아야 하는 이유, STL algorithms"/>
 
@@ -125,9 +124,9 @@
   <meta property="og:title" content="No raw loops! Yes STL algorithms!" />
 <meta property="og:description" content="raw loop 를 쓰지 말아야 하는 이유, STL algorithms" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kyungpyo-kim.github.io/study/no-raw-loops-yes-stl-algorithms-17cb7499a6464a30a9880cdc161e05b9/" /><meta property="article:section" content="study" />
+<meta property="og:url" content="https://kyungpyo-kim.github.io/study/no-raw-loops-yes-stl-algorithms-17cb7499a6464a30a9880cdc161e05b9/" /><meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/><meta property="article:section" content="study" />
 <meta property="article:published_time" content="2021-09-18T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-09-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-18T00:00:00+00:00" /><meta property="og:site_name" content="Kyungpyo Kim" />
 <meta property="og:see_also" content="https://kyungpyo-kim.github.io/study/effective-modern-c&#43;&#43;/" />
 
 
@@ -182,13 +181,18 @@
             "url": "https://kyungpyo-kim.github.io/",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https:\/\/kyungpyo-kim.github.io\/favicon-32x32.png",
+                "url": "https:\/\/kyungpyo-kim.github.io\/favicons\/favicon-32x32.png",
                 "width":"32",
                 "height":"32"
             }
         },
         "image": 
       [
+        
+        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
+
+
+      
       ]
 
     ,
@@ -252,17 +256,17 @@
     <div class="sidebar__introduction">
       <img
         class="sidebar__introduction-profileimage"
-        src="/"
+        src="/images/kyungpyo.jpeg"
         alt="profile picture"
       />
       
         <div class="sidebar__introduction-title">
-          <a href="/"></a>
+          <a href="/">Kyungpyo Kim</a>
         </div>
 
       
       <div class="sidebar__introduction-description">
-        <p></p>
+        <p>새로운 것을 찾아</p>
       </div>
     </div>
     <ul class="sidebar__list">
@@ -325,12 +329,22 @@
     <li class="footer__item">
       &copy;
       
-        
-        2022
-
+        Kyungpyo Kim 2014-2022
 
       
     </li>
+    
+      <li class="footer__item">
+        <a
+          class="link"
+          href="/imprint/"
+          
+          title=""
+        >
+          imprint
+        </a>
+      </li>
+
     
   </ul>
 </footer>
@@ -487,6 +501,7 @@ if (!doNotTrack) {
         </ul>
 
       <p><img src="/images/No%20raw%20loops!%20Yes%20STL%20algorithms!%2017cb7499a6464a30a9880cdc161e05b9/Untitled.png" alt="unsplash"></p>
+<p><br></br></p>
 <h1 id="what-are-raw-loops--algorithms">What are raw loops (↔ algorithms)?</h1>
 <ul>
 <li><code>for</code> loop</li>
@@ -509,7 +524,8 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">it_remove</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">remove_if</span><span class="p">(</span><span class="n">cbegin</span><span class="p">(</span><span class="n">my_vector</span><span class="p">),</span> <span class="n">cend</span><span class="p">(</span><span class="n">my_vector</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">                                <span class="n">remove_function</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">it_fill</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">fill_n</span><span class="p">(</span><span class="n">my_vector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">count</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
-</span></span></code></pre></div><h1 id="why-you-should-not-use-raw-loops">Why you should not use raw loops?</h1>
+</span></span></code></pre></div><p><br></br></p>
+<h1 id="why-you-should-not-use-raw-loops">Why you should not use raw loops?</h1>
 <ul>
 <li>raw loop 는 한눈에 loop 의 목적을 파악하기가 어렵다.
 <ul>
@@ -528,6 +544,7 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
+<p><br></br></p>
 <h1 id="stl-algorithms-every-programmer-must-know">STL algorithms every programmer must know.</h1>
 <h3 id="upper_bound-lower_bound"><code>upper_bound, lower_bound</code></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span> <span class="k">class</span> <span class="nc">ForwardIt</span><span class="p">,</span> <span class="k">class</span> <span class="nc">T</span> <span class="o">&gt;</span>
@@ -714,6 +731,7 @@ if (!doNotTrack) {
 </span></span></code></pre></div></li>
 </ul>
 <p><img src="/images/No%20raw%20loops!%20Yes%20STL%20algorithms!%2017cb7499a6464a30a9880cdc161e05b9/Untitled%201.png" alt="unsplash"></p>
+<p><br></br></p>
 <h1 id="그래도-raw-loop-를-써야한다면">그래도 raw loop 를 써야한다면?</h1>
 <ul>
 <li>range-based loop 를 사용</li>
@@ -722,7 +740,8 @@ if (!doNotTrack) {
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">r</span><span class="p">)</span> <span class="n">f</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span>  <span class="nl">e</span> <span class="p">:</span> <span class="n">r</span><span class="p">)</span> <span class="n">e</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span> <span class="n">f</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="n">g</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="p">}</span>
-</span></span></code></pre></div><h1 id="reference">Reference</h1>
+</span></span></code></pre></div><p><br></br></p>
+<h1 id="reference">Reference</h1>
 <ul>
 <li><a href="https://belaycpp.com/2021/06/22/dont-use-raw-loops/">https://belaycpp.com/2021/06/22/dont-use-raw-loops/</a></li>
 <li><a href="https://www.youtube.com/watch?v=W2tWOdzgXHA">C++ Seasoning, Sean Parent (2013)</a></li>
@@ -734,6 +753,7 @@ if (!doNotTrack) {
 <li><a href="https://en.cppreference.com/w/cpp/algorithm">https://en.cppreference.com/w/cpp/algorithm</a></li>
 <li><a href="https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=kks227&amp;logNo=220315322874">https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=kks227&amp;logNo=220315322874</a></li>
 </ul>
+<p><br></br></p>
 
 
 
@@ -792,12 +812,22 @@ if (!doNotTrack) {
     <li class="footer__item">
       &copy;
       
-        
-        2022
-
+        Kyungpyo Kim 2014-2022
 
       
     </li>
+    
+      <li class="footer__item">
+        <a
+          class="link"
+          href="/imprint/"
+          
+          title=""
+        >
+          imprint
+        </a>
+      </li>
+
     
   </ul>
 </footer>
