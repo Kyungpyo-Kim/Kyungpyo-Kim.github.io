@@ -5,7 +5,7 @@
     <link>https://kyungpyo-kim.github.io/tags/thread-safety/</link>
     <description>Recent content in thread safety on Website of Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>ko</language>
     <lastBuildDate>Sun, 06 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/thread-safety/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thread safety of unordered_map (shared_timed_mutex)</title>
