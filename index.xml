@@ -292,7 +292,7 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%95%BC%EA%B0%84-%EB%9F%AC%EB%8B%9D/</guid>
       
-        <description>달과 야경</description>
+        <description> 달과 야경 </description>
       
     </item>
     
@@ -303,7 +303,7 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%ED%95%9C%EA%B0%95-%EB%9D%BC%EC%9D%B4%EB%94%A9/</guid>
       
-        <description>잠실타워가 보이는 한강한강대교마포대교 건너면서소낙비가 내리고 난 뒤, 하늘이 유난히 맑고 구름은 유난히 희고 몽글몽글 했던날.</description>
+        <description>잠실타워가 보이는 한강 한강대교 마포대교 건너면서 소낙비가 내리고 난 뒤, 하늘이 유난히 맑고 구름은 유난히 희고 몽글몽글 했던날.</description>
       
     </item>
     
@@ -314,7 +314,7 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</guid>
       
-        <description>List 형 자료구조 배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동 Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) print ( &amp;#34; delete:&amp;#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) The sales result = 12The sales result = 45The sales result = 67The sales result = 43The sales result = 56The sales result = 98delete: 43The sales result = 12The sales result = 45The sales result = 67The sales result = 56The sales result = 98코드 설명: List 를 생성하고 삭제, 출력 예시</description>
+        <description>List 형 자료구조 배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동 Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) print ( &amp;#34; delete:&amp;#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 43 The sales result = 56 The sales result = 98 delete: 43 The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 56 The sales result = 98 코드 설명: List 를 생성하고 삭제, 출력 예시</description>
       
     </item>
     
