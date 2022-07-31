@@ -385,7 +385,7 @@
             </li><li class="sidebar__taxonomy_cloud-contents-li">
                 <a href='../../tags/shared_timed_mutex/' style='font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;'>shared_timed_mutex</a>
             </li><li class="sidebar__taxonomy_cloud-contents-li">
-                <a href='../../tags/stl/' style='font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;'>STL</a>
+                <a href='../../tags/stl/' style='font-size:1.05em; padding: 0.2em 0.2em 0.2em 0.2em;'>STL</a>
             </li><li class="sidebar__taxonomy_cloud-contents-li">
                 <a href='../../tags/tensorflow/' style='font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;'>tensorflow</a>
             </li><li class="sidebar__taxonomy_cloud-contents-li">
@@ -599,7 +599,7 @@ if (!doNotTrack) {
 <li><strong>&ldquo;DiagnosticTask&rdquo;</strong> 를 이용한 task 관리 기능이다.</li>
 </ul>
 <p>파이썬 코드를 좀 더 들여다 보자.
-(IMU 드라이버는 c++ 코드로 구현되어 있고, <a href="http://nlamprian.me/blog/software/ros/2018/03/21/ros-diagnostics/">nlamprian</a>를 참고하였다. 해당 블로그에 코드도 잘 설명되어 있다!)</p>
+(IMU 드라이버는 C++ 코드로 구현되어 있고, <a href="http://nlamprian.me/blog/software/ros/2018/03/21/ros-diagnostics/">nlamprian</a>를 참고하였다. 해당 블로그에 코드도 잘 설명되어 있다!)</p>
 <h4 id="topicdiagnostic-를-이용한-topic-관리-기능"><strong>&ldquo;TopicDiagnostic&rdquo;</strong> 를 이용한 Topic 관리 기능</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GpsNode</span><span class="p">():</span>
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -620,7 +620,7 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
 </span></span></span><span class="line"><span class="cl"><span class="s2">        ...
 </span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
-</span></span></code></pre></div><p>위의 코드에서 self.pub_nav_fix 와 self.nav_fix_freq 두개의 publisher 를 생성하였다. self.pub_nav_fix 는 실제 드라이버에서 publish 할 topic publisher 이고, self.nav_fix_freq 는 이와 함께 tick 을 만들어서 publisher 가 잘 동작하는지 확인할 수 있도록하는 diagnostic 기능을 제공하는 역할을 한다. c++ 에서는 이부분을 하나의 객체로 연결하여 사용할 수 있게 되어 있지만, python 에서는 따로 분리되어 있는 예제만 확인하였다. Topic 이름을 같이 사용하여 기능적으로는 동일하게 확인할 수 있도록 한 것 같다.</p>
+</span></span></code></pre></div><p>위의 코드에서 self.pub_nav_fix 와 self.nav_fix_freq 두개의 publisher 를 생성하였다. self.pub_nav_fix 는 실제 드라이버에서 publish 할 topic publisher 이고, self.nav_fix_freq 는 이와 함께 tick 을 만들어서 publisher 가 잘 동작하는지 확인할 수 있도록하는 diagnostic 기능을 제공하는 역할을 한다. C++ 에서는 이부분을 하나의 객체로 연결하여 사용할 수 있게 되어 있지만, python 에서는 따로 분리되어 있는 예제만 확인하였다. Topic 이름을 같이 사용하여 기능적으로는 동일하게 확인할 수 있도록 한 것 같다.</p>
 <p>TopicDiagnostic 객체의 생성 파라미터는  frequency 와 timestamp 에 관한 파라미터가 있으며, 각각 최대/최소, 시간에 대해서는 얼만큼에 시간에 대해서 tolerance 를 갖게 하는지 설정할 수 있다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">pub</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;

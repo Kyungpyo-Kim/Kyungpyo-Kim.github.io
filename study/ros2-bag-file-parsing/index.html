@@ -223,7 +223,7 @@
         ,
 
       
-      "c\u002b\u002b"
+      "C\u002b\u002b"
 
     
       
@@ -385,7 +385,7 @@
             </li><li class="sidebar__taxonomy_cloud-contents-li">
                 <a href='../../tags/shared_timed_mutex/' style='font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;'>shared_timed_mutex</a>
             </li><li class="sidebar__taxonomy_cloud-contents-li">
-                <a href='../../tags/stl/' style='font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;'>STL</a>
+                <a href='../../tags/stl/' style='font-size:1.05em; padding: 0.2em 0.2em 0.2em 0.2em;'>STL</a>
             </li><li class="sidebar__taxonomy_cloud-contents-li">
                 <a href='../../tags/tensorflow/' style='font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;'>tensorflow</a>
             </li><li class="sidebar__taxonomy_cloud-contents-li">
@@ -650,8 +650,8 @@ if (!doNotTrack) {
 <li>bag 파일을 열고 읽을 수 있는 <strong>SeqeuntialReader</strong></li>
 <li>토픽 데이터를 parsing 해주는 <strong>deserializae_message</strong></li>
 </ol>
-<p>그리고 위의 함수들은 c/c++로 구현되었고 이를 python으로 wrap-up한 코드라는 것을 알 수 있었다.
-따라서 c++ API만 동일하게 사용하면 된다!</p>
+<p>그리고 위의 함수들은 c/C++로 구현되었고 이를 python으로 wrap-up한 코드라는 것을 알 수 있었다.
+따라서 C++ API만 동일하게 사용하면 된다!</p>
 <h3 id="2-c-api">2. C++ API</h3>
 <p>먼저 bag 파일을 열고 읽는 API를 찾아 보았다.
 먼저 파일이 필요하고, 파일 형태가 필요하고, serialization 포맷 형태가 필요하다.</p>
@@ -660,7 +660,7 @@ if (!doNotTrack) {
 <ol>
 <li>Open</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="n">rosbag2</span><span class="o">::</span><span class="n">SequentialReader</span> <span class="n">reader</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="n">rosbag2</span><span class="o">::</span><span class="n">SequentialReader</span> <span class="n">reader</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">rosbag2</span><span class="o">::</span><span class="n">StorageOptions</span> <span class="n">storage_options</span><span class="p">{};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">storage_options</span><span class="p">.</span><span class="n">uri</span> <span class="o">=</span> <span class="s">&#34;bag_data&#34;</span><span class="p">;</span>
@@ -674,7 +674,7 @@ if (!doNotTrack) {
 <ol start="2">
 <li>Read</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">  <span class="c1">// read and deserialize &#34;serialized data&#34;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl">  <span class="c1">// read and deserialize &#34;serialized data&#34;
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">has_next</span><span class="p">()){</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1">// serialized data
@@ -684,7 +684,7 @@ if (!doNotTrack) {
 <ol start="3">
 <li>Deserialize</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">// deserialization and conversion to ros message
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="c1">// deserialization and conversion to ros message
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">dev_cpp_pkg</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">GpsRx</span> <span class="n">msg</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">ros_message</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rosbag2_introspection_message_t</span><span class="o">&gt;</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="n">ros_message</span><span class="o">-&gt;</span><span class="n">time_stamp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -730,7 +730,7 @@ if (!doNotTrack) {
       
 
       
-        <span><a class="tag" href="../../tags/ros/">ROS</a><a class="tag" href="../../tags/c&#43;&#43;/">c&#43;&#43;</a><a class="tag" href="../../tags/python/">python</a></span>
+        <span><a class="tag" href="../../tags/ros/">ROS</a><a class="tag" href="../../tags/c&#43;&#43;/">C&#43;&#43;</a><a class="tag" href="../../tags/python/">python</a></span>
 
 
 
