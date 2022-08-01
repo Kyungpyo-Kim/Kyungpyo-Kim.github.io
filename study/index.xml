@@ -6,7 +6,19 @@
     <description>Recent content in Studies on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Sun, 24 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Aug 2022 18:39:51 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>기술 블로그 만들기 [Github pages, Hugo]</title>
+      <link>https://kyungpyo-kim.github.io/study/tech_blog/</link>
+      <pubDate>Mon, 01 Aug 2022 18:39:51 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/tech_blog/</guid>
+      
+        <description>사용하고 싶고, 관리하고 싶은 기술 블로그 만들기
+Github pages Hugo Customization Utterances 1.</description>
+      
+    </item>
+    
     <item>
       <title>NVIDIA Jetson TX2/Xavier Image Cloning</title>
       <link>https://kyungpyo-kim.github.io/study/nvidia-jetson-tx2-xavier-image-cloning-709c45c1f161496db7c09de255d50fca/</link>

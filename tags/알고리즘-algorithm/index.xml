@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>자료구조 on Kyungpyo Kim</title>
-    <link>https://kyungpyo-kim.github.io/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</link>
-    <description>Recent content in 자료구조 on Kyungpyo Kim</description>
+    <title>알고리즘 (algorithm) on Kyungpyo Kim</title>
+    <link>https://kyungpyo-kim.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorithm/</link>
+    <description>Recent content in 알고리즘 (algorithm) on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Sun, 09 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No raw loops! Yes STL algorithms!</title>
+      <link>https://kyungpyo-kim.github.io/study/no-raw-loops-yes-stl-algorithms-17cb7499a6464a30a9880cdc161e05b9/</link>
+      <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/no-raw-loops-yes-stl-algorithms-17cb7499a6464a30a9880cdc161e05b9/</guid>
+      
+        <description>raw loop 를 쓰지 말아야 하는 이유, STL algorithms</description>
+      
+    </item>
+    
+    <item>
+      <title>알고리즘문제-전기버스</title>
+      <link>https://kyungpyo-kim.github.io/study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/</guid>
+      
+        <description>전기버스 알고리즘 SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스 문제링크 문제의 저작권은 SW Expert Academy에 있습니다.</description>
+      
+    </item>
+    
     <item>
       <title>자료구조의 구현</title>
       <link>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</link>

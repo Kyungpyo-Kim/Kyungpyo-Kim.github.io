@@ -6,7 +6,19 @@
     <description>Recent content on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Aug 2022 18:39:51 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>기술 블로그 만들기 [Github pages, Hugo]</title>
+      <link>https://kyungpyo-kim.github.io/study/tech_blog/</link>
+      <pubDate>Mon, 01 Aug 2022 18:39:51 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/tech_blog/</guid>
+      
+        <description>사용하고 싶고, 관리하고 싶은 기술 블로그 만들기
+Github pages Hugo Customization Utterances 1.</description>
+      
+    </item>
+    
     <item>
       <title>도시는 무엇으로 사는가?</title>
       <link>https://kyungpyo-kim.github.io/life/%E1%84%83%E1%85%A9%E1%84%89%E1%85%B5%E1%84%82%E1%85%B3%E1%86%AB-%E1%84%86%E1%85%AE%E1%84%8B%E1%85%A5%E1%86%BA%E1%84%8B%E1%85%B3%E1%84%85%E1%85%A9-%E1%84%89%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%E1%84%80%E1%85%A1/</link>

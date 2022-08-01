@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>list on Kyungpyo Kim</title>
-    <link>https://kyungpyo-kim.github.io/tags/list/</link>
-    <description>Recent content in list on Kyungpyo Kim</description>
+    <title>코딩테스트 (coding test) on Kyungpyo Kim</title>
+    <link>https://kyungpyo-kim.github.io/tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-coding-test/</link>
+    <description>Recent content in 코딩테스트 (coding test) on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Mon, 28 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/list/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-coding-test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>알고리즘문제-전기버스</title>
       <link>https://kyungpyo-kim.github.io/study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/</link>
