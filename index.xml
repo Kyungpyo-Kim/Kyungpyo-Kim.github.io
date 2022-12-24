@@ -6,7 +6,19 @@
     <description>Recent content on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Mon, 19 Sep 2022 23:23:22 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Dec 2022 11:31:10 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fast Matrix Multiplication</title>
+      <link>https://kyungpyo-kim.github.io/study/fast_mm/</link>
+      <pubDate>Sat, 24 Dec 2022 11:31:10 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/fast_mm/</guid>
+      
+        <description>Fast Matrix Muliplication
+Explanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도가 소요되며, 이를 개선하기 위한 여러가지 알고리즘들이 제안되어 왔으나, 가장 빠른 알고리즘 역시 O(N^2) 보다 느리다.</description>
+      
+    </item>
+    
     <item>
       <title>읽은 책들 정리 2022.01 ~ 2022.09</title>
       <link>https://kyungpyo-kim.github.io/life/%EC%9D%BD%EC%9D%80-%EC%B1%85%EB%93%A4-%EC%A0%95%EB%A6%AC-2022.01-~-2022.09/</link>
@@ -36,6 +48,17 @@ Github pages Hugo Customization Utterances 1.</description>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/life/%E1%84%83%E1%85%A9%E1%84%89%E1%85%B5%E1%84%82%E1%85%B3%E1%86%AB-%E1%84%86%E1%85%AE%E1%84%8B%E1%85%A5%E1%86%BA%E1%84%8B%E1%85%B3%E1%84%85%E1%85%A9-%E1%84%89%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%E1%84%80%E1%85%A1/</guid>
+      
+        <description>도시를 어떻게 바라보는가에 대한 새로운 눈</description>
+      
+    </item>
+    
+    <item>
+      <title>도시는 무엇으로 사는가?</title>
+      <link>https://kyungpyo-kim.github.io/life/%EB%8F%84%EC%8B%9C%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9C%BC%EB%A1%9C-%EC%82%AC%EB%8A%94%EA%B0%80/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/life/%EB%8F%84%EC%8B%9C%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9C%BC%EB%A1%9C-%EC%82%AC%EB%8A%94%EA%B0%80/</guid>
       
         <description>도시를 어떻게 바라보는가에 대한 새로운 눈</description>
       

@@ -8,7 +8,7 @@
   <title>
     
       
-        QT 를 이용한 Python GUI 개발 환경 만들기 |
+        Fast Matrix Multiplication |
 
       kyungpyo-kim
 
@@ -94,7 +94,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png" />
 
-  <link rel="canonical" href="https://kyungpyo-kim.github.io/study/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/" />
+  <link rel="canonical" href="https://kyungpyo-kim.github.io/study/fast_mm/" />
 
   
   
@@ -126,20 +126,20 @@
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
 
-<meta name="twitter:title" content="QT 를 이용한 Python GUI 개발 환경 만들기"/>
-<meta name="twitter:description" content="PyGUIDevTemplate GUI development template for python
-Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위한 custom class 활용 PyInstaller 를 이용한 파일 배포 Getting Started ## clonning repository git clone https://github."/>
+<meta name="twitter:title" content="Fast Matrix Multiplication"/>
+<meta name="twitter:description" content="Fast Matrix Muliplication
+Explanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도가 소요되며, 이를 개선하기 위한 여러가지 알고리즘들이 제안되어 왔으나, 가장 빠른 알고리즘 역시 O(N^2) 보다 느리다."/>
 
 
 
   
-  <meta property="og:title" content="QT 를 이용한 Python GUI 개발 환경 만들기" />
-<meta property="og:description" content="PyGUIDevTemplate GUI development template for python
-Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위한 custom class 활용 PyInstaller 를 이용한 파일 배포 Getting Started ## clonning repository git clone https://github." />
+  <meta property="og:title" content="Fast Matrix Multiplication" />
+<meta property="og:description" content="Fast Matrix Muliplication
+Explanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도가 소요되며, 이를 개선하기 위한 여러가지 알고리즘들이 제안되어 왔으나, 가장 빠른 알고리즘 역시 O(N^2) 보다 느리다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kyungpyo-kim.github.io/study/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/" /><meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/><meta property="article:section" content="study" />
-<meta property="article:published_time" content="2019-12-15T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-12-15T00:00:00+00:00" /><meta property="og:site_name" content="Kyungpyo Kim" />
+<meta property="og:url" content="https://kyungpyo-kim.github.io/study/fast_mm/" /><meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/><meta property="article:section" content="study" />
+<meta property="article:published_time" content="2022-12-24T11:31:10+09:00" />
+<meta property="article:modified_time" content="2022-12-24T11:31:10+09:00" /><meta property="og:site_name" content="Kyungpyo Kim" />
 
 
 
@@ -153,12 +153,12 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "articleSection": "study",
-        "name": "QT 를 이용한 Python GUI 개발 환경 만들기",
-        "headline": "QT 를 이용한 Python GUI 개발 환경 만들기",
+        "name": "Fast Matrix Multiplication",
+        "headline": "Fast Matrix Multiplication",
         "alternativeHeadline": "",
         "description": "
       
-        PyGUIDevTemplate GUI development template for python\nSummary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위한 custom class 활용 PyInstaller 를 이용한 파일 배포 Getting Started ## clonning repository git clone https:\/\/github.
+        Fast Matrix Muliplication\nExplanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도가 소요되며, 이를 개선하기 위한 여러가지 알고리즘들이 제안되어 왔으나, 가장 빠른 알고리즘 역시 O(N^2) 보다 느리다.
 
 
       
@@ -169,7 +169,7 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
         "isFamilyFriendly": "true",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0\/"
+            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/fast_mm\/"
         },
         "author" : {
             "@type": "Person",
@@ -187,10 +187,10 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
             "@type": "Person",
             "name": "kyungpyo-kim"
         },
-        "copyrightYear" : "2019",
-        "dateCreated": "2019-12-15T00:00:00.00Z",
-        "datePublished": "2019-12-15T00:00:00.00Z",
-        "dateModified": "2019-12-15T00:00:00.00Z",
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-12-24T11:31:10.00Z",
+        "datePublished": "2022-12-24T11:31:10.00Z",
+        "dateModified": "2022-12-24T11:31:10.00Z",
         "publisher":{
             "@type":"Organization",
             "name": "kyungpyo-kim",
@@ -212,19 +212,19 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       ]
 
     ,
-        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0\/",
-        "wordCount" : "239",
+        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/fast_mm\/",
+        "wordCount" : "792",
         "genre" : [ ],
         "keywords" : [ 
       
-      "PyQt"
+      "C\u002b\u002b"
 
     
       
         ,
 
       
-      "python"
+      "알고리즘 (algorithm)"
 
     ]
     }
@@ -552,7 +552,7 @@ if (!doNotTrack) {
   >
     
     <div class="post__content">
-      <h1>QT 를 이용한 Python GUI 개발 환경 만들기</h1>
+      <h1>Fast Matrix Multiplication</h1>
       
         <ul class="post__meta">
           <li class="post__meta-item">
@@ -560,7 +560,7 @@ if (!doNotTrack) {
             <span class="post__meta-text"
               >
                 
-                  Sun, Dec 15, 2019
+                  Sat, Dec 24, 2022
 
 
                 
@@ -571,99 +571,123 @@ if (!doNotTrack) {
           </li>
           <li class="post__meta-item">
             <em class="fas fa-stopwatch post__meta-icon"></em>
-            <span class="post__meta-text">읽는 시간 2분</span>
+            <span class="post__meta-text">읽는 시간 4분</span>
           </li>
         </ul>
 
-      <h2 id="pyguidevtemplatehttpsgithubcomkyungpyo-kimpyguidevtemplate"><a href="https://github.com/Kyungpyo-Kim/PyGUIDevTemplate">PyGUIDevTemplate</a></h2>
-<p>GUI development template for python</p>
-<h2 id="summary">Summary</h2>
-<ol>
-<li>QT Designer 를 이용하여 UI 설계</li>
-<li>Matplotlib, OpenCV 연동을 위한 custom class 활용</li>
-<li>PyInstaller 를 이용한 파일 배포</li>
-</ol>
+      <p>Fast Matrix Muliplication</p>
+<h2 id="explanation">Explanation</h2>
+<p>Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도가 소요되며, 이를 개선하기 위한 여러가지 알고리즘들이 제안되어 왔으나,
+가장 빠른 알고리즘 역시 O(N^2) 보다 느리다. (여기서 N은 matrix 의 dimmension)
+그리고 이러한 이론적으로 빠른 알고리즘을 직접 구현해 보면 생각보다 속도가 크게 개선되지 않는다.
+왜 그럴까? 이론과 현실사이의 차이는 프로그램의 메모리 사용에 의해 발생한다.
+좀 더 구체적으로 메모리의 복사/할당/접근에 소요되는 시간이 프로그램의 수행시간에 많은 영향을 미친다.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/MatrixMultComplexity_svg.svg" alt="MatrixMultComplexity"></p>
+<p>따라서, 같은 O(N^3)의 시간 복잡도의 알고리즘이더라도 메모리 사용을 최적화하여 더 빠른 수행시간을 얻을 수 있다!</p>
+<p>컴퓨터 프로그램은 메모리에 저장된 값을 사용하기 위해 사용하는 값과 그 근처의 메모리에 저장된 값을 한번에 가져와서(cache) 사용한다.
+이때 가져온 값들은 아주 빠른 메모리에 저장하여 사용하며 매우 빠르다. 이러한 메모리 영역을 캐시 영역이라고 한다.
+만약 캐시 영역에 필요로하는 값이 없다면 이러한 메모리 복사 과정을 다시 반복하며 추가적인 시간이 소요된다.
+반대로 이러한 메모리 복사 과정을 줄일 수 있다면, 같은 알고리즘이라도 좀 더 효율적으로 동작하게 할 수 있다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="c1">// a: m x k
+</span></span></span><span class="line"><span class="cl"><span class="c1">// b: k x n
+</span></span></span><span class="line"><span class="cl"><span class="c1">// c: m x n
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="p">;</span> <span class="n">i1</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="p">;</span> <span class="n">i2</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i3</span> <span class="o">&lt;</span> <span class="n">k</span> <span class="p">;</span> <span class="n">i3</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">c</span><span class="p">[</span><span class="n">n</span> <span class="o">*</span> <span class="n">i1</span> <span class="o">+</span> <span class="n">i2</span><span class="p">]</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">k</span> <span class="o">*</span> <span class="n">i1</span> <span class="o">+</span> <span class="n">i3</span><span class="p">]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[</span><span class="n">n</span> <span class="o">*</span> <span class="n">i3</span> <span class="o">+</span> <span class="n">i2</span><span class="p">]</span>
+</span></span></code></pre></div><p>위와 같이 마지막 <code>for</code> 문에서 <code>i3</code>가 바뀌면서 <code>b</code> 에 접근하는 메모리의 영역이 <code>n</code>만큼 점프하게 되는데 <code>n</code>이 커지면 사용하는 메모리 사이의 거리가 멀어진다.
+즉, 위에서 설명한 메모리 복사 과정이 빈번하게 발생하여 수행 시간을 길게 만든다.
+이러한 점을 이용하여, 메모리 접근의 점프가 없어지도록 하면 아래와 같이 코드를 수정할 수 있다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="p">;</span> <span class="n">i1</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i3</span> <span class="o">&lt;</span> <span class="n">k</span> <span class="p">;</span> <span class="n">i3</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="p">;</span> <span class="n">i2</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">c</span><span class="p">[</span><span class="n">n</span> <span class="o">*</span> <span class="n">i1</span> <span class="o">+</span> <span class="n">i2</span><span class="p">]</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">k</span> <span class="o">*</span> <span class="n">i1</span> <span class="o">+</span> <span class="n">i3</span><span class="p">]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[</span><span class="n">n</span> <span class="o">*</span> <span class="n">i3</span> <span class="o">+</span> <span class="n">i2</span><span class="p">]</span>
+</span></span></code></pre></div><p>위와 같이 두번째와 세번째의 <code>for</code> 문을 바꾸면 마지막 <code>for</code> 문에서 <code>i2</code> 가 바뀌면서 <code>c</code> 와 <code>b</code> 에 접근하는 위치를 가깝게 하여 캐시 사용 효율을 높일 수 있다.
+비슷한 원리로 마지막 <code>for</code> 문에서 사용되는 <code>a[k * i1 + i3]</code> 를 local 변수로 선언하면 이역시 캐싱되어 속도 개선에 도움이 될 수 있다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="p">;</span> <span class="n">i1</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i3</span> <span class="o">&lt;</span> <span class="n">k</span> <span class="p">;</span> <span class="n">i3</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">float</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">k</span> <span class="o">*</span> <span class="n">i1</span> <span class="o">+</span> <span class="n">i3</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="p">;</span> <span class="n">i2</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">c</span><span class="p">[</span><span class="n">n</span> <span class="o">*</span> <span class="n">i1</span> <span class="o">+</span> <span class="n">i2</span><span class="p">]</span> <span class="o">+=</span> <span class="n">tmp</span> <span class="o">*</span> <span class="n">b</span><span class="p">[</span><span class="n">n</span> <span class="o">*</span> <span class="n">i3</span> <span class="o">+</span> <span class="n">i2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><p>위와 같이 작성한 코드는 matrix 의 크기가 작을때에는 큰 효과가 없지만 matrix의 크기가 커지면 커질수록 성능에 큰 차이를 발생시킨다.
+아래 그래프는 matrix의 dimension의 크기를 다르게 하면서 수행 시간을 측정하여 시각화 한 것이다.</p>
+<p><img src="https://raw.githubusercontent.com/Kyungpyo-Kim/FastMM/main/plot1.png" alt=""></p>
+<p>위 그림에서 <code>matmult</code> 은 맨 처음 구현된 matrix multiplication 알고리즘이고, <code>matmult_cache</code>는 위에서 제안한 메모리 사용을 개선한 알고리즘이다.
+추가적으로 <code>OpenCV</code>, <code>Eigen</code> 라이브러리 사용시 성능도 함께 확인하였다.</p>
+<p>위 그래프처럼 dimension이 아주 작을때(2~4)에는 큰 차이는 없지만 크기가 8만 되어도 캐싱을 이용한 알고리즘과의 속도 차이가 발생하는 것을 확인할 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/Kyungpyo-Kim/FastMM/main/plot2.png" alt=""></p>
+<p>두번째 그래프를 보면 matrix 의 dimension이 더욱 커지면 성능 차이가 더욱 크게 발생하는 것을 확인할 수 있다.
+<code>matmul_cache</code>가 영상처리에 주로 사용되는 <code>OpenCV</code> 보다도 빠른 속도로 연산이 되는 것을 확인할 수 있는데 동적 메모리 할당을 사용하는 <code>OpenCV</code>의 matrix 연산은 일반적인 다른 라이브러리보다도 matrix 연산 속도가 느린 것으로 알려져 있다. 특히 컴파일 최적화가 잘되어 있는 <code>Eigen</code>의 경우 <code>matmul_cache</code>보다도 훨씬 빠른 연산 속도를 보여주고 있는데, 이를 통해 메모리 사용 최적화, 컴파일 최적화 등이 프로그램 수행 속도에 많은 영향을 준다는 사실을 확인할 수 있다.</p>
 <h2 id="getting-started">Getting Started</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">## clonning repository</span>
-</span></span><span class="line"><span class="cl">git clone https://github.com/Kyungpyo-Kim/PyGUIDevTemplate.git
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">## change directory</span>
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> PyGUIDevTemplate/PyQT <span class="c1">## for PyQT example</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># or</span>
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> PyGUIDevTemplate/PySide <span class="c1">## for PySide example</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">## run program</span>
-</span></span><span class="line"><span class="cl">python main.py
-</span></span></code></pre></div><h2 id="qt-를-이용한-gui-설계">QT 를 이용한 GUI 설계</h2>
 <ul>
 <li>
-<p>Qt designer 활용
-UI 디자인을 GUI 환경에서 진행가능</p>
+<p>Code</p>
 <ul>
-<li>custom widget</li>
-<li>custom label</li>
-<li>배포시 *.ui 파일을 *.py 파일로 변환하여 import 한 후, 배포파일을 생성해야 ui 파일을 포함하여 빌드 가능 (<a href="https://nuovoman1048.tistory.com/entry/QT-Desinger-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%97%B0%EB%8F%99%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95ui%ED%8C%8C%EC%9D%BC-%EC%97%B0%EA%B2%B0">reference</a>)
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pyuic5 -x ../qt_designer.ui -o qt_designer.py <span class="c1"># for PyQT</span>
-</span></span><span class="line"><span class="cl">pyside2-uic ../qt_designer.ui -o qt_designer.py <span class="c1"># for PySide</span>
+<li><a href="https://github.com/Kyungpyo-Kim/FastMM">https://github.com/Kyungpyo-Kim/FastMM</a></li>
+</ul>
+</li>
+<li>
+<p>Dependencies</p>
+<ul>
+<li>CMake</li>
+<li>OpenCV</li>
+<li>Eigen3</li>
+</ul>
+</li>
+<li>
+<p>Run</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+</span></span><span class="line"><span class="cl">cmake ..
+</span></span><span class="line"><span class="cl">make <span class="o">&amp;&amp;</span> ./fast_mm
 </span></span></code></pre></div></li>
-</ul>
-</li>
 <li>
-<p>Matplotlib 적용</p>
-<ul>
-<li>QWidget 클래스 이용 <a href="https://pythonspot.com/pyqt5-matplotlib/">reference</a></li>
-</ul>
-</li>
-<li>
-<p>Opencv 모듈을 이용한 이미지 생성</p>
-<ul>
-<li>QLabel 클래스 이용</li>
-<li>file 접근시 반드시 영문 path 로 접근해야 함
-<ul>
-<li>예외처리 완료</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>QT dial, slider 이용</p>
-<ul>
-<li><a href="https://wikidocs.net/35495">https://wikidocs.net/35495</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="pyinstaller-를-이용한-실행파일-생성-for-windows">Pyinstaller 를 이용한 실행파일 생성 (for Windows)</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pyinstaller main.py -F -w -i ../iconsample.ico
-</span></span></code></pre></div><p><img src="https://github.com/Kyungpyo-Kim/PyGUIDevTemplate/raw/master/demo.png" alt="demo"></p>
-<h2 id="todo-실행파일-생성-for-linux-ubuntu">TODO! 실행파일 생성 (for Linux Ubuntu)</h2>
-<h2 id="license">License</h2>
-<ul>
-<li>
-<p>Matplotlib: BSD</p>
-</li>
-<li>
-<p>PyQt: GNU General Public License (GPL) and commercial license</p>
-</li>
-<li>
-<p>PySide: LGPL</p>
-</li>
-<li>
-<p>PyInstaller: GPL with Exception</p>
-<p>PyInstaller is distributed under the GPL license (see the file COPYING.txt in the source code), with a special exception which allows to use PyInstaller to build and distribute non-free programs (including commercial ones). In other words, you have no restrictions in using PyInstaller as-is, but any kind of modifications to it will have to comply with the GPL license. See also our FAQ.</p>
-</li>
-<li>
-<p>Opencv: 3-clause BSD License</p>
-</li>
-<li>
-<p>Numpy: BSD</p>
-</li>
+<p>Results</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;&lt; benchmark: matmult &gt;&gt;
+</span></span><span class="line"><span class="cl">dim: 2 elapsed time: 0.000018 [ms]
+</span></span><span class="line"><span class="cl">dim: 4 elapsed time: 0.000051 [ms]
+</span></span><span class="line"><span class="cl">dim: 8 elapsed time: 0.000342 [ms]
+</span></span><span class="line"><span class="cl">dim: 16 elapsed time: 0.002218 [ms]
+</span></span><span class="line"><span class="cl">dim: 32 elapsed time: 0.018694 [ms]
+</span></span><span class="line"><span class="cl">dim: 64 elapsed time: 0.176169 [ms]
+</span></span><span class="line"><span class="cl">dim: 128 elapsed time: 1.625773 [ms]
+</span></span><span class="line"><span class="cl">dim: 256 elapsed time: 15.646681 [ms]
+</span></span><span class="line"><span class="cl">&lt;&lt; benchmark: matmult cache &gt;&gt;
+</span></span><span class="line"><span class="cl">dim: 2 elapsed time: 0.000030 [ms]
+</span></span><span class="line"><span class="cl">dim: 4 elapsed time: 0.000052 [ms]
+</span></span><span class="line"><span class="cl">dim: 8 elapsed time: 0.000168 [ms]
+</span></span><span class="line"><span class="cl">dim: 16 elapsed time: 0.000837 [ms]
+</span></span><span class="line"><span class="cl">dim: 32 elapsed time: 0.004913 [ms]
+</span></span><span class="line"><span class="cl">dim: 64 elapsed time: 0.034019 [ms]
+</span></span><span class="line"><span class="cl">dim: 128 elapsed time: 0.348234 [ms]
+</span></span><span class="line"><span class="cl">dim: 256 elapsed time: 2.442757 [ms]
+</span></span><span class="line"><span class="cl">&lt;&lt; benchmark: opencv &gt;&gt;
+</span></span><span class="line"><span class="cl">dim: 2 elapsed time: 0.000182 [ms]
+</span></span><span class="line"><span class="cl">dim: 4 elapsed time: 0.000199 [ms]
+</span></span><span class="line"><span class="cl">dim: 8 elapsed time: 0.000360 [ms]
+</span></span><span class="line"><span class="cl">dim: 16 elapsed time: 0.001306 [ms]
+</span></span><span class="line"><span class="cl">dim: 32 elapsed time: 0.009087 [ms]
+</span></span><span class="line"><span class="cl">dim: 64 elapsed time: 0.069120 [ms]
+</span></span><span class="line"><span class="cl">dim: 128 elapsed time: 0.588789 [ms]
+</span></span><span class="line"><span class="cl">dim: 256 elapsed time: 4.806176 [ms]
+</span></span><span class="line"><span class="cl">&lt;&lt; benchmark: eigen &gt;&gt;
+</span></span><span class="line"><span class="cl">dim: 2 elapsed time: 0.000027 [ms]
+</span></span><span class="line"><span class="cl">dim: 4 elapsed time: 0.000035 [ms]
+</span></span><span class="line"><span class="cl">dim: 8 elapsed time: 0.000109 [ms]
+</span></span><span class="line"><span class="cl">dim: 16 elapsed time: 0.000374 [ms]
+</span></span><span class="line"><span class="cl">dim: 32 elapsed time: 0.002332 [ms]
+</span></span><span class="line"><span class="cl">dim: 64 elapsed time: 0.017305 [ms]
+</span></span><span class="line"><span class="cl">dim: 128 elapsed time: 0.128563 [ms]
+</span></span><span class="line"><span class="cl">dim: 256 elapsed time: 1.081561 [ms]
+</span></span></code></pre></div></li>
 </ul>
 </div>
     <div class="post__footer">
       
 
       
-        <span><a class="tag" href="../../tags/pyqt/">PyQt</a><a class="tag" href="../../tags/python/">python</a></span>
+        <span><a class="tag" href="../../tags/c&#43;&#43;/">C&#43;&#43;</a><a class="tag" href="../../tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorithm/">알고리즘 (algorithm)</a></span>
 
 
 
