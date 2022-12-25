@@ -8,6 +8,9 @@
     <loc>https://kyungpyo-kim.github.io/tags/ai/</loc>
     <lastmod>2022-12-25T19:15:50+09:00</lastmod>
   </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/dl/</loc>
+    <lastmod>2022-12-25T19:15:50+09:00</lastmod>
+  </url><url>
     <loc>https://kyungpyo-kim.github.io/study/ensemble_object_detection_using_detectron2/</loc>
     <lastmod>2022-12-25T19:15:50+09:00</lastmod>
     <changefreq>daily</changefreq>
@@ -361,8 +364,6 @@
   </url><url>
     <loc>https://kyungpyo-kim.github.io/about/</loc>
     <priority>0</priority>
-  </url><url>
-    <loc>https://kyungpyo-kim.github.io/tags/ai/dl/</loc>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/categories/</loc>
   </url>
