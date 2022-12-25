@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI/DL on Kyungpyo Kim</title>
+    <link>https://kyungpyo-kim.github.io/tags/ai/dl/</link>
+    <description>Recent content in AI/DL on Kyungpyo Kim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language><atom:link href="https://kyungpyo-kim.github.io/tags/ai/dl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ensemble Object Detection using Detectron2</title>
+      <link>https://kyungpyo-kim.github.io/study/ensemble_object_detection_using_detectron2/</link>
+      <pubDate>Sun, 25 Dec 2022 19:15:50 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/ensemble_object_detection_using_detectron2/</guid>
+      
+        <description>Ensemble Object Detection using Detectron2 Getting Started code
+github Environments</description>
+      
+    </item>
+    
+    <item>
+      <title>Ensemble Object Detection using Detectron2</title>
+      <link>https://kyungpyo-kim.github.io/study/ensemble_object_detection_using_detectron2/</link>
+      <pubDate>Sun, 25 Dec 2022 19:15:50 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/ensemble_object_detection_using_detectron2/</guid>
+      
+        <description>Ensemble Object Detection using Detectron2 Getting Started code
+github Environments</description>
+      
+    </item>
+    
+  </channel>
+</rss>
