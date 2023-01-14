@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LiDAR on Kyungpyo Kim</title>
+    <link>https://kyungpyo-kim.github.io/tags/lidar/</link>
+    <description>Recent content in LiDAR on Kyungpyo Kim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 14 Jan 2023 17:27:23 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/lidar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[SOTA Study] LiDAR 3D Object Detection Model: CenterFormer</title>
+      <link>https://kyungpyo-kim.github.io/study/centerformer/</link>
+      <pubDate>Sat, 14 Jan 2023 17:27:23 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/centerformer/</guid>
+      
+        <description>최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

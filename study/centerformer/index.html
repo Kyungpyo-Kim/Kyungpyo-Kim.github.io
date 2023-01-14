@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="ko"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+      
+        [SOTA Study] LiDAR 3D Object Detection Model: CenterFormer |
+      kyungpyo-kim
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.109.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="kyungpyo-kim" />
+  <meta
+    name="description"
+    content="새로운 것을 찾아"
+  />
+  
+    <meta name="google-site-verification" content="LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../scss/main.min.5794be192d21535bdd301561e043a96b6adbad2b5c08279deff459e4661c613f.css"
+      integrity="sha256-V5S&#43;GS0hU1vdMBVh4EOpa2rbrStcCCed7/RZ5GYcYT8="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="../../css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../css/taxonomy.min.b6d7eff11342047cc36639518e493d5caf8fa6d496e67a716255c362e74e6519.css"
+      integrity="sha256-ttfv8RNCBHzDZjlRjkk9XK&#43;PptSW5npxYlXDYudOZRk="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="../../favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://kyungpyo-kim.github.io/study/centerformer/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="../../js/anatole-header.min.3fb7ecbad96218fce1cd5e8c69ce912680cfb525637325b5f76cdbefcc0d4a3a.js"
+    integrity="sha256-P7fsutliGPzhzV6Mac6RJoDPtSVjcyW192zb78wNSjo="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="../../js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="[SOTA Study] LiDAR 3D Object Detection Model: CenterFormer"/>
+<meta name="twitter:description" content="최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다."/>
+
+
+
+  
+  <meta property="og:title" content="[SOTA Study] LiDAR 3D Object Detection Model: CenterFormer" />
+<meta property="og:description" content="최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kyungpyo-kim.github.io/study/centerformer/" /><meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/><meta property="article:section" content="study" />
+<meta property="article:published_time" content="2023-01-14T17:27:23+09:00" />
+<meta property="article:modified_time" content="2023-01-14T17:27:23+09:00" /><meta property="og:site_name" content="Kyungpyo Kim" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "study",
+        "name": "[SOTA Study] LiDAR 3D Object Detection Model: CenterFormer",
+        "headline": "[SOTA Study] LiDAR 3D Object Detection Model: CenterFormer",
+        "alternativeHeadline": "",
+        "description": "
+      
+        최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다.
+
+
+      
+
+
+    ",
+        "inLanguage": "ko",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/centerformer\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-01-14T17:27:23.00Z",
+        "datePublished": "2023-01-14T17:27:23.00Z",
+        "dateModified": "2023-01-14T17:27:23.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "kyungpyo-kim",
+            "url": "https://kyungpyo-kim.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/kyungpyo-kim.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/centerformer\/",
+        "wordCount" : "630",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "AI"
+
+    
+      
+        ,
+
+      
+      "DL"
+
+    
+      
+        ,
+
+      
+      "LiDAR"
+
+    ]
+    }
+  </script>
+
+
+
+
+  
+  <script
+  data-ad-client="ca-pub-7791328994969079"
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+></script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="../../images/kyungpyo.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="../../">Kyungpyo Kim</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>새로운 것을 찾아</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Kyungpyo-Kim"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://instagram.com/kyung_py"
+            target="_blank"
+            rel="noopener me"
+            aria-label="instagram"
+            title="instagram"
+          >
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:kyungpyo94@gmail.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+
+    <div class="sidebar__taxonomy_cloud">
+      <h1 class="sidebar__taxonomy_cloud-title">
+        <a href="https://kyungpyo-kim.github.io//tags">Tags</a>
+      </h1>
+      <ul class="sidebar__taxonomy_cloud-contents-ul" id="taxonomy_cloud-contents-ul"><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ai/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">AI</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/big-data/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">big data</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/blog/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">blog</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/c&#43;&#43;/" style="font-size:1.2272727272727273em; padding: 0.2em 0.2em 0.2em 0.2em;">C&#43;&#43;</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/diagnostics/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Diagnostics</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/dl/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">DL</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/github/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Github</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/gpu/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">GPU</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/hash/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">hash</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/hugo/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Hugo</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/jetson/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Jetson</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/kalman-filter/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">kalman filter</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/key/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">key</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/license/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">license</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/lidar/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">LiDAR</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/nvidia/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">NVIDIA</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/optimal-state-estimation/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">optimal state estimation</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/pyqt/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">PyQt</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/python/" style="font-size:1.2727272727272727em; padding: 0.2em 0.2em 0.2em 0.2em;">python</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ros/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ros2/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS2</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/shared_timed_mutex/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">shared_timed_mutex</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/stl/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">STL</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/tensorflow/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">tensorflow</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/thread-safety/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">thread safety</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ubuntu/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">ubuntu</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/unordered_map/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">unordered_map</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">공업수학</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%8F%85%EC%84%9C/" style="font-size:2em; padding: 0.2em 0.2em 0.2em 0.2em;">독서</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%9D%BC%EC%9D%B4%EB%94%A9/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">라이딩</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%9F%AC%EB%8B%9D/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">러닝</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%B3%B4%EC%95%88/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">보안</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorithm/" style="font-size:1.1818181818181819em; padding: 0.2em 0.2em 0.2em 0.2em;">알고리즘 (algorithm)</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-data-structure/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">자료구조 (data structure)</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">자율주행</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%A0%9C%EC%96%B4/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">제어</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-coding-test/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">코딩테스트 (coding test)</a>
+      </li></ul>
+
+    </div>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>[SOTA Study] LiDAR 3D Object Detection Model: CenterFormer</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  Sat, Jan 14, 2023
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">읽는 시간 3분</span>
+          </li>
+        </ul>
+      <p>최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다. Waymo 벤치마크에서 우수항 성능을 보여주며 3D Object Detection 분야에서 새로운 SOTA 모델이 되었다.</p>
+<h1 id="1-centerpoint">1. CenterPoint</h1>
+<p>CenterPoint는 효율적으로 center를 추출하고 이를 바탕으로 object detection 을 수행하는 네트워크이다. CenterNet이라는 이미지 object detection 네트워크의 아이디어를 포인트 클라우드 object detection 네트워크에 적용한 것이다.</p>
+<p>CenterNet은 anchor-free 방식으로 heatmap 을 추출하고 heatmap의 peak 를 key-point로 사용하여 object detection 을 수행한다. CenterPoint역시 마찬가지로 포인트 클라우드로부터 heatmap 을 추출하고 이를 활용하여 object detection을 수행하는 구조를 제안하였다. 이때 VoxelNet 또는 PointPillars 모델과 같이 voxel 또는 pillar 형태로 encoding 및 feature들을 생성해 내고 이로부터 Bird-Eye-View (BEV) heatmap feature prediction을 수행하게 된다.</p>
+<p>CenterNet의 경우 bounding box ground truth로 부터 Gaussian 분포로 encoding 된 heatmap 을 생성해 내어 이를 학습에 이용하였는데 CenterPoint도 동일한 방법을 사용하였다. Bounding box regression은 CenterPoint의 경우 object의 크기 위치 및 사이즈, 방향 등 3차원 object 정보를 추출해낸다.</p>
+<h1 id="2-transformer">2. Transformer</h1>
+<p>트랜스포머(Transformer)는 2017년 구글이 발표한 논문인 &ldquo;Attention is all you need&quot;에서 나온 모델로 기존의 seq2seq의 구조인 인코더-디코더를 따르면서도, 논문의 이름처럼 어텐션(Attention)만으로 구현한 모델이다. 이 모델은 RNN을 사용하지 않고, 인코더-디코더 구조를 설계하였음에도 번역 성능에서도 RNN보다 우수한 성능을 보여주었고, 최근에는 CNN이 수행하던 object detection 에도 적용되며 우수한 성능을 보여주고 있다.</p>
+<h1 id="3-centerformer">3. CenterFormer</h1>
+<h2 id="overview">Overview</h2>
+<p>Transformer가 이미지 object detection에서 좋은 성능을 보이고 있지만, 상대적으로 포인트 클라우드 object detection에 Transformer를 적용하는 사례가 드물었다. CenterFormer는 포인트 클라우드에 Transformer를 적용하여 높은 성능을 달성했을 뿐만 아니라, 학습 속도를 향상시키고 네트워크의 크기를 줄일 수 있는 구조를 제안한다.</p>
+<p>CenterFormer는 CenterPoint 와 마찬가지로 center feature 를 사용하며, 이러한 center feature들을 Transformer의 입력으로 사용된다. 또한 ‘multi-scale cross-attention layer’를 적용하여 neighboring features를 종합적으로 고려할 수 있게 하였는데, 즉 CNN과 같이 Convolution을 하는 것처럼 하나의 feature를 연산할때 그 주변의 feature들을 함께 연산하는 효과를 낸다고 볼 수 있다. 또한 이러한 aggregation 과정에서 큰 연산의 증가가 없어 효율적으로 모델 구성이 가능하다. 뿐만 아니라 CenterPoint와 같이 여러 프레임의 입력을 종합하기 위해 ‘cross-attention transformer’를 제안하여 CenterFormer에 적용하였다.</p>
+<h2 id="detailed-method">Detailed Method</h2>
+<p><img src="image/centerformer/Untitled.png" alt="Untitled"></p>
+<ul>
+<li>포인트 클라우드를 voxel 형태로 인코딩하여 사용하였으며, CenterPoint와 마찬가지로 sparse voxel-based backbone network 를 적용하였다. 이러한 네트워크를 통해 BEV features를 생성해낸다. CenterPoint의 경우 pillar 형태의 backbone 사용 결과도 나와있었지만 CenterFormer에는 해당 내용은 없었다.</li>
+<li>CenterPoint와 달리 multi-scale BEV features를 사용하여 center proposals를 prediction한다. 이를 Transformer의 decoder의 입력으로 사용하며, 마지막 regression head를 이용하여 object의 정보들을 prediction 하는 task를 수행한다.</li>
+</ul>
+<h2 id="key-ideas">Key Ideas</h2>
+<p><img src="image/centerformer/Untitled%201.png" alt="Untitled"></p>
+<ul>
+<li>Multi-scale Center Proposal Network
+<ul>
+<li>DETR-style의 Transformer encoder는 feature bottleneck으로 fine-grained feature를 생성하는데 어려움이 있다고 한다. 이러한 문제를 해결하고자 feature pyramid network를 사용하고 여기에 Convolutional Block Attention Module (CBAM)을 적용하여 Transformer encoder를 대체하였다.</li>
+</ul>
+</li>
+<li>Multi-scale Center Transformer Decoder
+<ul>
+<li>Decoder의 경우 좀더 효율적인 연산을 위해 attending keypoints를 BEV전체에 적용하는 것이 아닌 center proposals 을 근처로 한 작은 크기의 window를 만들어 적용하였고 이를 통해 효율적인 Multi-scale cross-attention을 주행할 수 있게 하였다.</li>
+</ul>
+</li>
+<li>Multi-scale Deformable Cross-attention Layer
+<ul>
+<li>Deformable DETR에서 제안된 방법처럼 attending keypoints 를 sampling하여 학습에 적용하여 학습 결과가 좀 더 빠르게 수렴할 수 있도록 하였다.</li>
+</ul>
+</li>
+</ul>
+<p><img src="image/centerformer/Untitled%202.png" alt="Untitled"></p>
+<ul>
+<li>Multi-frame CenterFormer
+<ul>
+<li>Transformer의 장점은 attention 구조를 통해 과거의 데이터를 효과적으로 활용할 수 있다는 점이로 이러한 장점으로 인해 자연어 처리에 있어 우수한 성능을 낼 수 있었다.</li>
+<li>이러한 장점을 활용할 수 있는 Multi-frame CenterFormer를 제안하였는데 BEV features와 CBAM 과 같은 attention 구조를 적용하여 효과적으로 과거의 frame들을 fusion할 수 있게 하였다.</li>
+<li>테스트 결과를 보면 fusion하는 frame이 많아질수록 정확도가 향상되는 것을 볼 수 있다.</li>
+</ul>
+</li>
+</ul>
+<p><img src="image/centerformer/Untitled%203.png" alt="Untitled"></p>
+<hr>
+<h2 id="on-a-lighter-note">On a Lighter Note…</h2>
+<p>저자를 보면 TuSimple 이라는 회사와 University of Centeral Florida 의 Computational Image Lab. 이 함께 연구한 모델인 것 같다. 저자의 LinkedIn을 보면 TuSimple 에서 인턴도 하는 등 두 회사와 연구실이 긴밀이 협업을 수행하는 것 같다.</p>
+<p>실행 속도에 대한 결과가 없어 공식 Github를 찾아보니 single frame 에 80msec 정도 소요된다고 하니 실행속도도 그렇게 나쁘지 않은 것 같다. CenterPoint 모델의 경우 Python 모델의 경우 20FPS, TensorRT 모델의 경우 60FPS 까지 나온다고 하니 속도 착이가 크지 않아보인다. 그럼에도 불구하고 여러 벤치마크에서 우수한 성능을 보여주는 것으로 보아 Transformer를 적용한 3D object detection 도 향후 널리 이용될 것으로 보인다.</p>
+<h1 id="reference">Reference</h1>
+<ol>
+<li>CenterPoint
+<ul>
+<li><a href="https://arxiv.org/abs/1904.07850">CenterNet Paper</a></li>
+<li><a href="https://arxiv.org/abs/2006.11275">CenterPoint Paper</a></li>
+</ul>
+</li>
+<li>Transformer
+<ul>
+<li><a href="https://wikidocs.net/31379">Transformer wikidocs</a></li>
+</ul>
+</li>
+<li>CenterFormer
+<ul>
+<li><a href="https://arxiv.org/abs/2209.05588">CenterFormer Paper</a></li>
+<li><a href="https://paperswithcode.com/dataset/waymo-open-dataset">Papers with Code</a></li>
+</ul>
+</li>
+</ol>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="../../tags/ai/">AI</a><a class="tag" href="../../tags/dl/">DL</a><a class="tag" href="../../tags/lidar/">LiDAR</a></span>
+
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>댓글</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="Kyungpyo-Kim/Kyungpyo-Kim.github.io"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+</html>

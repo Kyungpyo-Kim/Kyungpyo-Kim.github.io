@@ -3,13 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kyungpyo-kim.github.io/</loc>
-    <lastmod>2022-12-25T19:15:50+09:00</lastmod>
+    <lastmod>2023-01-14T17:27:23+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/study/centerformer/</loc>
+    <lastmod>2023-01-14T17:27:23+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/ai/</loc>
-    <lastmod>2022-12-25T19:15:50+09:00</lastmod>
+    <lastmod>2023-01-14T17:27:23+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/dl/</loc>
-    <lastmod>2022-12-25T19:15:50+09:00</lastmod>
+    <lastmod>2023-01-14T17:27:23+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/lidar/</loc>
+    <lastmod>2023-01-14T17:27:23+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/study/</loc>
+    <lastmod>2023-01-14T17:27:23+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/</loc>
+    <lastmod>2023-01-14T17:27:23+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/study/ensemble_object_detection_using_detectron2/</loc>
     <lastmod>2022-12-25T19:15:50+09:00</lastmod>
@@ -17,12 +31,6 @@
     <priority>1</priority>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/python/</loc>
-    <lastmod>2022-12-25T19:15:50+09:00</lastmod>
-  </url><url>
-    <loc>https://kyungpyo-kim.github.io/study/</loc>
-    <lastmod>2022-12-25T19:15:50+09:00</lastmod>
-  </url><url>
-    <loc>https://kyungpyo-kim.github.io/tags/</loc>
     <lastmod>2022-12-25T19:15:50+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/contact/</loc>
