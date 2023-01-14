@@ -578,13 +578,13 @@ if (!doNotTrack) {
 <p>Transformer가 이미지 object detection에서 좋은 성능을 보이고 있지만, 상대적으로 포인트 클라우드 object detection에 Transformer를 적용하는 사례가 드물었다. CenterFormer는 포인트 클라우드에 Transformer를 적용하여 높은 성능을 달성했을 뿐만 아니라, 학습 속도를 향상시키고 네트워크의 크기를 줄일 수 있는 구조를 제안한다.</p>
 <p>CenterFormer는 CenterPoint 와 마찬가지로 center feature 를 사용하며, 이러한 center feature들을 Transformer의 입력으로 사용된다. 또한 ‘multi-scale cross-attention layer’를 적용하여 neighboring features를 종합적으로 고려할 수 있게 하였는데, 즉 CNN과 같이 Convolution을 하는 것처럼 하나의 feature를 연산할때 그 주변의 feature들을 함께 연산하는 효과를 낸다고 볼 수 있다. 또한 이러한 aggregation 과정에서 큰 연산의 증가가 없어 효율적으로 모델 구성이 가능하다. 뿐만 아니라 CenterPoint와 같이 여러 프레임의 입력을 종합하기 위해 ‘cross-attention transformer’를 제안하여 CenterFormer에 적용하였다.</p>
 <h2 id="detailed-method">Detailed Method</h2>
-<p><img src="images/centerformer/Untitled.png" alt="Untitled"></p>
+<p><img src="https://raw.githubusercontent.com/Kyungpyo-Kim/Kyungpyo-Kim.github.io/master/images/centerformer/Untitled.png" alt="Untitled"></p>
 <ul>
 <li>포인트 클라우드를 voxel 형태로 인코딩하여 사용하였으며, CenterPoint와 마찬가지로 sparse voxel-based backbone network 를 적용하였다. 이러한 네트워크를 통해 BEV features를 생성해낸다. CenterPoint의 경우 pillar 형태의 backbone 사용 결과도 나와있었지만 CenterFormer에는 해당 내용은 없었다.</li>
 <li>CenterPoint와 달리 multi-scale BEV features를 사용하여 center proposals를 prediction한다. 이를 Transformer의 decoder의 입력으로 사용하며, 마지막 regression head를 이용하여 object의 정보들을 prediction 하는 task를 수행한다.</li>
 </ul>
 <h2 id="key-ideas">Key Ideas</h2>
-<p><img src="images/centerformer/Untitled%201.png" alt="Untitled"></p>
+<p><img src="https://raw.githubusercontent.com/Kyungpyo-Kim/Kyungpyo-Kim.github.io/master/images/centerformer/Untitled%201.png" alt="Untitled"></p>
 <ul>
 <li>Multi-scale Center Proposal Network
 <ul>
@@ -602,7 +602,7 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
-<p><img src="images/centerformer/Untitled%202.png" alt="Untitled"></p>
+<p><img src="https://raw.githubusercontent.com/Kyungpyo-Kim/Kyungpyo-Kim.github.io/master/images/centerformer/Untitled%202.png" alt="Untitled"></p>
 <ul>
 <li>Multi-frame CenterFormer
 <ul>
@@ -612,7 +612,7 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
-<p><img src="images/centerformer/Untitled%203.png" alt="Untitled"></p>
+<p><img src="https://raw.githubusercontent.com/Kyungpyo-Kim/Kyungpyo-Kim.github.io/master/images/centerformer/Untitled%203.png" alt="Untitled"></p>
 <hr>
 <h2 id="on-a-lighter-note">On a Lighter Note…</h2>
 <p>저자를 보면 TuSimple 이라는 회사와 University of Centeral Florida 의 Computational Image Lab. 이 함께 연구한 모델인 것 같다. 저자의 LinkedIn을 보면 TuSimple 에서 인턴도 하는 등 두 회사와 연구실이 긴밀이 협업을 수행하는 것 같다.</p>
