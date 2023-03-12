@@ -6,7 +6,18 @@
     <description>Recent content in Studies on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Sat, 14 Jan 2023 17:27:23 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Mar 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey</title>
+      <link>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn/</link>
+      <pubDate>Sun, 12 Mar 2023 11:13:55 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn/</guid>
+      
+        <description>1. Introduction 최근 이직을 하였고 새로 진행하고 있는 업무는 기존의 AI 알고리즘들을 NPU라는 저전력 하드웨어에 올려서 돌리는 것이다.</description>
+      
+    </item>
+    
     <item>
       <title>[SOTA Study] LiDAR 3D Object Detection Model: CenterFormer</title>
       <link>https://kyungpyo-kim.github.io/study/centerformer/</link>
