@@ -16,7 +16,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.111.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.111.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="kyungpyo-kim" />
   <meta
     name="description"
@@ -209,7 +209,7 @@
 
     ,
         "url" : "https:\/\/kyungpyo-kim.github.io\/study\/efficient_processing_of_dnn\/",
-        "wordCount" : "907",
+        "wordCount" : "1928",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -572,7 +572,7 @@ if (!doNotTrack) {
           </li>
           <li class="post__meta-item">
             <em class="fas fa-stopwatch post__meta-icon"></em>
-            <span class="post__meta-text">읽는 시간 5분</span>
+            <span class="post__meta-text">읽는 시간 10분</span>
           </li>
         </ul>
       <h2 id="1-introduction">1. Introduction</h2>
@@ -624,6 +624,54 @@ if (!doNotTrack) {
 <p>DNN(딥러닝)의 일반적인 형태는 합성곱 신경망(CNN)으로, 다수의 CONV 레이어로 구성된다.(그림 10 참조). 이러한 네트워크에서 각 레이어는 입력 데이터의 점차 더 높은 수준의 추상화를 생성하는데, 이를 특징 맵(feature map 또는 fmap)이라고 한다. 이러한 CNN은 깊은 계층을 통해 다양한 task를 효과적으로 처리하며 다양한 분야에서 기존 알고리즘보다 우수한 성능을 보여주고 있다. 본 논문에서는 이미지 처리 분야에서의 이미지 분류 작업을 위한 CNN의 사용에 초점을 맞춘다.</p>
 <p>CNN의 각 CONV 레이어는 주로 고차원 컨볼루션으로 구성되며, 이는 그림 9(b)를 통해 어떻게 처리되는지 확인할 수 있다. 컨볼루션 연산에서는 학습을 통해 저장된 weights를 갖고 있는 filter가 입력 이미지 또는 특징맵에 컨볼루션으로 적용된다. 따라서 이러한 filter 컨볼루션 연산은 여러 입력 특징 맵 상에서 동시에 병렬적으로 처리될 수 있으며, 가중치에 대한 저장공간 효율또한 상당히 높다.</p>
 <p>Fully Connected (FC) Layer는 CNN의 마지막 레이어로, 이는 주로 CNNs 을 통해 생성된 특징맵을 통해 여러가지 task를 수행하는 역할을 한다. CNN과는 달리 weight 공유가 없이 모두 연결되 구조이기 때문에 CNN과 같이 효과적이 연산이 어렵다. 그 외에도 다양한 Non-linear Activation function들과 Max Pooling, Batch Normalization 등의 기법들이 함께 사용된다.</p>
+<h3 id="b-popular-dnn-models">B. Popular DNN Models</h3>
+<p>DNN 모델은 레이어 수, 레이어 유형, 레이어 모양(필터 크기, 채널 수 및 필터 수), 레이어 간 연결 등에서 다양한 &lsquo;네트워크 아키텍처&rsquo;를 가지고 있다. 본 섹션에서는 LeNet을 비롯한 다양한 모델들의 개요를 설명한다. 대부분 사전 훈련된 가중치를 가진 이러한 모델은 공개적으로 다운로드할 수 있다.</p>
+<p><img src="../../images/efficient_processing_of_DNN/dnn_models.png" alt="DNN Models"></p>
+<p>위 테이블을 보면 각 모델들의 성능을 비롯한 weights의 수, MAC(matrix multiply-accumulate) 연산의 수 등을 확인할 수 있다. 이러한 weights와 MAC 연산의 수는 DNN accelerator로 수행하였을때 얼마나 많은 에너지가 사용되고 얼마나 많은 시간이 소요되는지를 결정하는 중요한 요소이다.</p>
+<ul>
+<li>
+<p>LeNet
+LeNet은 1989년에 소개된 첫번째 CNN 방식 중 하나로, 28x28 크기의 회색조 이미지에서 숫자 인식을 위해 설계되었다. LeNet-5는 2개의 CONV 레이어와 2개의 FC 레이어를 포함하며, 각각 6개 및 16개의 필터를 사용한다. 각 컨볼루션 후 2x2 평균 풀링을 사용하고, 활성화 함수로 시그모이드 함수를 사용했다. 이 모델은 60k weights와 341k MACs를 필요로 하며, 디지털 수표 인식을 위해 ATM에 적용되어 CNN의 첫 상용화를 이루었다.</p>
+</li>
+<li>
+<p>AlexNet
+2012년 이미지넷 챌린지에서 우승한 최초의 CNN 모델인 AlexNet은 5개의 CONV 레이어와 3개의 FC 레이어로 이루어져 있다. 필터 크기는 3x3에서 11x11로, 96에서 384개의 필터가 사용되며, 각 채널은 3에서 256개의 채널로 확장되었다. AlexNet은 LeNet과 달리 레이어마다 가중치 수와 크기가 다른 특징이 있다. 총 61M의 weights 724M의 MACs가 필요로 한다.</p>
+</li>
+<li>
+<p>Overfeat
+Overfeat는 AlexNet과 유사한 구조를 가지고 있지만, 필터의 개수가 더 늘어나고 입력 크기가 다르며, 첫 번째 fully connected layer에서의 채널 수도 AlexNet보다 적다. 따라서 Overfeat는 이미지 하나를 처리하는 데 146M의 weights 2.8G의 MACs 연산을 요구한다.</p>
+</li>
+<li>
+<p>VGG-16
+VGG-16은 더 깊은 16개의 레이어로 구성되어 있으며, 모든 CONV 레이어가 3x3 필터를 사용하도록 설계되어 있다. 이로 인해 VGG-16은 이미지 하나를 처리하는 데 138M의 weights, 15.5G의 MACs 연산을 요구한다.</p>
+</li>
+<li>
+<p>GoogLeNet
+GoogLeNet는 22개의 레이어로 이루어진 심층 신경망으로, 인셉션 모듈을 도입하여 병렬 연결을 사용하고 다양한 필터 크기를 사용하여 입력을 다중 스케일로 처리한다. 또한 1x1 필터를 사용하여 가중치 수를 줄이고 Inception-v3와 Inception-v4로 업그레이드하여 성능을 향샹시켰다.</p>
+</li>
+<li>
+<p>ResNet
+ResNet은 Residual Net의 약자로, residual connections을 사용하여 더 깊은 네트워크(34개 이상의 레이어)를 만들었다. 이 방법은 역전파시 그래디언트 소실 문제를 해결하는데, 이전 레이어의 가중치를 건너뛸 수 있는 shortcut module을 사용한다. ResNet은 또한 1x1 필터를 사용하여 가중치 수를 줄이는 bottleneck 방식을 채택하였다. ResNet-50은 25.5M weights와 3.9G MACs가 필요하며, ResNet-152는 11.3G MACs와 60M weights가 필요하지만, ResNet-50보다 top-5 오류율을 약 1% 줄일 수 있다.</p>
+</li>
+</ul>
+<p>신경망의 깊이를 증가시키면 더 높은 정확도를 제공하는 경향이 있다. 가중치 수를 제어할 때 더 깊은 네트워크는 더 구별적인 비선형 함수를 지원하고 학습된 표현에서 더 많은 수준의 계층을 제공한다. 대부분의 연산은 FC 레이어가 아닌 CONV 레이어에서 이루어지며 FC 레이어의 가중치 수도 줄어들고 최근의 대부분의 네트워크(특히 GoogLeNet 이후)에서 CONV 레이어가 가중치에서 우위를 점하고 있다. 따라서 DNN Accelerator 하드웨어 구현의 초점은 CONV 레이어의 효율성에 대한 문제를 해결하는 것이 필요하다.</p>
+<h2 id="4-dnn-development-resources">4. DNN Development Resources</h2>
+<p>DNNs의 발전을 촉진하는 핵심 요소 중 하나는 연구 커뮤니티와 산업이 제공한 개발 리소스이다. 이들 리소스는 모델 복잡성과 정확성에 대한 트레이드 오프를 탐색하고 워크로드를 특성화하여 DNN 가속기의 개발을 용이하게 한다. 이 섹션은 이러한 리소스를 설명하여 이 분야에 관심 있는 사람들이 빠르게 시작할 수 있도록 한다.</p>
+<h3 id="a-frameworks">A. Frameworks</h3>
+<p>DNN 개발을 위해 여러 딥러닝 프레임워크가 개발되어 있으며, Caffe, TensorFlow, Torch, Theano, MXNet, CNTK 등이 있다. 이러한 프레임워크를 사용하면 보다 쉽게 DNN 모델을 개발하고 학습된 네트워크를 공유할 수 있다. 이러한 프레임워크 위에 Keras와 같은 라이브러리를 사용하여 빠르고 간편하게 개발할 수 있다.</p>
+<p>DNN 개발과 응용 디자이너들을 위한 프레임워크는 더 효율적인 DNN 계산 엔진을 설계하는 데 매우 중요하다. 이러한 프레임워크는 최적화된 소프트웨어 또는 하드웨어 가속기를 사용하여 처리할 수 있는 기본 연산들을 사용한다. 또한 이러한 프레임워크는 하드웨어 연구에 있어서도 HW/SW 최적화 간의 trade-off를 고려하며 워크로드를 분석하는 중요한 역할을 한다.</p>
+<h3 id="b-models">B. Models</h3>
+<p>사전 학습된 DNN 모델은 다양한 웹사이트 [56-59]에서 다양한 프레임워크를 위해 다운로드할 수 있다. 그러나, 같은 DNN (예: AlexNet)일지라도 모델이 어떻게 학습되었는지에 따라 정확도가 약 1%~2% 정도 차이가 나기 때문에 결과는 원래의 출판물과 완전히 일치하지 않을 수 있다는 것에 주의해야 한다.</p>
+<h3 id="c-popular-datasets-for-classification">C. Popular Datasets for Classification</h3>
+<p>DNN 모델을 비교할 때, 작업의 난이도를 고려하는 것이 중요하다. 예를 들어, MNIST 데이터셋으로 손글씨 숫자를 분류하는 것은 ImageNet 데이터셋에서 1000가지 클래스 중 하나를 분류하는 것보다 훨씬 간단하다. 따라서, 더 어려운 작업일수록 DNN의 크기(가중치 수)와 MACs 수가 더 크며, 더 많은 에너지를 필요로 하며, 처리량이 낮아진다. 또한, 다양한 공개 데이터셋을 활용하여 DNN 모델의 정확도를 평가하는 것이 중요하며, 이미지 분류가 가장 일반적이고 간단한 작업이다.</p>
+<p>MNIST는 손글씨 숫자 분류를 위해 1998년에 소개된 28x28 픽셀 회색조 이미지 10개 클래스의 데이터셋이다. LeNet-5는 MNIST를 위해 디자인된 DNN 모델 중 하나이다. CIFAR-10은 다양한 물체의 32x32 픽셀 컬러 이미지로 이루어진 데이터셋으로, 10개 클래스와 각각 5,000개의 학습 이미지와 1,000개의 테스트 이미지가 있다. ImageNet은 1,000개 클래스의 256x256 컬러 이미지 데이터셋으로, 다양한 물체 및 동물 종에 대한 세부 범주를 포함한다. MNIST는 쉬운 데이터셋이고, ImageNet은 어려운 데이터셋이며, DNN 모델의 정확도를 평가할 때 데이터셋을 고려하는 것이 중요하다.</p>
+<h3 id="d-datasets-for-other-tasks">D. Datasets for Other Tasks</h3>
+<p>DNN의 정확도가 인간 수준을 뛰어넘는 이미지 분류 작업에서는, ImageNet Challenge가 단일 객체 지역화 및 객체 감지와 같은 더 어려운 작업에 집중하기 시작했다. PASCAL VOC, MS COCO, Open Images dataset 및 YouTube dataset과 같은 다른 인기있는 이미지 데이터셋도 존재한다. 또한, Google이 발표한 632개 오디오 이벤트 클래스로 구성된 오디오 데이터셋과 200만개의 10초 길이 사운드 클립이 포함된 인간-라벨 데이터셋도 있다. 이러한 대규모 데이터셋은 미래 DNN 엔진의 효율성을 프로파일링하고 탐색하는 데 중요한 자원으로 작용할 것이다.</p>
+<h2 id="5-hardware-for-dnn-processing">5. Hardware for DNN Processing</h2>
+<p>딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다. 예를 들어, Intel Knights Landing CPU는 딥러닝을 위한 특수 벡터 명령어를 제공하고, Nvidia PASCAL GP100 GPU는 빠른 딥러닝 계산을 위해 단일 정밀도 코어에서 2개의 FP16 연산을 수행할 수 있는 16비트 부동 소수점 산술 지원을 제공한다. 또한, Nvidia DGX-1 및 Facebook의 Big Basin과 같은 DNN 처리를 위해 특별히 구축된 시스템도 있다. DNN 추론은 Nvidia Tegra 및 Samsung Exynos와 같은 다양한 임베디드 SoC 및 FPGA에서도 구현되었다. 이에 따라 이러한 플랫폼에서 처리가 어떻게 이루어지는지, 응용 프로그램별 가속기를 디자인하여 처리량과 에너지 효율성을 더욱 개선할 수 있는 방법에 대한 이해가 중요하다.</p>
+<p><img src="../../images/efficient_processing_of_DNN/parallel_compute_paradigms.png" alt="parallel_compute_paradigms"></p>
+<p>CONV 및 FC 레이어의 기본 구성 요소는 MACs 연산이다. 이는 쉽게 병렬화 할 수 있고, 고성능을 얻기 위해 매우 병렬적인 컴퓨팅 패러다임을 사용한다. 그 중에서도 시간적(temporal) 및 공간적(spatial) 아키텍처가 일반적이다. 시간적 아키텍처는 대개 CPU 또는 GPU에서 나타나며, SIMD 또는 SIMT와 같은 기술을 사용하여 병렬성을 구현한다. 반면 공간적 아키텍처는 데이터플로우 처리를 사용하며 ALU가 서로 직접 데이터를 전달할 수 있도록 처리 체인을 효율적으로 구성한다. 뒤 내용에서는 시간적 아키텍처에 대해서는 커널에서 계산 변환을 수행하여 곱셈 수를 줄여 처리량을 증가시키는 방법을 다루며, 가속기에서 사용되는 공간적 아키텍처에 대해서는 데이터 흐름을 통해 메모리 계층의 저비용 메모리에서 데이터 재사용을 증가시켜 에너지 소비를 줄이는 방법을 다룬다.</p>
+<h3 id="a-accelerate-kernel-computation-on-cpu-and-gpu-platforms">A. Accelerate Kernel Computation on CPU and GPU Platforms</h3>
 </div>
     <div class="post__footer">
       
