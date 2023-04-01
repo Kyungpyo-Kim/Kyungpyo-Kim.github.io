@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="ko"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+      
+        [Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey (Part 2) |
+      kyungpyo-kim
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.111.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="kyungpyo-kim" />
+  <meta
+    name="description"
+    content="새로운 것을 찾아"
+  />
+  
+    <meta name="google-site-verification" content="Q4P3G3Girpd3IvxCj-Pwjqw57XwNqKP1Qpu4pWlxa_w" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../scss/main.min.5794be192d21535bdd301561e043a96b6adbad2b5c08279deff459e4661c613f.css"
+      integrity="sha256-V5S&#43;GS0hU1vdMBVh4EOpa2rbrStcCCed7/RZ5GYcYT8="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="../../css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../css/taxonomy.min.b6d7eff11342047cc36639518e493d5caf8fa6d496e67a716255c362e74e6519.css"
+      integrity="sha256-ttfv8RNCBHzDZjlRjkk9XK&#43;PptSW5npxYlXDYudOZRk="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="../../favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part2/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="../../js/anatole-header.min.3fb7ecbad96218fce1cd5e8c69ce912680cfb525637325b5f76cdbefcc0d4a3a.js"
+    integrity="sha256-P7fsutliGPzhzV6Mac6RJoDPtSVjcyW192zb78wNSjo="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="../../js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="[Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey (Part 2)"/>
+<meta name="twitter:description" content="5. Hardware for DNN Processing 딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다."/>
+
+
+
+  
+  <meta property="og:title" content="[Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey (Part 2)" />
+<meta property="og:description" content="5. Hardware for DNN Processing 딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part2/" /><meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/><meta property="article:section" content="study" />
+<meta property="article:published_time" content="2023-04-01T11:13:55+09:00" />
+<meta property="article:modified_time" content="2023-04-01T11:13:55+09:00" /><meta property="og:site_name" content="Kyungpyo Kim" />
+<meta property="og:see_also" content="https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part1/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "study",
+        "name": "[Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey (Part 2)",
+        "headline": "[Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey (Part 2)",
+        "alternativeHeadline": "",
+        "description": "
+      
+        5. Hardware for DNN Processing 딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다.
+
+
+      
+
+
+    ",
+        "inLanguage": "ko",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/efficient_processing_of_dnn_part2\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-04-01T11:13:55.00Z",
+        "datePublished": "2023-04-01T11:13:55.00Z",
+        "dateModified": "2023-04-01T11:13:55.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "kyungpyo-kim",
+            "url": "https://kyungpyo-kim.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/kyungpyo-kim.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/efficient_processing_of_dnn_part2\/",
+        "wordCount" : "746",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "AI"
+
+    
+      
+        ,
+
+      
+      "DL"
+
+    
+      
+        ,
+
+      
+      "GPU"
+
+    
+      
+        ,
+
+      
+      "NPU"
+
+    ]
+    }
+  </script>
+
+
+
+
+  
+  <script
+  data-ad-client="ca-pub-7791328994969079"
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+></script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="../../images/kyungpyo.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="../../">Kyungpyo Kim</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>새로운 것을 찾아</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Kyungpyo-Kim"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://instagram.com/kyung_py"
+            target="_blank"
+            rel="noopener me"
+            aria-label="instagram"
+            title="instagram"
+          >
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:kyungpyo94@gmail.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+
+    <div class="sidebar__taxonomy_cloud">
+      <h1 class="sidebar__taxonomy_cloud-title">
+        <a href="https://kyungpyo-kim.github.io//tags">Tags</a>
+      </h1>
+      <ul class="sidebar__taxonomy_cloud-contents-ul" id="taxonomy_cloud-contents-ul"><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ai/" style="font-size:1.1818181818181819em; padding: 0.2em 0.2em 0.2em 0.2em;">AI</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/big-data/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">big data</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/blog/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">blog</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/c&#43;&#43;/" style="font-size:1.2272727272727273em; padding: 0.2em 0.2em 0.2em 0.2em;">C&#43;&#43;</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/diagnostics/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Diagnostics</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/dl/" style="font-size:1.1818181818181819em; padding: 0.2em 0.2em 0.2em 0.2em;">DL</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/github/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Github</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/gpu/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">GPU</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/hash/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">hash</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/hugo/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Hugo</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/jetson/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Jetson</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/kalman-filter/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">kalman filter</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/key/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">key</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/license/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">license</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/lidar/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">LiDAR</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/npu/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">NPU</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/nvidia/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">NVIDIA</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/optimal-state-estimation/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">optimal state estimation</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/pyqt/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">PyQt</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/python/" style="font-size:1.2727272727272727em; padding: 0.2em 0.2em 0.2em 0.2em;">python</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ros/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ros2/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS2</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/shared_timed_mutex/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">shared_timed_mutex</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/stl/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">STL</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/tensorflow/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">tensorflow</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/thread-safety/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">thread safety</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ubuntu/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">ubuntu</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/unordered_map/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">unordered_map</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">공업수학</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%8F%85%EC%84%9C/" style="font-size:2em; padding: 0.2em 0.2em 0.2em 0.2em;">독서</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%9D%BC%EC%9D%B4%EB%94%A9/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">라이딩</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%9F%AC%EB%8B%9D/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">러닝</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%B3%B4%EC%95%88/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">보안</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorithm/" style="font-size:1.1818181818181819em; padding: 0.2em 0.2em 0.2em 0.2em;">알고리즘 (algorithm)</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-data-structure/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">자료구조 (data structure)</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">자율주행</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%A0%9C%EC%96%B4/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">제어</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-coding-test/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">코딩테스트 (coding test)</a>
+      </li></ul>
+
+    </div>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>[Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey (Part 2)</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  Sat, Apr 1, 2023
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">읽는 시간 4분</span>
+          </li>
+        </ul>
+      <h2 id="5-hardware-for-dnn-processing">5. Hardware for DNN Processing</h2>
+<p>딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다. 예를 들어, Intel Knights Landing CPU는 딥러닝을 위한 특수 벡터 명령어를 제공하고, Nvidia PASCAL GP100 GPU는 빠른 딥러닝 계산을 위해 단일 정밀도 코어에서 2개의 FP16 연산을 수행할 수 있는 16비트 부동 소수점 산술 지원을 제공한다. 또한, Nvidia DGX-1 및 Facebook의 Big Basin과 같은 DNN 처리를 위해 특별히 구축된 시스템도 있다. DNN 추론은 Nvidia Tegra 및 Samsung Exynos와 같은 다양한 임베디드 SoC 및 FPGA에서도 구현되었다. 이에 따라 이러한 플랫폼에서 처리가 어떻게 이루어지는지, 응용 프로그램별 가속기를 디자인하여 처리량과 에너지 효율성을 더욱 개선할 수 있는 방법에 대한 이해가 중요하다.</p>
+<p><img src="../../images/efficient_processing_of_DNN/parallel_compute_paradigms.png" alt="parallel_compute_paradigms"></p>
+<p>CONV 및 FC 레이어의 기본 구성 요소는 MACs 연산이다. 이는 쉽게 병렬화 할 수 있고, 고성능을 얻기 위해 매우 병렬적인 컴퓨팅 패러다임을 사용한다. 그 중에서도 시간적(temporal) 및 공간적(spatial) 아키텍처가 일반적이다. 시간적 아키텍처는 대개 CPU 또는 GPU에서 나타나며, SIMD 또는 SIMT와 같은 기술을 사용하여 병렬성을 구현한다. 반면 공간적 아키텍처는 데이터플로우 처리를 사용하며 ALU가 서로 직접 데이터를 전달할 수 있도록 처리 체인을 효율적으로 구성한다. 뒤 내용에서는 시간적 아키텍처에 대해서는 커널에서 계산 변환을 수행하여 곱셈 수를 줄여 처리량을 증가시키는 방법을 다루며, 가속기에서 사용되는 공간적 아키텍처에 대해서는 데이터 흐름을 통해 메모리 계층의 저비용 메모리에서 데이터 재사용을 증가시켜 에너지 소비를 줄이는 방법을 다룬다.</p>
+<h3 id="a-accelerate-kernel-computation-on-cpu-and-gpu-platforms">A. Accelerate Kernel Computation on CPU and GPU Platforms</h3>
+<p>CPU와 GPU는 SIMD 또는 SIMT와 같은 병렬화 기술을 사용하여 MACs를 병렬로 처리하며, FC 및 CONV 레이어는 매트릭스 곱셈으로 매핑된다.
+<img src="../../images/efficient_processing_of_DNN/fc.png" alt="matrix multiplication for FC">
+그림에서는 fully connected layer 의 연산이 matrix muliplication 을 통해 어떻게 연산되는지 filter, input feature map, output feature map 의 크기 관점에서 보여준다.</p>
+<p><img src="../../images/efficient_processing_of_DNN/conv.png" alt="matrix multiplication for CONV">
+그림과 같이 DNN의 CONV 레이어는 Toeplitz 행렬의 간소화된 형태를 사용하여 행렬 곱셈으로 매핑할 수 있다. 그러나 이러한 방식은 원래의 input feature map 보다 더 많은 메모리를 사용하여 데이터 이동 관점에서의 효율성, 또는 연산의 복잡성으로 인한 효율성 저하를 야기할 수 있다. 이러한 방식은 CPU(예: OpenBLAS, Intel MKL 등)와 GPU(예: cuBLAS, cuDNN 등)를 위한 소프트웨어 라이브러리를 통해 지원되며 각각 플랫폼의 저장 계층에 맞게 행렬 곱셈이 타일 형태로 최적화된다. 이러한 플랫폼에서는 계산 변환을 적용하여 곱셈 수를 줄이면서도 동일한 비트 단위 결과를 얻을 수 있어서 더 빠른 연산이 가능하게 한다. 그러나 때로는 이러한 변환이 더 많은 덧셈을 필요로 하고 더 불규칙한 데이터 액세스 패턴을 유발할 수 있습니다.</p>
+<p>또다른 방벙으로는 FFT (Fast Fourier Transform)을 사용하여 convolution 연산의 수를 줄일 수 있다. 필터와 입력 특징 맵의 FFT를 계산하고, 주파수 영역에서 곱셈을 수행한 다음 결과를 공간 영역으로 역 FFT를 적용하여 출력 특징 맵을 복원하는 방법을 통해 convolution 연산을 수행한다. 그러나 이러한 방법은 FFT로 인해 생길 수 있는 추가적인 메모리 사용 등의 단점이 있을 수 있으며, filter, 또는 input feature map 의 sparsity를 활용하기 어렵다는 부분도 단점이 될 수 있다. FFT의 효율성을 높이기 위한 몇 가지 최적화 기법이 있으며, 필터의 FFT를 미리 계산하고 저장하여 연산 수를 줄이는 방법 또한 존재한다.</p>
+<p>그 외에도 convolution 연산 또는 matrix multiplication의 연산을 최적화하는 다양한 방법들이 연구되고 있으며, filter의 shape, 크기에 따라 다양한 방법을 적절히 적용하여 최적화를 수행할 수 있다.</p>
+<h3 id="b-energy-efficient-dataflow-for-accelerators">B. Energy-Efficient Dataflow for Accelerators</h3>
+<p>DNN을 처리할때 bottleneck이 되는 부분은 메모리 액세스다. 각 MAC(Multiply and Accumulate) 연산은 필터 가중치, 활성화된 특징 맵, 그리고 부분합을 위한 3번의 메모리 읽기와 갱신된 부분합을 위한 1번의 메모리 쓰기가 필요하다. 최악의 경우, 모든 메모리 액세스는 오프칩 DRAM을 통해 이루어져야 하며, 이는 처리량과 에너지 효율 관점에서 성능을 저하시키는 요인이 된다. DRAM 액세스는 계산에 비해 수백 배에서 수천 배까지 더 많은 에너지가 소요된다.</p>
+<p>그림 17에 나타난 공간 구조와 같은 가속기는 다양한 에너지 비용을 가진 여러 수준의 로컬 메모리 계층을 도입하여 데이터 이동의 에너지 비용을 줄일 수 있도록 한다. 이러한 계층은 DRAM과 연결된 몇 백 킬로바이트의 큰 전역 버퍼, ALU 사이에서 직접 데이터를 전달할 수 있는 inter-PE 네트워크, 그리고 각 Processing Engine (PE) 내부에 크기가 몇 킬로바이트 이하인 레지스터 파일(RF)로 구성된다. 다중 메모리 계층은 저비용 데이터 액세스를 제공하여 에너지 효율성을 향상시킨다. 예를 들어, RF나 이웃 PEs에서 데이터를 가져오는 것은 DRAM에서 가져오는 것보다 1~2개의 차수 더 낮은 에너지가 소요된다.</p>
+<p><img src="../../images/efficient_processing_of_DNN/memory_hierarchy.png" alt="memory hierarchy"></p>
+<p>가속기는 이러한 메모리 계층 구조를 활용하는 특수한 처리 데이터플로우를 지원하도록 설계될 수 있다. 이 데이터플로우는 어떤 데이터가 메모리 계층 구조의 어떤 수준으로 읽혀지고 언제 처리될지를 결정한다. DNN 처리는 무작위성이 없기 때문에, 최적의 에너지 효율을 위해 DNN 모양과 크기에 맞게 적응 가능한 고정 데이터플로우를 설계할 수 있다. 최적화된 데이터플로우는 메모리 계층 구조의 더 많은 에너지를 소비하는 수준으로부터의 접근을 최소화한다. 많은 양의 데이터를 저장할 수 있는 대형 메모리는 작은 메모리보다 더 많은 에너지를 소비한다. 예를 들어 DRAM은 기가바이트의 데이터를 저장할 수 있지만, 몇 킬로바이트의 작은 온칩 메모리보다 에너지 소비량이 2차례 높다. 따라서 비싼 메모리 수준에서 저렴한 수준으로 데이터를 이동할 때마다, 해당 데이터를 재사용하여 비싼 수준으로의 이후 접근을 최소화해야 한다. 그러나 이러한 저렴한 메모리의 저장 용량은 제한되기 때문에, 이러한 제한 하에서 재사용을 최대화하는 다양한 데이터플로우를 탐색해야 한다.</p>
+
+
+
+<h3>이 시리즈의 게시물</h3>
+<ul>
+  
+    <li><a href="../../study/efficient_processing_of_dnn_part2/">[Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey (Part 2)</a></li>
+  
+    <li><a href="../../study/efficient_processing_of_dnn_part1/">[Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey (Part 1)</a></li>
+  
+</ul>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="../../tags/ai/">AI</a><a class="tag" href="../../tags/dl/">DL</a><a class="tag" href="../../tags/gpu/">GPU</a><a class="tag" href="../../tags/npu/">NPU</a></span>
+
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>댓글</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="Kyungpyo-Kim/Kyungpyo-Kim.github.io"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+</html>

@@ -6,13 +6,24 @@
     <description>Recent content in NPU on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Sun, 12 Mar 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/npu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Apr 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/npu/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey</title>
-      <link>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn/</link>
+      <title>[Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey (Part 2)</title>
+      <link>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part2/</link>
+      <pubDate>Sat, 01 Apr 2023 11:13:55 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part2/</guid>
+      
+        <description>5. Hardware for DNN Processing 딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다.</description>
+      
+    </item>
+    
+    <item>
+      <title>[Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey (Part 1)</title>
+      <link>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part1/</link>
       <pubDate>Sun, 12 Mar 2023 11:13:55 +0900</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part1/</guid>
       
         <description>1. Introduction 최근 이직을 하였고 새로 진행하고 있는 업무는 기존의 AI 알고리즘들을 NPU라는 저전력 하드웨어에 올려서 돌리는 것이다.</description>
       

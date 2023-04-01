@@ -3,30 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kyungpyo-kim.github.io/</loc>
-    <lastmod>2023-03-12T11:13:55+09:00</lastmod>
+    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
   </url><url>
-    <loc>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn/</loc>
-    <lastmod>2023-03-12T11:13:55+09:00</lastmod>
+    <loc>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part2/</loc>
+    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/ai/</loc>
-    <lastmod>2023-03-12T11:13:55+09:00</lastmod>
+    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/dl/</loc>
-    <lastmod>2023-03-12T11:13:55+09:00</lastmod>
+    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/series/efficient_processing_of_dnn/</loc>
+    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/gpu/</loc>
-    <lastmod>2023-03-12T11:13:55+09:00</lastmod>
+    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/npu/</loc>
-    <lastmod>2023-03-12T11:13:55+09:00</lastmod>
+    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/series/</loc>
+    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/study/</loc>
-    <lastmod>2023-03-12T11:13:55+09:00</lastmod>
+    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/</loc>
+    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part1/</loc>
     <lastmod>2023-03-12T11:13:55+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/study/centerformer/</loc>
     <lastmod>2023-01-14T17:27:23+09:00</lastmod>
@@ -111,9 +122,6 @@
     <lastmod>2021-09-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/study/no-raw-loops-yes-stl-algorithms-17cb7499a6464a30a9880cdc161e05b9/</loc>
-    <lastmod>2021-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kyungpyo-kim.github.io/series/</loc>
     <lastmod>2021-09-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/stl/</loc>
