@@ -210,7 +210,7 @@
 
     ,
         "url" : "https:\/\/kyungpyo-kim.github.io\/study\/efficient_processing_of_dnn_part2\/",
-        "wordCount" : "746",
+        "wordCount" : "1116",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -573,7 +573,7 @@ if (!doNotTrack) {
           </li>
           <li class="post__meta-item">
             <em class="fas fa-stopwatch post__meta-icon"></em>
-            <span class="post__meta-text">읽는 시간 4분</span>
+            <span class="post__meta-text">읽는 시간 6분</span>
           </li>
         </ul>
       <h2 id="5-hardware-for-dnn-processing">5. Hardware for DNN Processing</h2>
@@ -593,6 +593,26 @@ if (!doNotTrack) {
 <p>그림 17에 나타난 공간 구조와 같은 가속기는 다양한 에너지 비용을 가진 여러 수준의 로컬 메모리 계층을 도입하여 데이터 이동의 에너지 비용을 줄일 수 있도록 한다. 이러한 계층은 DRAM과 연결된 몇 백 킬로바이트의 큰 전역 버퍼, ALU 사이에서 직접 데이터를 전달할 수 있는 inter-PE 네트워크, 그리고 각 Processing Engine (PE) 내부에 크기가 몇 킬로바이트 이하인 레지스터 파일(RF)로 구성된다. 다중 메모리 계층은 저비용 데이터 액세스를 제공하여 에너지 효율성을 향상시킨다. 예를 들어, RF나 이웃 PEs에서 데이터를 가져오는 것은 DRAM에서 가져오는 것보다 1~2개의 차수 더 낮은 에너지가 소요된다.</p>
 <p><img src="../../images/efficient_processing_of_DNN/memory_hierarchy.png" alt="memory hierarchy"></p>
 <p>가속기는 이러한 메모리 계층 구조를 활용하는 특수한 처리 데이터플로우를 지원하도록 설계될 수 있다. 이 데이터플로우는 어떤 데이터가 메모리 계층 구조의 어떤 수준으로 읽혀지고 언제 처리될지를 결정한다. DNN 처리는 무작위성이 없기 때문에, 최적의 에너지 효율을 위해 DNN 모양과 크기에 맞게 적응 가능한 고정 데이터플로우를 설계할 수 있다. 최적화된 데이터플로우는 메모리 계층 구조의 더 많은 에너지를 소비하는 수준으로부터의 접근을 최소화한다. 많은 양의 데이터를 저장할 수 있는 대형 메모리는 작은 메모리보다 더 많은 에너지를 소비한다. 예를 들어 DRAM은 기가바이트의 데이터를 저장할 수 있지만, 몇 킬로바이트의 작은 온칩 메모리보다 에너지 소비량이 2차례 높다. 따라서 비싼 메모리 수준에서 저렴한 수준으로 데이터를 이동할 때마다, 해당 데이터를 재사용하여 비싼 수준으로의 이후 접근을 최소화해야 한다. 그러나 이러한 저렴한 메모리의 저장 용량은 제한되기 때문에, 이러한 제한 하에서 재사용을 최대화하는 다양한 데이터플로우를 탐색해야 한다.</p>
+<p><img src="../../images/efficient_processing_of_DNN/memory_resuse.png" alt="memory_resuse"></p>
+<p>DNNs(Depth Neural Networks)에 대해, 그림 23과 같이 세 가지 입력 데이터 재사용을 통해 데이터 플로우를 최적화 할 수 있다. &ldquo;convolutional reuse&rdquo; 에서는 CNN 연산을 수행하는 과정으로 filter의 weight와 input feature map이 재사용될 수 있다. &ldquo;feature map reuse&quot;의 경우 하나의 input feature map에 여러개의 filter가 적용되는 경우로 filter weight가 재사용 될 수 있다. 마지막으로, &ldquo;filter reuse&quot;의 경우 동일한 필터 가중치가 입력 피쳐 맵 전체에 걸쳐 여러 번 사용됩니다. 주로 batch 연산 등을 위해 사용될 수 있다.</p>
+<p>만약 로컬 메모리 계층구조에 데이터를 저장하고 DRAM으로 다시 돌아가지 않고 여러 번 액세스할 수 있다면, 세 가지 유형의 데이터 재사용을 활용할 수 있으며, 이를 통해 DRAM 액세스를 상당히 줄일 수 있다. 예를 들어 AlexNet에서 CONV 레이어에서 DRAM 읽기 수를 최대 500배까지 줄일 수 있다고 한다.</p>
+<p>DNN 가속기의 작동은 그림 24에서 보듯이 범용 프로세서의 작동과 유사하다. 일반적인 컴퓨터 시스템에서 컴파일러는 프로그램을 하드웨어 아키텍처(x86 또는 ARM 등)에 맞게 기계 판독 가능한 바이너리 코드로 변환하여 실행한다. Mapper에서 데이터플로우에 따라 하드웨어에 최적화된 계산 매핑 등을 수행한다. 컴파일러는 보통 성능 최적화를 위해 최적화를 수행하고, Mapper는 에너지 효율성을 위해 최적화합니다.</p>
+<p><img src="../../images/efficient_processing_of_DNN/dataflows.png" alt="dataflows">
+그림 25와 같이 dataflow는 (a) weight stationary, (b) output stationary, (c) no local reuse로 분류해볼 수 있다.</p>
+<ul>
+<li>
+<p>(a) Weight Stationary
+weight stationary dataflow는 PE의 레지스터 파일(RF)에서 최대한 많은 가중치를 DRAM에서 불러오고 이를 재사용하여 가중치 읽기의 에너지 소비를 최소화한다. 가중치가 RF에 존재하는 동안 가능한 한 많은 MAC(Multiply-Accumulate)을 실행하여 합성곱 및 필터의 가중치 재사용을 최대화 한다. 입력과 부분 합은 공간 배열과 글로벌 버퍼를 통해 이동하게 된다. 입력 feature map 활성화는 모든 PE로 브로드캐스트되고, 부분 합은 PE 배열 전체에서 누적된다. 이를 위해 추가적인 로컬 저장소가 필요하게 된다.</p>
+</li>
+<li>
+<p>(b) Output Stationary
+ouput stationary dataflow는 부분 합을 읽고 쓰는 에너지 소비를 최소화하기 위해 설계되었다. 같은 출력 활성화 값을 위한 부분 합 누적을 RF 내에서 지역적으로 저장한다. 부분 합 누적을 RF에서 저장시키기 때문에 input feature map을 PE 배열을 통해 스트리밍하고 가중치를 배열 내 모든 PE로 브로드캐스트하는 방식을 취한다. 각 PE는 해당 output activation 값을 처리하며, 이를 위해 인접한 PE에서 필요한 input activation을 가져와 사용할 수 있다. PE 배열은 데이터를 수평 및 수직으로 전달하기 위한 전용 네트워크와 유사하게 동작한다. 각 PE는 필요한 사이클 동안 데이터를 유지하기 위한 데이터 지연 레지스터를 포함한다. 시스템 수준에서 글로벌 버퍼는 입력 활성화를 스트리밍하고 가중치를 PE 배열로 브로드캐스트한다. 부분 합은 각 PE 내에서 누적되고, 그 후에 전체 버퍼로 다시 스트리밍한다.
+<img src="../../images/efficient_processing_of_DNN/output_stationary_variations.png" alt="output_stationary_variations"></p>
+</li>
+<li>
+<p>(c) No Local Reuse</p>
+</li>
+</ul>
 
 
 
