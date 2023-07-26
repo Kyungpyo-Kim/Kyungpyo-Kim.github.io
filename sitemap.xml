@@ -19,6 +19,9 @@
     <loc>https://kyungpyo-kim.github.io/tags/lidar/</loc>
     <lastmod>2023-07-26T11:13:55+09:00</lastmod>
   </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/sota/</loc>
+    <lastmod>2023-07-26T11:13:55+09:00</lastmod>
+  </url><url>
     <loc>https://kyungpyo-kim.github.io/study/</loc>
     <lastmod>2023-07-26T11:13:55+09:00</lastmod>
   </url><url>
@@ -29,9 +32,6 @@
     <lastmod>2023-04-01T11:13:55+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
-  </url><url>
-    <loc>https://kyungpyo-kim.github.io/tags/dl/</loc>
-    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/series/efficient_processing_of_dnn/</loc>
     <lastmod>2023-04-01T11:13:55+09:00</lastmod>

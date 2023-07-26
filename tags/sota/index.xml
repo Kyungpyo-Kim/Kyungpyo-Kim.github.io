@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>3D Object Detection on Kyungpyo Kim</title>
-    <link>https://kyungpyo-kim.github.io/tags/3d-object-detection/</link>
-    <description>Recent content in 3D Object Detection on Kyungpyo Kim</description>
+    <title>SOTA on Kyungpyo Kim</title>
+    <link>https://kyungpyo-kim.github.io/tags/sota/</link>
+    <description>Recent content in SOTA on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Wed, 26 Jul 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/3d-object-detection/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Jul 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/sota/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[SOTA Review] DSVT LiDAR 3D Object Detection</title>
       <link>https://kyungpyo-kim.github.io/study/dsvt/</link>
