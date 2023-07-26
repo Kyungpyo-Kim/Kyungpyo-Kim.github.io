@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="ko"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+      
+        [SOTA Review] DSVT LiDAR 3D Object Detection |
+      kyungpyo-kim
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.115.4"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="kyungpyo-kim" />
+  <meta
+    name="description"
+    content="새로운 것을 찾아"
+  />
+  
+    <meta name="google-site-verification" content="Q4P3G3Girpd3IvxCj-Pwjqw57XwNqKP1Qpu4pWlxa_w" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../scss/main.min.5794be192d21535bdd301561e043a96b6adbad2b5c08279deff459e4661c613f.css"
+      integrity="sha256-V5S&#43;GS0hU1vdMBVh4EOpa2rbrStcCCed7/RZ5GYcYT8="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="../../css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../css/taxonomy.min.b6d7eff11342047cc36639518e493d5caf8fa6d496e67a716255c362e74e6519.css"
+      integrity="sha256-ttfv8RNCBHzDZjlRjkk9XK&#43;PptSW5npxYlXDYudOZRk="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="../../favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://kyungpyo-kim.github.io/study/dsvt/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="../../js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="../../js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="[SOTA Review] DSVT LiDAR 3D Object Detection"/>
+<meta name="twitter:description" content="DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다."/>
+
+
+
+  
+  <meta property="og:title" content="[SOTA Review] DSVT LiDAR 3D Object Detection" />
+<meta property="og:description" content="DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kyungpyo-kim.github.io/study/dsvt/" /><meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/><meta property="article:section" content="study" />
+<meta property="article:published_time" content="2023-07-26T11:13:55+09:00" />
+<meta property="article:modified_time" content="2023-07-26T11:13:55+09:00" /><meta property="og:site_name" content="Kyungpyo Kim" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "study",
+        "name": "[SOTA Review] DSVT LiDAR 3D Object Detection",
+        "headline": "[SOTA Review] DSVT LiDAR 3D Object Detection",
+        "alternativeHeadline": "",
+        "description": "
+      
+        DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다.
+
+
+      
+
+
+    ",
+        "inLanguage": "ko",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/dsvt\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-07-26T11:13:55.00Z",
+        "datePublished": "2023-07-26T11:13:55.00Z",
+        "dateModified": "2023-07-26T11:13:55.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "kyungpyo-kim",
+            "url": "https://kyungpyo-kim.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/kyungpyo-kim.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/dsvt\/",
+        "wordCount" : "433",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "AI"
+
+    
+      
+        ,
+
+      
+      "3D Object Detection"
+
+    
+      
+        ,
+
+      
+      "LiDAR"
+
+    ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="../../images/kyungpyo.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="../../">Kyungpyo Kim</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>새로운 것을 찾아</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Kyungpyo-Kim"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://instagram.com/kyung_py"
+            target="_blank"
+            rel="noopener me"
+            aria-label="instagram"
+            title="instagram"
+          >
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:kyungpyo94@gmail.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="../../contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>[SOTA Review] DSVT LiDAR 3D Object Detection</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  Wed, Jul 26, 2023
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">읽는 시간 3분</span>
+          </li>
+        </ul>
+      <p>DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다. 이런 부분이 향후에 많은 어플리케이션에서 사용될 수 있는 여지가 많다고 생각하여 정리해 보았습니다.</p>
+<h2 id="abstraction">Abstraction</h2>
+<ul>
+<li>single-stride window-based voxel transformer backbone 제안
+<ul>
+<li>dynamic sparse window attention → fully pallelization</li>
+<li>rotated set partitioning strategy → allow cross-set connection</li>
+<li>attention style 3D pooling → deploy friendly</li>
+</ul>
+</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li>Related Works
+<ul>
+<li>
+<p>To efficiently process the attention on sparse data, many approaches rebalance the token number by random sampling [25,49]</p>
+<pre><code>[25] Pointformer CVPR2021
+
+[49] Point transformer ICCV2021
+</code></pre>
+</li>
+<li>
+<p>group local regions with similar number of tokens together [10, 37]</p>
+<pre><code>[10] SST CVPR2022
+</code></pre>
+<ul>
+<li>
+<p>Attention token 생성을 위해 Bucketing 방법 사용</p>
+</li>
+<li>
+<p>batch regions with similar number of tokens together and pads them separately to implement parallel computation.</p>
+<p>[37] SWFormer ECCV2022</p>
+</li>
+<li>
+<p>batch regions with similar number of tokens together and pads them separately to implement parallel computation.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>[15, 24] try to solve these problems by writing customized CUDA operations</p>
+<pre><code>[15] Voxel Set Transformer CVPR2022
+</code></pre>
+<ul>
+<li>
+<p>customized CUDA for scatter function</p>
+<p>[24] VoTr (Voxel Transformer) ICCV2021</p>
+</li>
+<li>
+<p>proposes local attention and dilated attention with a self-designed voxel query to enable attention mechanism on sparse voxels</p>
+</li>
+<li>
+<p>customized CUDA for query function</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Proposed methods
+<ul>
+<li>
+<p>Dynamic sparse window attention → support efficient parallel computation</p>
+<pre><code>![Untitled](/images/DSVT%2099aee51df0254775853adeddc7d4ee3e/Untitled.png)
+</code></pre>
+<ul>
+<li>위와 같이 X 방향, Y 방향 두가지로 window 를 설정 함 (시험적으로 가장 좋은 성능을 보임, table 7 참조)</li>
+<li>X 방향 partition → self-attention → Y 방향 partition → self-attention 구조로 구성됨</li>
+<li>SST, SWFormer, SwinTransformer 보다 빠른 성능을 보여줌</li>
+</ul>
+</li>
+<li>
+<p>Attention-style 3D pooling operation → downsmaple the feature map, generalization 능력 향상</p>
+<ul>
+<li>기존 방법은 CUDA 코드 개발을 요구함, 제안한 방법은 CUDA 개발을 요구하지 않음?
+<ul>
+<li>[11] FSD NIPS2022: custom CUDA kernel for scatter function</li>
+<li>[46] SECOND Sensors2018: custom CUDA kernel for downsampling features</li>
+<li>[50] VoxelNet CVPR2018: custom CUDA kernel for downsampling features</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="methodology">Methodology</h2>
+<ul>
+<li>
+<p><strong>Overview</strong></p>
+<p><img src="../../images/DSVT%2099aee51df0254775853adeddc7d4ee3e/Untitled%201.png" alt="Untitled"></p>
+<ul>
+<li>
+<p>DSVT-P (pillar version, voxel 로 확장 가능)</p>
+</li>
+<li>
+<p>Voxel Feature Encoding (VFE) 으로 sparse 한 voxel feature 를 얻음 → 각각의 voxel 들은 하나의 token 으로 처리함</p>
+<pre><code>[37] SWFormer ECCV2022
+
+[45] PointPillars ECCV2020
+
+[48] CenterPoint CVPR2021
+</code></pre>
+</li>
+<li>
+<p>SST 방식처럼 충분한 receptive field 를 얻고 작은 scale 의 object detection 을 수행하기 위해서 single stride network 적용 → X-axis, Y-axis 로 적용</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Dynamic Sparse Window Attention</strong></p>
+<ul>
+<li><strong>Dynamic set partition</strong>
+<ul>
+<li>window-bounded, size-equivalent subsets → enable parallel computations</li>
+<li>3D Voxels 을 attention 을 위한 sub set 으로 나눈다
+<ul>
+<li>voxel 마다 x, y 를 이용해 sorting 하고,</li>
+<li>x-axis partitioning, y-aixs partitioning을 수행한다.</li>
+</ul>
+</li>
+<li>sub-set 은 voxel, coordinates 두가지로 구성되어 multi-head self-attention 으로 입력됨
+<ul>
+<li>coordinates 은 positional encoding 적용</li>
+</ul>
+</li>
+<li>Hybrid window partition for inter-window feature propagation.
+<ul>
+<li>Swin-Transformer 도 적용</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Attention-style 3D Pooling</strong></p>
+<p><img src="../../images/DSVT%2099aee51df0254775853adeddc7d4ee3e/Untitled%202.png" alt="Untitled"></p>
+</li>
+</ul>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://arxiv.org/pdf/2301.06051.pdf">Paper</a></li>
+<li><a href="https://github.com/Haiyang-W/DSVT">Github</a></li>
+</ul>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="../../tags/ai/">AI</a><a class="tag" href="../../tags/3d-object-detection/">3D Object Detection</a><a class="tag" href="../../tags/lidar/">LiDAR</a></span>
+
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>댓글</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="Kyungpyo-Kim/Kyungpyo-Kim.github.io"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+</html>

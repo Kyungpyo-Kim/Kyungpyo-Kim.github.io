@@ -3,15 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kyungpyo-kim.github.io/</loc>
-    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
+    <lastmod>2023-07-26T11:13:55+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/study/dsvt/</loc>
+    <lastmod>2023-07-26T11:13:55+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/3d-object-detection/</loc>
+    <lastmod>2023-07-26T11:13:55+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/ai/</loc>
+    <lastmod>2023-07-26T11:13:55+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/lidar/</loc>
+    <lastmod>2023-07-26T11:13:55+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/study/</loc>
+    <lastmod>2023-07-26T11:13:55+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/</loc>
+    <lastmod>2023-07-26T11:13:55+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part2/</loc>
     <lastmod>2023-04-01T11:13:55+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
-  </url><url>
-    <loc>https://kyungpyo-kim.github.io/tags/ai/</loc>
-    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/dl/</loc>
     <lastmod>2023-04-01T11:13:55+09:00</lastmod>
@@ -28,12 +45,6 @@
     <loc>https://kyungpyo-kim.github.io/series/</loc>
     <lastmod>2023-04-01T11:13:55+09:00</lastmod>
   </url><url>
-    <loc>https://kyungpyo-kim.github.io/study/</loc>
-    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
-  </url><url>
-    <loc>https://kyungpyo-kim.github.io/tags/</loc>
-    <lastmod>2023-04-01T11:13:55+09:00</lastmod>
-  </url><url>
     <loc>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part1/</loc>
     <lastmod>2023-03-12T11:13:55+09:00</lastmod>
     <changefreq>daily</changefreq>
@@ -43,9 +54,6 @@
     <lastmod>2023-01-14T17:27:23+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
-  </url><url>
-    <loc>https://kyungpyo-kim.github.io/tags/lidar/</loc>
-    <lastmod>2023-01-14T17:27:23+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/study/ensemble_object_detection_using_detectron2/</loc>
     <lastmod>2022-12-25T19:15:50+09:00</lastmod>
@@ -390,7 +398,6 @@
     <priority>1</priority>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/about/</loc>
-    <priority>0</priority>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/categories/</loc>
   </url>

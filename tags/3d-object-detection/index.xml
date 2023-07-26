@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3D Object Detection on Kyungpyo Kim</title>
+    <link>https://kyungpyo-kim.github.io/tags/3d-object-detection/</link>
+    <description>Recent content in 3D Object Detection on Kyungpyo Kim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Wed, 26 Jul 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/3d-object-detection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[SOTA Review] DSVT LiDAR 3D Object Detection</title>
+      <link>https://kyungpyo-kim.github.io/study/dsvt/</link>
+      <pubDate>Wed, 26 Jul 2023 11:13:55 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/dsvt/</guid>
+      
+        <description>DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

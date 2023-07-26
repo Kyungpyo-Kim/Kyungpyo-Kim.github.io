@@ -6,7 +6,18 @@
     <description>Recent content in Studies on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Sat, 01 Apr 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Jul 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[SOTA Review] DSVT LiDAR 3D Object Detection</title>
+      <link>https://kyungpyo-kim.github.io/study/dsvt/</link>
+      <pubDate>Wed, 26 Jul 2023 11:13:55 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/dsvt/</guid>
+      
+        <description>DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다.</description>
+      
+    </item>
+    
     <item>
       <title>[Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey (Part 2)</title>
       <link>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part2/</link>

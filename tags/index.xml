@@ -6,13 +6,35 @@
     <description>Recent content in Tags on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Sat, 01 Apr 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Jul 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3D Object Detection</title>
+      <link>https://kyungpyo-kim.github.io/tags/3d-object-detection/</link>
+      <pubDate>Wed, 26 Jul 2023 11:13:55 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/3d-object-detection/</guid>
+      
+        <description></description>
+      
+    </item>
+    
     <item>
       <title>AI</title>
       <link>https://kyungpyo-kim.github.io/tags/ai/</link>
-      <pubDate>Sat, 01 Apr 2023 11:13:55 +0900</pubDate>
+      <pubDate>Wed, 26 Jul 2023 11:13:55 +0900</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/tags/ai/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>LiDAR</title>
+      <link>https://kyungpyo-kim.github.io/tags/lidar/</link>
+      <pubDate>Wed, 26 Jul 2023 11:13:55 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/lidar/</guid>
       
         <description></description>
       
@@ -46,17 +68,6 @@
       <pubDate>Sat, 01 Apr 2023 11:13:55 +0900</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/tags/npu/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>LiDAR</title>
-      <link>https://kyungpyo-kim.github.io/tags/lidar/</link>
-      <pubDate>Sat, 14 Jan 2023 17:27:23 +0900</pubDate>
-      
-      <guid>https://kyungpyo-kim.github.io/tags/lidar/</guid>
       
         <description></description>
       
