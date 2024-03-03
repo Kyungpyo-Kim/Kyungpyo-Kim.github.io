@@ -6,24 +6,57 @@
     <description>Recent content in Tags on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Wed, 26 Jul 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Mar 2024 22:42:57 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>3D Object Detection</title>
-      <link>https://kyungpyo-kim.github.io/tags/3d-object-detection/</link>
-      <pubDate>Wed, 26 Jul 2023 11:13:55 +0900</pubDate>
+      <title>AI</title>
+      <link>https://kyungpyo-kim.github.io/tags/ai/</link>
+      <pubDate>Sun, 03 Mar 2024 22:42:57 +0900</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/tags/3d-object-detection/</guid>
+      <guid>https://kyungpyo-kim.github.io/tags/ai/</guid>
       
         <description></description>
       
     </item>
     
     <item>
-      <title>AI</title>
-      <link>https://kyungpyo-kim.github.io/tags/ai/</link>
+      <title>GPU</title>
+      <link>https://kyungpyo-kim.github.io/tags/gpu/</link>
+      <pubDate>Sun, 03 Mar 2024 22:42:57 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/gpu/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>LLMs</title>
+      <link>https://kyungpyo-kim.github.io/tags/llms/</link>
+      <pubDate>Sun, 03 Mar 2024 22:42:57 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/llms/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>NPU</title>
+      <link>https://kyungpyo-kim.github.io/tags/npu/</link>
+      <pubDate>Sun, 03 Mar 2024 22:42:57 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/npu/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>3D Object Detection</title>
+      <link>https://kyungpyo-kim.github.io/tags/3d-object-detection/</link>
       <pubDate>Wed, 26 Jul 2023 11:13:55 +0900</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/tags/ai/</guid>
+      <guid>https://kyungpyo-kim.github.io/tags/3d-object-detection/</guid>
       
         <description></description>
       
@@ -46,28 +79,6 @@
       <pubDate>Wed, 26 Jul 2023 11:13:55 +0900</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/tags/sota/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>GPU</title>
-      <link>https://kyungpyo-kim.github.io/tags/gpu/</link>
-      <pubDate>Sat, 01 Apr 2023 11:13:55 +0900</pubDate>
-      
-      <guid>https://kyungpyo-kim.github.io/tags/gpu/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>NPU</title>
-      <link>https://kyungpyo-kim.github.io/tags/npu/</link>
-      <pubDate>Sat, 01 Apr 2023 11:13:55 +0900</pubDate>
-      
-      <guid>https://kyungpyo-kim.github.io/tags/npu/</guid>
       
         <description></description>
       

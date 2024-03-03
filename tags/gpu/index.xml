@@ -6,7 +6,18 @@
     <description>Recent content in GPU on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Sat, 01 Apr 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/gpu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Mar 2024 22:42:57 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/gpu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Paper] 1-bit Large Language Models (LLMs)</title>
+      <link>https://kyungpyo-kim.github.io/study/bitnetb1.58/</link>
+      <pubDate>Sun, 03 Mar 2024 22:42:57 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/bitnetb1.58/</guid>
+      
+        <description>최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다.</description>
+      
+    </item>
+    
     <item>
       <title>[Paper] Efficient Processing of Deep Neural Networks: A Tutorial and Survey (Part 2)</title>
       <link>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part2/</link>
