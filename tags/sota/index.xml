@@ -6,9 +6,20 @@
     <description>Recent content in SOTA on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Wed, 26 Jul 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/sota/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Aug 2024 16:50:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/sota/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[SOTA Review] DSVT LiDAR 3D Object Detection</title>
+      <title>[paper] flash attention review</title>
+      <link>https://kyungpyo-kim.github.io/study/flash_attention/</link>
+      <pubDate>Sun, 18 Aug 2024 16:50:55 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/flash_attention/</guid>
+      
+        <description>Overview 저는 현재 LLM 을 포함한 AI 모델, 그리고 이를 효율적으로 처리하기 위한 NPU/GPU 관련된 업무들을 다양하게 진행해 오고 있습니다.</description>
+      
+    </item>
+    
+    <item>
+      <title>[SOTA] DSVT LiDAR 3D Object Detection</title>
       <link>https://kyungpyo-kim.github.io/study/dsvt/</link>
       <pubDate>Wed, 26 Jul 2023 11:13:55 +0900</pubDate>
       
@@ -19,7 +30,7 @@
     </item>
     
     <item>
-      <title>[SOTA Review] LiDAR 3D Object Detection Model: CenterFormer</title>
+      <title>[SOTA] LiDAR 3D Object Detection Model: CenterFormer</title>
       <link>https://kyungpyo-kim.github.io/study/centerformer/</link>
       <pubDate>Sat, 14 Jan 2023 17:27:23 +0900</pubDate>
       

@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="ko"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+      
+        Clean_Architecture_0 |
+      kyungpyo-kim
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.119.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="kyungpyo-kim" />
+  <meta
+    name="description"
+    content="새로운 것을 찾아"
+  />
+  
+    <meta name="google-site-verification" content="Q4P3G3Girpd3IvxCj-Pwjqw57XwNqKP1Qpu4pWlxa_w" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../scss/main.min.1147aa5bacb4bce677a0e264073829caedb82fd18ea07a5f1d80521f539d1c45.css"
+      integrity="sha256-EUeqW6y0vOZ3oOJkBzgpyu24L9GOoHpfHYBSH1OdHEU="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="../../css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../css/taxonomy.min.b6d7eff11342047cc36639518e493d5caf8fa6d496e67a716255c362e74e6519.css"
+      integrity="sha256-ttfv8RNCBHzDZjlRjkk9XK&#43;PptSW5npxYlXDYudOZRk="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="../../favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://kyungpyo-kim.github.io/study/clean_architecture_0/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="../../js/anatole-header.min.3fb7ecbad96218fce1cd5e8c69ce912680cfb525637325b5f76cdbefcc0d4a3a.js"
+    integrity="sha256-P7fsutliGPzhzV6Mac6RJoDPtSVjcyW192zb78wNSjo="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="../../js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Clean_Architecture_0"/>
+<meta name="twitter:description" content="Motivation 업무를 하다 보면 프로그램을 처음부터 만들어야 하는 경우가 종종 생긴다."/>
+
+
+
+  
+  <meta property="og:title" content="Clean_Architecture_0" />
+<meta property="og:description" content="Motivation 업무를 하다 보면 프로그램을 처음부터 만들어야 하는 경우가 종종 생긴다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kyungpyo-kim.github.io/study/clean_architecture_0/" /><meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/><meta property="article:section" content="study" />
+<meta property="article:published_time" content="2024-11-01T20:15:21+09:00" />
+<meta property="article:modified_time" content="2024-11-01T20:15:21+09:00" /><meta property="og:site_name" content="Kyungpyo Kim" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "study",
+        "name": "Clean_Architecture_0",
+        "headline": "Clean_Architecture_0",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Motivation 업무를 하다 보면 프로그램을 처음부터 만들어야 하는 경우가 종종 생긴다.
+
+
+      
+
+
+    ",
+        "inLanguage": "ko",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/clean_architecture_0\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightYear" : "2024",
+        "dateCreated": "2024-11-01T20:15:21.00Z",
+        "datePublished": "2024-11-01T20:15:21.00Z",
+        "dateModified": "2024-11-01T20:15:21.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "kyungpyo-kim",
+            "url": "https://kyungpyo-kim.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/kyungpyo-kim.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/clean_architecture_0\/",
+        "wordCount" : "775",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "software"
+
+    
+      
+        ,
+
+      
+      "architecture"
+
+    
+      
+        ,
+
+      
+      "engineering"
+
+    
+      
+        ,
+
+      
+      "study"
+
+    ]
+    }
+  </script>
+
+
+
+
+  
+  <script
+  data-ad-client="ca-pub-7791328994969079"
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+></script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="../../images/kyungpyo.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="../../">Kyungpyo Kim</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>새로운 것을 찾아</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Kyungpyo-Kim"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://instagram.com/kyung_py"
+            target="_blank"
+            rel="noopener me"
+            aria-label="instagram"
+            title="instagram"
+          >
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:kyungpyo94@gmail.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+
+    <div class="sidebar__taxonomy_cloud">
+      <h1 class="sidebar__taxonomy_cloud-title">
+        <a href="https://kyungpyo-kim.github.io//tags">Tags</a>
+      </h1>
+      <ul class="sidebar__taxonomy_cloud-contents-ul" id="taxonomy_cloud-contents-ul"><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/3d-object-detection/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">3D Object Detection</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ai/" style="font-size:1.3181818181818181em; padding: 0.2em 0.2em 0.2em 0.2em;">AI</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/architecture/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">architecture</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/big-data/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">big data</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/blog/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">blog</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/c&#43;&#43;/" style="font-size:1.2272727272727273em; padding: 0.2em 0.2em 0.2em 0.2em;">C&#43;&#43;</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/diagnostics/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Diagnostics</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/engineering/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">engineering</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/github/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Github</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/gpu/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">GPU</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/hash/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">hash</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/hugo/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Hugo</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/jetson/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Jetson</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/kalman-filter/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">kalman filter</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/key/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">key</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/license/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">license</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/lidar/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">LiDAR</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/llms/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">LLMs</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/npu/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">NPU</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/nvidia/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">NVIDIA</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/optimal-state-estimation/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">optimal state estimation</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/pyqt/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">PyQt</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/python/" style="font-size:1.2727272727272727em; padding: 0.2em 0.2em 0.2em 0.2em;">python</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ros/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ros2/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS2</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/shared_timed_mutex/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">shared_timed_mutex</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/software/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">software</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/sota/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">SOTA</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/stl/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">STL</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/study/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">study</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/tensorflow/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">tensorflow</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/thread-safety/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">thread safety</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ubuntu/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">ubuntu</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/unordered_map/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">unordered_map</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">공업수학</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%8F%85%EC%84%9C/" style="font-size:2em; padding: 0.2em 0.2em 0.2em 0.2em;">독서</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%9D%BC%EC%9D%B4%EB%94%A9/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">라이딩</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%9F%AC%EB%8B%9D/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">러닝</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%B3%B4%EC%95%88/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">보안</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorithm/" style="font-size:1.1818181818181819em; padding: 0.2em 0.2em 0.2em 0.2em;">알고리즘 (algorithm)</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-data-structure/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">자료구조 (data structure)</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">자율주행</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%A0%9C%EC%96%B4/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">제어</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-coding-test/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">코딩테스트 (coding test)</a>
+      </li></ul>
+
+    </div>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Clean_Architecture_0</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  Fri, Nov 1, 2024
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">읽는 시간 4분</span>
+          </li>
+        </ul>
+      <h2 id="motivation">Motivation</h2>
+<p>업무를 하다 보면 프로그램을 처음부터 만들어야 하는 경우가 종종 생긴다. 그때마다 나름의 경험들을 바탕으로 구조를 어찌 저찌 잡아간다. 그리고 그때마다 조금씩 아쉬울 때가 많았다. 이게 진짜 좋은 구조인가, 꼭 필요한 구조인가, 굳이 필요한가 고민을 하게된다. 그리고 어떤 명확한 기준을 세우기가 힘들었다. 이 책에서 이런 고민에 대한 해답을 조금 얻을 수 있기를 기대하며 읽어본다.</p>
+<h2 id="1-소개">1. 소개</h2>
+<ul>
+<li>나는 어떤 시스템을 만들어 보았나?</li>
+</ul>
+<p>제대로 된 소프트웨어를 만들면 아주 적은 인력 만으로도 새로운 기능을 추가하거나 유지보수 할 수 있다.</p>
+<ul>
+<li>
+<p>목표: 필요한 시스템을 만들고, 유지보수하는데 투입되는 인력을 최소화</p>
+<ul>
+<li>새로운 기능을 추가할 때만다 비용이 증가 -&gt; 나쁜 설계</li>
+<li>빨리 가는 유일한 방법은 제대로 가는 것이다.</li>
+</ul>
+</li>
+<li>
+<p>저자의 현업 에서의 경험에 바탕을 둔 worst practice</p>
+<ul>
+<li>시장에 요구에 따라 소프트웨어를 빠르게 출시</li>
+<li>그 동안 코드의 구조는 엉망징찬이 됨</li>
+<li>점점 생산성이 떨어지고 유지 보수의 비용이 크게 증가함</li>
+</ul>
+</li>
+<li>
+<p>소프트웨어의 두가지 가치: behavior, structure</p>
+<ul>
+<li>structure 를 위한 노력은 더 중요하지만 급하지 않을 경우가 많다. behavior 를 위한 노력은 급하지만 중요하지 않을 수 있다. 아이젠하워 매트릭스의 우선순위를 생각하며 중요한 일을 하기위해 노력해야 한다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-벽돌부터-시작하기-프로그래밍-패러다임">2. 벽돌부터 시작하기: 프로그래밍 패러다임</h2>
+<ul>
+<li>
+<p>3가지 프로그래밍 패러다임: 구조적, 객체지향, 함수형</p>
+<ul>
+<li>구조적 프로그래밍
+<ul>
+<li>에츠허르 비버 데이크스트라가 발견</li>
+<li>부분별한 점프는 프로그램 주조에 해로움, 이를 if/else, while 등으로 대체</li>
+<li>제어흐름의 직접적인 전환에 대해 규칙을 부과 (goto)</li>
+</ul>
+</li>
+<li>객체지향 프로그래밍
+<ul>
+<li>스택의 사용에 의한 변수의 life cycle 을 조절할 수 있게 되고 포인터의 사용하는 규칙에 따른 다형성을 적용 (캐스팅)</li>
+<li>제어흐름의 간접적인 전환에 대한 규칙을 부과 (함수 pointer)</li>
+</ul>
+</li>
+<li>함수형 프로그래밍
+<ul>
+<li>할당문에 대해 규칙을 부과함</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>프로그래밍 패러다임은 무엇을 하지 말아야 하는지 정한다.</p>
+</li>
+<li>
+<p>세가지 제약 (goto, 함수 포인터, 할당문)은 함수, 컴포넌트 분리, 데이터 관리와 밀접하게 관련됨</p>
+</li>
+<li>
+<p>구조적 프로그래밍</p>
+<ul>
+<li>데이크스트라는 유클리드 방식을 통해 프로그램을 증명할 수 있는 방법을 고민했다. 이러한 노력은 결과적으로는 결실을 맺지 못했다고 한다. #검증 분야에서 formal verification 방법이 이와 비슷한가? 생각이 든다.</li>
+<li>소프트웨어 개발은 증명을 통해 참을 입증하는 수학보다는, 증명이 거짓임을 시험적으로 테스트하는 과학에 더 가깝다.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>테스트는 버그가 있음을 보여줄 뿐, 버그가 없음을 보여줄 수는 없다. - 데이크스트라</p>
+</blockquote>
+<ul>
+<li>
+<p>객체지향 프로그래밍</p>
+<ul>
+<li>OO 언어는 다형성을 안전하고 편리하게 사용할 수 있게 지원한다. 저자는 상속, 캡슐화 보다도 이러한 다형성을 OO 언어의 큰 특징으로 본다.</li>
+<li>다형성은 의존성 역전을 만들 수 있고, 이는 소스코드 의존성을 원하는 대로 변경할 수 있게 한다. 예를 들어 시스템의 모듈을 독립적으로 개발하고 배포할 수 있게 한다.</li>
+<li>이해한 대로 다시 정리해 보면, 다형성은 하나의 인터페이스로 다양한 동작을 할 수 있게 한다. 이러한 기법은 시스템 수준에서 보면 각 모듈의 개발과 배포 (소스코드 그 자체를) 독립시킬 수 있게 한다.</li>
+</ul>
+</li>
+<li>
+<p>함수형 프로그래밍</p>
+<ul>
+<li>함수형 프로그래밍은 할당문이 없다.</li>
+<li>변수의 가변성은 race condition, deadlock, concurrent update 문제를 야기한다.</li>
+<li>가능한 많은 부분을 불변 컴포넌트로 옮기는 것이 좋다.
+*</li>
+</ul>
+</li>
+<li>
+<p>결론</p>
+<ul>
+<li>구조적 프로그래밍: 제어흐름의 직접적인 전환에 대해 규칙을 부과</li>
+<li>객체지향 프로그래밍: 제어흐름의 간접적인 전환에 대해 규칙을 부과</li>
+<li>함수형 프로그래밍: 할당문에 대해 규칙을 부과함</li>
+<li>소프트웨어: 순차, 분기, 반복, 참조</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-설계-원칙">3. 설계 원칙</h2>
+<ul>
+<li>SRP
+<ul>
+<li>함수는 하나의 기능만 해야 한다. 여기서 말하는 SRP 는 이러한 의미가 아니다.</li>
+<li>단일 모듈은 하나의 이유로만 변경되어야 한다.</li>
+<li>하나의 모듈은 하나의 액터에 대해서만 책임져야 한다.</li>
+<li>하나의 모듈이 A에 필요한 정보도 제공하고 B가 필요한 정보도 제공하고 있을 때, A에게 제공하는 정봉의 수정이 B에게 제공하는 정보의 변경을 발생시킬 수 있다.</li>
+</ul>
+</li>
+<li>OCP
+<ul>
+<li>기능을 추가할 때에는 반드시 기존의 코드를 수정하지 않고, 새로운 코드를 추가할 수 있게 해야 한다.</li>
+</ul>
+</li>
+<li>LSP
+<ul>
+<li>하위 객체를 다른 타입으로 치환하더라도 상위 객체의 동작은 변경이 없어야 한다.</li>
+</ul>
+</li>
+<li>ISP
+<ul>
+<li>불필요한 무언가에 의존하고 있다면 예상치 못한 문제가 발생할 수 있다.</li>
+</ul>
+</li>
+<li>DIP
+<ul>
+<li>dependency inversion 을 통해서 하위 모듈들이 변경되더라도 동작에 변경이 없도록 해야 한다.</li>
+<li>안정된 추상화
+<ul>
+<li>변동성이 큰 구체 클래스를 직접사용하지 않도록 하는 것이 좋다.</li>
+</ul>
+</li>
+<li>팩토리
+<ul>
+<li>팩토리를 이용해서 dependency 를 최소화 할 수 있다.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-컴포넌트-원칙">4. 컴포넌트 원칙</h2>
+<ul>
+<li>
+<p>컴포넌트 응집도</p>
+<ul>
+<li>REP: Reuse/Release Equivalence Principle</li>
+<li>CCP: Common Closure Principle
+<ul>
+<li>동일한 이유로 동일한 시점에 변경되는 클래스는 같은 컴포넌트로 묶어라 (컴포넌트 관점의 SRP)</li>
+</ul>
+</li>
+<li>CRP: Common Reuse Principle
+<ul>
+<li>공통 재사용 원칙</li>
+<li>컴포넌트 사용자들을 필요하지 않는 것에 의존하게 강요하지 마라</li>
+<li>컴포넌트 관점의 ISP</li>
+</ul>
+</li>
+<li>REP, CCP, CRP 는 서로 상충되는 개념이여서 이들간의 적정선을 찾는 것이 아키텍트의 역량이 될 수 있다.</li>
+<li>또한 개발 초기에는 CCP 에 좀더 우선순위가 가는 경향이 있고, 프로그램이 성숙해 나가면서 REP, CRP 에 무게가 실리면서 발전해 나가는 경향이 있다.</li>
+</ul>
+</li>
+<li>
+<p>컴포넌트 결합</p>
+<ul>
+<li>ADP: Acyclic Dependencies Principle
+<ul>
+<li>의존성 비순환 원칙</li>
+<li>의존성을 잘 관리하면 새로운 버전이 릴리즈 되더라도 전체 시스템에 이로인한 문제가 발생하지 않도록 버전을 관리하기가 용이해지지만, 의존성에 순환이 생기면 이런 방법을 적용하기 어려워 진다.</li>
+<li>순환 끊기: DIP 의존성 역전 원칙 사용</li>
+</ul>
+</li>
+<li>SDP: Stable Dependencies Principle
+<ul>
+<li>안정성의 방향으로 의존하라</li>
+<li>안정적인 모듈에 의존하게 만들기</li>
+<li>변동성이 크면 안정성이 떨어지게 된다.</li>
+<li>많은 모듈이 의존하게 되면 해당 모듈의 변경이 어려워 진다.</li>
+<li>안정성이 필요한 모듈과 불안정성이 필요한 모듈을 구분하고 DIP 을 통해 안정한 모듈이 불안정한 모듈을 의존하는 것을 없애는 것이 좋다.</li>
+</ul>
+</li>
+<li>SAP: 안정된 추상화 원칙
+<ul>
+<li>컴포넌트는 안정된 정도만큼만 추상화 되어야 한다.</li>
+</ul>
+</li>
+<li>컴포넌트의 안정성, 추상성을 측정하는 지표를 제시한다. 시스템이 매우 크고 릴리즈가 잦다면 충분히 활용해 볼만한 지표라고 생각이 든다. 나의 경우는 아직까지는 활용하기 어려워 보인다.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>시스템이나 프로젝트가 커지면서 이에 비례하게 유지관리 비용이 증가한다면 좋지 못한 방법을 사용하고 있음이 분명하다. 이를 해결하기 위한 고민을 하는 것이 중요하다.</p>
+</blockquote>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="../../tags/software/">software</a><a class="tag" href="../../tags/architecture/">architecture</a><a class="tag" href="../../tags/engineering/">engineering</a><a class="tag" href="../../tags/study/">study</a></span>
+
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>댓글</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="Kyungpyo-Kim/Kyungpyo-Kim.github.io"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+</html>

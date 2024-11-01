@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="ko"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+      
+        [paper] flash attention review |
+      kyungpyo-kim
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.119.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="kyungpyo-kim" />
+  <meta
+    name="description"
+    content="새로운 것을 찾아"
+  />
+  
+    <meta name="google-site-verification" content="Q4P3G3Girpd3IvxCj-Pwjqw57XwNqKP1Qpu4pWlxa_w" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../scss/main.min.1147aa5bacb4bce677a0e264073829caedb82fd18ea07a5f1d80521f539d1c45.css"
+      integrity="sha256-EUeqW6y0vOZ3oOJkBzgpyu24L9GOoHpfHYBSH1OdHEU="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="../../css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../css/taxonomy.min.b6d7eff11342047cc36639518e493d5caf8fa6d496e67a716255c362e74e6519.css"
+      integrity="sha256-ttfv8RNCBHzDZjlRjkk9XK&#43;PptSW5npxYlXDYudOZRk="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="../../favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://kyungpyo-kim.github.io/study/flash_attention/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="../../js/anatole-header.min.3fb7ecbad96218fce1cd5e8c69ce912680cfb525637325b5f76cdbefcc0d4a3a.js"
+    integrity="sha256-P7fsutliGPzhzV6Mac6RJoDPtSVjcyW192zb78wNSjo="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="../../js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="[paper] flash attention review"/>
+<meta name="twitter:description" content="Overview 저는 현재 LLM 을 포함한 AI 모델, 그리고 이를 효율적으로 처리하기 위한 NPU/GPU 관련된 업무들을 다양하게 진행해 오고 있습니다."/>
+
+
+
+  
+  <meta property="og:title" content="[paper] flash attention review" />
+<meta property="og:description" content="Overview 저는 현재 LLM 을 포함한 AI 모델, 그리고 이를 효율적으로 처리하기 위한 NPU/GPU 관련된 업무들을 다양하게 진행해 오고 있습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kyungpyo-kim.github.io/study/flash_attention/" /><meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/><meta property="article:section" content="study" />
+<meta property="article:published_time" content="2024-08-18T16:50:55+09:00" />
+<meta property="article:modified_time" content="2024-08-18T16:50:55+09:00" /><meta property="og:site_name" content="Kyungpyo Kim" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "study",
+        "name": "[paper] flash attention review",
+        "headline": "[paper] flash attention review",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Overview 저는 현재 LLM 을 포함한 AI 모델, 그리고 이를 효율적으로 처리하기 위한 NPU\/GPU 관련된 업무들을 다양하게 진행해 오고 있습니다.
+
+
+      
+
+
+    ",
+        "inLanguage": "ko",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/flash_attention\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightYear" : "2024",
+        "dateCreated": "2024-08-18T16:50:55.00Z",
+        "datePublished": "2024-08-18T16:50:55.00Z",
+        "dateModified": "2024-08-18T16:50:55.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "kyungpyo-kim",
+            "url": "https://kyungpyo-kim.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/kyungpyo-kim.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/flash_attention\/",
+        "wordCount" : "373",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "LLMs"
+
+    
+      
+        ,
+
+      
+      "AI"
+
+    
+      
+        ,
+
+      
+      "SOTA"
+
+    ]
+    }
+  </script>
+
+
+
+
+  
+  <script
+  data-ad-client="ca-pub-7791328994969079"
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+></script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="../../images/kyungpyo.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="../../">Kyungpyo Kim</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>새로운 것을 찾아</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Kyungpyo-Kim"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://instagram.com/kyung_py"
+            target="_blank"
+            rel="noopener me"
+            aria-label="instagram"
+            title="instagram"
+          >
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:kyungpyo94@gmail.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+
+    <div class="sidebar__taxonomy_cloud">
+      <h1 class="sidebar__taxonomy_cloud-title">
+        <a href="https://kyungpyo-kim.github.io//tags">Tags</a>
+      </h1>
+      <ul class="sidebar__taxonomy_cloud-contents-ul" id="taxonomy_cloud-contents-ul"><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/3d-object-detection/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">3D Object Detection</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ai/" style="font-size:1.3181818181818181em; padding: 0.2em 0.2em 0.2em 0.2em;">AI</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/architecture/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">architecture</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/big-data/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">big data</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/blog/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">blog</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/c&#43;&#43;/" style="font-size:1.2272727272727273em; padding: 0.2em 0.2em 0.2em 0.2em;">C&#43;&#43;</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/diagnostics/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Diagnostics</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/engineering/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">engineering</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/github/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Github</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/gpu/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">GPU</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/hash/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">hash</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/hugo/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Hugo</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/jetson/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Jetson</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/kalman-filter/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">kalman filter</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/key/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">key</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/license/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">license</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/lidar/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">LiDAR</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/llms/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">LLMs</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/npu/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">NPU</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/nvidia/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">NVIDIA</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/optimal-state-estimation/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">optimal state estimation</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/pyqt/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">PyQt</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/python/" style="font-size:1.2727272727272727em; padding: 0.2em 0.2em 0.2em 0.2em;">python</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ros/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ros2/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS2</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/shared_timed_mutex/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">shared_timed_mutex</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/software/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">software</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/sota/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">SOTA</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/stl/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">STL</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/study/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">study</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/tensorflow/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">tensorflow</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/thread-safety/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">thread safety</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ubuntu/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">ubuntu</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/unordered_map/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">unordered_map</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">공업수학</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%8F%85%EC%84%9C/" style="font-size:2em; padding: 0.2em 0.2em 0.2em 0.2em;">독서</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%9D%BC%EC%9D%B4%EB%94%A9/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">라이딩</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%9F%AC%EB%8B%9D/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">러닝</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%B3%B4%EC%95%88/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">보안</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorithm/" style="font-size:1.1818181818181819em; padding: 0.2em 0.2em 0.2em 0.2em;">알고리즘 (algorithm)</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-data-structure/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">자료구조 (data structure)</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">자율주행</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%A0%9C%EC%96%B4/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">제어</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-coding-test/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">코딩테스트 (coding test)</a>
+      </li></ul>
+
+    </div>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>[Paper] Flash Attention Review</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  Sun, Aug 18, 2024
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">읽는 시간 2분</span>
+          </li>
+        </ul>
+      <h2 id="overview">Overview</h2>
+<p>저는 현재 LLM 을 포함한 AI 모델, 그리고 이를 효율적으로 처리하기 위한 NPU/GPU 관련된 업무들을 다양하게 진행해 오고 있습니다.
+이 글에서 리뷰하는 논문은 LLM 연산의 효율성을 크게 향상 시킨 FlashAttention 을 소개하는 논문입니다.
+많은 뉴스에서 다뤄지고 있는 것처럼 현재 LLM 의 사용화를 위해 많은 업체들이 노력하고 있고, 그 중 가장 중요한 부분이 연산의 효율성 인 것 같습니다.
+충분한 성능은 나오고 있고, 사용할 곳도 점점 많아지고 있으니 사용할때 드는 비용만 좀 더 낮아진다면 그만큼 더 큰 부가가치를 창출해 낼 수 있을 것이라 보는 것이죠.</p>
+<p>FlashAttention 논문은 2022년에 발표되었고, 현재는 V2, V3 까지 나오면서 Transformer 기반의 LLM 모델의 효율성 향상에 큰 기여를 한 연구논문이다.
+Transformer 의 기반이 되는 Attention 레이어는 시퀀스 길이가 길어질수록 시퀀스길이의 제곱에 비례하는 연산량 증가로 인해 많은 연산시간과 메모리 사용량을 요구하게 된다.
+FlashAttention 은 이러한 문제를 해결하기 위해 GPU 메모리 사용을 효과적으로 개선할 수 있는 알고리즘을 제안하였고, 이를 통해 HBM 메모리 접근을 최소화 하면서 SRAM 을 적극적으로 사용하여 연산 속도를 향상시키는 결과를 보여주었다.</p>
+<p>많이 알려진 것처럼 Transformer 의 성능은 메모리의 읽고쓰는 속도에 많은 영향을 받는다. 간단히 말하면 Transformer 에서 연산을 위해 필요한 데이터를 가져오거나 연산 결과를 메모리에 저장하는데 걸리는 시간이 데이터의 연산에 필요한 시간보다 많이 소요되기 때문이다.
+이 연구는 이렇게 데이터를 가져오는 시간을 줄이기 위해 GPU 의 하드웨어적인 특성을 분석하고 좀 더 효율적으로 하드웨어를 활용하는 방법을 제안한다.</p>
+<h2 id="introduction">Introduction</h2>
+<p><img src="flash_attention/image.png" alt="FlashAttention"></p>
+<p>그림의 왼쪽 피라미드는 GPU 의 메모리 계층을 보여준다.
+Main Memory 의 데이터를 GPU HBM 으로 보내고, 이를 GPU SRAM 으로 일부 보내고 연산을 수행하고 다시 GPU HBM 에 보내는 방식으로 GPU 에서의 연산이 수행되게 된다.
+이때 그림에서 나온 것처럼 각 계층의 메모리의 속도가 다르기 때문에 최대한 데이터의 이동을 줄이면서 속도가 빠른 메모리에서 더 많은 연산을 한다면 성능 개선이 가능해진다.</p>
+<p>FlashAttention 은 이러한 하드웨어의 특성을 반영한다. 기존의 PyTorch 에서는 이를 지원하지 못한다.</p>
+<p>Transformer 의 계산량을 줄이려는 노력은 다양한 방면으로 진행 되었다. sparsity 를 이용하거나 low-rank 를 기반으로한 근사 기법들은 연산량을 선형에 가깝게 감소시키긴 했지만, 기존 모델 대비 실제로 큰 속도 향상을 보여주지 못했다. 이러한 방법들은 연산의 수를 줄이긴 하지만, 메모리 접근에 대한 오버헤드를 줄여주지는 못했기 때문이다.</p>
+<h2 id="123123123">123123123</h2>
+<p>FlashAttention 은 GPU IO 계층을 효과적으로 사용하기 위해 타일링 (tiling) 방식을 적용하였고, 이는 결과적으로 HBM과 SRAM 사이의 메모리 read/write  숫자를 줄여주었다.</p>
+<p>SRAM 사이즈에 따른 성능은?</p>
+<h2 id="method">Method</h2>
+<p>FlashAttention 의 목표는 attention matrix 를 HBM 으로 쓰거나 읽는 것을 피하는 것이다. 이를 위해 아마도 커널 코드를 개선한 것으로 보인다.</p>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="../../tags/llms/">LLMs</a><a class="tag" href="../../tags/ai/">AI</a><a class="tag" href="../../tags/sota/">SOTA</a></span>
+
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>댓글</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="Kyungpyo-Kim/Kyungpyo-Kim.github.io"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150383923-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+</html>

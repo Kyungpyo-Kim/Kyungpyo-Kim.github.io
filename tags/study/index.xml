@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>study on Kyungpyo Kim</title>
+    <link>https://kyungpyo-kim.github.io/tags/study/</link>
+    <description>Recent content in study on Kyungpyo Kim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Fri, 01 Nov 2024 20:15:21 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clean_Architecture_0</title>
+      <link>https://kyungpyo-kim.github.io/study/clean_architecture_0/</link>
+      <pubDate>Fri, 01 Nov 2024 20:15:21 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/clean_architecture_0/</guid>
+      
+        <description>Motivation 업무를 하다 보면 프로그램을 처음부터 만들어야 하는 경우가 종종 생긴다.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

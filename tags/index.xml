@@ -6,13 +6,79 @@
     <description>Recent content in Tags on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Sun, 03 Mar 2024 22:42:57 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Nov 2024 20:15:21 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>architecture</title>
+      <link>https://kyungpyo-kim.github.io/tags/architecture/</link>
+      <pubDate>Fri, 01 Nov 2024 20:15:21 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/architecture/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>engineering</title>
+      <link>https://kyungpyo-kim.github.io/tags/engineering/</link>
+      <pubDate>Fri, 01 Nov 2024 20:15:21 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/engineering/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://kyungpyo-kim.github.io/tags/software/</link>
+      <pubDate>Fri, 01 Nov 2024 20:15:21 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/software/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>study</title>
+      <link>https://kyungpyo-kim.github.io/tags/study/</link>
+      <pubDate>Fri, 01 Nov 2024 20:15:21 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/study/</guid>
+      
+        <description></description>
+      
+    </item>
+    
     <item>
       <title>AI</title>
       <link>https://kyungpyo-kim.github.io/tags/ai/</link>
-      <pubDate>Sun, 03 Mar 2024 22:42:57 +0900</pubDate>
+      <pubDate>Sun, 18 Aug 2024 16:50:55 +0900</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/tags/ai/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>LLMs</title>
+      <link>https://kyungpyo-kim.github.io/tags/llms/</link>
+      <pubDate>Sun, 18 Aug 2024 16:50:55 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/llms/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SOTA</title>
+      <link>https://kyungpyo-kim.github.io/tags/sota/</link>
+      <pubDate>Sun, 18 Aug 2024 16:50:55 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/tags/sota/</guid>
       
         <description></description>
       
@@ -24,17 +90,6 @@
       <pubDate>Sun, 03 Mar 2024 22:42:57 +0900</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/tags/gpu/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>LLMs</title>
-      <link>https://kyungpyo-kim.github.io/tags/llms/</link>
-      <pubDate>Sun, 03 Mar 2024 22:42:57 +0900</pubDate>
-      
-      <guid>https://kyungpyo-kim.github.io/tags/llms/</guid>
       
         <description></description>
       
@@ -68,17 +123,6 @@
       <pubDate>Wed, 26 Jul 2023 11:13:55 +0900</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/tags/lidar/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>SOTA</title>
-      <link>https://kyungpyo-kim.github.io/tags/sota/</link>
-      <pubDate>Wed, 26 Jul 2023 11:13:55 +0900</pubDate>
-      
-      <guid>https://kyungpyo-kim.github.io/tags/sota/</guid>
       
         <description></description>
       

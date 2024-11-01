@@ -3,29 +3,54 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kyungpyo-kim.github.io/</loc>
-    <lastmod>2024-03-03T22:42:57+09:00</lastmod>
+    <lastmod>2024-11-01T20:15:21+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/architecture/</loc>
+    <lastmod>2024-11-01T20:15:21+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/study/clean_architecture_0/</loc>
+    <lastmod>2024-11-01T20:15:21+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/engineering/</loc>
+    <lastmod>2024-11-01T20:15:21+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/software/</loc>
+    <lastmod>2024-11-01T20:15:21+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/study/</loc>
+    <lastmod>2024-11-01T20:15:21+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/study/</loc>
+    <lastmod>2024-11-01T20:15:21+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/</loc>
+    <lastmod>2024-11-01T20:15:21+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/study/flash_attention/</loc>
+    <lastmod>2024-08-18T16:50:55+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/ai/</loc>
+    <lastmod>2024-08-18T16:50:55+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/llms/</loc>
+    <lastmod>2024-08-18T16:50:55+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/sota/</loc>
+    <lastmod>2024-08-18T16:50:55+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/study/bitnetb1.58/</loc>
     <lastmod>2024-03-03T22:42:57+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url><url>
-    <loc>https://kyungpyo-kim.github.io/tags/ai/</loc>
-    <lastmod>2024-03-03T22:42:57+09:00</lastmod>
-  </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/gpu/</loc>
     <lastmod>2024-03-03T22:42:57+09:00</lastmod>
   </url><url>
-    <loc>https://kyungpyo-kim.github.io/tags/llms/</loc>
-    <lastmod>2024-03-03T22:42:57+09:00</lastmod>
-  </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/npu/</loc>
-    <lastmod>2024-03-03T22:42:57+09:00</lastmod>
-  </url><url>
-    <loc>https://kyungpyo-kim.github.io/study/</loc>
-    <lastmod>2024-03-03T22:42:57+09:00</lastmod>
-  </url><url>
-    <loc>https://kyungpyo-kim.github.io/tags/</loc>
     <lastmod>2024-03-03T22:42:57+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/study/dsvt/</loc>
@@ -37,9 +62,6 @@
     <lastmod>2023-07-26T11:13:55+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/lidar/</loc>
-    <lastmod>2023-07-26T11:13:55+09:00</lastmod>
-  </url><url>
-    <loc>https://kyungpyo-kim.github.io/tags/sota/</loc>
     <lastmod>2023-07-26T11:13:55+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part2/</loc>
