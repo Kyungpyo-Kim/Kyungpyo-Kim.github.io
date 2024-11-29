@@ -14,7 +14,8 @@
       
       <guid>https://kyungpyo-kim.github.io/study/ros2-bag-file-parsing/</guid>
       
-        <description>ROS2 Bag File Parsing 하기 ROS의 강력한 도구중 하나가 rosbag 패키지였다.</description>
+        <description>&lt;h2 id=&#34;ros2-bag-file-parsing-하기&#34;&gt;ROS2 Bag File Parsing 하기&lt;/h2&gt;
+&lt;p&gt;ROS의 강력한 도구중 하나가 rosbag 패키지였다. ROS1의 rosbag 패키지는 Logging 과 Replay 기능 뿐만 아니라 rqt 플러그인을 통해서 시스템 개발에 필요한 여러가지 디버깅 기능을 제공하였다. 하지만 아직 ROS2에서는 rosbag(rosbag2) 의 record(logging) play, 그리고 info 기능밖에 구현이 안되어 있다. 게다가 bag파일이 sqlite 등 다른 형태로 저장되어 ROS1의 rosbag 기능을 사용할 수 없는 상태이다.&lt;/p&gt;</description>
       
     </item>
     
@@ -25,8 +26,16 @@
       
       <guid>https://kyungpyo-kim.github.io/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
       
-        <description>ROS2_Exercise ROS2 INSTALLATION https://index.ros.org/doc/ros2/Installation/#installationguide https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/
-Version: ROS 2 Eloquent Elusor</description>
+        <description>&lt;h2 id=&#34;ros2_exercisehttpsgithubcomkyungpyo-kimros2_exercise&#34;&gt;&lt;a href=&#34;https://github.com/Kyungpyo-Kim/ROS2_Exercise&#34;&gt;ROS2_Exercise&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;ros2-installation&#34;&gt;ROS2 INSTALLATION&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://index.ros.org/doc/ros2/Installation/#installationguide&#34;&gt;https://index.ros.org/doc/ros2/Installation/#installationguide&lt;/a&gt;
+&lt;a href=&#34;https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/&#34;&gt;https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Version: ROS 2 Eloquent Elusor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Takes ~10min&lt;/p&gt;</description>
       
     </item>
     
@@ -37,7 +46,7 @@ Version: ROS 2 Eloquent Elusor</description>
       
       <guid>https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
       
-        <description>아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.</description>
+        <description>&lt;p&gt;아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.&lt;/p&gt;</description>
       
     </item>
     
@@ -48,7 +57,7 @@ Version: ROS 2 Eloquent Elusor</description>
       
       <guid>https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0/</guid>
       
-        <description>ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 diagnostic 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 드라이버가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다.</description>
+        <description>&lt;p&gt;ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 &lt;a href=&#34;http://wiki.ros.org/diagnostics&#34;&gt;diagnostic&lt;/a&gt; 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 &lt;strong&gt;드라이버&lt;/strong&gt;가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다.&lt;/p&gt;</description>
       
     </item>
     

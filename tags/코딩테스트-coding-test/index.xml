@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>코딩테스트 (coding test) on Kyungpyo Kim</title>
+    <title>코딩테스트 (Coding Test) on Kyungpyo Kim</title>
     <link>https://kyungpyo-kim.github.io/tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-coding-test/</link>
-    <description>Recent content in 코딩테스트 (coding test) on Kyungpyo Kim</description>
+    <description>Recent content in 코딩테스트 (Coding Test) on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <lastBuildDate>Mon, 28 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-coding-test/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +14,14 @@
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/</guid>
       
-        <description>전기버스 알고리즘 SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스 문제링크 문제의 저작권은 SW Expert Academy에 있습니다.</description>
+        <description>&lt;h2 id=&#34;전기버스-알고리즘&#34;&gt;전기버스 알고리즘&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://swexpertacademy.com/main/learn/course/subjectList.do?courseId=AVuPDN86AAXw5UW6&#34;&gt;문제링크&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;문제의 저작권은 SW Expert Academy에 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;문제풀이-1-brute-force-search&#34;&gt;문제풀이 1 Brute-force search&lt;/h2&gt;
+&lt;p&gt;모든 경우의 수를 모두 확인하여 가장 좋은 값을 확인&lt;/p&gt;</description>
       
     </item>
     

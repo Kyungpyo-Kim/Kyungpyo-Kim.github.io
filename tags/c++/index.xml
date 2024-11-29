@@ -14,8 +14,13 @@
       
       <guid>https://kyungpyo-kim.github.io/study/fast_mm/</guid>
       
-        <description>Fast Matrix Muliplication
-Explanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도가 소요되며, 이를 개선하기 위한 여러가지 알고리즘들이 제안되어 왔으나, 가장 빠른 알고리즘 역시 O(N^2) 보다 느리다.</description>
+        <description>&lt;p&gt;Fast Matrix Muliplication&lt;/p&gt;
+&lt;h2 id=&#34;explanation&#34;&gt;Explanation&lt;/h2&gt;
+&lt;p&gt;Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도가 소요되며, 이를 개선하기 위한 여러가지 알고리즘들이 제안되어 왔으나,
+가장 빠른 알고리즘 역시 O(N^2) 보다 느리다. (여기서 N은 matrix 의 dimmension)
+그리고 이러한 이론적으로 빠른 알고리즘을 직접 구현해 보면 생각보다 속도가 크게 개선되지 않는다.
+왜 그럴까? 이론과 현실사이의 차이는 프로그램의 메모리 사용에 의해 발생한다.
+좀 더 구체적으로 메모리의 복사/할당/접근에 소요되는 시간이 프로그램의 수행시간에 많은 영향을 미친다.&lt;/p&gt;</description>
       
     </item>
     
@@ -48,7 +53,14 @@ Explanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도�
       
       <guid>https://kyungpyo-kim.github.io/study/thread-safety-of-unordered_map/</guid>
       
-        <description>Prerequisite Thread Mutex Thread safety Problem unordered_map 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다.</description>
+        <description>&lt;h2 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Thread&lt;/li&gt;
+&lt;li&gt;Mutex&lt;/li&gt;
+&lt;li&gt;Thread safety&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;unordered_map&lt;/code&gt; 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다. 기본적으로 STL Container 는 하나의 스레드에 의한 쓰기 접근을 허용하고 다중 스레드에 의한 읽기 접근을 허용하기 때문에 &lt;code&gt;unordered_map&lt;/code&gt;의 데이터를 업데이트 하는 부분에 &lt;code&gt;mutex&lt;/code&gt;를 적용하여 문제를 해결하려 시도 했다. 보통은 이렇게 해결이 되지만 &lt;code&gt;unordered_map&lt;/code&gt; 에서는 조금 다른 문제가 엮여 있었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -59,7 +71,8 @@ Explanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도�
       
       <guid>https://kyungpyo-kim.github.io/study/ros2-bag-file-parsing/</guid>
       
-        <description>ROS2 Bag File Parsing 하기 ROS의 강력한 도구중 하나가 rosbag 패키지였다.</description>
+        <description>&lt;h2 id=&#34;ros2-bag-file-parsing-하기&#34;&gt;ROS2 Bag File Parsing 하기&lt;/h2&gt;
+&lt;p&gt;ROS의 강력한 도구중 하나가 rosbag 패키지였다. ROS1의 rosbag 패키지는 Logging 과 Replay 기능 뿐만 아니라 rqt 플러그인을 통해서 시스템 개발에 필요한 여러가지 디버깅 기능을 제공하였다. 하지만 아직 ROS2에서는 rosbag(rosbag2) 의 record(logging) play, 그리고 info 기능밖에 구현이 안되어 있다. 게다가 bag파일이 sqlite 등 다른 형태로 저장되어 ROS1의 rosbag 기능을 사용할 수 없는 상태이다.&lt;/p&gt;</description>
       
     </item>
     
@@ -70,8 +83,16 @@ Explanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도�
       
       <guid>https://kyungpyo-kim.github.io/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
       
-        <description>ROS2_Exercise ROS2 INSTALLATION https://index.ros.org/doc/ros2/Installation/#installationguide https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/
-Version: ROS 2 Eloquent Elusor</description>
+        <description>&lt;h2 id=&#34;ros2_exercisehttpsgithubcomkyungpyo-kimros2_exercise&#34;&gt;&lt;a href=&#34;https://github.com/Kyungpyo-Kim/ROS2_Exercise&#34;&gt;ROS2_Exercise&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;ros2-installation&#34;&gt;ROS2 INSTALLATION&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://index.ros.org/doc/ros2/Installation/#installationguide&#34;&gt;https://index.ros.org/doc/ros2/Installation/#installationguide&lt;/a&gt;
+&lt;a href=&#34;https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/&#34;&gt;https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Version: ROS 2 Eloquent Elusor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Takes ~10min&lt;/p&gt;</description>
       
     </item>
     

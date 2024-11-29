@@ -14,7 +14,11 @@
       
       <guid>https://kyungpyo-kim.github.io/study/flash_attention/</guid>
       
-        <description>Overview 저는 현재 LLM 을 포함한 AI 모델, 그리고 이를 효율적으로 처리하기 위한 NPU/GPU 관련된 업무들을 다양하게 진행해 오고 있습니다.</description>
+        <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;저는 현재 LLM 을 포함한 AI 모델, 그리고 이를 효율적으로 처리하기 위한 NPU/GPU 관련된 업무들을 다양하게 진행해 오고 있습니다.
+이 글에서 리뷰하는 논문은 LLM 연산의 효율성을 크게 향상 시킨 FlashAttention 을 소개하는 논문입니다.
+많은 뉴스에서 다뤄지고 있는 것처럼 현재 LLM 의 사용화를 위해 많은 업체들이 노력하고 있고, 그 중 가장 중요한 부분이 연산의 효율성 인 것 같습니다.
+충분한 성능은 나오고 있고, 사용할 곳도 점점 많아지고 있으니 사용할때 드는 비용만 좀 더 낮아진다면 그만큼 더 큰 부가가치를 창출해 낼 수 있을 것이라 보는 것이죠.&lt;/p&gt;</description>
       
     </item>
     
@@ -25,7 +29,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/bitnetb1.58/</guid>
       
-        <description>최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다.</description>
+        <description>&lt;p&gt;최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다. “The Era of 1-bit LLMs”&lt;/p&gt;</description>
       
     </item>
     
@@ -36,7 +40,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/dsvt/</guid>
       
-        <description>DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다.</description>
+        <description>&lt;p&gt;DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다. 이런 부분이 향후에 많은 어플리케이션에서 사용될 수 있는 여지가 많다고 생각하여 정리해 보았습니다.&lt;/p&gt;</description>
       
     </item>
     
@@ -47,7 +51,8 @@
       
       <guid>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part2/</guid>
       
-        <description>5. Hardware for DNN Processing 딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다.</description>
+        <description>&lt;h2 id=&#34;5-hardware-for-dnn-processing&#34;&gt;5. Hardware for DNN Processing&lt;/h2&gt;
+&lt;p&gt;딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다. 예를 들어, Intel Knights Landing CPU는 딥러닝을 위한 특수 벡터 명령어를 제공하고, Nvidia PASCAL GP100 GPU는 빠른 딥러닝 계산을 위해 단일 정밀도 코어에서 2개의 FP16 연산을 수행할 수 있는 16비트 부동 소수점 산술 지원을 제공한다. 또한, Nvidia DGX-1 및 Facebook의 Big Basin과 같은 DNN 처리를 위해 특별히 구축된 시스템도 있다. DNN 추론은 Nvidia Tegra 및 Samsung Exynos와 같은 다양한 임베디드 SoC 및 FPGA에서도 구현되었다. 이에 따라 이러한 플랫폼에서 처리가 어떻게 이루어지는지, 응용 프로그램별 가속기를 디자인하여 처리량과 에너지 효율성을 더욱 개선할 수 있는 방법에 대한 이해가 중요하다.&lt;/p&gt;</description>
       
     </item>
     
@@ -58,7 +63,9 @@
       
       <guid>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part1/</guid>
       
-        <description>1. Introduction 최근 이직을 하였고 새로 진행하고 있는 업무는 기존의 AI 알고리즘들을 NPU라는 저전력 하드웨어에 올려서 돌리는 것이다.</description>
+        <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
+&lt;p&gt;최근 이직을 하였고 새로 진행하고 있는 업무는 기존의 AI 알고리즘들을 NPU라는 저전력 하드웨어에 올려서 돌리는 것이다. 이에 따라 NPU에 대한 이해가 필요하게 되었고, 이에 대한 내용을 정리하고자 한다. 이 논문은 NPU에 대한 전반적인 내용을 다루고 있다. 이 논문을 통해 DNN을 지원하는 다양한 하드웨어 플랫폼 및 아키텍처에 대해 이해할 수 있고, DNN의 계산 비용을 줄이기 위한 주요 테크닉들을 다루고 있다. 또한, 다양한 DNN 하드웨어를 평가하는 방법을 통해 해당 하드웨어의 효율성, 유용성을 평가하는 방법 또한 다루고 있다.
+가급적 논문의 구성과 내용을 그대로 따라가면서 정리하였다. NPU 관련 내용을 중심으로 정리하고자 하였고 주변 배경 지식들은 거칠게 다루거나 생략하면서 정리하였다.&lt;/p&gt;</description>
       
     </item>
     
@@ -69,7 +76,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/centerformer/</guid>
       
-        <description>최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다.</description>
+        <description>&lt;p&gt;최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다. Waymo 벤치마크에서 우수항 성능을 보여주며 3D Object Detection 분야에서 새로운 SOTA 모델이 되었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -80,9 +87,17 @@
       
       <guid>https://kyungpyo-kim.github.io/study/ensemble_object_detection_using_detectron2/</guid>
       
-        <description>Ensemble Object Detection using Detectron2
-Getting Started code
-github Environments</description>
+        <description>&lt;p&gt;Ensemble Object Detection using Detectron2&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;ol start=&#34;0&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;code&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Kyungpyo-Kim/Ensemble-Object-Detection-using-Detectron2&#34;&gt;github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Environments&lt;/p&gt;</description>
       
     </item>
     
@@ -93,7 +108,14 @@ github Environments</description>
       
       <guid>https://kyungpyo-kim.github.io/study/setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</guid>
       
-        <description>AI, Deep Learning 환경 준비하기 My PC Info Ubuntu18.04 NVIDIA GTX1650 CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다.</description>
+        <description>&lt;h2 id=&#34;ai-deep-learning-환경-준비하기&#34;&gt;AI, Deep Learning 환경 준비하기&lt;/h2&gt;
+&lt;h3 id=&#34;my-pc-info&#34;&gt;My PC Info&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu18.04&lt;/li&gt;
+&lt;li&gt;NVIDIA GTX1650&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다. 그리고 Tensorflow 도 마찬가지로 CUDA와의 호환성을 체크하여야 한다. 현재(2020-03-22) Tensorflow 는 CUDA10.0(not 10.2)까지만 호환 가능하다.
+{: .notice}&lt;/p&gt;</description>
       
     </item>
     

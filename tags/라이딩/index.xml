@@ -14,7 +14,21 @@
       
       <guid>https://kyungpyo-kim.github.io/life/%ED%95%9C%EA%B0%95-%EB%9D%BC%EC%9D%B4%EB%94%A9/</guid>
       
-        <description>잠실타워가 보이는 한강 한강대교 마포대교 건너면서 소낙비가 내리고 난 뒤, 하늘이 유난히 맑고 구름은 유난히 희고 몽글몽글 했던날.</description>
+        <description>&lt;figure&gt;
+	&lt;img src=&#39;{{ &#34;/assets/images/gallery/KakaoTalk_20190616_225248912.jpg&#34; | relative_url }}&#39; width=&#34;1600&#34; height=&#34;1200&#34; alt=&#39;absolute&#39;&gt;
+	&lt;figcaption&gt;잠실타워가 보이는 한강&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;img src=&#39;{{ &#34;/assets/images/gallery/KakaoTalk_20190616_225304231.jpg&#34; | relative_url }}&#39; width=&#34;1600&#34; height=&#34;1200&#34; alt=&#39;absolute&#39;&gt;
+	&lt;figcaption&gt;한강대교&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;img src=&#39;{{ &#34;/assets/images/gallery/KakaoTalk_20190616_225313944.jpg&#34; | relative_url }}&#39; width=&#34;1600&#34; height=&#34;1200&#34; alt=&#39;absolute&#39;&gt;
+	&lt;figcaption&gt;마포대교 건너면서&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;소낙비가 내리고 난 뒤,
+하늘이 유난히 맑고 구름은 유난히 희고 몽글몽글 했던날.
+자전거 타고 한강 한바퀴 돌았다.&lt;/p&gt;</description>
       
     </item>
     

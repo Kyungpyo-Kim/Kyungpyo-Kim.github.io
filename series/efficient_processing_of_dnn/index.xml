@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>efficient_processing_of_DNN on Kyungpyo Kim</title>
+    <title>Efficient_processing_of_DNN on Kyungpyo Kim</title>
     <link>https://kyungpyo-kim.github.io/series/efficient_processing_of_dnn/</link>
-    <description>Recent content in efficient_processing_of_DNN on Kyungpyo Kim</description>
+    <description>Recent content in Efficient_processing_of_DNN on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <lastBuildDate>Sat, 01 Apr 2023 11:13:55 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/series/efficient_processing_of_dnn/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +14,8 @@
       
       <guid>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part2/</guid>
       
-        <description>5. Hardware for DNN Processing 딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다.</description>
+        <description>&lt;h2 id=&#34;5-hardware-for-dnn-processing&#34;&gt;5. Hardware for DNN Processing&lt;/h2&gt;
+&lt;p&gt;딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다. 예를 들어, Intel Knights Landing CPU는 딥러닝을 위한 특수 벡터 명령어를 제공하고, Nvidia PASCAL GP100 GPU는 빠른 딥러닝 계산을 위해 단일 정밀도 코어에서 2개의 FP16 연산을 수행할 수 있는 16비트 부동 소수점 산술 지원을 제공한다. 또한, Nvidia DGX-1 및 Facebook의 Big Basin과 같은 DNN 처리를 위해 특별히 구축된 시스템도 있다. DNN 추론은 Nvidia Tegra 및 Samsung Exynos와 같은 다양한 임베디드 SoC 및 FPGA에서도 구현되었다. 이에 따라 이러한 플랫폼에서 처리가 어떻게 이루어지는지, 응용 프로그램별 가속기를 디자인하여 처리량과 에너지 효율성을 더욱 개선할 수 있는 방법에 대한 이해가 중요하다.&lt;/p&gt;</description>
       
     </item>
     
@@ -25,7 +26,9 @@
       
       <guid>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part1/</guid>
       
-        <description>1. Introduction 최근 이직을 하였고 새로 진행하고 있는 업무는 기존의 AI 알고리즘들을 NPU라는 저전력 하드웨어에 올려서 돌리는 것이다.</description>
+        <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
+&lt;p&gt;최근 이직을 하였고 새로 진행하고 있는 업무는 기존의 AI 알고리즘들을 NPU라는 저전력 하드웨어에 올려서 돌리는 것이다. 이에 따라 NPU에 대한 이해가 필요하게 되었고, 이에 대한 내용을 정리하고자 한다. 이 논문은 NPU에 대한 전반적인 내용을 다루고 있다. 이 논문을 통해 DNN을 지원하는 다양한 하드웨어 플랫폼 및 아키텍처에 대해 이해할 수 있고, DNN의 계산 비용을 줄이기 위한 주요 테크닉들을 다루고 있다. 또한, 다양한 DNN 하드웨어를 평가하는 방법을 통해 해당 하드웨어의 효율성, 유용성을 평가하는 방법 또한 다루고 있다.
+가급적 논문의 구성과 내용을 그대로 따라가면서 정리하였다. NPU 관련 내용을 중심으로 정리하고자 하였고 주변 배경 지식들은 거칠게 다루거나 생략하면서 정리하였다.&lt;/p&gt;</description>
       
     </item>
     

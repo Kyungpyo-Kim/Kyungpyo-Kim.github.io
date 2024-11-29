@@ -1,20 +1,89 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>engineering on Kyungpyo Kim</title>
+    <title>Engineering on Kyungpyo Kim</title>
     <link>https://kyungpyo-kim.github.io/tags/engineering/</link>
-    <description>Recent content in engineering on Kyungpyo Kim</description>
+    <description>Recent content in Engineering on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Fri, 01 Nov 2024 20:15:21 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/engineering/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Nov 2024 20:15:21 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Clean_Architecture_0</title>
+      <title>Clean Architecture 1</title>
+      <link>https://kyungpyo-kim.github.io/study/clean_architecture_1/</link>
+      <pubDate>Sun, 17 Nov 2024 20:15:21 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/clean_architecture_1/</guid>
+      
+        <description>&lt;h2 id=&#34;5-아키텍쳐&#34;&gt;5. 아키텍쳐&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아키텍쳐란?
+&lt;ul&gt;
+&lt;li&gt;책에서 정의하는 바로는 아키텍쳐는 잘 동작하는 시스템을 만들기 보다는 잘 운영할 수 있는 시스템을 만들기 위한다고 설명한다. 다시 말하면 좋은 아키텍쳐의 목표는 잘 동작하는 것 보다는 생산성을 최대화 하고 운영 비용을 최소화 하는데 있다.&lt;/li&gt;
+&lt;li&gt;개발: 아키텍쳐가 개발을 효율적으로 할 수 있게 뒷받침 되어야 한다.&lt;/li&gt;
+&lt;li&gt;배포: 배포를 쉽게 할 수 있게 아키텍쳐를 설계해야 한다.&lt;/li&gt;
+&lt;li&gt;운영: 운영에는 아키텍쳐가 큰 영향을 주지 않는다. 오히려 운영의 문제는 하드웨어의 추가로 비교적 저렴하게 해결할 수 있다.&lt;/li&gt;
+&lt;li&gt;유지보수: 유지보수 비용이 줄어들도록 컴포넌트를 분리하고 안정된 인터페이스를 두어 아키텍쳐를 설계해야 한다.&lt;/li&gt;
+&lt;li&gt;선택사항 열어두기: 중요치 않은 세부사항은 언제든지 변경될 수 있게 열려 있는 아키텍쳐를 구성해야 한다. 고수준의 정책은 이런 디테일을 알지 못해야 한다. (데이터베이스 시스템의 선택, 웹서버의 종류 선택 등)&lt;/li&gt;
+&lt;li&gt;장치 독립성&lt;/li&gt;
+&lt;li&gt;물리적 주소 할당: 절대 주소로 데이터를 접근하는 방법은 확장성이나 데이터를 옮겨야 할 때 큰 문제가 생긴다. 상대적으로 주소를 할당해서 사용하면 이런 문제를 크게 줄일 수 있다. 즉 애플리케이션의 선택사항 중 디스크 드라이브의 용량이나 구조에 대한 내용을 분리할 수 있게 한다.&lt;/li&gt;
+&lt;li&gt;좋은 아키텍쳐는 세부사항에 대한 결정을 최대한 뒤로 미룰 수 있게 한다. 이는 결과적으로 더 많은 실험과 테스트, 선택지의 비교를 통해 더 좋은 결정을 내릴 수 있게 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;독립성
+&lt;ul&gt;
+&lt;li&gt;좋은 아키텍쳐: 시스템의 유스케이스, 운영, 개발, 배포를 지원&lt;/li&gt;
+&lt;li&gt;유스케이스: 아키텍쳐는 시스템의 의도를 잘 보여주어야 한다.&lt;/li&gt;
+&lt;li&gt;운영: 운영과 관련된 threading, multi-processing 등에 열려있는 구조를 가지고 있어야 한다.&lt;/li&gt;
+&lt;li&gt;개발: 각 팀, 개발자들이 독립적으로 개발하기 쉬운 구조를 지원해야 한다.&lt;/li&gt;
+&lt;li&gt;배포: immediate deployment 를 지원할 수 있어야 한다.&lt;/li&gt;
+&lt;li&gt;계층 결합 분리: 유즈케이스에 연관되어 있는 부분들을 수평적인 계층으로 분리 (UI, 어플리케이션 특화 업무, 어플리케이션 독립 업무, 데이터베이스 등)&lt;/li&gt;
+&lt;li&gt;유스케이스 결합 분리는 계층결합 분리와 함께 소프트웨어 아키텍쳐가 미래의 요구사항에 열려 있을 수 있게 하고 아래의 표처럼 독립된 개발 단위를 지원해 줄 수 있다.&lt;/li&gt;
+&lt;li&gt;중복: 진짜 중복은 제거해야 하지만, 다른 계층으로 이뤄진 코드는 다른 속도와 모습으로 발전해 나가며 결국은 중복이 아니게 되는 경우가 있다. 중복을 제거하려고 할 때 이점을 숙지해야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;주문 추가 유스케이스&lt;/th&gt;
+          &lt;th&gt;주문 삭제 유스케이스&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;UI 계층&lt;/td&gt;
+          &lt;td&gt;주문 추가용 UI&lt;/td&gt;
+          &lt;td&gt;주문 삭제용 UI&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;업무 로직 계층&lt;/td&gt;
+          &lt;td&gt;주문 추가용 업무 로직&lt;/td&gt;
+          &lt;td&gt;주문 삭제용 업무 로직&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;데이터베이스 계층&lt;/td&gt;
+          &lt;td&gt;주문 추가용 데이터베이스&lt;/td&gt;
+          &lt;td&gt;주문 삭제용 데이터베이스&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;콘웨이 법칙: 시스템을 설계하는 조직이라면 어디든지 그 조직의 의사소통 구조와 동일한 구조의 설계를 만들어 낼 것이다.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Clean Architecture 0</title>
       <link>https://kyungpyo-kim.github.io/study/clean_architecture_0/</link>
       <pubDate>Fri, 01 Nov 2024 20:15:21 +0900</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/clean_architecture_0/</guid>
       
-        <description>Motivation 업무를 하다 보면 프로그램을 처음부터 만들어야 하는 경우가 종종 생긴다.</description>
+        <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;업무를 하다 보면 프로그램을 처음부터 만들어야 하는 경우가 종종 생긴다. 그때마다 나름의 경험들을 바탕으로 구조를 어찌 저찌 잡아간다. 그리고 그때마다 조금씩 아쉬울 때가 많았다. 이게 진짜 좋은 구조인가, 꼭 필요한 구조인가, 굳이 필요한가 고민을 하게된다. 그리고 어떤 명확한 기준을 세우기가 힘들었다. 이 책에서 이런 고민에 대한 해답을 조금 얻을 수 있기를 기대하며 읽어본다.&lt;/p&gt;</description>
       
     </item>
     

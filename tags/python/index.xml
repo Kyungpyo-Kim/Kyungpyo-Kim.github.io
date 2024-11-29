@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on Kyungpyo Kim</title>
+    <title>Python on Kyungpyo Kim</title>
     <link>https://kyungpyo-kim.github.io/tags/python/</link>
-    <description>Recent content in python on Kyungpyo Kim</description>
+    <description>Recent content in Python on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <lastBuildDate>Sun, 25 Dec 2022 19:15:50 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
@@ -14,9 +14,17 @@
       
       <guid>https://kyungpyo-kim.github.io/study/ensemble_object_detection_using_detectron2/</guid>
       
-        <description>Ensemble Object Detection using Detectron2
-Getting Started code
-github Environments</description>
+        <description>&lt;p&gt;Ensemble Object Detection using Detectron2&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;ol start=&#34;0&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;code&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Kyungpyo-Kim/Ensemble-Object-Detection-using-Detectron2&#34;&gt;github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Environments&lt;/p&gt;</description>
       
     </item>
     
@@ -27,7 +35,7 @@ github Environments</description>
       
       <guid>https://kyungpyo-kim.github.io/study/tensorflow-gpu-installation-on-ubuntu20.04/</guid>
       
-        <description>Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.</description>
+        <description>&lt;p&gt;Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.&lt;/p&gt;</description>
       
     </item>
     
@@ -38,7 +46,8 @@ github Environments</description>
       
       <guid>https://kyungpyo-kim.github.io/study/dash-plotly-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
       
-        <description>데이터 시각화 및 분석 라이브러리 Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다.</description>
+        <description>&lt;h2 id=&#34;데이터-시각화-및-분석-라이브러리&#34;&gt;데이터 시각화 및 분석 라이브러리&lt;/h2&gt;
+&lt;p&gt;Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -49,7 +58,8 @@ github Environments</description>
       
       <guid>https://kyungpyo-kim.github.io/study/ros2-bag-file-parsing/</guid>
       
-        <description>ROS2 Bag File Parsing 하기 ROS의 강력한 도구중 하나가 rosbag 패키지였다.</description>
+        <description>&lt;h2 id=&#34;ros2-bag-file-parsing-하기&#34;&gt;ROS2 Bag File Parsing 하기&lt;/h2&gt;
+&lt;p&gt;ROS의 강력한 도구중 하나가 rosbag 패키지였다. ROS1의 rosbag 패키지는 Logging 과 Replay 기능 뿐만 아니라 rqt 플러그인을 통해서 시스템 개발에 필요한 여러가지 디버깅 기능을 제공하였다. 하지만 아직 ROS2에서는 rosbag(rosbag2) 의 record(logging) play, 그리고 info 기능밖에 구현이 안되어 있다. 게다가 bag파일이 sqlite 등 다른 형태로 저장되어 ROS1의 rosbag 기능을 사용할 수 없는 상태이다.&lt;/p&gt;</description>
       
     </item>
     
@@ -60,8 +70,16 @@ github Environments</description>
       
       <guid>https://kyungpyo-kim.github.io/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
       
-        <description>ROS2_Exercise ROS2 INSTALLATION https://index.ros.org/doc/ros2/Installation/#installationguide https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/
-Version: ROS 2 Eloquent Elusor</description>
+        <description>&lt;h2 id=&#34;ros2_exercisehttpsgithubcomkyungpyo-kimros2_exercise&#34;&gt;&lt;a href=&#34;https://github.com/Kyungpyo-Kim/ROS2_Exercise&#34;&gt;ROS2_Exercise&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;ros2-installation&#34;&gt;ROS2 INSTALLATION&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://index.ros.org/doc/ros2/Installation/#installationguide&#34;&gt;https://index.ros.org/doc/ros2/Installation/#installationguide&lt;/a&gt;
+&lt;a href=&#34;https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/&#34;&gt;https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Version: ROS 2 Eloquent Elusor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Takes ~10min&lt;/p&gt;</description>
       
     </item>
     
@@ -72,8 +90,30 @@ Version: ROS 2 Eloquent Elusor</description>
       
       <guid>https://kyungpyo-kim.github.io/study/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
       
-        <description>PyGUIDevTemplate GUI development template for python
-Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위한 custom class 활용 PyInstaller 를 이용한 파일 배포 Getting Started ## clonning repository git clone https://github.</description>
+        <description>&lt;h2 id=&#34;pyguidevtemplatehttpsgithubcomkyungpyo-kimpyguidevtemplate&#34;&gt;&lt;a href=&#34;https://github.com/Kyungpyo-Kim/PyGUIDevTemplate&#34;&gt;PyGUIDevTemplate&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;GUI development template for python&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;QT Designer 를 이용하여 UI 설계&lt;/li&gt;
+&lt;li&gt;Matplotlib, OpenCV 연동을 위한 custom class 활용&lt;/li&gt;
+&lt;li&gt;PyInstaller 를 이용한 파일 배포&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## clonning repository&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/Kyungpyo-Kim/PyGUIDevTemplate.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## change directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; PyGUIDevTemplate/PyQT &lt;span class=&#34;c1&#34;&gt;## for PyQT example&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# or&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; PyGUIDevTemplate/PySide &lt;span class=&#34;c1&#34;&gt;## for PySide example&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## run program&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python main.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;qt-를-이용한-gui-설계&#34;&gt;QT 를 이용한 GUI 설계&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Qt designer 활용
+UI 디자인을 GUI 환경에서 진행가능&lt;/p&gt;</description>
       
     </item>
     
@@ -84,7 +124,14 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/</guid>
       
-        <description>전기버스 알고리즘 SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스 문제링크 문제의 저작권은 SW Expert Academy에 있습니다.</description>
+        <description>&lt;h2 id=&#34;전기버스-알고리즘&#34;&gt;전기버스 알고리즘&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://swexpertacademy.com/main/learn/course/subjectList.do?courseId=AVuPDN86AAXw5UW6&#34;&gt;문제링크&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;문제의 저작권은 SW Expert Academy에 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;문제풀이-1-brute-force-search&#34;&gt;문제풀이 1 Brute-force search&lt;/h2&gt;
+&lt;p&gt;모든 경우의 수를 모두 확인하여 가장 좋은 값을 확인&lt;/p&gt;</description>
       
     </item>
     

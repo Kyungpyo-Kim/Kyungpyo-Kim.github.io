@@ -14,7 +14,11 @@
       
       <guid>https://kyungpyo-kim.github.io/study/flash_attention/</guid>
       
-        <description>Overview 저는 현재 LLM 을 포함한 AI 모델, 그리고 이를 효율적으로 처리하기 위한 NPU/GPU 관련된 업무들을 다양하게 진행해 오고 있습니다.</description>
+        <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;저는 현재 LLM 을 포함한 AI 모델, 그리고 이를 효율적으로 처리하기 위한 NPU/GPU 관련된 업무들을 다양하게 진행해 오고 있습니다.
+이 글에서 리뷰하는 논문은 LLM 연산의 효율성을 크게 향상 시킨 FlashAttention 을 소개하는 논문입니다.
+많은 뉴스에서 다뤄지고 있는 것처럼 현재 LLM 의 사용화를 위해 많은 업체들이 노력하고 있고, 그 중 가장 중요한 부분이 연산의 효율성 인 것 같습니다.
+충분한 성능은 나오고 있고, 사용할 곳도 점점 많아지고 있으니 사용할때 드는 비용만 좀 더 낮아진다면 그만큼 더 큰 부가가치를 창출해 낼 수 있을 것이라 보는 것이죠.&lt;/p&gt;</description>
       
     </item>
     
@@ -25,7 +29,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/bitnetb1.58/</guid>
       
-        <description>최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다.</description>
+        <description>&lt;p&gt;최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다. “The Era of 1-bit LLMs”&lt;/p&gt;</description>
       
     </item>
     

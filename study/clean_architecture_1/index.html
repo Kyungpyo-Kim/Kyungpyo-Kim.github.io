@@ -1,0 +1,832 @@
+<!doctype html>
+<html
+  dir="ltr"
+  lang="ko"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <meta charset="utf-8" />
+  <title>
+    
+      
+        Clean Architecture 1 |
+      kyungpyo-kim
+
+  </title>
+
+  <meta name="generator" content="Hugo 0.139.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="kyungpyo-kim" />
+  <meta
+    name="description"
+    content="새로운 것을 찾아"
+  />
+  
+    <meta name="google-site-verification" content="Q4P3G3Girpd3IvxCj-Pwjqw57XwNqKP1Qpu4pWlxa_w" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../scss/main.min.8d4fad7e6916ad2e291e8d97ada157c70350d6d7150fea137e7243340967befb.css"
+      integrity="sha256-jU&#43;tfmkWrS4pHo2XraFXxwNQ1tcVD&#43;oTfnJDNAlnvvs="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="../../css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../css/taxonomy.min.b6d7eff11342047cc36639518e493d5caf8fa6d496e67a716255c362e74e6519.css"
+      integrity="sha256-ttfv8RNCBHzDZjlRjkk9XK&#43;PptSW5npxYlXDYudOZRk="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/fontawesome.min.137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519.css"
+    integrity="sha256-E3sc886pqK23iENDqaXd3fQoD1kVP3TceC&#43;3978NBRk="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/solid.min.e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3.css"
+    integrity="sha256-5l3FtI&#43;185sUI2DFfDohV0TJTlbHVckpzD6I/hKqtNM="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/regular.min.6f4f16d58da1c82c0c3a3436e021a3d39b4742f741192c546e73e947eacfd92f.css"
+    integrity="sha256-b08W1Y2hyCwMOjQ24CGj05tHQvdBGSxUbnPpR&#43;rP2S8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/brands.min.e10425ad768bc98ff1fb272a0ac8420f9d1ba22f0612c08ff1010c95080ffe7e.css"
+    integrity="sha256-4QQlrXaLyY/x&#43;ycqCshCD50boi8GEsCP8QEMlQgP/n4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="../../favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://kyungpyo-kim.github.io/study/clean_architecture_1/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="../../js/anatole-header.min.3fb7ecbad96218fce1cd5e8c69ce912680cfb525637325b5f76cdbefcc0d4a3a.js"
+    integrity="sha256-P7fsutliGPzhzV6Mac6RJoDPtSVjcyW192zb78wNSjo="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="../../js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+  
+
+
+  
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png">
+  <meta name="twitter:title" content="Clean Architecture 1">
+  <meta name="twitter:description" content="5. 아키텍쳐 아키텍쳐란? 책에서 정의하는 바로는 아키텍쳐는 잘 동작하는 시스템을 만들기 보다는 잘 운영할 수 있는 시스템을 만들기 위한다고 설명한다. 다시 말하면 좋은 아키텍쳐의 목표는 잘 동작하는 것 보다는 생산성을 최대화 하고 운영 비용을 최소화 하는데 있다. 개발: 아키텍쳐가 개발을 효율적으로 할 수 있게 뒷받침 되어야 한다. 배포: 배포를 쉽게 할 수 있게 아키텍쳐를 설계해야 한다. 운영: 운영에는 아키텍쳐가 큰 영향을 주지 않는다. 오히려 운영의 문제는 하드웨어의 추가로 비교적 저렴하게 해결할 수 있다. 유지보수: 유지보수 비용이 줄어들도록 컴포넌트를 분리하고 안정된 인터페이스를 두어 아키텍쳐를 설계해야 한다. 선택사항 열어두기: 중요치 않은 세부사항은 언제든지 변경될 수 있게 열려 있는 아키텍쳐를 구성해야 한다. 고수준의 정책은 이런 디테일을 알지 못해야 한다. (데이터베이스 시스템의 선택, 웹서버의 종류 선택 등) 장치 독립성 물리적 주소 할당: 절대 주소로 데이터를 접근하는 방법은 확장성이나 데이터를 옮겨야 할 때 큰 문제가 생긴다. 상대적으로 주소를 할당해서 사용하면 이런 문제를 크게 줄일 수 있다. 즉 애플리케이션의 선택사항 중 디스크 드라이브의 용량이나 구조에 대한 내용을 분리할 수 있게 한다. 좋은 아키텍쳐는 세부사항에 대한 결정을 최대한 뒤로 미룰 수 있게 한다. 이는 결과적으로 더 많은 실험과 테스트, 선택지의 비교를 통해 더 좋은 결정을 내릴 수 있게 한다. 독립성 좋은 아키텍쳐: 시스템의 유스케이스, 운영, 개발, 배포를 지원 유스케이스: 아키텍쳐는 시스템의 의도를 잘 보여주어야 한다. 운영: 운영과 관련된 threading, multi-processing 등에 열려있는 구조를 가지고 있어야 한다. 개발: 각 팀, 개발자들이 독립적으로 개발하기 쉬운 구조를 지원해야 한다. 배포: immediate deployment 를 지원할 수 있어야 한다. 계층 결합 분리: 유즈케이스에 연관되어 있는 부분들을 수평적인 계층으로 분리 (UI, 어플리케이션 특화 업무, 어플리케이션 독립 업무, 데이터베이스 등) 유스케이스 결합 분리는 계층결합 분리와 함께 소프트웨어 아키텍쳐가 미래의 요구사항에 열려 있을 수 있게 하고 아래의 표처럼 독립된 개발 단위를 지원해 줄 수 있다. 중복: 진짜 중복은 제거해야 하지만, 다른 계층으로 이뤄진 코드는 다른 속도와 모습으로 발전해 나가며 결국은 중복이 아니게 되는 경우가 있다. 중복을 제거하려고 할 때 이점을 숙지해야 한다. 주문 추가 유스케이스 주문 삭제 유스케이스 UI 계층 주문 추가용 UI 주문 삭제용 UI 업무 로직 계층 주문 추가용 업무 로직 주문 삭제용 업무 로직 데이터베이스 계층 주문 추가용 데이터베이스 주문 삭제용 데이터베이스 콘웨이 법칙: 시스템을 설계하는 조직이라면 어디든지 그 조직의 의사소통 구조와 동일한 구조의 설계를 만들어 낼 것이다.">
+
+
+
+  
+  <meta property="og:url" content="https://kyungpyo-kim.github.io/study/clean_architecture_1/">
+  <meta property="og:site_name" content="Kyungpyo Kim">
+  <meta property="og:title" content="Clean Architecture 1">
+  <meta property="og:description" content="5. 아키텍쳐 아키텍쳐란? 책에서 정의하는 바로는 아키텍쳐는 잘 동작하는 시스템을 만들기 보다는 잘 운영할 수 있는 시스템을 만들기 위한다고 설명한다. 다시 말하면 좋은 아키텍쳐의 목표는 잘 동작하는 것 보다는 생산성을 최대화 하고 운영 비용을 최소화 하는데 있다. 개발: 아키텍쳐가 개발을 효율적으로 할 수 있게 뒷받침 되어야 한다. 배포: 배포를 쉽게 할 수 있게 아키텍쳐를 설계해야 한다. 운영: 운영에는 아키텍쳐가 큰 영향을 주지 않는다. 오히려 운영의 문제는 하드웨어의 추가로 비교적 저렴하게 해결할 수 있다. 유지보수: 유지보수 비용이 줄어들도록 컴포넌트를 분리하고 안정된 인터페이스를 두어 아키텍쳐를 설계해야 한다. 선택사항 열어두기: 중요치 않은 세부사항은 언제든지 변경될 수 있게 열려 있는 아키텍쳐를 구성해야 한다. 고수준의 정책은 이런 디테일을 알지 못해야 한다. (데이터베이스 시스템의 선택, 웹서버의 종류 선택 등) 장치 독립성 물리적 주소 할당: 절대 주소로 데이터를 접근하는 방법은 확장성이나 데이터를 옮겨야 할 때 큰 문제가 생긴다. 상대적으로 주소를 할당해서 사용하면 이런 문제를 크게 줄일 수 있다. 즉 애플리케이션의 선택사항 중 디스크 드라이브의 용량이나 구조에 대한 내용을 분리할 수 있게 한다. 좋은 아키텍쳐는 세부사항에 대한 결정을 최대한 뒤로 미룰 수 있게 한다. 이는 결과적으로 더 많은 실험과 테스트, 선택지의 비교를 통해 더 좋은 결정을 내릴 수 있게 한다. 독립성 좋은 아키텍쳐: 시스템의 유스케이스, 운영, 개발, 배포를 지원 유스케이스: 아키텍쳐는 시스템의 의도를 잘 보여주어야 한다. 운영: 운영과 관련된 threading, multi-processing 등에 열려있는 구조를 가지고 있어야 한다. 개발: 각 팀, 개발자들이 독립적으로 개발하기 쉬운 구조를 지원해야 한다. 배포: immediate deployment 를 지원할 수 있어야 한다. 계층 결합 분리: 유즈케이스에 연관되어 있는 부분들을 수평적인 계층으로 분리 (UI, 어플리케이션 특화 업무, 어플리케이션 독립 업무, 데이터베이스 등) 유스케이스 결합 분리는 계층결합 분리와 함께 소프트웨어 아키텍쳐가 미래의 요구사항에 열려 있을 수 있게 하고 아래의 표처럼 독립된 개발 단위를 지원해 줄 수 있다. 중복: 진짜 중복은 제거해야 하지만, 다른 계층으로 이뤄진 코드는 다른 속도와 모습으로 발전해 나가며 결국은 중복이 아니게 되는 경우가 있다. 중복을 제거하려고 할 때 이점을 숙지해야 한다. 주문 추가 유스케이스 주문 삭제 유스케이스 UI 계층 주문 추가용 UI 주문 삭제용 UI 업무 로직 계층 주문 추가용 업무 로직 주문 삭제용 업무 로직 데이터베이스 계층 주문 추가용 데이터베이스 주문 삭제용 데이터베이스 콘웨이 법칙: 시스템을 설계하는 조직이라면 어디든지 그 조직의 의사소통 구조와 동일한 구조의 설계를 만들어 낼 것이다.">
+  <meta property="og:locale" content="ko">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="study">
+    <meta property="article:published_time" content="2024-11-17T20:15:21+09:00">
+    <meta property="article:modified_time" content="2024-11-17T20:15:21+09:00">
+    <meta property="article:tag" content="Software">
+    <meta property="article:tag" content="Architecture">
+    <meta property="article:tag" content="Engineering">
+    <meta property="article:tag" content="Study">
+    <meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png">
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "study",
+        "name": "Clean Architecture 1",
+        "headline": "Clean Architecture 1",
+        "alternativeHeadline": "",
+        "description": "
+      
+        \u003ch2 id=\u00225-아키텍쳐\u0022\u003e5. 아키텍쳐\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003e아키텍쳐란?\n\u003cul\u003e\n\u003cli\u003e책에서 정의하는 바로는 아키텍쳐는 잘 동작하는 시스템을 만들기 보다는 잘 운영할 수 있는 시스템을 만들기 위한다고 설명한다. 다시 말하면 좋은 아키텍쳐의 목표는 잘 동작하는 것 보다는 생산성을 최대화 하고 운영 비용을 최소화 하는데 있다.\u003c\/li\u003e\n\u003cli\u003e개발: 아키텍쳐가 개발을 효율적으로 할 수 있게 뒷받침 되어야 한다.\u003c\/li\u003e\n\u003cli\u003e배포: 배포를 쉽게 할 수 있게 아키텍쳐를 설계해야 한다.\u003c\/li\u003e\n\u003cli\u003e운영: 운영에는 아키텍쳐가 큰 영향을 주지 않는다. 오히려 운영의 문제는 하드웨어의 추가로 비교적 저렴하게 해결할 수 있다.\u003c\/li\u003e\n\u003cli\u003e유지보수: 유지보수 비용이 줄어들도록 컴포넌트를 분리하고 안정된 인터페이스를 두어 아키텍쳐를 설계해야 한다.\u003c\/li\u003e\n\u003cli\u003e선택사항 열어두기: 중요치 않은 세부사항은 언제든지 변경될 수 있게 열려 있는 아키텍쳐를 구성해야 한다. 고수준의 정책은 이런 디테일을 알지 못해야 한다. (데이터베이스 시스템의 선택, 웹서버의 종류 선택 등)\u003c\/li\u003e\n\u003cli\u003e장치 독립성\u003c\/li\u003e\n\u003cli\u003e물리적 주소 할당: 절대 주소로 데이터를 접근하는 방법은 확장성이나 데이터를 옮겨야 할 때 큰 문제가 생긴다. 상대적으로 주소를 할당해서 사용하면 이런 문제를 크게 줄일 수 있다. 즉 애플리케이션의 선택사항 중 디스크 드라이브의 용량이나 구조에 대한 내용을 분리할 수 있게 한다.\u003c\/li\u003e\n\u003cli\u003e좋은 아키텍쳐는 세부사항에 대한 결정을 최대한 뒤로 미룰 수 있게 한다. 이는 결과적으로 더 많은 실험과 테스트, 선택지의 비교를 통해 더 좋은 결정을 내릴 수 있게 한다.\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cul\u003e\n\u003cli\u003e독립성\n\u003cul\u003e\n\u003cli\u003e좋은 아키텍쳐: 시스템의 유스케이스, 운영, 개발, 배포를 지원\u003c\/li\u003e\n\u003cli\u003e유스케이스: 아키텍쳐는 시스템의 의도를 잘 보여주어야 한다.\u003c\/li\u003e\n\u003cli\u003e운영: 운영과 관련된 threading, multi-processing 등에 열려있는 구조를 가지고 있어야 한다.\u003c\/li\u003e\n\u003cli\u003e개발: 각 팀, 개발자들이 독립적으로 개발하기 쉬운 구조를 지원해야 한다.\u003c\/li\u003e\n\u003cli\u003e배포: immediate deployment 를 지원할 수 있어야 한다.\u003c\/li\u003e\n\u003cli\u003e계층 결합 분리: 유즈케이스에 연관되어 있는 부분들을 수평적인 계층으로 분리 (UI, 어플리케이션 특화 업무, 어플리케이션 독립 업무, 데이터베이스 등)\u003c\/li\u003e\n\u003cli\u003e유스케이스 결합 분리는 계층결합 분리와 함께 소프트웨어 아키텍쳐가 미래의 요구사항에 열려 있을 수 있게 하고 아래의 표처럼 독립된 개발 단위를 지원해 줄 수 있다.\u003c\/li\u003e\n\u003cli\u003e중복: 진짜 중복은 제거해야 하지만, 다른 계층으로 이뤄진 코드는 다른 속도와 모습으로 발전해 나가며 결국은 중복이 아니게 되는 경우가 있다. 중복을 제거하려고 할 때 이점을 숙지해야 한다.\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003ctable\u003e\n  \u003cthead\u003e\n      \u003ctr\u003e\n          \u003cth\u003e\u003c\/th\u003e\n          \u003cth\u003e주문 추가 유스케이스\u003c\/th\u003e\n          \u003cth\u003e주문 삭제 유스케이스\u003c\/th\u003e\n      \u003c\/tr\u003e\n  \u003c\/thead\u003e\n  \u003ctbody\u003e\n      \u003ctr\u003e\n          \u003ctd\u003eUI 계층\u003c\/td\u003e\n          \u003ctd\u003e주문 추가용 UI\u003c\/td\u003e\n          \u003ctd\u003e주문 삭제용 UI\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e업무 로직 계층\u003c\/td\u003e\n          \u003ctd\u003e주문 추가용 업무 로직\u003c\/td\u003e\n          \u003ctd\u003e주문 삭제용 업무 로직\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e데이터베이스 계층\u003c\/td\u003e\n          \u003ctd\u003e주문 추가용 데이터베이스\u003c\/td\u003e\n          \u003ctd\u003e주문 삭제용 데이터베이스\u003c\/td\u003e\n      \u003c\/tr\u003e\n  \u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cblockquote\u003e\n\u003cp\u003e콘웨이 법칙: 시스템을 설계하는 조직이라면 어디든지 그 조직의 의사소통 구조와 동일한 구조의 설계를 만들어 낼 것이다.\u003c\/p\u003e
+
+
+      
+
+
+    ",
+        "inLanguage": "ko",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/clean_architecture_1\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightYear" : "2024",
+        "dateCreated": "2024-11-17T20:15:21.00Z",
+        "datePublished": "2024-11-17T20:15:21.00Z",
+        "dateModified": "2024-11-17T20:15:21.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "kyungpyo-kim",
+            "url": "https://kyungpyo-kim.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/kyungpyo-kim.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/clean_architecture_1\/",
+        "wordCount" : "898",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "software"
+
+    
+      
+        ,
+
+      
+      "architecture"
+
+    
+      
+        ,
+
+      
+      "engineering"
+
+    
+      
+        ,
+
+      
+      "study"
+
+    ]
+    }
+  </script>
+
+
+
+
+  
+  <script
+  data-ad-client="ca-pub-7791328994969079"
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+></script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="../../images/kyungpyo.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="../../">Kyungpyo Kim</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>새로운 것을 찾아</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Kyungpyo-Kim"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://instagram.com/kyung_py"
+            target="_blank"
+            rel="noopener me"
+            aria-label="instagram"
+            title="instagram"
+          >
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:kyungpyo94@gmail.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+
+    <div class="sidebar__taxonomy_cloud">
+      <h1 class="sidebar__taxonomy_cloud-title">
+        <a href="https://kyungpyo-kim.github.io//tags">Tags</a>
+      </h1>
+      <ul class="sidebar__taxonomy_cloud-contents-ul" id="taxonomy_cloud-contents-ul"><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/3d-object-detection/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">3D Object Detection</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ai/" style="font-size:1.3181818181818181em; padding: 0.2em 0.2em 0.2em 0.2em;">AI</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/architecture/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Architecture</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/big-data/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Big Data</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/blog/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Blog</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/c&#43;&#43;/" style="font-size:1.2272727272727273em; padding: 0.2em 0.2em 0.2em 0.2em;">C&#43;&#43;</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/diagnostics/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Diagnostics</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/engineering/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Engineering</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/github/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Github</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/gpu/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">GPU</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/hash/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Hash</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/hugo/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Hugo</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/jetson/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Jetson</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/kalman-filter/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Kalman Filter</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/key/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Key</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/license/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">License</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/lidar/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">LiDAR</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/llms/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">LLMs</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/npu/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">NPU</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/nvidia/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">NVIDIA</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/optimal-state-estimation/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Optimal State Estimation</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/pyqt/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">PyQt</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/python/" style="font-size:1.2727272727272727em; padding: 0.2em 0.2em 0.2em 0.2em;">Python</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ros/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ros2/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS2</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/shared_timed_mutex/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Shared_timed_mutex</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/software/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Software</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/sota/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">SOTA</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/stl/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">STL</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/study/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Study</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/tensorflow/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Tensorflow</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/thread-safety/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Thread Safety</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ubuntu/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">Ubuntu</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/unordered_map/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Unordered_map</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">공업수학</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%8F%85%EC%84%9C/" style="font-size:2em; padding: 0.2em 0.2em 0.2em 0.2em;">독서</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%9D%BC%EC%9D%B4%EB%94%A9/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">라이딩</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%9F%AC%EB%8B%9D/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">러닝</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%B3%B4%EC%95%88/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">보안</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorithm/" style="font-size:1.1818181818181819em; padding: 0.2em 0.2em 0.2em 0.2em;">알고리즘 (Algorithm)</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-data-structure/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">자료구조 (Data Structure)</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">자율주행</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%A0%9C%EC%96%B4/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">제어</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-coding-test/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">코딩테스트 (Coding Test)</a>
+      </li></ul>
+
+    </div>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      
+        <h1>Clean Architecture 1</h1>
+      
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  Sun, Nov 17, 2024
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">읽는 시간 5분</span>
+          </li>
+        </ul>
+      <h2 id="5-아키텍쳐">5. 아키텍쳐</h2>
+<ul>
+<li>아키텍쳐란?
+<ul>
+<li>책에서 정의하는 바로는 아키텍쳐는 잘 동작하는 시스템을 만들기 보다는 잘 운영할 수 있는 시스템을 만들기 위한다고 설명한다. 다시 말하면 좋은 아키텍쳐의 목표는 잘 동작하는 것 보다는 생산성을 최대화 하고 운영 비용을 최소화 하는데 있다.</li>
+<li>개발: 아키텍쳐가 개발을 효율적으로 할 수 있게 뒷받침 되어야 한다.</li>
+<li>배포: 배포를 쉽게 할 수 있게 아키텍쳐를 설계해야 한다.</li>
+<li>운영: 운영에는 아키텍쳐가 큰 영향을 주지 않는다. 오히려 운영의 문제는 하드웨어의 추가로 비교적 저렴하게 해결할 수 있다.</li>
+<li>유지보수: 유지보수 비용이 줄어들도록 컴포넌트를 분리하고 안정된 인터페이스를 두어 아키텍쳐를 설계해야 한다.</li>
+<li>선택사항 열어두기: 중요치 않은 세부사항은 언제든지 변경될 수 있게 열려 있는 아키텍쳐를 구성해야 한다. 고수준의 정책은 이런 디테일을 알지 못해야 한다. (데이터베이스 시스템의 선택, 웹서버의 종류 선택 등)</li>
+<li>장치 독립성</li>
+<li>물리적 주소 할당: 절대 주소로 데이터를 접근하는 방법은 확장성이나 데이터를 옮겨야 할 때 큰 문제가 생긴다. 상대적으로 주소를 할당해서 사용하면 이런 문제를 크게 줄일 수 있다. 즉 애플리케이션의 선택사항 중 디스크 드라이브의 용량이나 구조에 대한 내용을 분리할 수 있게 한다.</li>
+<li>좋은 아키텍쳐는 세부사항에 대한 결정을 최대한 뒤로 미룰 수 있게 한다. 이는 결과적으로 더 많은 실험과 테스트, 선택지의 비교를 통해 더 좋은 결정을 내릴 수 있게 한다.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>독립성
+<ul>
+<li>좋은 아키텍쳐: 시스템의 유스케이스, 운영, 개발, 배포를 지원</li>
+<li>유스케이스: 아키텍쳐는 시스템의 의도를 잘 보여주어야 한다.</li>
+<li>운영: 운영과 관련된 threading, multi-processing 등에 열려있는 구조를 가지고 있어야 한다.</li>
+<li>개발: 각 팀, 개발자들이 독립적으로 개발하기 쉬운 구조를 지원해야 한다.</li>
+<li>배포: immediate deployment 를 지원할 수 있어야 한다.</li>
+<li>계층 결합 분리: 유즈케이스에 연관되어 있는 부분들을 수평적인 계층으로 분리 (UI, 어플리케이션 특화 업무, 어플리케이션 독립 업무, 데이터베이스 등)</li>
+<li>유스케이스 결합 분리는 계층결합 분리와 함께 소프트웨어 아키텍쳐가 미래의 요구사항에 열려 있을 수 있게 하고 아래의 표처럼 독립된 개발 단위를 지원해 줄 수 있다.</li>
+<li>중복: 진짜 중복은 제거해야 하지만, 다른 계층으로 이뤄진 코드는 다른 속도와 모습으로 발전해 나가며 결국은 중복이 아니게 되는 경우가 있다. 중복을 제거하려고 할 때 이점을 숙지해야 한다.</li>
+</ul>
+</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>주문 추가 유스케이스</th>
+          <th>주문 삭제 유스케이스</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>UI 계층</td>
+          <td>주문 추가용 UI</td>
+          <td>주문 삭제용 UI</td>
+      </tr>
+      <tr>
+          <td>업무 로직 계층</td>
+          <td>주문 추가용 업무 로직</td>
+          <td>주문 삭제용 업무 로직</td>
+      </tr>
+      <tr>
+          <td>데이터베이스 계층</td>
+          <td>주문 추가용 데이터베이스</td>
+          <td>주문 삭제용 데이터베이스</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>콘웨이 법칙: 시스템을 설계하는 조직이라면 어디든지 그 조직의 의사소통 구조와 동일한 구조의 설계를 만들어 낼 것이다.</p>
+</blockquote>
+<ul>
+<li>경계: 선 긋기
+<ul>
+<li>데이터베이스의 선택, 웹서버, 유틸리티 라이브러리 등의 선택에 필요한 경계선은 최대한 나중에 그어서 선택을 미루는 것이 좋다.</li>
+</ul>
+</li>
+</ul>
+<p>이 부분을 읽으면서 실제 설계 업무를 하면서 나름의 여러가지 고려를 하면서 진행 하였는데, 어느 정도는 책의 내용과 일치하는 부분이 많아서 신기하기도 하면서 공감이 좀 되었다. 책의 내용을 먼저 읽어 보았다면 더 체계적으로, 효율적으로 했을까 생각이 들기도 하고, 반대로 내가 했던 경험을 이 책처럼 정리해 봤을 수 있지 않았을까 생각해 보았다.
+나의 경험을 간단하게 적어보면 소프트웨어를 설계하면서 유스케이스를 확정하고 이에따라 모듈과 인터페이스들을 분리하며 초기의 작은 선들을 그었다. 그리고 세부 사항들을 구현해 나가면서 모듈 내의, 필요에 따라서는 모듈간의 선을 긋거나 조정하면서 개발을 진행했었다.</p>
+<ul>
+<li>
+<p>경계 해부학</p>
+<ul>
+<li>경계를 나눌 때, 앞에 언급한 것처럼 컴포넌트 수준의 경계 뿐만 아니라, 스레드, 로컬 프로세스 수준의 경계도 고려하면 좋다. 로컬 프로세스 수준은 로컬 변수의 범위나 함수 호출 스택의 스코프 등을 고려한는 것을 말한다.</li>
+<li>이러한 내용은 C++, JAVA 와 같은 컴파일 언어에 좀 더 직관적인 접근법이긴 한 것 같다. Python 과 같은 동적언어에서 어떻게 적용해야 할지는 좀 더 고민이 필요할 것 같다.</li>
+</ul>
+</li>
+<li>
+<p>정책과 수준</p>
+<ul>
+<li>고수준 정책과 저수준 정책을 계층화하고 저수준 정책의 변경이 고수준 정책에 영향이 가지 않도록 해야 한다.</li>
+</ul>
+</li>
+<li>
+<p>업무규칙</p>
+<ul>
+<li>엔티티, 유즈케이스</li>
+<li>제목의 번역이 적절해 보이지는 않는다.</li>
+<li>가장 중심이 되는 프로그램의 rule 로 이해했다. 따라서, 당연하게도 가장 변경이 적게되는 시스템의 중심에 위치해야 한다.</li>
+</ul>
+</li>
+<li>
+<p>소리치는 아키텍쳐</p>
+<ul>
+<li>앞에서도 계속 반복되듯 어떤 프레임워크나 데이터베이스 사용의 결정은 최대한 늦춰져야 한다.</li>
+</ul>
+</li>
+<li>
+<p>클린 아키텍쳐</p>
+<ul>
+<li><img alt="20241116_131901" src="../../images/clean_architecture/20241116_131901.jpg"></li>
+</ul>
+</li>
+<li>
+<p>프레젠터와 험블 객체</p>
+<ul>
+<li>험블 객체는 GUI 프로그램의 뷰처럼 테스트 하기 어렵지만 간단하게 구현되는 객체를 분리하여 구현한 객체이다. 이를 통해 쉽게 테스트 가능한 객체의 개발과 테스트를 용이하게 한다.</li>
+</ul>
+</li>
+<li>
+<p>부분적 경계</p>
+<ul>
+<li>부분적 경계는 추후에 필요할 지 모르는 부분의 구현을 어떻게 하면 좋을지에 대한 고민이다. 이를 위해 몇가지 패턴을 소개한다. 전부 이해하지는 못한 것 같지만 가능한 구체적인 구현을 나중으로 하기 위한 인터페이스, 객체 설계 방법들을 설명한다.</li>
+</ul>
+</li>
+<li>
+<p>계층과 경계</p>
+<ul>
+<li>아키테트는 오버 엔지니어링과 언더 엔지지어링을 막기위한 결정을 내려야 한다.</li>
+<li>소프트웨어 경계를 만들고 추상클래스를 추가하는 일은 오버 엔지니어링이 될 수도 있고 이를 방치했두었다 뒤늦게 수습하면서 더 많은 비용을 지불하게 될 수도 있다.</li>
+<li><strong>계속 지켜보면서 이러한 비용의 변곡점에서 적절한 선택을 해야 한다.</strong></li>
+</ul>
+</li>
+<li>
+<p>메인 컴포넌트</p>
+<ul>
+<li>아키텍쳐의 가장 밖의 플러그인 수준의 컴포넌트가 된다.</li>
+</ul>
+</li>
+<li>
+<p>크고 작은 모든 서비스들</p>
+<ul>
+<li>서비스는 아키텍쳐와는 다른 개념이다. 시스템의 변경은 모든 서비스를 변경하게 만들 수 있다. 이러한 횡단 관심사를 잘 처리하기 위해서는 아키텍쳐 관점에서 컴포넌트 설계를 적절하게 해야 한다.</li>
+</ul>
+</li>
+<li>
+<p>테스트 경계</p>
+<ul>
+<li>테스트도 아키텍쳐의 일부처럼 고려되어야 한다.</li>
+<li>GUI처럼 변경이 잦은 의존성을 없애자.</li>
+</ul>
+</li>
+<li>
+<p>클린 임베디드 아키텍쳐</p>
+<ul>
+<li>하드웨어에 종속되어 동작하는 코드를 펌웨어라고 보면, 우리는 펌웨어는 적게 생산하고 소프트웨어를 많이 만들어야 한다.</li>
+<li>하드웨어 의존성을 낮추고 OS 의존성을 낮춰야 좀 더 긴 수명의 소프트웨어를 만들 수 있다.</li>
+</ul>
+</li>
+</ul>
+<p>#켄트백</p>
+<ul>
+<li>먼저 동작하게 만들어라.</li>
+<li>그리고 올바르게 만들어라.</li>
+<li>그리고 빠르게 만들어라.</li>
+</ul>
+<h2 id="6세부사항">6.세부사항</h2>
+<ul>
+<li>데이터베이스는 세부사항이다.
+<ul>
+<li>다시 강조하면 성능은 아키텍쳐의 관심사가 아니다. 데이터베이스의 속도는 저수준의 관심사일 뿐이다.</li>
+<li>저자의 재밌는 경험이 나오는데, 공학적 판단이 언제나 옳다는 생각은 좋지 않다는 것을 보여준다. (데이터베이스와 같은 세부사항이 변경될 수 있는 아키텍쳐도 중요함은 명백하다.) 때로는 마케팅이나 정치적인 결정에 의한 선택이 이루어 질 수 있고 아키텍쳐는 이를 충분히 수용할 수 있어야 한다.</li>
+</ul>
+</li>
+<li>웹은 세부사항이다.</li>
+<li>프레임워크는 세부사항이다.
+<ul>
+<li>프레임워크와 이를 사용하는 사용자의 관계는 매우 비대칭적이다.</li>
+<li>프레임워크는 사용자를 위한 개발을 전혀 하지 않는다.</li>
+<li>이를 고려하면 프레임워크를 세부사항으로 두고 아키텍쳐를 설계해야 한다.</li>
+</ul>
+</li>
+<li>사례연구: 비디오 판매
+<ul>
+<li>액터, 유즈케이스 정의 -&gt; 컴포넌트 아키텍쳐 설계</li>
+</ul>
+</li>
+<li>빠져있는 장
+<ul>
+<li>계층적 구조화가 항상 정답은 아니다. 컴포전트 기반의 구조화가 필요할 수 있다.</li>
+<li>아키텍쳐의 규칙을 컴파일 단계에서 강제하는 것이 좋다.</li>
+<li>아키텍쳐 설계는 구현, 컴파일, 배포, 개발 리소스, 일정 등 다양한 요소를 종합적으로 고려해야 한다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-부록">7. 부록</h2>
+<ul>
+<li>아키텍쳐 고고학
+<ul>
+<li>저자의 꽤 오래전 부터 이어온 설계 경험을풀어썼다. 흥미로운 이야기여서 가볍게 읽었다.</li>
+</ul>
+</li>
+</ul>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="../../tags/software/">software</a><a class="tag" href="../../tags/architecture/">architecture</a><a class="tag" href="../../tags/engineering/">engineering</a><a class="tag" href="../../tags/study/">study</a></span>
+
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>댓글</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="Kyungpyo-Kim/Kyungpyo-Kim.github.io"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></body>
+</html>

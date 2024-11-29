@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>unordered_map on Kyungpyo Kim</title>
+    <title>Unordered_map on Kyungpyo Kim</title>
     <link>https://kyungpyo-kim.github.io/tags/unordered_map/</link>
-    <description>Recent content in unordered_map on Kyungpyo Kim</description>
+    <description>Recent content in Unordered_map on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <lastBuildDate>Sun, 06 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/unordered_map/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +14,14 @@
       
       <guid>https://kyungpyo-kim.github.io/study/thread-safety-of-unordered_map/</guid>
       
-        <description>Prerequisite Thread Mutex Thread safety Problem unordered_map 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다.</description>
+        <description>&lt;h2 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Thread&lt;/li&gt;
+&lt;li&gt;Mutex&lt;/li&gt;
+&lt;li&gt;Thread safety&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;unordered_map&lt;/code&gt; 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다. 기본적으로 STL Container 는 하나의 스레드에 의한 쓰기 접근을 허용하고 다중 스레드에 의한 읽기 접근을 허용하기 때문에 &lt;code&gt;unordered_map&lt;/code&gt;의 데이터를 업데이트 하는 부분에 &lt;code&gt;mutex&lt;/code&gt;를 적용하여 문제를 해결하려 시도 했다. 보통은 이렇게 해결이 되지만 &lt;code&gt;unordered_map&lt;/code&gt; 에서는 조금 다른 문제가 엮여 있었다.&lt;/p&gt;</description>
       
     </item>
     

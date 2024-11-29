@@ -14,7 +14,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/dsvt/</guid>
       
-        <description>DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다.</description>
+        <description>&lt;p&gt;DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다. 이런 부분이 향후에 많은 어플리케이션에서 사용될 수 있는 여지가 많다고 생각하여 정리해 보았습니다.&lt;/p&gt;</description>
       
     </item>
     
@@ -25,7 +25,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/centerformer/</guid>
       
-        <description>최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다.</description>
+        <description>&lt;p&gt;최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다. Waymo 벤치마크에서 우수항 성능을 보여주며 3D Object Detection 분야에서 새로운 SOTA 모델이 되었다.&lt;/p&gt;</description>
       
     </item>
     

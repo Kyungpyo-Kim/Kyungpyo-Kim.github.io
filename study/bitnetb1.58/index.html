@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html
   dir="ltr"
   lang="ko"
@@ -7,6 +7,7 @@
     class="html theme--light"
   
 ><head>
+  <meta charset="utf-8" />
   <title>
     
       
@@ -15,8 +16,7 @@
 
   </title>
 
-  
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.119.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="generator" content="Hugo 0.139.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="kyungpyo-kim" />
   <meta
     name="description"
@@ -29,8 +29,8 @@
     
     <link
       rel="stylesheet"
-      href="../../scss/main.min.1147aa5bacb4bce677a0e264073829caedb82fd18ea07a5f1d80521f539d1c45.css"
-      integrity="sha256-EUeqW6y0vOZ3oOJkBzgpyu24L9GOoHpfHYBSH1OdHEU="
+      href="../../scss/main.min.8d4fad7e6916ad2e291e8d97ada157c70350d6d7150fea137e7243340967befb.css"
+      integrity="sha256-jU&#43;tfmkWrS4pHo2XraFXxwNQ1tcVD&#43;oTfnJDNAlnvvs="
       crossorigin="anonymous"
       type="text/css"
     />
@@ -58,32 +58,32 @@
   
   <link
     rel="stylesheet"
-    href="../../fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
-    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    href="../../fontawesome/css/fontawesome.min.137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519.css"
+    integrity="sha256-E3sc886pqK23iENDqaXd3fQoD1kVP3TceC&#43;3978NBRk="
     crossorigin="anonymous"
     type="text/css"
   />
   
   <link
     rel="stylesheet"
-    href="../../fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
-    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    href="../../fontawesome/css/solid.min.e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3.css"
+    integrity="sha256-5l3FtI&#43;185sUI2DFfDohV0TJTlbHVckpzD6I/hKqtNM="
     crossorigin="anonymous"
     type="text/css"
   />
   
   <link
     rel="stylesheet"
-    href="../../fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
-    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    href="../../fontawesome/css/regular.min.6f4f16d58da1c82c0c3a3436e021a3d39b4742f741192c546e73e947eacfd92f.css"
+    integrity="sha256-b08W1Y2hyCwMOjQ24CGj05tHQvdBGSxUbnPpR&#43;rP2S8="
     crossorigin="anonymous"
     type="text/css"
   />
   
   <link
     rel="stylesheet"
-    href="../../fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
-    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    href="../../fontawesome/css/brands.min.e10425ad768bc98ff1fb272a0ac8420f9d1ba22f0612c08ff1010c95080ffe7e.css"
+    integrity="sha256-4QQlrXaLyY/x&#43;ycqCshCD50boi8GEsCP8QEMlQgP/n4="
     crossorigin="anonymous"
     type="text/css"
   />
@@ -119,24 +119,33 @@
 
   
 
-
   
-  <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/>
-
-<meta name="twitter:title" content="[Paper] 1-bit Large Language Models (LLMs)"/>
-<meta name="twitter:description" content="최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다."/>
-
 
 
   
-  <meta property="og:title" content="[Paper] 1-bit Large Language Models (LLMs)" />
-<meta property="og:description" content="최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://kyungpyo-kim.github.io/study/bitnetb1.58/" /><meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png"/><meta property="article:section" content="study" />
-<meta property="article:published_time" content="2024-03-03T22:42:57+09:00" />
-<meta property="article:modified_time" content="2024-03-03T22:42:57+09:00" /><meta property="og:site_name" content="Kyungpyo Kim" />
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png">
+  <meta name="twitter:title" content="[Paper] 1-bit Large Language Models (LLMs)">
+  <meta name="twitter:description" content="최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다. “The Era of 1-bit LLMs”">
 
+
+
+  
+  <meta property="og:url" content="https://kyungpyo-kim.github.io/study/bitnetb1.58/">
+  <meta property="og:site_name" content="Kyungpyo Kim">
+  <meta property="og:title" content="[Paper] 1-bit Large Language Models (LLMs)">
+  <meta property="og:description" content="최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다. “The Era of 1-bit LLMs”">
+  <meta property="og:locale" content="ko">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="study">
+    <meta property="article:published_time" content="2024-03-03T22:42:57+09:00">
+    <meta property="article:modified_time" content="2024-03-03T22:42:57+09:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLMs">
+    <meta property="article:tag" content="NPU">
+    <meta property="article:tag" content="GPU">
+    <meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png">
 
 
 
@@ -154,7 +163,7 @@
         "alternativeHeadline": "",
         "description": "
       
-        최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다.
+        \u003cp\u003e최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다. “The Era of 1-bit LLMs”\u003c\/p\u003e
 
 
       
@@ -340,33 +349,33 @@
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/ai/" style="font-size:1.3181818181818181em; padding: 0.2em 0.2em 0.2em 0.2em;">AI</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/architecture/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">architecture</a>
+        <a href="../../tags/architecture/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Architecture</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/big-data/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">big data</a>
+        <a href="../../tags/big-data/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Big Data</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/blog/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">blog</a>
+        <a href="../../tags/blog/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Blog</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/c&#43;&#43;/" style="font-size:1.2272727272727273em; padding: 0.2em 0.2em 0.2em 0.2em;">C&#43;&#43;</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/diagnostics/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Diagnostics</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/engineering/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">engineering</a>
+        <a href="../../tags/engineering/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Engineering</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/github/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Github</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/gpu/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">GPU</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/hash/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">hash</a>
+        <a href="../../tags/hash/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Hash</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/hugo/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Hugo</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/jetson/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Jetson</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/kalman-filter/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">kalman filter</a>
+        <a href="../../tags/kalman-filter/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Kalman Filter</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/key/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">key</a>
+        <a href="../../tags/key/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Key</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/license/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">license</a>
+        <a href="../../tags/license/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">License</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/lidar/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">LiDAR</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
@@ -376,33 +385,33 @@
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/nvidia/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">NVIDIA</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/optimal-state-estimation/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">optimal state estimation</a>
+        <a href="../../tags/optimal-state-estimation/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Optimal State Estimation</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/pyqt/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">PyQt</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/python/" style="font-size:1.2727272727272727em; padding: 0.2em 0.2em 0.2em 0.2em;">python</a>
+        <a href="../../tags/python/" style="font-size:1.2727272727272727em; padding: 0.2em 0.2em 0.2em 0.2em;">Python</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/ros/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/ros2/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS2</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/shared_timed_mutex/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">shared_timed_mutex</a>
+        <a href="../../tags/shared_timed_mutex/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Shared_timed_mutex</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/software/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">software</a>
+        <a href="../../tags/software/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Software</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/sota/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">SOTA</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/stl/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">STL</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/study/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">study</a>
+        <a href="../../tags/study/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Study</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/tensorflow/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">tensorflow</a>
+        <a href="../../tags/tensorflow/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Tensorflow</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/thread-safety/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">thread safety</a>
+        <a href="../../tags/thread-safety/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Thread Safety</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/ubuntu/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">ubuntu</a>
+        <a href="../../tags/ubuntu/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">Ubuntu</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/unordered_map/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">unordered_map</a>
+        <a href="../../tags/unordered_map/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Unordered_map</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">공업수학</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
@@ -414,15 +423,15 @@
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/%EB%B3%B4%EC%95%88/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">보안</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorithm/" style="font-size:1.1818181818181819em; padding: 0.2em 0.2em 0.2em 0.2em;">알고리즘 (algorithm)</a>
+        <a href="../../tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorithm/" style="font-size:1.1818181818181819em; padding: 0.2em 0.2em 0.2em 0.2em;">알고리즘 (Algorithm)</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-data-structure/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">자료구조 (data structure)</a>
+        <a href="../../tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-data-structure/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">자료구조 (Data Structure)</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">자율주행</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/%EC%A0%9C%EC%96%B4/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">제어</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-coding-test/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">코딩테스트 (coding test)</a>
+        <a href="../../tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-coding-test/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">코딩테스트 (Coding Test)</a>
       </li></ul>
 
     </div>
@@ -443,18 +452,7 @@
     src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
     integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
-  ></script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-150383923-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-</div>
+  ></script></div>
 </aside>
       <main
         
@@ -573,7 +571,9 @@ if (!doNotTrack) {
   >
     
     <div class="post__content">
-      <h1>[Paper] 1-Bit Large Language Models (LLMs)</h1>
+      
+        <h1>[Paper] 1-Bit Large Language Models (LLMs)</h1>
+      
       
         <ul class="post__meta">
           <li class="post__meta-item">
@@ -593,7 +593,7 @@ if (!doNotTrack) {
           </li>
         </ul>
       <p>최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다. “The Era of 1-bit LLMs”</p>
-<p><img src="../../images/bitnetb1.58/Untitled.png" alt="Untitled"></p>
+<p><img alt="Untitled" src="../../images/bitnetb1.58/Untitled.png"></p>
 <p>첫 페이지의 그래프부터 아주 직관적으로 논문의 내용을 드러내고 있다. 현재 많은 LLMs 들은 보통은 FP16, 즉 하나의 데이터 단위를 16bit 의 크기로 다루는 데이터 타입을 기본적으로 사용한다. 그리고 이러한 FP16 데이터 타입은 넓은 범위의 데이터 표현을 매우 잘 해주지만 때로는 불필요하게 많은 데이터를 사용할 수도 있다는 단점을 가지고 있다. 이러한 단점을 보완하기 위해 흔히 quantization, calibration 이라는 과정을 거쳐 데이터의 크기를 8bit 혹은 그 이하의 단위로 줄이는 방법을 사용한다. 이렇게 데이터의 타입의 크기가 줄어들게 되면 아무래서 사용하는 메모리가 적게 들고, 이러한 메모리의 데이터를 옮기는 시간도 적게 들며, 연산의 양도 줄어들게 된다. 즉 현재 LLMs 의 가장 큰 이슈인 높은 비용을 절감할 수 있게 된다.</p>
 <p>기존의 연구들이 이러한 취지로 8bit 혹은 그 이하의 4bit 의 데이터 타입을 사용하기 위한 다양한 방법들을 제안한다. 하지만 언제나 엔지니어링 세상에는 trade-off 가 존재한다. 데이터 타입에 사용되는 bit 의 수가 줄어들수록 데이터 타입이 가지는 표현력이 줄어들게 되고 이는 곧 정확도의 성능 저하로 이어지게 된다. 그래서 기존 연구들은 최소한의 성능 저하를 유지한채 사용되는 데이터의 크기를 줄이기 위한 다양한 방법들을 제안한다. 어떻게 데이터를 표현할 것인지, 어느 부분에 어떤 데이터 타입을 사용하는 것이 좋을지 등 다양하고 복잡한 방법들이 제안되어 왔다.</p>
 <p>그런데 이 논문은 자극적이게 4bit 도 아닌 1bit 를 사용한 LLMs 을 선보였다. 그리고 첫장의 그래프를 보면 1.58bit 데이터 타입으로 16bit 대비 크기와 비용을 극적으로 줄이면서 성능의 저하 없이 이를 이뤄냈다. 어떤 방법을 사용했는지, 그리고 진짜 이게 가능한지 궁금해진다.</p>
@@ -610,13 +610,13 @@ if (!doNotTrack) {
 <p>이 논문에서 제안하는 BitNet b1.58 모델은 모든 single parameter 나 weight 값들을 {-1, 0, 1} 의 값으로 사용한다. 그리고 이를 위해 새로운 scaling 방법과 training 방법을 제안하고 있다. 제목만 보았을 때, 단순히 quantization 의 한 방법이라고 생각했으나, 모델 자체를 {-1, 0, 1} 의 데이터 타입을 사용하게 설계하여 이를 학습단계에서 부터 사용하게 되는 것 같다. 이로인해 비용 측면에서 기존의 모델보다 효율적으로 모델을 학습시킬 수 있을 것으로 보인다.</p>
 <p>이미 기존에 {-1, 1} 만 사용하는 1bit 모델인 BitNet 이 발표되었었다. 이 모델은 앞에서 설명한 모델 경량화를 통한 장점을 극대화 할 수 있었지만, 정확도에 있어 많은 손실이 있었던 것 같다. 그래서 BitNet 의 장점을 유지하며 정확도의 손실을 보완하기 위해 0을 추가하여 BitNet b1.58 을 제안하였다.</p>
 <p>논문에서 BitNet 이 기존 LLMs 과 달리 새로운 computation paradigm 을 제안한다고 말하고 있다. 이부분이 좀 중요한 부분이여서 한문단을 더 할애해본다. 기존의 LLMs 같은 경우 기본적으로 Matrix Multiplication 연산이 대부분이다. Transformer 모델의 경우 Weight 와 vector 계산을 반복적으로 수행하기 때문이다. 이때 Matrix Multiplication 의 경우 Multiplication then Addition (accumulation) 의 연산이 필요로해진다. 하지만 BitNet (b1.58) 의 경우 1 일 경우 더하고, 0 일경우 skip, -1 일 경우 빼주면 된다. 즉 weight 를 곱하는 multiplication 과정이 없어지게 된다. 하드웨어 설계 측면에서 곱하기 연산이 사라진다면 연산을 더욱 최적화 할 수 있게 된다. 이게 새로운 LLMs acceleration 개발을 가능하게 할 수 있을 것 같다. 그래서 이 논문에서는 이부분을 힘주어 이야기 하는 것 같다. (여담이지만 최근 OpenAI 에서 새로운 HW 를 만들려고 하는 것도 이러한 부분을 염두해 두었을 것 같다.)</p>
-<p><img src="../../images/bitnetb1.58/Untitled%201.png" alt="Untitled"></p>
+<p><img alt="Untitled" src="../../images/bitnetb1.58/Untitled%201.png"></p>
 <p>Weight 의 경우 앞에서 설명된 것과 같이 {-1, 0, 1} 의 1.58bit 데이터 타입을 사용하고, activation 의 경우 8bit 를 사용한 것으로 나와 있다.</p>
 <p>BitNet 1b 모델과 동일한 구조를 사용하지만, {-1, 0, 1} 데이터 타입을 위한 quantization 방법이 조금 다르고, activation 의 경우도 [-Qb, Qb] 를 사용하여 0 값을 사용하지 않는 것으로 보인다. 시스템적으로는 이러한 변경이 더 최적화될 수 있는 여지가 있으며, 시험적으로 성능에 큰 영향을 주지 않는 것으로 설명되어있다.</p>
-<p><img src="../../images/bitnetb1.58/Untitled%202.png" alt="Untitled"></p>
+<p><img alt="Untitled" src="../../images/bitnetb1.58/Untitled%202.png"></p>
 <p>위의 그림은 BitNet 1B 논문에서 가져온 그림인데 위의 quantization method 는 linear 레이어에만 적용되어 있는 것을 확인할 수 있다. 또한 dequantization 의 과정을 거치는 것으로 보인다. 즉 BitLinear 에서 적용되는 quantization 을 통해 입력 값들이 scaling 되고 {-1, 0, 1} 의 weight 에 따라서 summation 연산이 수행되고 quantization 에서 사용된 scaling 값을 통해 de-scaling 되는 구조로 보인다. 또한 Attention layer 는 그대로 사용되었다.</p>
 <h2 id="results">Results</h2>
-<p><img src="../../images/bitnetb1.58/Untitled%203.png" alt="Untitled"></p>
+<p><img alt="Untitled" src="../../images/bitnetb1.58/Untitled%203.png"></p>
 <p>앞에서도 설명했듯이 b1.58 의 데이터 타입을 사용하면, 메모리 사용량, 속도, 비용(에너지) 측면에서 많은 이점을 얻을 수 있다. 결과 중 에너지 측면에서 비교한 내용이 눈에 띈다. End-to-end 로 분석하였을 때, 40배 이상의 에너지를 절감할 수 있게 된다. 이러한 하드웨어가 설계되어 적용된다면 LLMs 의 가장 큰 문제인 비용문제를 크게 줄일 수 있지 않을까 싶다.</p>
 <p>앞으로 이 연구를 토대로 Mobile/Edge 단에서의 LLMs 적용과 새로운 하드웨어 개발에 좀 더 많은 연구들이 이루어 질 것 같다.</p>
 <h2 id="reference">Reference</h2>
@@ -668,16 +668,5 @@ if (!doNotTrack) {
     src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
     integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
-  ></script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-150383923-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-</body>
+  ></script></body>
 </html>

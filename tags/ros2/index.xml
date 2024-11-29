@@ -14,8 +14,16 @@
       
       <guid>https://kyungpyo-kim.github.io/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
       
-        <description>ROS2_Exercise ROS2 INSTALLATION https://index.ros.org/doc/ros2/Installation/#installationguide https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/
-Version: ROS 2 Eloquent Elusor</description>
+        <description>&lt;h2 id=&#34;ros2_exercisehttpsgithubcomkyungpyo-kimros2_exercise&#34;&gt;&lt;a href=&#34;https://github.com/Kyungpyo-Kim/ROS2_Exercise&#34;&gt;ROS2_Exercise&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;ros2-installation&#34;&gt;ROS2 INSTALLATION&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://index.ros.org/doc/ros2/Installation/#installationguide&#34;&gt;https://index.ros.org/doc/ros2/Installation/#installationguide&lt;/a&gt;
+&lt;a href=&#34;https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/&#34;&gt;https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Version: ROS 2 Eloquent Elusor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Takes ~10min&lt;/p&gt;</description>
       
     </item>
     

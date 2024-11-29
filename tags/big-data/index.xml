@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>big data on Kyungpyo Kim</title>
+    <title>Big Data on Kyungpyo Kim</title>
     <link>https://kyungpyo-kim.github.io/tags/big-data/</link>
-    <description>Recent content in big data on Kyungpyo Kim</description>
+    <description>Recent content in Big Data on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <lastBuildDate>Wed, 29 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/big-data/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +14,8 @@
       
       <guid>https://kyungpyo-kim.github.io/study/dash-plotly-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
       
-        <description>데이터 시각화 및 분석 라이브러리 Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다.</description>
+        <description>&lt;h2 id=&#34;데이터-시각화-및-분석-라이브러리&#34;&gt;데이터 시각화 및 분석 라이브러리&lt;/h2&gt;
+&lt;p&gt;Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다.&lt;/p&gt;</description>
       
     </item>
     

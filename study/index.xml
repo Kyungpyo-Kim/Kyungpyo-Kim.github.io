@@ -6,15 +6,84 @@
     <description>Recent content in Studies on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Fri, 01 Nov 2024 20:15:21 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Nov 2024 20:15:21 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/study/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Clean_Architecture_0</title>
+      <title>Clean Architecture 1</title>
+      <link>https://kyungpyo-kim.github.io/study/clean_architecture_1/</link>
+      <pubDate>Sun, 17 Nov 2024 20:15:21 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/clean_architecture_1/</guid>
+      
+        <description>&lt;h2 id=&#34;5-아키텍쳐&#34;&gt;5. 아키텍쳐&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아키텍쳐란?
+&lt;ul&gt;
+&lt;li&gt;책에서 정의하는 바로는 아키텍쳐는 잘 동작하는 시스템을 만들기 보다는 잘 운영할 수 있는 시스템을 만들기 위한다고 설명한다. 다시 말하면 좋은 아키텍쳐의 목표는 잘 동작하는 것 보다는 생산성을 최대화 하고 운영 비용을 최소화 하는데 있다.&lt;/li&gt;
+&lt;li&gt;개발: 아키텍쳐가 개발을 효율적으로 할 수 있게 뒷받침 되어야 한다.&lt;/li&gt;
+&lt;li&gt;배포: 배포를 쉽게 할 수 있게 아키텍쳐를 설계해야 한다.&lt;/li&gt;
+&lt;li&gt;운영: 운영에는 아키텍쳐가 큰 영향을 주지 않는다. 오히려 운영의 문제는 하드웨어의 추가로 비교적 저렴하게 해결할 수 있다.&lt;/li&gt;
+&lt;li&gt;유지보수: 유지보수 비용이 줄어들도록 컴포넌트를 분리하고 안정된 인터페이스를 두어 아키텍쳐를 설계해야 한다.&lt;/li&gt;
+&lt;li&gt;선택사항 열어두기: 중요치 않은 세부사항은 언제든지 변경될 수 있게 열려 있는 아키텍쳐를 구성해야 한다. 고수준의 정책은 이런 디테일을 알지 못해야 한다. (데이터베이스 시스템의 선택, 웹서버의 종류 선택 등)&lt;/li&gt;
+&lt;li&gt;장치 독립성&lt;/li&gt;
+&lt;li&gt;물리적 주소 할당: 절대 주소로 데이터를 접근하는 방법은 확장성이나 데이터를 옮겨야 할 때 큰 문제가 생긴다. 상대적으로 주소를 할당해서 사용하면 이런 문제를 크게 줄일 수 있다. 즉 애플리케이션의 선택사항 중 디스크 드라이브의 용량이나 구조에 대한 내용을 분리할 수 있게 한다.&lt;/li&gt;
+&lt;li&gt;좋은 아키텍쳐는 세부사항에 대한 결정을 최대한 뒤로 미룰 수 있게 한다. 이는 결과적으로 더 많은 실험과 테스트, 선택지의 비교를 통해 더 좋은 결정을 내릴 수 있게 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;독립성
+&lt;ul&gt;
+&lt;li&gt;좋은 아키텍쳐: 시스템의 유스케이스, 운영, 개발, 배포를 지원&lt;/li&gt;
+&lt;li&gt;유스케이스: 아키텍쳐는 시스템의 의도를 잘 보여주어야 한다.&lt;/li&gt;
+&lt;li&gt;운영: 운영과 관련된 threading, multi-processing 등에 열려있는 구조를 가지고 있어야 한다.&lt;/li&gt;
+&lt;li&gt;개발: 각 팀, 개발자들이 독립적으로 개발하기 쉬운 구조를 지원해야 한다.&lt;/li&gt;
+&lt;li&gt;배포: immediate deployment 를 지원할 수 있어야 한다.&lt;/li&gt;
+&lt;li&gt;계층 결합 분리: 유즈케이스에 연관되어 있는 부분들을 수평적인 계층으로 분리 (UI, 어플리케이션 특화 업무, 어플리케이션 독립 업무, 데이터베이스 등)&lt;/li&gt;
+&lt;li&gt;유스케이스 결합 분리는 계층결합 분리와 함께 소프트웨어 아키텍쳐가 미래의 요구사항에 열려 있을 수 있게 하고 아래의 표처럼 독립된 개발 단위를 지원해 줄 수 있다.&lt;/li&gt;
+&lt;li&gt;중복: 진짜 중복은 제거해야 하지만, 다른 계층으로 이뤄진 코드는 다른 속도와 모습으로 발전해 나가며 결국은 중복이 아니게 되는 경우가 있다. 중복을 제거하려고 할 때 이점을 숙지해야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;주문 추가 유스케이스&lt;/th&gt;
+          &lt;th&gt;주문 삭제 유스케이스&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;UI 계층&lt;/td&gt;
+          &lt;td&gt;주문 추가용 UI&lt;/td&gt;
+          &lt;td&gt;주문 삭제용 UI&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;업무 로직 계층&lt;/td&gt;
+          &lt;td&gt;주문 추가용 업무 로직&lt;/td&gt;
+          &lt;td&gt;주문 삭제용 업무 로직&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;데이터베이스 계층&lt;/td&gt;
+          &lt;td&gt;주문 추가용 데이터베이스&lt;/td&gt;
+          &lt;td&gt;주문 삭제용 데이터베이스&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;콘웨이 법칙: 시스템을 설계하는 조직이라면 어디든지 그 조직의 의사소통 구조와 동일한 구조의 설계를 만들어 낼 것이다.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Clean Architecture 0</title>
       <link>https://kyungpyo-kim.github.io/study/clean_architecture_0/</link>
       <pubDate>Fri, 01 Nov 2024 20:15:21 +0900</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/clean_architecture_0/</guid>
       
-        <description>Motivation 업무를 하다 보면 프로그램을 처음부터 만들어야 하는 경우가 종종 생긴다.</description>
+        <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;업무를 하다 보면 프로그램을 처음부터 만들어야 하는 경우가 종종 생긴다. 그때마다 나름의 경험들을 바탕으로 구조를 어찌 저찌 잡아간다. 그리고 그때마다 조금씩 아쉬울 때가 많았다. 이게 진짜 좋은 구조인가, 꼭 필요한 구조인가, 굳이 필요한가 고민을 하게된다. 그리고 어떤 명확한 기준을 세우기가 힘들었다. 이 책에서 이런 고민에 대한 해답을 조금 얻을 수 있기를 기대하며 읽어본다.&lt;/p&gt;</description>
       
     </item>
     
@@ -25,7 +94,11 @@
       
       <guid>https://kyungpyo-kim.github.io/study/flash_attention/</guid>
       
-        <description>Overview 저는 현재 LLM 을 포함한 AI 모델, 그리고 이를 효율적으로 처리하기 위한 NPU/GPU 관련된 업무들을 다양하게 진행해 오고 있습니다.</description>
+        <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;저는 현재 LLM 을 포함한 AI 모델, 그리고 이를 효율적으로 처리하기 위한 NPU/GPU 관련된 업무들을 다양하게 진행해 오고 있습니다.
+이 글에서 리뷰하는 논문은 LLM 연산의 효율성을 크게 향상 시킨 FlashAttention 을 소개하는 논문입니다.
+많은 뉴스에서 다뤄지고 있는 것처럼 현재 LLM 의 사용화를 위해 많은 업체들이 노력하고 있고, 그 중 가장 중요한 부분이 연산의 효율성 인 것 같습니다.
+충분한 성능은 나오고 있고, 사용할 곳도 점점 많아지고 있으니 사용할때 드는 비용만 좀 더 낮아진다면 그만큼 더 큰 부가가치를 창출해 낼 수 있을 것이라 보는 것이죠.&lt;/p&gt;</description>
       
     </item>
     
@@ -36,7 +109,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/bitnetb1.58/</guid>
       
-        <description>최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다.</description>
+        <description>&lt;p&gt;최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다. “The Era of 1-bit LLMs”&lt;/p&gt;</description>
       
     </item>
     
@@ -47,7 +120,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/dsvt/</guid>
       
-        <description>DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다.</description>
+        <description>&lt;p&gt;DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다. 이런 부분이 향후에 많은 어플리케이션에서 사용될 수 있는 여지가 많다고 생각하여 정리해 보았습니다.&lt;/p&gt;</description>
       
     </item>
     
@@ -58,7 +131,8 @@
       
       <guid>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part2/</guid>
       
-        <description>5. Hardware for DNN Processing 딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다.</description>
+        <description>&lt;h2 id=&#34;5-hardware-for-dnn-processing&#34;&gt;5. Hardware for DNN Processing&lt;/h2&gt;
+&lt;p&gt;딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다. 예를 들어, Intel Knights Landing CPU는 딥러닝을 위한 특수 벡터 명령어를 제공하고, Nvidia PASCAL GP100 GPU는 빠른 딥러닝 계산을 위해 단일 정밀도 코어에서 2개의 FP16 연산을 수행할 수 있는 16비트 부동 소수점 산술 지원을 제공한다. 또한, Nvidia DGX-1 및 Facebook의 Big Basin과 같은 DNN 처리를 위해 특별히 구축된 시스템도 있다. DNN 추론은 Nvidia Tegra 및 Samsung Exynos와 같은 다양한 임베디드 SoC 및 FPGA에서도 구현되었다. 이에 따라 이러한 플랫폼에서 처리가 어떻게 이루어지는지, 응용 프로그램별 가속기를 디자인하여 처리량과 에너지 효율성을 더욱 개선할 수 있는 방법에 대한 이해가 중요하다.&lt;/p&gt;</description>
       
     </item>
     
@@ -69,7 +143,9 @@
       
       <guid>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part1/</guid>
       
-        <description>1. Introduction 최근 이직을 하였고 새로 진행하고 있는 업무는 기존의 AI 알고리즘들을 NPU라는 저전력 하드웨어에 올려서 돌리는 것이다.</description>
+        <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
+&lt;p&gt;최근 이직을 하였고 새로 진행하고 있는 업무는 기존의 AI 알고리즘들을 NPU라는 저전력 하드웨어에 올려서 돌리는 것이다. 이에 따라 NPU에 대한 이해가 필요하게 되었고, 이에 대한 내용을 정리하고자 한다. 이 논문은 NPU에 대한 전반적인 내용을 다루고 있다. 이 논문을 통해 DNN을 지원하는 다양한 하드웨어 플랫폼 및 아키텍처에 대해 이해할 수 있고, DNN의 계산 비용을 줄이기 위한 주요 테크닉들을 다루고 있다. 또한, 다양한 DNN 하드웨어를 평가하는 방법을 통해 해당 하드웨어의 효율성, 유용성을 평가하는 방법 또한 다루고 있다.
+가급적 논문의 구성과 내용을 그대로 따라가면서 정리하였다. NPU 관련 내용을 중심으로 정리하고자 하였고 주변 배경 지식들은 거칠게 다루거나 생략하면서 정리하였다.&lt;/p&gt;</description>
       
     </item>
     
@@ -80,7 +156,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/centerformer/</guid>
       
-        <description>최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다.</description>
+        <description>&lt;p&gt;최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다. Waymo 벤치마크에서 우수항 성능을 보여주며 3D Object Detection 분야에서 새로운 SOTA 모델이 되었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -91,9 +167,17 @@
       
       <guid>https://kyungpyo-kim.github.io/study/ensemble_object_detection_using_detectron2/</guid>
       
-        <description>Ensemble Object Detection using Detectron2
-Getting Started code
-github Environments</description>
+        <description>&lt;p&gt;Ensemble Object Detection using Detectron2&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;ol start=&#34;0&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;code&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Kyungpyo-Kim/Ensemble-Object-Detection-using-Detectron2&#34;&gt;github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Environments&lt;/p&gt;</description>
       
     </item>
     
@@ -104,8 +188,13 @@ github Environments</description>
       
       <guid>https://kyungpyo-kim.github.io/study/fast_mm/</guid>
       
-        <description>Fast Matrix Muliplication
-Explanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도가 소요되며, 이를 개선하기 위한 여러가지 알고리즘들이 제안되어 왔으나, 가장 빠른 알고리즘 역시 O(N^2) 보다 느리다.</description>
+        <description>&lt;p&gt;Fast Matrix Muliplication&lt;/p&gt;
+&lt;h2 id=&#34;explanation&#34;&gt;Explanation&lt;/h2&gt;
+&lt;p&gt;Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도가 소요되며, 이를 개선하기 위한 여러가지 알고리즘들이 제안되어 왔으나,
+가장 빠른 알고리즘 역시 O(N^2) 보다 느리다. (여기서 N은 matrix 의 dimmension)
+그리고 이러한 이론적으로 빠른 알고리즘을 직접 구현해 보면 생각보다 속도가 크게 개선되지 않는다.
+왜 그럴까? 이론과 현실사이의 차이는 프로그램의 메모리 사용에 의해 발생한다.
+좀 더 구체적으로 메모리의 복사/할당/접근에 소요되는 시간이 프로그램의 수행시간에 많은 영향을 미친다.&lt;/p&gt;</description>
       
     </item>
     
@@ -116,8 +205,15 @@ Explanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도�
       
       <guid>https://kyungpyo-kim.github.io/study/tech_blog/</guid>
       
-        <description>사용하고 싶고, 관리하고 싶은 기술 블로그 만들기
-Github pages Hugo Customization Utterances 1.</description>
+        <description>&lt;p&gt;사용하고 싶고, 관리하고 싶은 기술 블로그 만들기&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Github pages&lt;/li&gt;
+&lt;li&gt;Hugo&lt;/li&gt;
+&lt;li&gt;Customization&lt;/li&gt;
+&lt;li&gt;Utterances&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1-intro&#34;&gt;1. Intro.&lt;/h2&gt;
+&lt;p&gt;기존에 블로그를 만들어 공부한 내용이나 독서 기록 용도로 블로그를 운영하고 있었는데, 요즘 기록하는 빈도도 떨어지고 관심도도 떨어져 가는 것 같았다. 이를 극복하고자 블로그에 작은 변화도 주고, Github action 등의 설정을 하면서 과정을 좀 정리해 보려고 한다.&lt;/p&gt;</description>
       
     </item>
     
@@ -172,7 +268,14 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/thread-safety-of-unordered_map/</guid>
       
-        <description>Prerequisite Thread Mutex Thread safety Problem unordered_map 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다.</description>
+        <description>&lt;h2 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Thread&lt;/li&gt;
+&lt;li&gt;Mutex&lt;/li&gt;
+&lt;li&gt;Thread safety&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;unordered_map&lt;/code&gt; 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다. 기본적으로 STL Container 는 하나의 스레드에 의한 쓰기 접근을 허용하고 다중 스레드에 의한 읽기 접근을 허용하기 때문에 &lt;code&gt;unordered_map&lt;/code&gt;의 데이터를 업데이트 하는 부분에 &lt;code&gt;mutex&lt;/code&gt;를 적용하여 문제를 해결하려 시도 했다. 보통은 이렇게 해결이 되지만 &lt;code&gt;unordered_map&lt;/code&gt; 에서는 조금 다른 문제가 엮여 있었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -183,7 +286,7 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/tensorflow-gpu-installation-on-ubuntu20.04/</guid>
       
-        <description>Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.</description>
+        <description>&lt;p&gt;Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.&lt;/p&gt;</description>
       
     </item>
     
@@ -194,7 +297,13 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/modern-control-systems-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%99-c1c11c2ee9e7445489ddedf783d7ce01/</guid>
       
-        <description>소개 서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다.</description>
+        <description>&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;서울과학기술대학교 전기정보공학과 &lt;strong&gt;박영칠 교수님&lt;/strong&gt;의 명강의 &lt;strong&gt;제어공학&lt;/strong&gt; 수업을 들으며 필기한 내용입니다.&lt;/li&gt;
+&lt;li&gt;원서는 &lt;strong&gt;Modern Control Systems - Richard C. Dorf&lt;/strong&gt;입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dowonloads&#34;&gt;Dowonloads&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.notion.so/kyungpyokim/Modern-Control-Systems-a2041d53d38c41f4aa2c9d785f71b20f#c1c11c2ee9e7445489ddedf783d7ce01&#34;&gt;제어공학1.pptx&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -205,7 +314,8 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/dash-plotly-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
       
-        <description>데이터 시각화 및 분석 라이브러리 Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다.</description>
+        <description>&lt;h2 id=&#34;데이터-시각화-및-분석-라이브러리&#34;&gt;데이터 시각화 및 분석 라이브러리&lt;/h2&gt;
+&lt;p&gt;Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -216,7 +326,14 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</guid>
       
-        <description>AI, Deep Learning 환경 준비하기 My PC Info Ubuntu18.04 NVIDIA GTX1650 CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다.</description>
+        <description>&lt;h2 id=&#34;ai-deep-learning-환경-준비하기&#34;&gt;AI, Deep Learning 환경 준비하기&lt;/h2&gt;
+&lt;h3 id=&#34;my-pc-info&#34;&gt;My PC Info&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu18.04&lt;/li&gt;
+&lt;li&gt;NVIDIA GTX1650&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다. 그리고 Tensorflow 도 마찬가지로 CUDA와의 호환성을 체크하여야 한다. 현재(2020-03-22) Tensorflow 는 CUDA10.0(not 10.2)까지만 호환 가능하다.
+{: .notice}&lt;/p&gt;</description>
       
     </item>
     
@@ -227,18 +344,22 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/ros2-bag-file-parsing/</guid>
       
-        <description>ROS2 Bag File Parsing 하기 ROS의 강력한 도구중 하나가 rosbag 패키지였다.</description>
+        <description>&lt;h2 id=&#34;ros2-bag-file-parsing-하기&#34;&gt;ROS2 Bag File Parsing 하기&lt;/h2&gt;
+&lt;p&gt;ROS의 강력한 도구중 하나가 rosbag 패키지였다. ROS1의 rosbag 패키지는 Logging 과 Replay 기능 뿐만 아니라 rqt 플러그인을 통해서 시스템 개발에 필요한 여러가지 디버깅 기능을 제공하였다. 하지만 아직 ROS2에서는 rosbag(rosbag2) 의 record(logging) play, 그리고 info 기능밖에 구현이 안되어 있다. 게다가 bag파일이 sqlite 등 다른 형태로 저장되어 ROS1의 rosbag 기능을 사용할 수 없는 상태이다.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Ubuntu 18.04 - Swap Caps lock and Ctrl</title>
-      <link>https://kyungpyo-kim.github.io/study/ubuntu-18.04-swap-caps-lock-and-ctrl/</link>
+      <link>https://kyungpyo-kim.github.io/study/ubuntu-18.04---swap-caps-lock-and-ctrl/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04-swap-caps-lock-and-ctrl/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04---swap-caps-lock-and-ctrl/</guid>
       
-        <description>Ubuntu 18.04, Swap Caps lock and Ctrl - No installation Open ~/.</description>
+        <description>&lt;h2 id=&#34;ubuntu-1804-swap-caps-lock-and-ctrl---no-installation&#34;&gt;Ubuntu 18.04, Swap Caps lock and Ctrl - No installation&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;strong&gt;~/.Xmodmap&lt;/strong&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -249,7 +370,9 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04-installation-dual-boot/</guid>
       
-        <description>Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는) 준비물:</description>
+        <description>&lt;h2 id=&#34;ubuntu-1804-설치하기-windows10-와-듀얼-부트로-사용하기--매번-설명하기-귀찮아-정리하는&#34;&gt;Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;준비물:&lt;/p&gt;</description>
       
     </item>
     
@@ -260,8 +383,16 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
       
-        <description>ROS2_Exercise ROS2 INSTALLATION https://index.ros.org/doc/ros2/Installation/#installationguide https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/
-Version: ROS 2 Eloquent Elusor</description>
+        <description>&lt;h2 id=&#34;ros2_exercisehttpsgithubcomkyungpyo-kimros2_exercise&#34;&gt;&lt;a href=&#34;https://github.com/Kyungpyo-Kim/ROS2_Exercise&#34;&gt;ROS2_Exercise&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;ros2-installation&#34;&gt;ROS2 INSTALLATION&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://index.ros.org/doc/ros2/Installation/#installationguide&#34;&gt;https://index.ros.org/doc/ros2/Installation/#installationguide&lt;/a&gt;
+&lt;a href=&#34;https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/&#34;&gt;https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Version: ROS 2 Eloquent Elusor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Takes ~10min&lt;/p&gt;</description>
       
     </item>
     
@@ -272,8 +403,30 @@ Version: ROS 2 Eloquent Elusor</description>
       
       <guid>https://kyungpyo-kim.github.io/study/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
       
-        <description>PyGUIDevTemplate GUI development template for python
-Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위한 custom class 활용 PyInstaller 를 이용한 파일 배포 Getting Started ## clonning repository git clone https://github.</description>
+        <description>&lt;h2 id=&#34;pyguidevtemplatehttpsgithubcomkyungpyo-kimpyguidevtemplate&#34;&gt;&lt;a href=&#34;https://github.com/Kyungpyo-Kim/PyGUIDevTemplate&#34;&gt;PyGUIDevTemplate&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;GUI development template for python&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;QT Designer 를 이용하여 UI 설계&lt;/li&gt;
+&lt;li&gt;Matplotlib, OpenCV 연동을 위한 custom class 활용&lt;/li&gt;
+&lt;li&gt;PyInstaller 를 이용한 파일 배포&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## clonning repository&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/Kyungpyo-Kim/PyGUIDevTemplate.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## change directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; PyGUIDevTemplate/PyQT &lt;span class=&#34;c1&#34;&gt;## for PyQT example&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# or&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; PyGUIDevTemplate/PySide &lt;span class=&#34;c1&#34;&gt;## for PySide example&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## run program&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python main.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;qt-를-이용한-gui-설계&#34;&gt;QT 를 이용한 GUI 설계&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Qt designer 활용
+UI 디자인을 GUI 환경에서 진행가능&lt;/p&gt;</description>
       
     </item>
     
@@ -284,7 +437,14 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/</guid>
       
-        <description>전기버스 알고리즘 SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스 문제링크 문제의 저작권은 SW Expert Academy에 있습니다.</description>
+        <description>&lt;h2 id=&#34;전기버스-알고리즘&#34;&gt;전기버스 알고리즘&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://swexpertacademy.com/main/learn/course/subjectList.do?courseId=AVuPDN86AAXw5UW6&#34;&gt;문제링크&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;문제의 저작권은 SW Expert Academy에 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;문제풀이-1-brute-force-search&#34;&gt;문제풀이 1 Brute-force search&lt;/h2&gt;
+&lt;p&gt;모든 경우의 수를 모두 확인하여 가장 좋은 값을 확인&lt;/p&gt;</description>
       
     </item>
     
@@ -295,7 +455,7 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
       
-        <description>아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.</description>
+        <description>&lt;p&gt;아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.&lt;/p&gt;</description>
       
     </item>
     
@@ -306,7 +466,7 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0/</guid>
       
-        <description>ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 diagnostic 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 드라이버가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다.</description>
+        <description>&lt;p&gt;ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 &lt;a href=&#34;http://wiki.ros.org/diagnostics&#34;&gt;diagnostic&lt;/a&gt; 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 &lt;strong&gt;드라이버&lt;/strong&gt;가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다.&lt;/p&gt;</description>
       
     </item>
     
@@ -317,7 +477,37 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</guid>
       
-        <description>List 형 자료구조 배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동 Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) print ( &amp;#34; delete:&amp;#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 43 The sales result = 56 The sales result = 98 delete: 43 The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 56 The sales result = 98 코드 설명: List 를 생성하고 삭제, 출력 예시</description>
+        <description>&lt;h4 id=&#34;list-형-자료구조&#34;&gt;List 형 자료구조&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정&lt;/li&gt;
+&lt;li&gt;리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;python-example&#34;&gt;Python example&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Python List&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sales_results&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;45&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;67&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;43&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;56&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;98&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sales_results&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;The sales result = &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%d&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34; delete:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sales_results&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;del&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sales_results&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sales_results&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;The sales result = &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%d&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;The sales result = 12
+The sales result = 45
+The sales result = 67
+The sales result = 43
+The sales result = 56
+The sales result = 98
+ delete: 43
+The sales result = 12
+The sales result = 45
+The sales result = 67
+The sales result = 56
+The sales result = 98
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;코드 설명: List 를 생성하고 삭제, 출력 예시&lt;/p&gt;</description>
       
     </item>
     
@@ -328,8 +518,15 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EC%A0%95%EC%9D%98-%EB%B0%8F-%EC%A2%85%EB%A5%98/</guid>
       
-        <description>자료구조와 알고리즘 공부 프로젝트
-목적 자료구조와 알고리즘 공부 Python, Java, C++ 을 이용한 구현 꾸준히 공부하기 자료구조의 정의 및 종류 자료구조를 물리적으로 구현하는 방법</description>
+        <description>&lt;p&gt;자료구조와 알고리즘 공부 프로젝트&lt;/p&gt;
+&lt;h4 id=&#34;목적&#34;&gt;목적&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;자료구조와 알고리즘 공부&lt;/li&gt;
+&lt;li&gt;Python, Java, C++ 을 이용한 구현&lt;/li&gt;
+&lt;li&gt;꾸준히 공부하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;자료구조의-정의-및-종류&#34;&gt;자료구조의 정의 및 종류&lt;/h4&gt;
+&lt;p&gt;자료구조를 물리적으로 구현하는 방법&lt;/p&gt;</description>
       
     </item>
     
@@ -340,7 +537,14 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/hash-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%9D%BC%EC%9D%B4%EC%84%BC%EC%8A%A4-%ED%82%A4-%EC%83%9D%EC%84%B1/</guid>
       
-        <description>Hash 를 이용한 라이센스 키 생성 Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트 MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고, 생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다.</description>
+        <description>&lt;h1 id=&#34;hash-를-이용한-라이센스-키-생성&#34;&gt;Hash 를 이용한 라이센스 키 생성&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트&lt;/li&gt;
+&lt;li&gt;MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고,&lt;/li&gt;
+&lt;li&gt;생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;digest-란&#34;&gt;Digest 란?&lt;/h4&gt;
+&lt;p&gt;암호화해시를 통해 얻은 메시지 (여기서는 라이센스 키로 사용)&lt;/p&gt;</description>
       
     </item>
     
@@ -351,7 +555,9 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/partial-differential-equation/</guid>
       
-        <description>편미분방정식. 말이 익숙해서 배웠는데 내가 공업수학에서 배우고 까먹은 건줄 알았는데 알고보니 수업에서는 배우지 않았다&amp;hellip; 대학원 면접때 공업수학 준비를 못해서 물어볼 줄 예상도 못했고&amp;hellip; 다시 공부해야겠다 싶어 책을 들었다!</description>
+        <description>&lt;p&gt;편미분방정식. 말이 익숙해서 배웠는데 내가 공업수학에서 배우고 까먹은 건줄 알았는데 알고보니 수업에서는 배우지 않았다&amp;hellip;
+대학원 면접때 공업수학 준비를 못해서 물어볼 줄 예상도 못했고&amp;hellip;
+다시 공부해야겠다 싶어 책을 들었다!&lt;/p&gt;</description>
       
     </item>
     

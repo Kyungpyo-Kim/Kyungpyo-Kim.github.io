@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Fri, 01 Nov 2024 20:15:21 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Nov 2024 20:15:21 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>architecture</title>
+      <title>Architecture</title>
       <link>https://kyungpyo-kim.github.io/tags/architecture/</link>
-      <pubDate>Fri, 01 Nov 2024 20:15:21 +0900</pubDate>
+      <pubDate>Sun, 17 Nov 2024 20:15:21 +0900</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/tags/architecture/</guid>
       
@@ -19,9 +19,9 @@
     </item>
     
     <item>
-      <title>engineering</title>
+      <title>Engineering</title>
       <link>https://kyungpyo-kim.github.io/tags/engineering/</link>
-      <pubDate>Fri, 01 Nov 2024 20:15:21 +0900</pubDate>
+      <pubDate>Sun, 17 Nov 2024 20:15:21 +0900</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/tags/engineering/</guid>
       
@@ -30,9 +30,9 @@
     </item>
     
     <item>
-      <title>software</title>
+      <title>Software</title>
       <link>https://kyungpyo-kim.github.io/tags/software/</link>
-      <pubDate>Fri, 01 Nov 2024 20:15:21 +0900</pubDate>
+      <pubDate>Sun, 17 Nov 2024 20:15:21 +0900</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/tags/software/</guid>
       
@@ -41,9 +41,9 @@
     </item>
     
     <item>
-      <title>study</title>
+      <title>Study</title>
       <link>https://kyungpyo-kim.github.io/tags/study/</link>
-      <pubDate>Fri, 01 Nov 2024 20:15:21 +0900</pubDate>
+      <pubDate>Sun, 17 Nov 2024 20:15:21 +0900</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/tags/study/</guid>
       
@@ -129,7 +129,7 @@
     </item>
     
     <item>
-      <title>python</title>
+      <title>Python</title>
       <link>https://kyungpyo-kim.github.io/tags/python/</link>
       <pubDate>Sun, 25 Dec 2022 19:15:50 +0900</pubDate>
       
@@ -151,7 +151,7 @@
     </item>
     
     <item>
-      <title>알고리즘 (algorithm)</title>
+      <title>알고리즘 (Algorithm)</title>
       <link>https://kyungpyo-kim.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorithm/</link>
       <pubDate>Sat, 24 Dec 2022 11:31:10 +0900</pubDate>
       
@@ -173,7 +173,7 @@
     </item>
     
     <item>
-      <title>blog</title>
+      <title>Blog</title>
       <link>https://kyungpyo-kim.github.io/tags/blog/</link>
       <pubDate>Mon, 01 Aug 2022 18:39:51 +0900</pubDate>
       
@@ -239,7 +239,7 @@
     </item>
     
     <item>
-      <title>kalman filter</title>
+      <title>Kalman Filter</title>
       <link>https://kyungpyo-kim.github.io/tags/kalman-filter/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
       
@@ -250,7 +250,7 @@
     </item>
     
     <item>
-      <title>optimal state estimation</title>
+      <title>Optimal State Estimation</title>
       <link>https://kyungpyo-kim.github.io/tags/optimal-state-estimation/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
       
@@ -272,7 +272,7 @@
     </item>
     
     <item>
-      <title>shared_timed_mutex</title>
+      <title>Shared_timed_mutex</title>
       <link>https://kyungpyo-kim.github.io/tags/shared_timed_mutex/</link>
       <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
       
@@ -283,7 +283,7 @@
     </item>
     
     <item>
-      <title>thread safety</title>
+      <title>Thread Safety</title>
       <link>https://kyungpyo-kim.github.io/tags/thread-safety/</link>
       <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
       
@@ -294,7 +294,7 @@
     </item>
     
     <item>
-      <title>unordered_map</title>
+      <title>Unordered_map</title>
       <link>https://kyungpyo-kim.github.io/tags/unordered_map/</link>
       <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
       
@@ -305,7 +305,7 @@
     </item>
     
     <item>
-      <title>tensorflow</title>
+      <title>Tensorflow</title>
       <link>https://kyungpyo-kim.github.io/tags/tensorflow/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       
@@ -316,7 +316,7 @@
     </item>
     
     <item>
-      <title>ubuntu</title>
+      <title>Ubuntu</title>
       <link>https://kyungpyo-kim.github.io/tags/ubuntu/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       
@@ -338,7 +338,7 @@
     </item>
     
     <item>
-      <title>big data</title>
+      <title>Big Data</title>
       <link>https://kyungpyo-kim.github.io/tags/big-data/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -382,7 +382,7 @@
     </item>
     
     <item>
-      <title>코딩테스트 (coding test)</title>
+      <title>코딩테스트 (Coding Test)</title>
       <link>https://kyungpyo-kim.github.io/tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-coding-test/</link>
       <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
       
@@ -426,7 +426,7 @@
     </item>
     
     <item>
-      <title>자료구조 (data structure)</title>
+      <title>자료구조 (Data Structure)</title>
       <link>https://kyungpyo-kim.github.io/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-data-structure/</link>
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
@@ -437,7 +437,7 @@
     </item>
     
     <item>
-      <title>hash</title>
+      <title>Hash</title>
       <link>https://kyungpyo-kim.github.io/tags/hash/</link>
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
@@ -448,7 +448,7 @@
     </item>
     
     <item>
-      <title>key</title>
+      <title>Key</title>
       <link>https://kyungpyo-kim.github.io/tags/key/</link>
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
@@ -459,7 +459,7 @@
     </item>
     
     <item>
-      <title>license</title>
+      <title>License</title>
       <link>https://kyungpyo-kim.github.io/tags/license/</link>
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       

@@ -6,15 +6,84 @@
     <description>Recent content on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Fri, 01 Nov 2024 20:15:21 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Nov 2024 20:15:21 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Clean_Architecture_0</title>
+      <title>Clean Architecture 1</title>
+      <link>https://kyungpyo-kim.github.io/study/clean_architecture_1/</link>
+      <pubDate>Sun, 17 Nov 2024 20:15:21 +0900</pubDate>
+      
+      <guid>https://kyungpyo-kim.github.io/study/clean_architecture_1/</guid>
+      
+        <description>&lt;h2 id=&#34;5-아키텍쳐&#34;&gt;5. 아키텍쳐&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아키텍쳐란?
+&lt;ul&gt;
+&lt;li&gt;책에서 정의하는 바로는 아키텍쳐는 잘 동작하는 시스템을 만들기 보다는 잘 운영할 수 있는 시스템을 만들기 위한다고 설명한다. 다시 말하면 좋은 아키텍쳐의 목표는 잘 동작하는 것 보다는 생산성을 최대화 하고 운영 비용을 최소화 하는데 있다.&lt;/li&gt;
+&lt;li&gt;개발: 아키텍쳐가 개발을 효율적으로 할 수 있게 뒷받침 되어야 한다.&lt;/li&gt;
+&lt;li&gt;배포: 배포를 쉽게 할 수 있게 아키텍쳐를 설계해야 한다.&lt;/li&gt;
+&lt;li&gt;운영: 운영에는 아키텍쳐가 큰 영향을 주지 않는다. 오히려 운영의 문제는 하드웨어의 추가로 비교적 저렴하게 해결할 수 있다.&lt;/li&gt;
+&lt;li&gt;유지보수: 유지보수 비용이 줄어들도록 컴포넌트를 분리하고 안정된 인터페이스를 두어 아키텍쳐를 설계해야 한다.&lt;/li&gt;
+&lt;li&gt;선택사항 열어두기: 중요치 않은 세부사항은 언제든지 변경될 수 있게 열려 있는 아키텍쳐를 구성해야 한다. 고수준의 정책은 이런 디테일을 알지 못해야 한다. (데이터베이스 시스템의 선택, 웹서버의 종류 선택 등)&lt;/li&gt;
+&lt;li&gt;장치 독립성&lt;/li&gt;
+&lt;li&gt;물리적 주소 할당: 절대 주소로 데이터를 접근하는 방법은 확장성이나 데이터를 옮겨야 할 때 큰 문제가 생긴다. 상대적으로 주소를 할당해서 사용하면 이런 문제를 크게 줄일 수 있다. 즉 애플리케이션의 선택사항 중 디스크 드라이브의 용량이나 구조에 대한 내용을 분리할 수 있게 한다.&lt;/li&gt;
+&lt;li&gt;좋은 아키텍쳐는 세부사항에 대한 결정을 최대한 뒤로 미룰 수 있게 한다. 이는 결과적으로 더 많은 실험과 테스트, 선택지의 비교를 통해 더 좋은 결정을 내릴 수 있게 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;독립성
+&lt;ul&gt;
+&lt;li&gt;좋은 아키텍쳐: 시스템의 유스케이스, 운영, 개발, 배포를 지원&lt;/li&gt;
+&lt;li&gt;유스케이스: 아키텍쳐는 시스템의 의도를 잘 보여주어야 한다.&lt;/li&gt;
+&lt;li&gt;운영: 운영과 관련된 threading, multi-processing 등에 열려있는 구조를 가지고 있어야 한다.&lt;/li&gt;
+&lt;li&gt;개발: 각 팀, 개발자들이 독립적으로 개발하기 쉬운 구조를 지원해야 한다.&lt;/li&gt;
+&lt;li&gt;배포: immediate deployment 를 지원할 수 있어야 한다.&lt;/li&gt;
+&lt;li&gt;계층 결합 분리: 유즈케이스에 연관되어 있는 부분들을 수평적인 계층으로 분리 (UI, 어플리케이션 특화 업무, 어플리케이션 독립 업무, 데이터베이스 등)&lt;/li&gt;
+&lt;li&gt;유스케이스 결합 분리는 계층결합 분리와 함께 소프트웨어 아키텍쳐가 미래의 요구사항에 열려 있을 수 있게 하고 아래의 표처럼 독립된 개발 단위를 지원해 줄 수 있다.&lt;/li&gt;
+&lt;li&gt;중복: 진짜 중복은 제거해야 하지만, 다른 계층으로 이뤄진 코드는 다른 속도와 모습으로 발전해 나가며 결국은 중복이 아니게 되는 경우가 있다. 중복을 제거하려고 할 때 이점을 숙지해야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;주문 추가 유스케이스&lt;/th&gt;
+          &lt;th&gt;주문 삭제 유스케이스&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;UI 계층&lt;/td&gt;
+          &lt;td&gt;주문 추가용 UI&lt;/td&gt;
+          &lt;td&gt;주문 삭제용 UI&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;업무 로직 계층&lt;/td&gt;
+          &lt;td&gt;주문 추가용 업무 로직&lt;/td&gt;
+          &lt;td&gt;주문 삭제용 업무 로직&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;데이터베이스 계층&lt;/td&gt;
+          &lt;td&gt;주문 추가용 데이터베이스&lt;/td&gt;
+          &lt;td&gt;주문 삭제용 데이터베이스&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;콘웨이 법칙: 시스템을 설계하는 조직이라면 어디든지 그 조직의 의사소통 구조와 동일한 구조의 설계를 만들어 낼 것이다.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Clean Architecture 0</title>
       <link>https://kyungpyo-kim.github.io/study/clean_architecture_0/</link>
       <pubDate>Fri, 01 Nov 2024 20:15:21 +0900</pubDate>
       
       <guid>https://kyungpyo-kim.github.io/study/clean_architecture_0/</guid>
       
-        <description>Motivation 업무를 하다 보면 프로그램을 처음부터 만들어야 하는 경우가 종종 생긴다.</description>
+        <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;업무를 하다 보면 프로그램을 처음부터 만들어야 하는 경우가 종종 생긴다. 그때마다 나름의 경험들을 바탕으로 구조를 어찌 저찌 잡아간다. 그리고 그때마다 조금씩 아쉬울 때가 많았다. 이게 진짜 좋은 구조인가, 꼭 필요한 구조인가, 굳이 필요한가 고민을 하게된다. 그리고 어떤 명확한 기준을 세우기가 힘들었다. 이 책에서 이런 고민에 대한 해답을 조금 얻을 수 있기를 기대하며 읽어본다.&lt;/p&gt;</description>
       
     </item>
     
@@ -25,7 +94,11 @@
       
       <guid>https://kyungpyo-kim.github.io/study/flash_attention/</guid>
       
-        <description>Overview 저는 현재 LLM 을 포함한 AI 모델, 그리고 이를 효율적으로 처리하기 위한 NPU/GPU 관련된 업무들을 다양하게 진행해 오고 있습니다.</description>
+        <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;저는 현재 LLM 을 포함한 AI 모델, 그리고 이를 효율적으로 처리하기 위한 NPU/GPU 관련된 업무들을 다양하게 진행해 오고 있습니다.
+이 글에서 리뷰하는 논문은 LLM 연산의 효율성을 크게 향상 시킨 FlashAttention 을 소개하는 논문입니다.
+많은 뉴스에서 다뤄지고 있는 것처럼 현재 LLM 의 사용화를 위해 많은 업체들이 노력하고 있고, 그 중 가장 중요한 부분이 연산의 효율성 인 것 같습니다.
+충분한 성능은 나오고 있고, 사용할 곳도 점점 많아지고 있으니 사용할때 드는 비용만 좀 더 낮아진다면 그만큼 더 큰 부가가치를 창출해 낼 수 있을 것이라 보는 것이죠.&lt;/p&gt;</description>
       
     </item>
     
@@ -36,7 +109,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/bitnetb1.58/</guid>
       
-        <description>최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다.</description>
+        <description>&lt;p&gt;최근 LinkedIn 에서 많이 언급되는 논문이 발표되어 간단하게 살펴본다. 제목이 자극적이긴 하다. “The Era of 1-bit LLMs”&lt;/p&gt;</description>
       
     </item>
     
@@ -47,7 +120,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/dsvt/</guid>
       
-        <description>DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다.</description>
+        <description>&lt;p&gt;DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다. 이런 부분이 향후에 많은 어플리케이션에서 사용될 수 있는 여지가 많다고 생각하여 정리해 보았습니다.&lt;/p&gt;</description>
       
     </item>
     
@@ -58,7 +131,8 @@
       
       <guid>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part2/</guid>
       
-        <description>5. Hardware for DNN Processing 딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다.</description>
+        <description>&lt;h2 id=&#34;5-hardware-for-dnn-processing&#34;&gt;5. Hardware for DNN Processing&lt;/h2&gt;
+&lt;p&gt;딥러닝의 인기 상승으로 인해, 많은 최근 하드웨어 플랫폼은 딥러닝 처리를 위한 특별한 기능을 제공하고 있다. 예를 들어, Intel Knights Landing CPU는 딥러닝을 위한 특수 벡터 명령어를 제공하고, Nvidia PASCAL GP100 GPU는 빠른 딥러닝 계산을 위해 단일 정밀도 코어에서 2개의 FP16 연산을 수행할 수 있는 16비트 부동 소수점 산술 지원을 제공한다. 또한, Nvidia DGX-1 및 Facebook의 Big Basin과 같은 DNN 처리를 위해 특별히 구축된 시스템도 있다. DNN 추론은 Nvidia Tegra 및 Samsung Exynos와 같은 다양한 임베디드 SoC 및 FPGA에서도 구현되었다. 이에 따라 이러한 플랫폼에서 처리가 어떻게 이루어지는지, 응용 프로그램별 가속기를 디자인하여 처리량과 에너지 효율성을 더욱 개선할 수 있는 방법에 대한 이해가 중요하다.&lt;/p&gt;</description>
       
     </item>
     
@@ -69,7 +143,9 @@
       
       <guid>https://kyungpyo-kim.github.io/study/efficient_processing_of_dnn_part1/</guid>
       
-        <description>1. Introduction 최근 이직을 하였고 새로 진행하고 있는 업무는 기존의 AI 알고리즘들을 NPU라는 저전력 하드웨어에 올려서 돌리는 것이다.</description>
+        <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
+&lt;p&gt;최근 이직을 하였고 새로 진행하고 있는 업무는 기존의 AI 알고리즘들을 NPU라는 저전력 하드웨어에 올려서 돌리는 것이다. 이에 따라 NPU에 대한 이해가 필요하게 되었고, 이에 대한 내용을 정리하고자 한다. 이 논문은 NPU에 대한 전반적인 내용을 다루고 있다. 이 논문을 통해 DNN을 지원하는 다양한 하드웨어 플랫폼 및 아키텍처에 대해 이해할 수 있고, DNN의 계산 비용을 줄이기 위한 주요 테크닉들을 다루고 있다. 또한, 다양한 DNN 하드웨어를 평가하는 방법을 통해 해당 하드웨어의 효율성, 유용성을 평가하는 방법 또한 다루고 있다.
+가급적 논문의 구성과 내용을 그대로 따라가면서 정리하였다. NPU 관련 내용을 중심으로 정리하고자 하였고 주변 배경 지식들은 거칠게 다루거나 생략하면서 정리하였다.&lt;/p&gt;</description>
       
     </item>
     
@@ -80,7 +156,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/centerformer/</guid>
       
-        <description>최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다.</description>
+        <description>&lt;p&gt;최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다. Waymo 벤치마크에서 우수항 성능을 보여주며 3D Object Detection 분야에서 새로운 SOTA 모델이 되었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -91,9 +167,17 @@
       
       <guid>https://kyungpyo-kim.github.io/study/ensemble_object_detection_using_detectron2/</guid>
       
-        <description>Ensemble Object Detection using Detectron2
-Getting Started code
-github Environments</description>
+        <description>&lt;p&gt;Ensemble Object Detection using Detectron2&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;ol start=&#34;0&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;code&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Kyungpyo-Kim/Ensemble-Object-Detection-using-Detectron2&#34;&gt;github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Environments&lt;/p&gt;</description>
       
     </item>
     
@@ -115,8 +199,13 @@ github Environments</description>
       
       <guid>https://kyungpyo-kim.github.io/study/fast_mm/</guid>
       
-        <description>Fast Matrix Muliplication
-Explanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도가 소요되며, 이를 개선하기 위한 여러가지 알고리즘들이 제안되어 왔으나, 가장 빠른 알고리즘 역시 O(N^2) 보다 느리다.</description>
+        <description>&lt;p&gt;Fast Matrix Muliplication&lt;/p&gt;
+&lt;h2 id=&#34;explanation&#34;&gt;Explanation&lt;/h2&gt;
+&lt;p&gt;Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도가 소요되며, 이를 개선하기 위한 여러가지 알고리즘들이 제안되어 왔으나,
+가장 빠른 알고리즘 역시 O(N^2) 보다 느리다. (여기서 N은 matrix 의 dimmension)
+그리고 이러한 이론적으로 빠른 알고리즘을 직접 구현해 보면 생각보다 속도가 크게 개선되지 않는다.
+왜 그럴까? 이론과 현실사이의 차이는 프로그램의 메모리 사용에 의해 발생한다.
+좀 더 구체적으로 메모리의 복사/할당/접근에 소요되는 시간이 프로그램의 수행시간에 많은 영향을 미친다.&lt;/p&gt;</description>
       
     </item>
     
@@ -127,7 +216,15 @@ Explanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%9D%BD%EC%9D%80-%EC%B1%85%EB%93%A4-%EC%A0%95%EB%A6%AC-2022.01-~-2022.09/</guid>
       
-        <description>물고기는 존재하지 않는다 - 룰루 밀러 거꾸로 읽는 세계사 - 유시민 이어령의 마지막 수업 - 김지수, 이어령 출판사: 열림원 읽은 날짜: 2022-05-30 나에게 가까운 사람의 죽음이 찾아왔을 때 읽었던 책이다.</description>
+        <description>&lt;h2 id=&#34;물고기는-존재하지-않는다---룰루-밀러&#34;&gt;물고기는 존재하지 않는다 - 룰루 밀러&lt;/h2&gt;
+&lt;h2 id=&#34;거꾸로-읽는-세계사---유시민&#34;&gt;거꾸로 읽는 세계사 - 유시민&lt;/h2&gt;
+&lt;h2 id=&#34;이어령의-마지막-수업---김지수-이어령&#34;&gt;이어령의 마지막 수업 - 김지수, 이어령&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;출판사: 열림원&lt;/li&gt;
+&lt;li&gt;읽은 날짜: 2022-05-30&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;나에게 가까운 사람의 죽음이 찾아왔을 때 읽었던 책이다. 사실 너무나 큰 아픔이어서 이를 지적으로 달래 보려고 찾아본 책이었던 것 같다.
+그리고 다행히 이 책이 당시 힘들었던 마음에 많은 위로가 되었었다. 사랑하는 사람의 죽음을 어떻게 바라보면 좋을지 고민하는데 많은 도움을 주었다. 한 시대의 지성을 대표하는 인물이었던 이어령 선생님께서, 풍만한 지식을 지니고도 죽음 앞에서 한없이 작아지는 모습을 스스로 담담하게 그리고, 모습을 또 관조하며 배움을 전하려는 선생님의 태도 속에서, 나의 삶의 자세, 죽음에 대한 생각을 깊이 해보게 했던 것 같다. 삶의 끝에서 바라보는 지성인의 통찰과 생각, 그리고 위트가 인상적이었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -138,8 +235,15 @@ Explanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도�
       
       <guid>https://kyungpyo-kim.github.io/study/tech_blog/</guid>
       
-        <description>사용하고 싶고, 관리하고 싶은 기술 블로그 만들기
-Github pages Hugo Customization Utterances 1.</description>
+        <description>&lt;p&gt;사용하고 싶고, 관리하고 싶은 기술 블로그 만들기&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Github pages&lt;/li&gt;
+&lt;li&gt;Hugo&lt;/li&gt;
+&lt;li&gt;Customization&lt;/li&gt;
+&lt;li&gt;Utterances&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1-intro&#34;&gt;1. Intro.&lt;/h2&gt;
+&lt;p&gt;기존에 블로그를 만들어 공부한 내용이나 독서 기록 용도로 블로그를 운영하고 있었는데, 요즘 기록하는 빈도도 떨어지고 관심도도 떨어져 가는 것 같았다. 이를 극복하고자 블로그에 작은 변화도 주고, Github action 등의 설정을 하면서 과정을 좀 정리해 보려고 한다.&lt;/p&gt;</description>
       
     </item>
     
@@ -183,7 +287,7 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/life/powerful/</guid>
       
-        <description>넷플릭스가 어떤 회사가 되었으면 하는지, 빠르고 효율적으로 성장하기 위해 어떻게 인재관리를 했는지에 대한 저자의 경험을 원칙과 사례로 흥미롭게 서술하였다.</description>
+        <description>&lt;p&gt;넷플릭스가 어떤 회사가 되었으면 하는지, 빠르고 효율적으로 성장하기 위해 어떻게 인재관리를 했는지에 대한 저자의 경험을 원칙과 사례로 흥미롭게 서술하였다. 지금 당장 필요한 인재와 그렇지 않은 인재를 구분하고 필요하지 않은 인재는 과감하게 내보낸다는 원칙이 인상적이었다. 그리고 중소기업/스타트업 에서의 개인적인 경험이 이 책의 내용과 많은 부분 공감대를 형성하였던 것 같다.&lt;/p&gt;</description>
       
     </item>
     
@@ -205,7 +309,7 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/life/tesla_shock/</guid>
       
-        <description>&amp;lsquo;바퀴 달린 아이폰&amp;rsquo; 이라는 테슬라의 여러가지 측면을 분석하여 정리한 책이다. 자동차 업계에 오랜 경험이 있는 저자가 업계의 다양한 정보를 바탕으로 테슬라를 분석했다는 점이 돋보이는 책이었다.</description>
+        <description>&lt;p&gt;&amp;lsquo;바퀴 달린 아이폰&amp;rsquo; 이라는 테슬라의 여러가지 측면을 분석하여 정리한 책이다. 자동차 업계에 오랜 경험이 있는 저자가 업계의 다양한 정보를 바탕으로 테슬라를 분석했다는 점이 돋보이는 책이었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -238,7 +342,7 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/life/%EA%B3%B5%EC%A0%95%ED%95%98%EB%8B%A4%EB%8A%94%EC%B0%A9%EA%B0%81/</guid>
       
-        <description>&amp;lsquo;정의란 무엇인가&amp;rsquo;의 저자 마이클 센델의 가장 최근 저서이다. 최근 미국 사회의 능력주의로 인한 문제점과 이에 관해 생각해 보아야 할 점들을 정리하였다.</description>
+        <description>&lt;p&gt;&amp;lsquo;정의란 무엇인가&amp;rsquo;의 저자 마이클 센델의 가장 최근 저서이다. 최근 미국 사회의 능력주의로 인한 문제점과 이에 관해 생각해 보아야 할 점들을 정리하였다. 왜 능력주의는 우리 사회에서 이토록 인정을 받는지에 대해 설명하고, 이러한 능력주의의 문제점을 하나하나 살펴보고 있다.&lt;/p&gt;</description>
       
     </item>
     
@@ -249,7 +353,14 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/thread-safety-of-unordered_map/</guid>
       
-        <description>Prerequisite Thread Mutex Thread safety Problem unordered_map 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다.</description>
+        <description>&lt;h2 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Thread&lt;/li&gt;
+&lt;li&gt;Mutex&lt;/li&gt;
+&lt;li&gt;Thread safety&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;unordered_map&lt;/code&gt; 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다. 기본적으로 STL Container 는 하나의 스레드에 의한 쓰기 접근을 허용하고 다중 스레드에 의한 읽기 접근을 허용하기 때문에 &lt;code&gt;unordered_map&lt;/code&gt;의 데이터를 업데이트 하는 부분에 &lt;code&gt;mutex&lt;/code&gt;를 적용하여 문제를 해결하려 시도 했다. 보통은 이렇게 해결이 되지만 &lt;code&gt;unordered_map&lt;/code&gt; 에서는 조금 다른 문제가 엮여 있었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -260,8 +371,13 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/life/the_millionaire_fastlane/</guid>
       
-        <description>부의 추월차선 M. J. 더마코 토트 출판사 부의추월차선
-오랜만에 읽는 자기계발서로 예전에 읽어왔던 자기계발서와는 다르게 좀 더 구체적으로 사업을 하라는 메세지를 역설하는 부분이 흥미로웠다.</description>
+        <description>&lt;h2 id=&#34;부의-추월차선&#34;&gt;부의 추월차선&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;M. J. 더마코&lt;/li&gt;
+&lt;li&gt;토트 출판사&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;부의추월차선&lt;/p&gt;
+&lt;p&gt;오랜만에 읽는 자기계발서로 예전에 읽어왔던 자기계발서와는 다르게 좀 더 구체적으로 사업을 하라는 메세지를 역설하는 부분이 흥미로웠다. 모든 것이 그러하듯 자기계발서도 시대와 시류에 따라 변화되나 보다. 스스로의 성장, 성찰 등을 강조하는 책과는 다른 결이 느껴졌다.&lt;/p&gt;</description>
       
     </item>
     
@@ -272,7 +388,7 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/tensorflow-gpu-installation-on-ubuntu20.04/</guid>
       
-        <description>Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.</description>
+        <description>&lt;p&gt;Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.&lt;/p&gt;</description>
       
     </item>
     
@@ -283,7 +399,7 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%B2%A0%ED%95%99%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%82%B6%EC%9D%98-%EB%AC%B4%EA%B8%B0%EA%B0%80-%EB%90%98%EB%8A%94%EA%B0%80/</guid>
       
-        <description>왜 철학, 인문학을 공부해야하는가에 대한 대답을 줄 수 있는 책이었다.</description>
+        <description>&lt;p&gt;왜 철학, 인문학을 공부해야하는가에 대한 대답을 줄 수 있는 책이었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -294,7 +410,10 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%A7%80%EC%A0%81%EB%8C%80%ED%99%94%EB%A5%BC-%EC%9C%84%ED%95%9C-%EB%84%93%EA%B3%A0-%EC%96%95%EC%9D%80-%EC%A7%80%EC%8B%9D-0/</guid>
       
-        <description>지적 대화를 위한 넓고 얕은 지식 0 (제로) 파잔 (Phajaan) 파잔(phajaan)은 코끼리의 영혼을 파괴하는 의식이다.</description>
+        <description>&lt;h2 id=&#34;지적-대화를-위한-넓고-얕은-지식-0-제로&#34;&gt;지적 대화를 위한 넓고 얕은 지식 0 (제로)&lt;/h2&gt;
+&lt;h3 id=&#34;파잔-phajaan&#34;&gt;파잔 (Phajaan)&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;파잔(phajaan)은 코끼리의 영혼을 파괴하는 의식이다. 야생의 아기 코끼리를 묶어 저항이 사라질떄까지 굶기고 구타하는 의식이다. 절반의 코끼리는 죽고, 살아남은 코끼리는 관광객을 태우며 돈을 버는 수단이 된다. 이 과정에서 코끼리의 영혼은 파괴되어 버린다.&lt;/p&gt;</description>
       
     </item>
     
@@ -305,7 +424,13 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/modern-control-systems-%EC%A0%9C%EC%96%B4%EA%B3%B5%ED%95%99-c1c11c2ee9e7445489ddedf783d7ce01/</guid>
       
-        <description>소개 서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다.</description>
+        <description>&lt;h2 id=&#34;소개&#34;&gt;소개&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;서울과학기술대학교 전기정보공학과 &lt;strong&gt;박영칠 교수님&lt;/strong&gt;의 명강의 &lt;strong&gt;제어공학&lt;/strong&gt; 수업을 들으며 필기한 내용입니다.&lt;/li&gt;
+&lt;li&gt;원서는 &lt;strong&gt;Modern Control Systems - Richard C. Dorf&lt;/strong&gt;입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dowonloads&#34;&gt;Dowonloads&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.notion.so/kyungpyokim/Modern-Control-Systems-a2041d53d38c41f4aa2c9d785f71b20f#c1c11c2ee9e7445489ddedf783d7ce01&#34;&gt;제어공학1.pptx&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -316,7 +441,8 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/dash-plotly-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
       
-        <description>데이터 시각화 및 분석 라이브러리 Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다.</description>
+        <description>&lt;h2 id=&#34;데이터-시각화-및-분석-라이브러리&#34;&gt;데이터 시각화 및 분석 라이브러리&lt;/h2&gt;
+&lt;p&gt;Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -327,7 +453,8 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%82%BC%EA%B5%AD%EC%A7%80/</guid>
       
-        <description>어플로 책을 읽었다. 요키카와 에이지의 삼국지를 읽었다. 총 10권으로 구성되어 있었다.</description>
+        <description>&lt;h4 id=&#34;어플로-책을-읽었다&#34;&gt;어플로 책을 읽었다.&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;요키카와 에이지&lt;/strong&gt;의 &lt;strong&gt;삼국지&lt;/strong&gt;를 읽었다. 총 10권으로 구성되어 있었다. 여러 유명한 작가들의 삼국지가 있는 것은 알고 있었지만, 리디북스에 있는 삼국지가 이것 뿐이었다. 어느순간 책을 사서 읽는 것보다 어플리케이션을 이용해 책을 읽는게 익숙해 진 것 같다. 마지막으로 종이책을 사서 읽은게 1년은 더 넘은 것 같다. 어플을 사용하면 출퇴근길에 읽기도 편하고, 종이책은 혼자 작은 집에서 사는 나에게는 짐덩어리이다&amp;hellip; 시대가 이렇게 변해가는 것 같다.&lt;/p&gt;</description>
       
     </item>
     
@@ -338,7 +465,14 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</guid>
       
-        <description>AI, Deep Learning 환경 준비하기 My PC Info Ubuntu18.04 NVIDIA GTX1650 CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다.</description>
+        <description>&lt;h2 id=&#34;ai-deep-learning-환경-준비하기&#34;&gt;AI, Deep Learning 환경 준비하기&lt;/h2&gt;
+&lt;h3 id=&#34;my-pc-info&#34;&gt;My PC Info&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu18.04&lt;/li&gt;
+&lt;li&gt;NVIDIA GTX1650&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다. 그리고 Tensorflow 도 마찬가지로 CUDA와의 호환성을 체크하여야 한다. 현재(2020-03-22) Tensorflow 는 CUDA10.0(not 10.2)까지만 호환 가능하다.
+{: .notice}&lt;/p&gt;</description>
       
     </item>
     
@@ -349,18 +483,22 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/ros2-bag-file-parsing/</guid>
       
-        <description>ROS2 Bag File Parsing 하기 ROS의 강력한 도구중 하나가 rosbag 패키지였다.</description>
+        <description>&lt;h2 id=&#34;ros2-bag-file-parsing-하기&#34;&gt;ROS2 Bag File Parsing 하기&lt;/h2&gt;
+&lt;p&gt;ROS의 강력한 도구중 하나가 rosbag 패키지였다. ROS1의 rosbag 패키지는 Logging 과 Replay 기능 뿐만 아니라 rqt 플러그인을 통해서 시스템 개발에 필요한 여러가지 디버깅 기능을 제공하였다. 하지만 아직 ROS2에서는 rosbag(rosbag2) 의 record(logging) play, 그리고 info 기능밖에 구현이 안되어 있다. 게다가 bag파일이 sqlite 등 다른 형태로 저장되어 ROS1의 rosbag 기능을 사용할 수 없는 상태이다.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Ubuntu 18.04 - Swap Caps lock and Ctrl</title>
-      <link>https://kyungpyo-kim.github.io/study/ubuntu-18.04-swap-caps-lock-and-ctrl/</link>
+      <link>https://kyungpyo-kim.github.io/study/ubuntu-18.04---swap-caps-lock-and-ctrl/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04-swap-caps-lock-and-ctrl/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04---swap-caps-lock-and-ctrl/</guid>
       
-        <description>Ubuntu 18.04, Swap Caps lock and Ctrl - No installation Open ~/.</description>
+        <description>&lt;h2 id=&#34;ubuntu-1804-swap-caps-lock-and-ctrl---no-installation&#34;&gt;Ubuntu 18.04, Swap Caps lock and Ctrl - No installation&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;strong&gt;~/.Xmodmap&lt;/strong&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -371,7 +509,9 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04-installation-dual-boot/</guid>
       
-        <description>Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는) 준비물:</description>
+        <description>&lt;h2 id=&#34;ubuntu-1804-설치하기-windows10-와-듀얼-부트로-사용하기--매번-설명하기-귀찮아-정리하는&#34;&gt;Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;준비물:&lt;/p&gt;</description>
       
     </item>
     
@@ -382,8 +522,16 @@ Github pages Hugo Customization Utterances 1.</description>
       
       <guid>https://kyungpyo-kim.github.io/study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
       
-        <description>ROS2_Exercise ROS2 INSTALLATION https://index.ros.org/doc/ros2/Installation/#installationguide https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/
-Version: ROS 2 Eloquent Elusor</description>
+        <description>&lt;h2 id=&#34;ros2_exercisehttpsgithubcomkyungpyo-kimros2_exercise&#34;&gt;&lt;a href=&#34;https://github.com/Kyungpyo-Kim/ROS2_Exercise&#34;&gt;ROS2_Exercise&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;ros2-installation&#34;&gt;ROS2 INSTALLATION&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://index.ros.org/doc/ros2/Installation/#installationguide&#34;&gt;https://index.ros.org/doc/ros2/Installation/#installationguide&lt;/a&gt;
+&lt;a href=&#34;https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/&#34;&gt;https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Version: ROS 2 Eloquent Elusor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Takes ~10min&lt;/p&gt;</description>
       
     </item>
     
@@ -394,8 +542,30 @@ Version: ROS 2 Eloquent Elusor</description>
       
       <guid>https://kyungpyo-kim.github.io/study/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
       
-        <description>PyGUIDevTemplate GUI development template for python
-Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위한 custom class 활용 PyInstaller 를 이용한 파일 배포 Getting Started ## clonning repository git clone https://github.</description>
+        <description>&lt;h2 id=&#34;pyguidevtemplatehttpsgithubcomkyungpyo-kimpyguidevtemplate&#34;&gt;&lt;a href=&#34;https://github.com/Kyungpyo-Kim/PyGUIDevTemplate&#34;&gt;PyGUIDevTemplate&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;GUI development template for python&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;QT Designer 를 이용하여 UI 설계&lt;/li&gt;
+&lt;li&gt;Matplotlib, OpenCV 연동을 위한 custom class 활용&lt;/li&gt;
+&lt;li&gt;PyInstaller 를 이용한 파일 배포&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## clonning repository&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/Kyungpyo-Kim/PyGUIDevTemplate.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## change directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; PyGUIDevTemplate/PyQT &lt;span class=&#34;c1&#34;&gt;## for PyQT example&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# or&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; PyGUIDevTemplate/PySide &lt;span class=&#34;c1&#34;&gt;## for PySide example&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## run program&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python main.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;qt-를-이용한-gui-설계&#34;&gt;QT 를 이용한 GUI 설계&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Qt designer 활용
+UI 디자인을 GUI 환경에서 진행가능&lt;/p&gt;</description>
       
     </item>
     
@@ -406,7 +576,14 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/</guid>
       
-        <description>전기버스 알고리즘 SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스 문제링크 문제의 저작권은 SW Expert Academy에 있습니다.</description>
+        <description>&lt;h2 id=&#34;전기버스-알고리즘&#34;&gt;전기버스 알고리즘&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://swexpertacademy.com/main/learn/course/subjectList.do?courseId=AVuPDN86AAXw5UW6&#34;&gt;문제링크&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;문제의 저작권은 SW Expert Academy에 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;문제풀이-1-brute-force-search&#34;&gt;문제풀이 1 Brute-force search&lt;/h2&gt;
+&lt;p&gt;모든 경우의 수를 모두 확인하여 가장 좋은 값을 확인&lt;/p&gt;</description>
       
     </item>
     
@@ -417,7 +594,7 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
       
-        <description>아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.</description>
+        <description>&lt;p&gt;아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.&lt;/p&gt;</description>
       
     </item>
     
@@ -428,7 +605,7 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0/</guid>
       
-        <description>ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 diagnostic 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 드라이버가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다.</description>
+        <description>&lt;p&gt;ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 &lt;a href=&#34;http://wiki.ros.org/diagnostics&#34;&gt;diagnostic&lt;/a&gt; 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 &lt;strong&gt;드라이버&lt;/strong&gt;가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다.&lt;/p&gt;</description>
       
     </item>
     
@@ -439,7 +616,10 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%95%BC%EA%B0%84-%EB%9F%AC%EB%8B%9D/</guid>
       
-        <description> 달과 야경 </description>
+        <description>&lt;figure&gt;
+	&lt;img src=&#39;{{ &#34;/assets/images/gallery/KakaoTalk_20190618_085439458.jpg&#34; | relative_url }}&#39; alt=&#39;absolute&#39;&gt;
+	&lt;figcaption&gt;달과 야경&lt;/figcaption&gt;
+&lt;/figure&gt;</description>
       
     </item>
     
@@ -450,7 +630,21 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%ED%95%9C%EA%B0%95-%EB%9D%BC%EC%9D%B4%EB%94%A9/</guid>
       
-        <description>잠실타워가 보이는 한강 한강대교 마포대교 건너면서 소낙비가 내리고 난 뒤, 하늘이 유난히 맑고 구름은 유난히 희고 몽글몽글 했던날.</description>
+        <description>&lt;figure&gt;
+	&lt;img src=&#39;{{ &#34;/assets/images/gallery/KakaoTalk_20190616_225248912.jpg&#34; | relative_url }}&#39; width=&#34;1600&#34; height=&#34;1200&#34; alt=&#39;absolute&#39;&gt;
+	&lt;figcaption&gt;잠실타워가 보이는 한강&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;img src=&#39;{{ &#34;/assets/images/gallery/KakaoTalk_20190616_225304231.jpg&#34; | relative_url }}&#39; width=&#34;1600&#34; height=&#34;1200&#34; alt=&#39;absolute&#39;&gt;
+	&lt;figcaption&gt;한강대교&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+	&lt;img src=&#39;{{ &#34;/assets/images/gallery/KakaoTalk_20190616_225313944.jpg&#34; | relative_url }}&#39; width=&#34;1600&#34; height=&#34;1200&#34; alt=&#39;absolute&#39;&gt;
+	&lt;figcaption&gt;마포대교 건너면서&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;소낙비가 내리고 난 뒤,
+하늘이 유난히 맑고 구름은 유난히 희고 몽글몽글 했던날.
+자전거 타고 한강 한바퀴 돌았다.&lt;/p&gt;</description>
       
     </item>
     
@@ -461,7 +655,37 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EA%B5%AC%ED%98%84/</guid>
       
-        <description>List 형 자료구조 배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정 리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동 Python example # Python List sales_results = [12, 45, 67, 43, 56, 98] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) print ( &amp;#34; delete:&amp;#34;, sales_results[3]) del sales_results[3] for s in sales_results: print ( &amp;#34;The sales result = %d&amp;#34; % ( s ) ) The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 43 The sales result = 56 The sales result = 98 delete: 43 The sales result = 12 The sales result = 45 The sales result = 67 The sales result = 56 The sales result = 98 코드 설명: List 를 생성하고 삭제, 출력 예시</description>
+        <description>&lt;h4 id=&#34;list-형-자료구조&#34;&gt;List 형 자료구조&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;배열: 크기가 변하지 않음, 중간 값이 지워져도 크기가 일정&lt;/li&gt;
+&lt;li&gt;리스트: 크기가 변함, 중간 값이 지워지면 뒤에 값이 앞으로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;python-example&#34;&gt;Python example&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Python List&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sales_results&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;45&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;67&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;43&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;56&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;98&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sales_results&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;The sales result = &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%d&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34; delete:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sales_results&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;del&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sales_results&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sales_results&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;The sales result = &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%d&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;The sales result = 12
+The sales result = 45
+The sales result = 67
+The sales result = 43
+The sales result = 56
+The sales result = 98
+ delete: 43
+The sales result = 12
+The sales result = 45
+The sales result = 67
+The sales result = 56
+The sales result = 98
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;코드 설명: List 를 생성하고 삭제, 출력 예시&lt;/p&gt;</description>
       
     </item>
     
@@ -472,8 +696,15 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98-%EC%A0%95%EC%9D%98-%EB%B0%8F-%EC%A2%85%EB%A5%98/</guid>
       
-        <description>자료구조와 알고리즘 공부 프로젝트
-목적 자료구조와 알고리즘 공부 Python, Java, C++ 을 이용한 구현 꾸준히 공부하기 자료구조의 정의 및 종류 자료구조를 물리적으로 구현하는 방법</description>
+        <description>&lt;p&gt;자료구조와 알고리즘 공부 프로젝트&lt;/p&gt;
+&lt;h4 id=&#34;목적&#34;&gt;목적&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;자료구조와 알고리즘 공부&lt;/li&gt;
+&lt;li&gt;Python, Java, C++ 을 이용한 구현&lt;/li&gt;
+&lt;li&gt;꾸준히 공부하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;자료구조의-정의-및-종류&#34;&gt;자료구조의 정의 및 종류&lt;/h4&gt;
+&lt;p&gt;자료구조를 물리적으로 구현하는 방법&lt;/p&gt;</description>
       
     </item>
     
@@ -484,7 +715,14 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/hash-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%9D%BC%EC%9D%B4%EC%84%BC%EC%8A%A4-%ED%82%A4-%EC%83%9D%EC%84%B1/</guid>
       
-        <description>Hash 를 이용한 라이센스 키 생성 Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트 MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고, 생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다.</description>
+        <description>&lt;h1 id=&#34;hash-를-이용한-라이센스-키-생성&#34;&gt;Hash 를 이용한 라이센스 키 생성&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트&lt;/li&gt;
+&lt;li&gt;MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고,&lt;/li&gt;
+&lt;li&gt;생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;digest-란&#34;&gt;Digest 란?&lt;/h4&gt;
+&lt;p&gt;암호화해시를 통해 얻은 메시지 (여기서는 라이센스 키로 사용)&lt;/p&gt;</description>
       
     </item>
     
@@ -506,7 +744,7 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%88%A8%EC%89%AC%EB%93%AF-%EA%B0%80%EB%B3%8D%EA%B2%8C/</guid>
       
-        <description>즐겨듣는 팟캐스트 라디오 &amp;lsquo;지적대화를 위한 넓고 얕은 지식&amp;rsquo; 의 진행자 김도인의 저서 숨쉬듯 가볍게를 읽었다.</description>
+        <description>&lt;p&gt;즐겨듣는 팟캐스트 라디오 &lt;strong&gt;&amp;lsquo;지적대화를 위한 넓고 얕은 지식&amp;rsquo;&lt;/strong&gt; 의 진행자 &lt;em&gt;김도인&lt;/em&gt;의 저서 숨쉬듯 가볍게를 읽었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -517,7 +755,9 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/study/partial-differential-equation/</guid>
       
-        <description>편미분방정식. 말이 익숙해서 배웠는데 내가 공업수학에서 배우고 까먹은 건줄 알았는데 알고보니 수업에서는 배우지 않았다&amp;hellip; 대학원 면접때 공업수학 준비를 못해서 물어볼 줄 예상도 못했고&amp;hellip; 다시 공부해야겠다 싶어 책을 들었다!</description>
+        <description>&lt;p&gt;편미분방정식. 말이 익숙해서 배웠는데 내가 공업수학에서 배우고 까먹은 건줄 알았는데 알고보니 수업에서는 배우지 않았다&amp;hellip;
+대학원 면접때 공업수학 준비를 못해서 물어볼 줄 예상도 못했고&amp;hellip;
+다시 공부해야겠다 싶어 책을 들었다!&lt;/p&gt;</description>
       
     </item>
     
@@ -528,7 +768,9 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%9D%B4%EB%A0%87%EA%B2%8C-%EC%82%B4%EC%95%84%EA%B0%80%EB%8F%84-%EA%B4%9C%EC%B0%AE%EC%9D%80%EA%B0%80/</guid>
       
-        <description>역사의 종말 후쿠야마는 그의 저서 역사의 종말 에서 자유민주주의 자유기업의 사회형태를 모두가 받아들이는 것이야 말로 역사의 종말이라고 주장한다.</description>
+        <description>&lt;h4 id=&#34;역사의-종말&#34;&gt;역사의 종말&lt;/h4&gt;
+&lt;p&gt;후쿠야마는 그의 저서 &lt;strong&gt;역사의 종말&lt;/strong&gt; 에서 자유민주주의 자유기업의 사회형태를 모두가 받아들이는 것이야 말로 역사의 종말이라고 주장한다. 이러한 주장은 역사는 ‘방향과 종말이 있는 과정’이라는 헤겔의 생각을 부활시키며 등장하였다. 후쿠야마에 따르면 역사에 종말이 있다는 것은 역사가 끝장난다는 뜻이라기보다는 최종목표나 목적지에 도달한다는 뜻이다. 그리고 그가 말하는 최종 목적지는 자유민주주의 기업모델인 듯하다. 자유시장주의 에서 그의 주장은 크게 환영받는 듯 했다.
+하지만 글쓴이는 대니얼 벨이 ‘이데올로기의 종언’을 예언했던 이야기를 인용해 후쿠야마의 이러한 주장은 자유주의적 자유기업 체제가 종말을 앞두고 있음을 암시할 수 있다고 말한다. 지금의 자유주의적 자유기업체제는 현재 많은 문제를 가지고 있고 그 문제점이 최근 극도로 심화되고 있기 때문이다. 후쿠야마의 예언 역시 ‘자유주의적 자유기업 체제가 가장 지독한 위기를 앞둔 시점에서 터져 나온 것은 아닌가?’ 라며 반문한다. 그리고 역사의 종말에 대립되는 다음의 두 가지 문제를 이야기 한다.&lt;/p&gt;</description>
       
     </item>
     
@@ -539,7 +781,13 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%A0%95%EC%9D%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80/</guid>
       
-        <description>2장; 벤담의 공리주의와 이에 대한 두 반박을 정리하시오. 벤담이 말하는 도덕의 최고원칙은 행복을 극대화하는 것, 쾌락이 고통을 넘어서도록 하여 전반적으로 조화를 이루는 것이다.</description>
+        <description>&lt;h4 id=&#34;2장-벤담의-공리주의와-이에-대한-두-반박을-정리하시오&#34;&gt;2장; 벤담의 공리주의와 이에 대한 두 반박을 정리하시오.&lt;/h4&gt;
+&lt;p&gt;벤담이 말하는 도덕의 최고원칙은 행복을 극대화하는 것, 쾌락이 고통을 넘어서도록 하여 전반적으로 조화를 이루는 것이다.
+이는 쾌락이나 행복을 가져오고 고통을 막는 것 일체를 의미하는 ‘공리’의 극대화를 추구하는 공리주의를 말한다.
+이러한 공리주의는 인간의 가장 기본적인 가치인 쾌락과 이에 반하는 고통이라는 감정을 도덕원칙의 기준으로 삼는다.
+그리고 행복을 최대화하고, 고통을 최소화 하는 것이 바람직하고 도덕적인 원칙이라고 주장한다.
+그리고 이것은 사회 전체로 확대되어 개인의 행동 역시 공동체의 공리의 극대화를 위해야 한다고 주장한다.
+이러한 공리주의적인 가치는 몇 가지 문제를 만들 수 있다.&lt;/p&gt;</description>
       
     </item>
     
@@ -550,7 +798,7 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%A7%80%EB%8C%80%EB%84%93%EC%96%95/</guid>
       
-        <description>이 책을 표지만 보고 접할때는 기본적인 인문학적 교양들을 간단하게 소개하는 내용일 줄 알았다.</description>
+        <description>&lt;p&gt;이 책을 표지만 보고 접할때는 기본적인 인문학적 교양들을 간단하게 소개하는 내용일 줄 알았다.&lt;/p&gt;</description>
       
     </item>
     
@@ -561,7 +809,8 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%ED%95%80%ED%85%8C%ED%81%AC-%EC%A0%84%EC%9F%81/</guid>
       
-        <description>핀테크전쟁 - 브렛 킹 지음 이 책에서 나타나는 핀테크의 주요 발전 방향은 크게 대출분야와 디지털화폐, 그리고 페이먼트분야가 주를 이루는 것 같다.</description>
+        <description>&lt;h4 id=&#34;핀테크전쟁---브렛-킹-지음&#34;&gt;핀테크전쟁 - 브렛 킹 지음&lt;/h4&gt;
+&lt;p&gt;이 책에서 나타나는 핀테크의 주요 발전 방향은 크게 대출분야와 디지털화폐, 그리고 페이먼트분야가 주를 이루는 것 같다.&lt;/p&gt;</description>
       
     </item>
     
@@ -572,7 +821,9 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%8B%A4%ED%96%89%EC%9D%B4-%EB%8B%B5%EC%9D%B4%EB%8B%A4/</guid>
       
-        <description>1장 결심 - 목적지를 확실히 정하라 로드맵을 그려보라. 지름길이 보인다. 꿈에 이르기 위한 인생 로드맵을 만들어 보자.</description>
+        <description>&lt;h4 id=&#34;1장-결심---목적지를-확실히-정하라&#34;&gt;1장 결심 - 목적지를 확실히 정하라&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;로드맵을 그려보라.&lt;/em&gt; 지름길이 보인다.
+꿈에 이르기 위한 인생 로드맵을 만들어 보자.&lt;/p&gt;</description>
       
     </item>
     
@@ -583,8 +834,8 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%82%AC%EB%9E%8C%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9C%BC%EB%A1%9C-%EC%84%B1%EC%9E%A5%ED%95%98%EB%8A%94%EA%B0%80/</guid>
       
-        <description>사람은 무엇으로 성장하는가
-융합사 독서 목록 첫 번째 도서다. 독서후기를 내일까지 써야 하는 탓에 깊이 정독하지는 못 했다.</description>
+        <description>&lt;p&gt;사람은 무엇으로 성장하는가&lt;/p&gt;
+&lt;p&gt;융합사 독서 목록 첫 번째 도서다. 독서후기를 내일까지 써야 하는 탓에 깊이 정독하지는 못 했다. 그래도 인상 깊은 부분들을 표시해 나가면서 읽어나갔다.&lt;/p&gt;</description>
       
     </item>
     
@@ -595,8 +846,8 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%95%9C-%EC%83%9D%EA%B0%81%EB%93%A4/</guid>
       
-        <description>생각보다 읽기 지루한 책이었다.
-하지만 어떤 중요한 선택을 해야하는 상황에 놓여있을 때 다시한번 보면 정말 큰 도움이 될 거 같아서 내용들을 하나씩 정리해 놓으려 한다.</description>
+        <description>&lt;p&gt;생각보다 읽기 지루한 책이었다.&lt;/p&gt;
+&lt;p&gt;하지만 어떤 중요한 선택을 해야하는 상황에 놓여있을 때 다시한번 보면 정말 큰 도움이 될 거 같아서 내용들을 하나씩 정리해 놓으려 한다.&lt;/p&gt;</description>
       
     </item>
     
@@ -607,7 +858,7 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%9D%B4%EC%95%BC%EA%B8%B0-%EC%9D%B8%EB%AC%B8%ED%95%99/</guid>
       
-        <description>공대생인 나에게는 제목부터 조금은 어려운 느낌이 들었던 책이지만, 재미있는 교양 상식들을 담고 있는 책인 거 같다.</description>
+        <description>&lt;p&gt;공대생인 나에게는 제목부터 조금은 어려운 느낌이 들었던 책이지만, 재미있는 교양 상식들을 담고 있는 책인 거 같다.&lt;/p&gt;</description>
       
     </item>
     
@@ -618,7 +869,10 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%B9%BC%EC%9D%98-%EB%85%B8%EB%9E%98/</guid>
       
-        <description>칼의 노래. 중학교 때 읽다가 너무 글이 어려워서 읽기를 포기했던 책이었다.</description>
+        <description>&lt;h4 id=&#34;칼의-노래&#34;&gt;칼의 노래.&lt;/h4&gt;
+&lt;p&gt;중학교 때 읽다가 너무 글이 어려워서 읽기를 포기했던 책이었다.
+지금 다시 읽으니 내가 많이 컸다는 게 느껴지기도 하고 옛날 생각도 나고 그랬다.
+옛날에 불멸의 이순신이라는 드라마 이후로 이순신 장군님을 무지 좋아했었던 거 같다. 당시 유행했던 칼의 노래라는 책을 읽고(물론 실패했지만&amp;hellip;) 만드는 걸 좋아해서 거북선 모형을 만들기도 하고, &amp;lsquo;불멸의 이순신 게임&amp;rsquo; 도 했었던 거 같다. 어쨌든 많이 좋아했던 거 같다.&lt;/p&gt;</description>
       
     </item>
     
@@ -629,7 +883,8 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%B0%BD%EB%AC%B8%EB%84%98%EC%96%B4-%EB%8F%84%EB%A7%9D%EC%B9%9C-100%EC%84%B8-%EB%85%B8%EC%9D%B8/</guid>
       
-        <description>풍자를 안에 담은 &amp;lsquo;알란 칼손&amp;rsquo; [창문 넘어 도망친 100세 노인 - 요나스 요나손] 창문을 넘어 도망친 100세 노인의 이야기.</description>
+        <description>&lt;h4 id=&#34;풍자를-안에-담은-알란-칼손-창문-넘어-도망친-100세-노인---요나스-요나손&#34;&gt;풍자를 안에 담은 &amp;lsquo;알란 칼손&amp;rsquo; [창문 넘어 도망친 100세 노인 - 요나스 요나손]&lt;/h4&gt;
+&lt;p&gt;창문을 넘어 도망친 100세 노인의 이야기. 처음 몇 페이지를 읽고 말았다면, 이 책은 그저 자신의 백 살 생일파티가 유쾌하지 않았던 한 노인네의 가벼운 좌충우돌 여행기로 끝났을지 모른다. 하지만 노인의 일생을 담은 이야기가 같이 전개되면서부터는 나는 그 노인의 가볍지 않은, 하지만 무겁다고도 하지 못할 그의 인생에 빠져들게 된다.&lt;/p&gt;</description>
       
     </item>
     
@@ -640,7 +895,7 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/life/%EC%97%B4%ED%98%88%EA%B5%90%EC%82%AC-%EB%8F%84%EC%A0%84%EA%B8%B0/</guid>
       
-        <description>2학년 1학기 중간시험이 끝났다. 생각보다 많이 실망스러운 시험 결과, 그리고 슬픔에 잠긴 나라 분위기까지, 내 몸과 정신까지 힘들게 했던 거 같다.</description>
+        <description>&lt;p&gt;2학년 1학기 중간시험이 끝났다. 생각보다 많이 실망스러운 시험 결과, 그리고 슬픔에 잠긴 나라 분위기까지, 내 몸과 정신까지 힘들게 했던 거 같다. 그래도 다시 힘을 내야 내가 원하는 결과를 만들어 낼 수 있을 거라 생각하기에 다시 한번 마음을 굳게 먹어보았다. 그리고 기분전환도 해볼 겸, 좀 많이 한가해져서 얼마 전에 여자친구가 빌려준 책을 이제야 읽어보게 되었다. 별 기대 없이 읽었지만 많은 에너지를 주는 책이었다.&lt;/p&gt;</description>
       
     </item>
     
@@ -651,7 +906,10 @@ Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위�
       
       <guid>https://kyungpyo-kim.github.io/about/</guid>
       
-        <description>Kyungpyo Kim | AI Engineer for AD Perception, NPU Development 새로운 것을 찾아 현실에 적용할 수 있는 엔지니어로 성장하기 위해 노력하고 있습니다.</description>
+        <description>&lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;kyungpyo-kim--ai-engineer-for-ad-perception-npu-development&#34;&gt;Kyungpyo Kim | AI Engineer for AD Perception, NPU Development&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;새로운 것을 찾아 현실에 적용할 수 있는 엔지니어로 성장하기 위해 노력하고 있습니다.&lt;/p&gt;</description>
       
     </item>
     

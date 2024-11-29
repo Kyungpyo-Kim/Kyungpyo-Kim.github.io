@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ubuntu on Kyungpyo Kim</title>
+    <title>Ubuntu on Kyungpyo Kim</title>
     <link>https://kyungpyo-kim.github.io/tags/ubuntu/</link>
-    <description>Recent content in ubuntu on Kyungpyo Kim</description>
+    <description>Recent content in Ubuntu on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +14,7 @@
       
       <guid>https://kyungpyo-kim.github.io/study/tensorflow-gpu-installation-on-ubuntu20.04/</guid>
       
-        <description>Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.</description>
+        <description>&lt;p&gt;Tensorflow GPU 설치를 위해서는 CUDA, cuDNN 버전을 꼭 확인해야 한다.&lt;/p&gt;</description>
       
     </item>
     
@@ -25,18 +25,28 @@
       
       <guid>https://kyungpyo-kim.github.io/study/setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/</guid>
       
-        <description>AI, Deep Learning 환경 준비하기 My PC Info Ubuntu18.04 NVIDIA GTX1650 CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다.</description>
+        <description>&lt;h2 id=&#34;ai-deep-learning-환경-준비하기&#34;&gt;AI, Deep Learning 환경 준비하기&lt;/h2&gt;
+&lt;h3 id=&#34;my-pc-info&#34;&gt;My PC Info&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu18.04&lt;/li&gt;
+&lt;li&gt;NVIDIA GTX1650&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다. 그리고 Tensorflow 도 마찬가지로 CUDA와의 호환성을 체크하여야 한다. 현재(2020-03-22) Tensorflow 는 CUDA10.0(not 10.2)까지만 호환 가능하다.
+{: .notice}&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Ubuntu 18.04 - Swap Caps lock and Ctrl</title>
-      <link>https://kyungpyo-kim.github.io/study/ubuntu-18.04-swap-caps-lock-and-ctrl/</link>
+      <link>https://kyungpyo-kim.github.io/study/ubuntu-18.04---swap-caps-lock-and-ctrl/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04-swap-caps-lock-and-ctrl/</guid>
+      <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04---swap-caps-lock-and-ctrl/</guid>
       
-        <description>Ubuntu 18.04, Swap Caps lock and Ctrl - No installation Open ~/.</description>
+        <description>&lt;h2 id=&#34;ubuntu-1804-swap-caps-lock-and-ctrl---no-installation&#34;&gt;Ubuntu 18.04, Swap Caps lock and Ctrl - No installation&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;strong&gt;~/.Xmodmap&lt;/strong&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -47,7 +57,9 @@
       
       <guid>https://kyungpyo-kim.github.io/study/ubuntu-18.04-installation-dual-boot/</guid>
       
-        <description>Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는) 준비물:</description>
+        <description>&lt;h2 id=&#34;ubuntu-1804-설치하기-windows10-와-듀얼-부트로-사용하기--매번-설명하기-귀찮아-정리하는&#34;&gt;Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;준비물:&lt;/p&gt;</description>
       
     </item>
     

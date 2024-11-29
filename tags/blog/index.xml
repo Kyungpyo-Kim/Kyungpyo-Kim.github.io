@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on Kyungpyo Kim</title>
+    <title>Blog on Kyungpyo Kim</title>
     <link>https://kyungpyo-kim.github.io/tags/blog/</link>
-    <description>Recent content in blog on Kyungpyo Kim</description>
+    <description>Recent content in Blog on Kyungpyo Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <lastBuildDate>Mon, 01 Aug 2022 18:39:51 +0900</lastBuildDate><atom:link href="https://kyungpyo-kim.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
@@ -14,8 +14,15 @@
       
       <guid>https://kyungpyo-kim.github.io/study/tech_blog/</guid>
       
-        <description>사용하고 싶고, 관리하고 싶은 기술 블로그 만들기
-Github pages Hugo Customization Utterances 1.</description>
+        <description>&lt;p&gt;사용하고 싶고, 관리하고 싶은 기술 블로그 만들기&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Github pages&lt;/li&gt;
+&lt;li&gt;Hugo&lt;/li&gt;
+&lt;li&gt;Customization&lt;/li&gt;
+&lt;li&gt;Utterances&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1-intro&#34;&gt;1. Intro.&lt;/h2&gt;
+&lt;p&gt;기존에 블로그를 만들어 공부한 내용이나 독서 기록 용도로 블로그를 운영하고 있었는데, 요즘 기록하는 빈도도 떨어지고 관심도도 떨어져 가는 것 같았다. 이를 극복하고자 블로그에 작은 변화도 주고, Github action 등의 설정을 하면서 과정을 좀 정리해 보려고 한다.&lt;/p&gt;</description>
       
     </item>
     
