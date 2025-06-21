@@ -225,7 +225,7 @@
 
     ,
         "url" : "https:\/\/kyungpyo-kim.github.io\/study\/llada_gemini_diffusion\/",
-        "wordCount" : "657",
+        "wordCount" : "652",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -645,7 +645,7 @@
 <p>저자는 이러한 ARM 의 단점을 보고, 다른 방법을 써도 괜찮은지 고민한 것 같다. Large language model 은 출력된 언어의 distribution 을 모델링 하는 것이기 때문에, distribution 을 잘 생성하는 검증된 방법인 diffusion 방법을 적용한다. LLM 의 여러 특성들은 언어모델 자체의 특성이며, ARM 이 수행하는 무손실 압축 특성은 다른 확률 모델로도 충분히 수행할 수 있다고 말한다.</p>
 <p>Diffusion 방법은 은 노이즈로 부터 이미지를 생성하는 과정을 학습한다. 이를 통해 요청된 쿼리로부터 노이즈를 적당하게 생성하고 이로부터 다양하고 높은 퀄리티의 이미지를 만들어 내는 일을 수행한다. 그 과정은 diffusion 이라는 말이 의미 하듯이 노이즈를 점차 제거해 나가는 과정을 통해서 진행된다. (diffusion 의 forward 과정에서는 학습데이터이에 점차 노이즈를 확산시키며 학습할 데이터를 만들고 reverse 과정을 통해 노이즈로 부터 원래의 학습 데이터를 추정하는 방법을 배운다. 엄밀히 말하면 reverse diffusion 을 통해 노이즈를 제거한다.)</p>
 <p>이미지 생성을 위해 사용되던 Diffusion 방법을 언어모델에 적용한 것이 LLaDA 이다.</p>
-<p>![LLaDA](/images/Large Language Diffusion, Gemini Diffusion.png)</p>
+<p><img alt="LLaDA" src="../../images/Large_Language_Diffusion_Gemini_Diffusion.png"></p>
 <p>논문의 그림이 쉽게 잘 그려진 것 같다. (a) Pre-training 과정에서는 LLM 이 하듯이 많은 text 데이터에 masking 을 하고 이를 추론 하도록 학습을 한다. 기존의 LLM 과 동일한 방식이다. 이후에 (b) Supervised Fine-Tuning (SFT) 를 거쳐서 Prompt/Response 를 위한 mask predictor 를 학습 시킨다. 어쩌면 여기까지는 기존의 ARM 과 동일한 과정이라고 볼 수 있다. 큰 차이점은 LLaDA 는 (c) Inference 를 diffusion 과정을 통해서 수행 한다는 것이 큰 차이이다. (c) Inference 를 위해서 (a) Pre-training, (b) SFT 에서 diffusion 과정을 학습하게 된다.</p>
 <h4 id="gemini-diffusion">Gemini Diffusion</h4>
 <p>Gemini Diffusion 은 이를 상용화 한 것으로 보인다.</p>
