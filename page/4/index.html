@@ -92,7 +92,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png" />
 
   <link rel="canonical" href="https://kyungpyo-kim.github.io/" />
-
   
   <link rel="alternate" type="application/rss+xml" href="../../index.xml" title="Kyungpyo Kim" />
   
@@ -110,10 +109,12 @@
     
     <script
       type="text/javascript"
-      src="../../js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
-      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      src="../../js/anatole-theme-switcher.min.8724ddf9268dee451060f191961647573c7f592fbccc6d858746236b3f915813.js"
+      integrity="sha256-hyTd&#43;SaN7kUQYPGRlhZHVzx/WS&#43;8zG2Fh0Yjaz&#43;RWBM="
       crossorigin="anonymous"
     ></script>
+  
+
   
 
   
@@ -150,7 +151,11 @@
       "url": "https:\/\/kyungpyo-kim.github.io\/",
       "description": "새로운 것을 찾아",
       "thumbnailUrl": "https:\/\/kyungpyo-kim.github.io\/",
-      "license": "Kyungpyo Kim 2014-{{ YEAR }}"
+      "license": ""
+      
+        
+        ,"copyrightYear": ""
+      
     }
   </script>
 
@@ -254,7 +259,7 @@
       <ul class="sidebar__taxonomy_cloud-contents-ul" id="taxonomy_cloud-contents-ul"><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/3d-object-detection/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">3D Object Detection</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/ai/" style="font-size:1.3181818181818181em; padding: 0.2em 0.2em 0.2em 0.2em;">AI</a>
+        <a href="../../tags/ai/" style="font-size:1.3636363636363638em; padding: 0.2em 0.2em 0.2em 0.2em;">AI</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/architecture/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Architecture</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
@@ -266,7 +271,13 @@
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/diagnostics/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Diagnostics</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/diffusion/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Diffusion</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/engineering/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Engineering</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/gemini/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Gemini</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/generative-ai/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Generative AI</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/github/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Github</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
@@ -285,6 +296,10 @@
         <a href="../../tags/license/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">License</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/lidar/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">LiDAR</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/llada/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">LLaDA</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/llm/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">LLM</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/llms/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">LLMs</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
@@ -347,7 +362,7 @@
     <li class="footer__item">
       &copy;
       
-        Kyungpyo Kim 2014-2024
+        Kyungpyo Kim 2014-2025
       
     </li>
     
@@ -497,11 +512,48 @@
       
       <div class="post__content">
         
+          <h3><a href="../../study/setup-ubuntu18.04-&#43;-cuda10.0-&#43;-cudnn7.4.2-&#43;-tf1.14.0/">SETUP - UBUNTU18.04 &#43; CUDA10.0 &#43; CUDNN7.4.2 &#43; TF1.14.0</a></h3>
+        
+        
+          <p>AI, Deep Learning 환경 준비하기 My PC Info Ubuntu18.04 NVIDIA GTX1650 CUDA 및 cuDNN 을 설치 할 때, GPU와 호환 가능한 버전을 반드시 체크해야 한다. 그리고 Tensorflow 도 마찬가지로 CUDA와의 호환성을 체크하여야 한다. 현재(2020-03-22) Tensorflow 는 CUDA10.0(not 10.2)까지만 호환 가능하다. {: .notice}
+</p>
+        
+        </div>
+
+      
+      <div class="post__footer">
+        <em class="fas fa-calendar-day"></em>
+        <span class="post__footer-date"
+          >
+            
+              Sun, Mar 22, 2020
+            
+
+          </span
+        >
+        
+
+        
+          <span><a class="tag" href="../../tags/ai/">AI</a><a class="tag" href="../../tags/ubuntu/">ubuntu</a></span>
+
+
+        
+      </div>
+    </div>
+  
+    <div
+      class="post 
+        animated fadeInDown
+      "
+    >
+      
+      <div class="post__content">
+        
           <h3><a href="../../study/ros2-bag-file-parsing/">ROS2 BAG FILE PARSING</a></h3>
         
         
-          <p><h2 id="ros2-bag-file-parsing-하기">ROS2 Bag File Parsing 하기</h2>
-<p>ROS의 강력한 도구중 하나가 rosbag 패키지였다. ROS1의 rosbag 패키지는 Logging 과 Replay 기능 뿐만 아니라 rqt 플러그인을 통해서 시스템 개발에 필요한 여러가지 디버깅 기능을 제공하였다. 하지만 아직 ROS2에서는 rosbag(rosbag2) 의 record(logging) play, 그리고 info 기능밖에 구현이 안되어 있다. 게다가 bag파일이 sqlite 등 다른 형태로 저장되어 ROS1의 rosbag 기능을 사용할 수 없는 상태이다.</p></p>
+          <p>ROS2 Bag File Parsing 하기 ROS의 강력한 도구중 하나가 rosbag 패키지였다. ROS1의 rosbag 패키지는 Logging 과 Replay 기능 뿐만 아니라 rqt 플러그인을 통해서 시스템 개발에 필요한 여러가지 디버깅 기능을 제공하였다. 하지만 아직 ROS2에서는 rosbag(rosbag2) 의 record(logging) play, 그리고 info 기능밖에 구현이 안되어 있다. 게다가 bag파일이 sqlite 등 다른 형태로 저장되어 ROS1의 rosbag 기능을 사용할 수 없는 상태이다.
+</p>
         
         </div>
 
@@ -537,10 +589,8 @@
           <h3><a href="../../study/ubuntu-18.04---swap-caps-lock-and-ctrl/">UBUNTU 18.04 - SWAP CAPS LOCK AND CTRL</a></h3>
         
         
-          <p><h2 id="ubuntu-1804-swap-caps-lock-and-ctrl---no-installation">Ubuntu 18.04, Swap Caps lock and Ctrl - No installation</h2>
-<ol>
-<li>
-<p>Open <strong>~/.Xmodmap</strong></p></p>
+          <p>Ubuntu 18.04, Swap Caps lock and Ctrl - No installation Open ~/.Xmodmap
+</p>
         
         </div>
 
@@ -576,9 +626,8 @@
           <h3><a href="../../study/ubuntu-18.04-installation-dual-boot/">UBUNTU 18.04 INSTALLATION (DUAL BOOT)</a></h3>
         
         
-          <p><h2 id="ubuntu-1804-설치하기-windows10-와-듀얼-부트로-사용하기--매번-설명하기-귀찮아-정리하는">Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는)</h2>
-<hr>
-<p>준비물:</p></p>
+          <p>Ubuntu 18.04 설치하기(+ Windows10 와 듀얼 부트로 사용하기 + 매번 설명하기 귀찮아 정리하는) 준비물:
+</p>
         
         </div>
 
@@ -614,16 +663,10 @@
           <h3><a href="../../study/ros2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">ROS2 시작하기</a></h3>
         
         
-          <p><h2 id="ros2_exercisehttpsgithubcomkyungpyo-kimros2_exercise"><a href="https://github.com/Kyungpyo-Kim/ROS2_Exercise">ROS2_Exercise</a></h2>
-<h2 id="ros2-installation">ROS2 INSTALLATION</h2>
-<p><a href="https://index.ros.org/doc/ros2/Installation/#installationguide">https://index.ros.org/doc/ros2/Installation/#installationguide</a>
-<a href="https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/">https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/</a></p>
-<ul>
-<li>
-<p>Version: ROS 2 Eloquent Elusor</p>
-</li>
-<li>
-<p>Takes ~10min</p></p>
+          <p>ROS2_Exercise ROS2 INSTALLATION https://index.ros.org/doc/ros2/Installation/#installationguide https://index.ros.org/doc/ros2/Installation/Eloquent/Linux-Install-Debians/
+Version: ROS 2 Eloquent Elusor
+Takes ~10min
+</p>
         
         </div>
 
@@ -659,30 +702,9 @@
           <h3><a href="../../study/qt-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python-gui-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/">QT 를 이용한 PYTHON GUI 개발 환경 만들기</a></h3>
         
         
-          <p><h2 id="pyguidevtemplatehttpsgithubcomkyungpyo-kimpyguidevtemplate"><a href="https://github.com/Kyungpyo-Kim/PyGUIDevTemplate">PyGUIDevTemplate</a></h2>
-<p>GUI development template for python</p>
-<h2 id="summary">Summary</h2>
-<ol>
-<li>QT Designer 를 이용하여 UI 설계</li>
-<li>Matplotlib, OpenCV 연동을 위한 custom class 활용</li>
-<li>PyInstaller 를 이용한 파일 배포</li>
-</ol>
-<h2 id="getting-started">Getting Started</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">## clonning repository</span>
-</span></span><span class="line"><span class="cl">git clone https://github.com/Kyungpyo-Kim/PyGUIDevTemplate.git
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">## change directory</span>
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> PyGUIDevTemplate/PyQT <span class="c1">## for PyQT example</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># or</span>
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> PyGUIDevTemplate/PySide <span class="c1">## for PySide example</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">## run program</span>
-</span></span><span class="line"><span class="cl">python main.py
-</span></span></code></pre></div><h2 id="qt-를-이용한-gui-설계">QT 를 이용한 GUI 설계</h2>
-<ul>
-<li>
-<p>Qt designer 활용
-UI 디자인을 GUI 환경에서 진행가능</p></p>
+          <p>PyGUIDevTemplate GUI development template for python
+Summary QT Designer 를 이용하여 UI 설계 Matplotlib, OpenCV 연동을 위한 custom class 활용 PyInstaller 를 이용한 파일 배포 Getting Started ## clonning repository git clone https://github.com/Kyungpyo-Kim/PyGUIDevTemplate.git ## change directory cd PyGUIDevTemplate/PyQT ## for PyQT example # or cd PyGUIDevTemplate/PySide ## for PySide example ## run program python main.py QT 를 이용한 GUI 설계 Qt designer 활용 UI 디자인을 GUI 환경에서 진행가능
+</p>
         
         </div>
 
@@ -718,14 +740,8 @@ UI 디자인을 GUI 환경에서 진행가능</p></p>
           <h3><a href="../../study/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EB%AC%B8%EC%A0%9C-%EC%A0%84%EA%B8%B0%EB%B2%84%EC%8A%A4/">알고리즘문제-전기버스</a></h3>
         
         
-          <p><h2 id="전기버스-알고리즘">전기버스 알고리즘</h2>
-<ul>
-<li>SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스</li>
-<li><a href="https://swexpertacademy.com/main/learn/course/subjectList.do?courseId=AVuPDN86AAXw5UW6">문제링크</a></li>
-<li>문제의 저작권은 SW Expert Academy에 있습니다.</li>
-</ul>
-<h2 id="문제풀이-1-brute-force-search">문제풀이 1 Brute-force search</h2>
-<p>모든 경우의 수를 모두 확인하여 가장 좋은 값을 확인</p></p>
+          <p>전기버스 알고리즘 SWEA 4831 - [파이썬 S/W 문제해결 기본 1일차] LIST1 - 전기버스 문제링크 문제의 저작권은 SW Expert Academy에 있습니다. 문제풀이 1 Brute-force search 모든 경우의 수를 모두 확인하여 가장 좋은 값을 확인
+</p>
         
         </div>
 
@@ -761,7 +777,8 @@ UI 디자인을 GUI 환경에서 진행가능</p></p>
           <h3><a href="../../study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%BC%EC%84%9C-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/">ROS DIAGNOSTICS 패키지 센서 드라이버에 적용하기</a></h3>
         
         
-          <p>아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.</p>
+          <p>아래의 Getting started 를 참고하여 github에 업로드한 예제를 실행해 볼 수 있다.
+</p>
         
         </div>
 
@@ -797,7 +814,8 @@ UI 디자인을 GUI 환경에서 진행가능</p></p>
           <h3><a href="../../study/ros-diagnostics-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0/">ROS DIAGNOSTICS 패키지 이해하기</a></h3>
         
         
-          <p>ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 <a href="http://wiki.ros.org/diagnostics">diagnostic</a> 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 <strong>드라이버</strong>가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다.</p>
+          <p>ROS 패키지 중 하드웨어의 상태를 모니터링을 하는 diagnostic 패키지가 있다. 좀 더 정확히 설명하면, ROS와 하드웨어(센서, 엑츄에이터 등)를 연결해주는 드라이버가 잘 움직이고 있는지, 나쁜짓은 안하는지 등을 모니터링하기 쉽게 해주는 패키지이다.
+</p>
         
         </div>
 
@@ -833,10 +851,7 @@ UI 디자인을 GUI 환경에서 진행가능</p></p>
           <h3><a href="../../life/%EC%95%BC%EA%B0%84-%EB%9F%AC%EB%8B%9D/">야간 러닝</a></h3>
         
         
-          <p><figure>
-	<img src='{{ "/assets/images/gallery/KakaoTalk_20190618_085439458.jpg" | relative_url }}' alt='absolute'>
-	<figcaption>달과 야경</figcaption>
-</figure></p>
+          <p> 달과 야경 </p>
         
         </div>
 
@@ -855,56 +870,6 @@ UI 디자인을 GUI 환경에서 진행가능</p></p>
 
         
           <span><a class="tag" href="../../tags/%EB%9F%AC%EB%8B%9D/">러닝</a></span>
-
-
-        
-      </div>
-    </div>
-  
-    <div
-      class="post 
-        animated fadeInDown
-      "
-    >
-      
-      <div class="post__content">
-        
-          <h3><a href="../../life/%ED%95%9C%EA%B0%95-%EB%9D%BC%EC%9D%B4%EB%94%A9/">한강 라이딩</a></h3>
-        
-        
-          <p><figure>
-	<img src='{{ "/assets/images/gallery/KakaoTalk_20190616_225248912.jpg" | relative_url }}' width="1600" height="1200" alt='absolute'>
-	<figcaption>잠실타워가 보이는 한강</figcaption>
-</figure>
-<figure>
-	<img src='{{ "/assets/images/gallery/KakaoTalk_20190616_225304231.jpg" | relative_url }}' width="1600" height="1200" alt='absolute'>
-	<figcaption>한강대교</figcaption>
-</figure>
-<figure>
-	<img src='{{ "/assets/images/gallery/KakaoTalk_20190616_225313944.jpg" | relative_url }}' width="1600" height="1200" alt='absolute'>
-	<figcaption>마포대교 건너면서</figcaption>
-</figure>
-<p>소낙비가 내리고 난 뒤,
-하늘이 유난히 맑고 구름은 유난히 희고 몽글몽글 했던날.
-자전거 타고 한강 한바퀴 돌았다.</p></p>
-        
-        </div>
-
-      
-      <div class="post__footer">
-        <em class="fas fa-calendar-day"></em>
-        <span class="post__footer-date"
-          >
-            
-              Sun, Jun 16, 2019
-            
-
-          </span
-        >
-        
-
-        
-          <span><a class="tag" href="../../tags/%EB%9D%BC%EC%9D%B4%EB%94%A9/">라이딩</a></span>
 
 
         
@@ -986,7 +951,7 @@ UI 디자인을 GUI 환경에서 진행가능</p></p>
     <li class="footer__item">
       &copy;
       
-        Kyungpyo Kim 2014-2024
+        Kyungpyo Kim 2014-2025
       
     </li>
     

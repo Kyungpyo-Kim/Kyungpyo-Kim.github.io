@@ -92,7 +92,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png" />
 
   <link rel="canonical" href="https://kyungpyo-kim.github.io/" />
-
   
   <link rel="alternate" type="application/rss+xml" href="../../index.xml" title="Kyungpyo Kim" />
   
@@ -110,10 +109,12 @@
     
     <script
       type="text/javascript"
-      src="../../js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
-      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      src="../../js/anatole-theme-switcher.min.8724ddf9268dee451060f191961647573c7f592fbccc6d858746236b3f915813.js"
+      integrity="sha256-hyTd&#43;SaN7kUQYPGRlhZHVzx/WS&#43;8zG2Fh0Yjaz&#43;RWBM="
       crossorigin="anonymous"
     ></script>
+  
+
   
 
   
@@ -150,7 +151,11 @@
       "url": "https:\/\/kyungpyo-kim.github.io\/",
       "description": "새로운 것을 찾아",
       "thumbnailUrl": "https:\/\/kyungpyo-kim.github.io\/",
-      "license": "Kyungpyo Kim 2014-{{ YEAR }}"
+      "license": ""
+      
+        
+        ,"copyrightYear": ""
+      
     }
   </script>
 
@@ -254,7 +259,7 @@
       <ul class="sidebar__taxonomy_cloud-contents-ul" id="taxonomy_cloud-contents-ul"><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/3d-object-detection/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">3D Object Detection</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
-        <a href="../../tags/ai/" style="font-size:1.3181818181818181em; padding: 0.2em 0.2em 0.2em 0.2em;">AI</a>
+        <a href="../../tags/ai/" style="font-size:1.3636363636363638em; padding: 0.2em 0.2em 0.2em 0.2em;">AI</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/architecture/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Architecture</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
@@ -266,7 +271,13 @@
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/diagnostics/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Diagnostics</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/diffusion/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Diffusion</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/engineering/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Engineering</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/gemini/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Gemini</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/generative-ai/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Generative AI</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/github/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Github</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
@@ -285,6 +296,10 @@
         <a href="../../tags/license/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">License</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/lidar/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">LiDAR</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/llada/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">LLaDA</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/llm/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">LLM</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
         <a href="../../tags/llms/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">LLMs</a>
       </li><li class="sidebar__taxonomy_cloud-contents-li">
@@ -347,7 +362,7 @@
     <li class="footer__item">
       &copy;
       
-        Kyungpyo Kim 2014-2024
+        Kyungpyo Kim 2014-2025
       
     </li>
     
@@ -497,18 +512,49 @@
       
       <div class="post__content">
         
+          <h3><a href="../../study/fast_mm/">FAST MATRIX MULTIPLICATION</a></h3>
+        
+        
+          <p>Fast Matrix Muliplication
+Explanation Matrix Muliplication은 기본적으로 O(N^3) 의 시간복잡도가 소요되며, 이를 개선하기 위한 여러가지 알고리즘들이 제안되어 왔으나, 가장 빠른 알고리즘 역시 O(N^2) 보다 느리다. (여기서 N은 matrix 의 dimmension) 그리고 이러한 이론적으로 빠른 알고리즘을 직접 구현해 보면 생각보다 속도가 크게 개선되지 않는다. 왜 그럴까? 이론과 현실사이의 차이는 프로그램의 메모리 사용에 의해 발생한다. 좀 더 구체적으로 메모리의 복사/할당/접근에 소요되는 시간이 프로그램의 수행시간에 많은 영향을 미친다.
+</p>
+        
+        </div>
+
+      
+      <div class="post__footer">
+        <em class="fas fa-calendar-day"></em>
+        <span class="post__footer-date"
+          >
+            
+              Sat, Dec 24, 2022
+            
+
+          </span
+        >
+        
+
+        
+          <span><a class="tag" href="../../tags/c&#43;&#43;/">C&#43;&#43;</a><a class="tag" href="../../tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorithm/">알고리즘 (algorithm)</a></span>
+
+
+        
+      </div>
+    </div>
+  
+    <div
+      class="post 
+        animated fadeInDown
+      "
+    >
+      
+      <div class="post__content">
+        
           <h3><a href="../../life/%EC%9D%BD%EC%9D%80-%EC%B1%85%EB%93%A4-%EC%A0%95%EB%A6%AC-2022.01-~-2022.09/">읽은 책들 정리 2022.01 ~ 2022.09</a></h3>
         
         
-          <p><h2 id="물고기는-존재하지-않는다---룰루-밀러">물고기는 존재하지 않는다 - 룰루 밀러</h2>
-<h2 id="거꾸로-읽는-세계사---유시민">거꾸로 읽는 세계사 - 유시민</h2>
-<h2 id="이어령의-마지막-수업---김지수-이어령">이어령의 마지막 수업 - 김지수, 이어령</h2>
-<ul>
-<li>출판사: 열림원</li>
-<li>읽은 날짜: 2022-05-30</li>
-</ul>
-<p>나에게 가까운 사람의 죽음이 찾아왔을 때 읽었던 책이다. 사실 너무나 큰 아픔이어서 이를 지적으로 달래 보려고 찾아본 책이었던 것 같다.
-그리고 다행히 이 책이 당시 힘들었던 마음에 많은 위로가 되었었다. 사랑하는 사람의 죽음을 어떻게 바라보면 좋을지 고민하는데 많은 도움을 주었다. 한 시대의 지성을 대표하는 인물이었던 이어령 선생님께서, 풍만한 지식을 지니고도 죽음 앞에서 한없이 작아지는 모습을 스스로 담담하게 그리고, 모습을 또 관조하며 배움을 전하려는 선생님의 태도 속에서, 나의 삶의 자세, 죽음에 대한 생각을 깊이 해보게 했던 것 같다. 삶의 끝에서 바라보는 지성인의 통찰과 생각, 그리고 위트가 인상적이었다.</p></p>
+          <p>물고기는 존재하지 않는다 - 룰루 밀러 거꾸로 읽는 세계사 - 유시민 이어령의 마지막 수업 - 김지수, 이어령 출판사: 열림원 읽은 날짜: 2022-05-30 나에게 가까운 사람의 죽음이 찾아왔을 때 읽었던 책이다. 사실 너무나 큰 아픔이어서 이를 지적으로 달래 보려고 찾아본 책이었던 것 같다. 그리고 다행히 이 책이 당시 힘들었던 마음에 많은 위로가 되었었다. 사랑하는 사람의 죽음을 어떻게 바라보면 좋을지 고민하는데 많은 도움을 주었다. 한 시대의 지성을 대표하는 인물이었던 이어령 선생님께서, 풍만한 지식을 지니고도 죽음 앞에서 한없이 작아지는 모습을 스스로 담담하게 그리고, 모습을 또 관조하며 배움을 전하려는 선생님의 태도 속에서, 나의 삶의 자세, 죽음에 대한 생각을 깊이 해보게 했던 것 같다. 삶의 끝에서 바라보는 지성인의 통찰과 생각, 그리고 위트가 인상적이었다.
+</p>
         
         </div>
 
@@ -544,15 +590,9 @@
           <h3><a href="../../study/tech_blog/">기술 블로그 만들기 [GITHUB PAGES, HUGO]</a></h3>
         
         
-          <p><p>사용하고 싶고, 관리하고 싶은 기술 블로그 만들기</p>
-<ul>
-<li>Github pages</li>
-<li>Hugo</li>
-<li>Customization</li>
-<li>Utterances</li>
-</ul>
-<h2 id="1-intro">1. Intro.</h2>
-<p>기존에 블로그를 만들어 공부한 내용이나 독서 기록 용도로 블로그를 운영하고 있었는데, 요즘 기록하는 빈도도 떨어지고 관심도도 떨어져 가는 것 같았다. 이를 극복하고자 블로그에 작은 변화도 주고, Github action 등의 설정을 하면서 과정을 좀 정리해 보려고 한다.</p></p>
+          <p>사용하고 싶고, 관리하고 싶은 기술 블로그 만들기
+Github pages Hugo Customization Utterances 1. Intro. 기존에 블로그를 만들어 공부한 내용이나 독서 기록 용도로 블로그를 운영하고 있었는데, 요즘 기록하는 빈도도 떨어지고 관심도도 떨어져 가는 것 같았다. 이를 극복하고자 블로그에 작은 변화도 주고, Github action 등의 설정을 하면서 과정을 좀 정리해 보려고 한다.
+</p>
         
         </div>
 
@@ -588,17 +628,8 @@
           <h3><a href="../../life/%E1%84%83%E1%85%A9%E1%84%89%E1%85%B5%E1%84%82%E1%85%B3%E1%86%AB-%E1%84%86%E1%85%AE%E1%84%8B%E1%85%A5%E1%86%BA%E1%84%8B%E1%85%B3%E1%84%85%E1%85%A9-%E1%84%89%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%E1%84%80%E1%85%A1/">도시는 무엇으로 사는가?</a></h3>
         
         
-          <p><h2 id="도시는-무엇으로-사는가">도시는 무엇으로 사는가?</h2>
-<ul>
-<li>미디어: Book</li>
-<li>발간일: 2015/03/25</li>
-<li>읽은 날: November 5, 2021</li>
-<li>저자/역: 유현준</li>
-<li>출판사: 을유문화사</li>
-<li>카테고리: 인문</li>
-</ul>
-<h3 id="introduction">Introduction</h3>
-<p>유현준 작가는 내가 생각하는 지금 우리사회의 지식인 중 한분이다. 최근 저가가 유튜브를 시작하여 영상을 보게 되었는데 내용들이 너무나 흥미로웠다. 그 전의 많은 TV 프로그램에서 나온 저자의 강의들도 재미있게 봤었다. 저자의 영상을 보면, 건축의 요소들을 쉽고 간단하게 설명하면서도 그 뿌리가 되는 인문학적 지식들을 녹여내는 그의 실력이 감탄을 자아낸다.</p></p>
+          <p>도시는 무엇으로 사는가? 미디어: Book 발간일: 2015/03/25 읽은 날: November 5, 2021 저자/역: 유현준 출판사: 을유문화사 카테고리: 인문 Introduction 유현준 작가는 내가 생각하는 지금 우리사회의 지식인 중 한분이다. 최근 저가가 유튜브를 시작하여 영상을 보게 되었는데 내용들이 너무나 흥미로웠다. 그 전의 많은 TV 프로그램에서 나온 저자의 강의들도 재미있게 봤었다. 저자의 영상을 보면, 건축의 요소들을 쉽고 간단하게 설명하면서도 그 뿌리가 되는 인문학적 지식들을 녹여내는 그의 실력이 감탄을 자아낸다.
+</p>
         
         </div>
 
@@ -634,17 +665,8 @@
           <h3><a href="../../life/%EB%8F%84%EC%8B%9C%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9C%BC%EB%A1%9C-%EC%82%AC%EB%8A%94%EA%B0%80/">도시는 무엇으로 사는가?</a></h3>
         
         
-          <p><h2 id="도시는-무엇으로-사는가">도시는 무엇으로 사는가?</h2>
-<ul>
-<li>미디어: Book</li>
-<li>발간일: 2015/03/25</li>
-<li>읽은 날: November 5, 2021</li>
-<li>저자/역: 유현준</li>
-<li>출판사: 을유문화사</li>
-<li>카테고리: 인문</li>
-</ul>
-<h3 id="introduction">Introduction</h3>
-<p>유현준 작가는 내가 생각하는 지금 우리사회의 지식인 중 한분이다. 최근 저가가 유튜브를 시작하여 영상을 보게 되었는데 내용들이 너무나 흥미로웠다. 그 전의 많은 TV 프로그램에서 나온 저자의 강의들도 재미있게 봤었다. 저자의 영상을 보면, 건축의 요소들을 쉽고 간단하게 설명하면서도 그 뿌리가 되는 인문학적 지식들을 녹여내는 그의 실력이 감탄을 자아낸다.</p></p>
+          <p>도시는 무엇으로 사는가? 미디어: Book 발간일: 2015/03/25 읽은 날: November 5, 2021 저자/역: 유현준 출판사: 을유문화사 카테고리: 인문 Introduction 유현준 작가는 내가 생각하는 지금 우리사회의 지식인 중 한분이다. 최근 저가가 유튜브를 시작하여 영상을 보게 되었는데 내용들이 너무나 흥미로웠다. 그 전의 많은 TV 프로그램에서 나온 저자의 강의들도 재미있게 봤었다. 저자의 영상을 보면, 건축의 요소들을 쉽고 간단하게 설명하면서도 그 뿌리가 되는 인문학적 지식들을 녹여내는 그의 실력이 감탄을 자아낸다.
+</p>
         
         </div>
 
@@ -680,8 +702,8 @@
           <h3><a href="../../study/nvidia-jetson-tx2-xavier-image-cloning-709c45c1f161496db7c09de255d50fca/">NVIDIA JETSON TX2/XAVIER IMAGE CLONING</a></h3>
         
         
-          <p><h3 id="nvidia-jetson-">NVIDIA Jetson *</h3>
-<p>NVIDIA Jetson 시리즈 제품들은 GPU를 사용하는 어플리케이션(주로 AI Edge computing)을 개발하고 이를 임베디드 시스템에 적용할 때 필수적으로 사용하게 되는 제품들이다. 전에는 <code>Jetson TX2</code> 제품이 가성비로 많이 사용되었고, 최근에는 <code>Jetson AGX Xavier</code> 가 높은 GPU/CPU 성능으로 고사양이 필요한 어플리케이션에 사용되고 있다. <code>Jetson Xavier Nano</code> 는 낮은 가격으로 가벼운 어플리케이션에 많이 이용되고 있다.</p></p>
+          <p>NVIDIA Jetson * NVIDIA Jetson 시리즈 제품들은 GPU를 사용하는 어플리케이션(주로 AI Edge computing)을 개발하고 이를 임베디드 시스템에 적용할 때 필수적으로 사용하게 되는 제품들이다. 전에는 Jetson TX2 제품이 가성비로 많이 사용되었고, 최근에는 Jetson AGX Xavier 가 높은 GPU/CPU 성능으로 고사양이 필요한 어플리케이션에 사용되고 있다. Jetson Xavier Nano 는 낮은 가격으로 가벼운 어플리케이션에 많이 이용되고 있다.
+</p>
         
         </div>
 
@@ -717,7 +739,8 @@
           <h3><a href="../../life/powerful/">파워풀: 넷플릭스 성장의 비결</a></h3>
         
         
-          <p>넷플릭스가 어떤 회사가 되었으면 하는지, 빠르고 효율적으로 성장하기 위해 어떻게 인재관리를 했는지에 대한 저자의 경험을 원칙과 사례로 흥미롭게 서술하였다. 지금 당장 필요한 인재와 그렇지 않은 인재를 구분하고 필요하지 않은 인재는 과감하게 내보낸다는 원칙이 인상적이었다. 그리고 중소기업/스타트업 에서의 개인적인 경험이 이 책의 내용과 많은 부분 공감대를 형성하였던 것 같다.</p>
+          <p>넷플릭스가 어떤 회사가 되었으면 하는지, 빠르고 효율적으로 성장하기 위해 어떻게 인재관리를 했는지에 대한 저자의 경험을 원칙과 사례로 흥미롭게 서술하였다. 지금 당장 필요한 인재와 그렇지 않은 인재를 구분하고 필요하지 않은 인재는 과감하게 내보낸다는 원칙이 인상적이었다. 그리고 중소기업/스타트업 에서의 개인적인 경험이 이 책의 내용과 많은 부분 공감대를 형성하였던 것 같다.
+</p>
         
         </div>
 
@@ -753,31 +776,8 @@
           <h3><a href="../../study/no-raw-loops-yes-stl-algorithms-17cb7499a6464a30a9880cdc161e05b9/">NO RAW LOOPS! YES STL ALGORITHMS!</a></h3>
         
         
-          <p><p><img alt="unsplash" src="../../images/No%20raw%20loops!%20Yes%20STL%20algorithms!%2017cb7499a6464a30a9880cdc161e05b9/Untitled.png"></p>
-<p><br></br></p>
-<h1 id="what-are-raw-loops--algorithms">What are raw loops (↔ algorithms)?</h1>
-<ul>
-<li><code>for</code> loop</li>
-<li><code>while</code> loop</li>
-<li><code>do</code> <code>while</code> loop</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// Raw loop
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">my_vector</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// do something including erase, push, insert and break;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">x</span> <span class="p">:</span> <span class="n">my_vector</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// do something
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Algorithms
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">auto</span> <span class="n">it_found</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">find_if</span><span class="p">(</span><span class="n">cbegin</span><span class="p">(</span><span class="n">my_vector</span><span class="p">),</span> <span class="n">cend</span><span class="p">(</span><span class="n">my_vector</span><span class="p">),</span> 
-</span></span><span class="line"><span class="cl">                             <span class="n">find_function</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">it_remove</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">remove_if</span><span class="p">(</span><span class="n">cbegin</span><span class="p">(</span><span class="n">my_vector</span><span class="p">),</span> <span class="n">cend</span><span class="p">(</span><span class="n">my_vector</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">                                <span class="n">remove_function</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">it_fill</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">fill_n</span><span class="p">(</span><span class="n">my_vector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">count</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
-</span></span></code></pre></div><p><br></br></p></p>
+          <p>
+What are raw loops (↔ algorithms)? for loop while loop do while loop // Raw loop for (size_t i=0; i &lt; my_vector.size();i++) { // do something including erase, push, insert and break; } for (auto&amp; x : my_vector){ // do something } // Algorithms auto it_found = std::find_if(cbegin(my_vector), cend(my_vector), find_function); auto it_remove = std::remove_if(cbegin(my_vector), cend(my_vector), remove_function); auto it_fill = std::fill_n(my_vector.begin(), count, value); </p>
         
         </div>
 
@@ -813,7 +813,8 @@
           <h3><a href="../../life/tesla_shock/">테슬라쇼크</a></h3>
         
         
-          <p>&lsquo;바퀴 달린 아이폰&rsquo; 이라는 테슬라의 여러가지 측면을 분석하여 정리한 책이다. 자동차 업계에 오랜 경험이 있는 저자가 업계의 다양한 정보를 바탕으로 테슬라를 분석했다는 점이 돋보이는 책이었다.</p>
+          <p>&lsquo;바퀴 달린 아이폰&rsquo; 이라는 테슬라의 여러가지 측면을 분석하여 정리한 책이다. 자동차 업계에 오랜 경험이 있는 저자가 업계의 다양한 정보를 바탕으로 테슬라를 분석했다는 점이 돋보이는 책이었다.
+</p>
         
         </div>
 
@@ -849,8 +850,8 @@
           <h3><a href="../../study/effective-modern-c&#43;&#43;/">EFFECTIVE MODERN C&#43;&#43;</a></h3>
         
         
-          <p><hr>
-<p>Effective Modern C++ 도서를 읽고 정리한 효율적인 C++ 프로그래밍 방법</p></p>
+          <p> Effective Modern C++ 도서를 읽고 정리한 효율적인 C++ 프로그래밍 방법
+</p>
         
         </div>
 
@@ -869,60 +870,6 @@
 
         
           <span><a class="tag" href="../../tags/c&#43;&#43;/">C&#43;&#43;</a><a class="tag" href="../../tags/%EB%8F%85%EC%84%9C/">독서</a></span>
-
-
-        
-      </div>
-    </div>
-  
-    <div
-      class="post 
-        animated fadeInDown
-      "
-    >
-      
-      <div class="post__content">
-        
-          <h3><a href="../../study/kalman-filter/">KALMAN FILTER (작성중)</a></h3>
-        
-        
-          <p><hr>
-<p>자율주행 알고리즘 개발을 위한 칼만필터</p>
-<hr>
-<hr>
-<p>@Remind</p>
-<ul>
-<li>내가 아는 Kalman Filter 개념을 다시 정리하기 위해</li>
-<li>다른 사람에게 설명할 때 유용한 자료로 활용하기 위해</li>
-<li>수식은 적게 그림은 많게</li>
-</ul>
-<hr>
-<h2 id="prerequisites">Prerequisites</h2>
-<ul>
-<li>Least Square Method</li>
-<li>Bayes theorem</li>
-<li>Gaussian distribution</li>
-</ul>
-<h2 id="objective-optimal-state-estimation">Objective: Optimal state estimation</h2>
-<p>칼만 필터는 많은 분야에서 두루 사용되는 효율적이면서 강건한 알고리즘입니다. 센서에서 측정된 결과로 부터 우리가 알고자 하는 정보를 뽑아내기 위해 사용됩니다.</p></p>
-        
-        </div>
-
-      
-      <div class="post__footer">
-        <em class="fas fa-calendar-day"></em>
-        <span class="post__footer-date"
-          >
-            
-              Thu, Aug 5, 2021
-            
-
-          </span
-        >
-        
-
-        
-          <span><a class="tag" href="../../tags/kalman-filter/">kalman filter</a><a class="tag" href="../../tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/">자율주행</a><a class="tag" href="../../tags/optimal-state-estimation/">optimal state estimation</a></span>
 
 
         
@@ -1003,7 +950,7 @@
     <li class="footer__item">
       &copy;
       
-        Kyungpyo Kim 2014-2024
+        Kyungpyo Kim 2014-2025
       
     </li>
     

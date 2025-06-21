@@ -3,7 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kyungpyo-kim.github.io/</loc>
-    <lastmod>2024-11-17T20:15:21+09:00</lastmod>
+    <lastmod>2025-06-21T21:23:45+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/ai/</loc>
+    <lastmod>2025-06-21T21:23:45+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/diffusion/</loc>
+    <lastmod>2025-06-21T21:23:45+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/gemini/</loc>
+    <lastmod>2025-06-21T21:23:45+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/generative-ai/</loc>
+    <lastmod>2025-06-21T21:23:45+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/study/llada_gemini_diffusion/</loc>
+    <lastmod>2025-06-21T21:23:45+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/llada/</loc>
+    <lastmod>2025-06-21T21:23:45+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/llm/</loc>
+    <lastmod>2025-06-21T21:23:45+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/study/</loc>
+    <lastmod>2025-06-21T21:23:45+09:00</lastmod>
+  </url><url>
+    <loc>https://kyungpyo-kim.github.io/tags/</loc>
+    <lastmod>2025-06-21T21:23:45+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/architecture/</loc>
     <lastmod>2024-11-17T20:15:21+09:00</lastmod>
@@ -19,13 +48,7 @@
     <loc>https://kyungpyo-kim.github.io/tags/software/</loc>
     <lastmod>2024-11-17T20:15:21+09:00</lastmod>
   </url><url>
-    <loc>https://kyungpyo-kim.github.io/study/</loc>
-    <lastmod>2024-11-17T20:15:21+09:00</lastmod>
-  </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/study/</loc>
-    <lastmod>2024-11-17T20:15:21+09:00</lastmod>
-  </url><url>
-    <loc>https://kyungpyo-kim.github.io/tags/</loc>
     <lastmod>2024-11-17T20:15:21+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/study/clean_architecture_0/</loc>
@@ -37,9 +60,6 @@
     <lastmod>2024-08-18T16:50:55+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
-  </url><url>
-    <loc>https://kyungpyo-kim.github.io/tags/ai/</loc>
-    <lastmod>2024-08-18T16:50:55+09:00</lastmod>
   </url><url>
     <loc>https://kyungpyo-kim.github.io/tags/llms/</loc>
     <lastmod>2024-08-18T16:50:55+09:00</lastmod>

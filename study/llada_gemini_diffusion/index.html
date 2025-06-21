@@ -1,0 +1,703 @@
+<!doctype html>
+<html
+  dir="ltr"
+  lang="ko"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <meta charset="utf-8" />
+  <title>
+    
+      
+        Large Language Diffusion Model (LLaDA), Gemini Diffusion |
+      kyungpyo-kim
+
+  </title>
+
+  <meta name="generator" content="Hugo 0.139.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="kyungpyo-kim" />
+  <meta
+    name="description"
+    content="새로운 것을 찾아"
+  />
+  
+    <meta name="google-site-verification" content="Q4P3G3Girpd3IvxCj-Pwjqw57XwNqKP1Qpu4pWlxa_w" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../scss/main.min.8d4fad7e6916ad2e291e8d97ada157c70350d6d7150fea137e7243340967befb.css"
+      integrity="sha256-jU&#43;tfmkWrS4pHo2XraFXxwNQ1tcVD&#43;oTfnJDNAlnvvs="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="../../css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="../../css/taxonomy.min.b6d7eff11342047cc36639518e493d5caf8fa6d496e67a716255c362e74e6519.css"
+      integrity="sha256-ttfv8RNCBHzDZjlRjkk9XK&#43;PptSW5npxYlXDYudOZRk="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/fontawesome.min.137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519.css"
+    integrity="sha256-E3sc886pqK23iENDqaXd3fQoD1kVP3TceC&#43;3978NBRk="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/solid.min.e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3.css"
+    integrity="sha256-5l3FtI&#43;185sUI2DFfDohV0TJTlbHVckpzD6I/hKqtNM="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/regular.min.6f4f16d58da1c82c0c3a3436e021a3d39b4742f741192c546e73e947eacfd92f.css"
+    integrity="sha256-b08W1Y2hyCwMOjQ24CGj05tHQvdBGSxUbnPpR&#43;rP2S8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="../../fontawesome/css/brands.min.e10425ad768bc98ff1fb272a0ac8420f9d1ba22f0612c08ff1010c95080ffe7e.css"
+    integrity="sha256-4QQlrXaLyY/x&#43;ycqCshCD50boi8GEsCP8QEMlQgP/n4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="../../favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://kyungpyo-kim.github.io/study/llada_gemini_diffusion/" />
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="../../js/anatole-header.min.3fb7ecbad96218fce1cd5e8c69ce912680cfb525637325b5f76cdbefcc0d4a3a.js"
+    integrity="sha256-P7fsutliGPzhzV6Mac6RJoDPtSVjcyW192zb78wNSjo="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="../../js/anatole-theme-switcher.min.8724ddf9268dee451060f191961647573c7f592fbccc6d858746236b3f915813.js"
+      integrity="sha256-hyTd&#43;SaN7kUQYPGRlhZHVzx/WS&#43;8zG2Fh0Yjaz&#43;RWBM="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+  
+
+  
+
+
+  
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png">
+  <meta name="twitter:title" content="Large Language Diffusion Model (LLaDA), Gemini Diffusion">
+  <meta name="twitter:description" content="Gemini Diffusion waitlist 를 받고 있다. waitlist 도 등록할 겸 Large Language Diffusion Models 논문도 함께 리뷰해본다.">
+
+
+
+  
+  <meta property="og:url" content="https://kyungpyo-kim.github.io/study/llada_gemini_diffusion/">
+  <meta property="og:site_name" content="Kyungpyo Kim">
+  <meta property="og:title" content="Large Language Diffusion Model (LLaDA), Gemini Diffusion">
+  <meta property="og:description" content="Gemini Diffusion waitlist 를 받고 있다. waitlist 도 등록할 겸 Large Language Diffusion Models 논문도 함께 리뷰해본다.">
+  <meta property="og:locale" content="ko">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="study">
+    <meta property="article:published_time" content="2025-06-21T21:23:45+09:00">
+    <meta property="article:modified_time" content="2025-06-21T21:23:45+09:00">
+    <meta property="article:tag" content="LLaDA">
+    <meta property="article:tag" content="Gemini">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Diffusion">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Generative AI">
+    <meta property="og:image" content="https://kyungpyo-kim.github.io/images/site-feature-image.png">
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "study",
+        "name": "Large Language Diffusion Model (LLaDA), Gemini Diffusion",
+        "headline": "Large Language Diffusion Model (LLaDA), Gemini Diffusion",
+        "alternativeHeadline": "",
+        "description": "
+      
+        \u003cp\u003eGemini Diffusion waitlist 를 받고 있다. waitlist 도 등록할 겸 Large Language Diffusion Models 논문도 함께 리뷰해본다.\u003c\/p\u003e
+
+
+      
+
+
+    ",
+        "license": "",
+        
+          
+          "copyrightYear": "",
+        
+        "inLanguage": "ko",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/kyungpyo-kim.github.io\/study\/llada_gemini_diffusion\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "kyungpyo-kim"
+        },
+        "dateCreated": "2025-06-21T21:23:45.00Z",
+        "datePublished": "2025-06-21T21:23:45.00Z",
+        "dateModified": "2025-06-21T21:23:45.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "kyungpyo-kim",
+            "url": "https://kyungpyo-kim.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/kyungpyo-kim.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://kyungpyo-kim.github.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/kyungpyo-kim.github.io\/study\/llada_gemini_diffusion\/",
+        "wordCount" : "657",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "LLaDA"
+
+    
+      
+        ,
+
+      
+      "Gemini"
+
+    
+      
+        ,
+
+      
+      "LLM"
+
+    
+      
+        ,
+
+      
+      "Diffusion"
+
+    
+      
+        ,
+
+      
+      "AI"
+
+    
+      
+        ,
+
+      
+      "Generative AI"
+
+    ]
+    }
+  </script>
+
+
+
+
+  
+  <script
+  data-ad-client="ca-pub-7791328994969079"
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+></script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="../../images/kyungpyo.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="../../">Kyungpyo Kim</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>새로운 것을 찾아</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Kyungpyo-Kim"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://instagram.com/kyung_py"
+            target="_blank"
+            rel="noopener me"
+            aria-label="instagram"
+            title="instagram"
+          >
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:kyungpyo94@gmail.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+
+    <div class="sidebar__taxonomy_cloud">
+      <h1 class="sidebar__taxonomy_cloud-title">
+        <a href="https://kyungpyo-kim.github.io//tags">Tags</a>
+      </h1>
+      <ul class="sidebar__taxonomy_cloud-contents-ul" id="taxonomy_cloud-contents-ul"><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/3d-object-detection/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">3D Object Detection</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ai/" style="font-size:1.3636363636363638em; padding: 0.2em 0.2em 0.2em 0.2em;">AI</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/architecture/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Architecture</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/big-data/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Big Data</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/blog/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Blog</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/c&#43;&#43;/" style="font-size:1.2272727272727273em; padding: 0.2em 0.2em 0.2em 0.2em;">C&#43;&#43;</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/diagnostics/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Diagnostics</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/diffusion/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Diffusion</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/engineering/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Engineering</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/gemini/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Gemini</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/generative-ai/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Generative AI</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/github/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Github</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/gpu/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">GPU</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/hash/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Hash</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/hugo/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Hugo</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/jetson/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Jetson</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/kalman-filter/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Kalman Filter</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/key/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Key</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/license/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">License</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/lidar/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">LiDAR</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/llada/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">LLaDA</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/llm/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">LLM</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/llms/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">LLMs</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/npu/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">NPU</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/nvidia/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">NVIDIA</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/optimal-state-estimation/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Optimal State Estimation</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/pyqt/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">PyQt</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/python/" style="font-size:1.2727272727272727em; padding: 0.2em 0.2em 0.2em 0.2em;">Python</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ros/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ros2/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">ROS2</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/shared_timed_mutex/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Shared_timed_mutex</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/software/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Software</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/sota/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">SOTA</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/stl/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">STL</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/study/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">Study</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/tensorflow/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Tensorflow</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/thread-safety/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Thread Safety</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/ubuntu/" style="font-size:1.1363636363636362em; padding: 0.2em 0.2em 0.2em 0.2em;">Ubuntu</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/unordered_map/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">Unordered_map</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EA%B3%B5%EC%97%85%EC%88%98%ED%95%99/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">공업수학</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%8F%85%EC%84%9C/" style="font-size:2em; padding: 0.2em 0.2em 0.2em 0.2em;">독서</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%9D%BC%EC%9D%B4%EB%94%A9/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">라이딩</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%9F%AC%EB%8B%9D/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">러닝</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EB%B3%B4%EC%95%88/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">보안</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-algorithm/" style="font-size:1.1818181818181819em; padding: 0.2em 0.2em 0.2em 0.2em;">알고리즘 (Algorithm)</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-data-structure/" style="font-size:1.0454545454545454em; padding: 0.2em 0.2em 0.2em 0.2em;">자료구조 (Data Structure)</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89/" style="font-size:1.0909090909090908em; padding: 0.2em 0.2em 0.2em 0.2em;">자율주행</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%A0%9C%EC%96%B4/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">제어</a>
+      </li><li class="sidebar__taxonomy_cloud-contents-li">
+        <a href="../../tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-coding-test/" style="font-size:1em; padding: 0.2em 0.2em 0.2em 0.2em;">코딩테스트 (Coding Test)</a>
+      </li></ul>
+
+    </div>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2025
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../life/"
+              
+              title=""
+              >Life</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../study/"
+              
+              title=""
+              >Study</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="../../contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      
+        <h1>Large Language Diffusion Model (LLaDA), Gemini Diffusion</h1>
+      
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  Sat, Jun 21, 2025
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">읽는 시간 4분</span>
+          </li>
+        </ul>
+      <p>Gemini Diffusion waitlist 를 받고 있다. waitlist 도 등록할 겸 Large Language Diffusion Models 논문도 함께 리뷰해본다.</p>
+<ul>
+<li>Paper: NIE, Shen, et al. Large language diffusion models. <em>arXiv preprint arXiv:2502.09992</em>, 2025.</li>
+<li>Gemini Diffusion: <a href="https://deepmind.google/models/gemini-diffusion/">Gemini Diffusion - Google DeepMind</a></li>
+</ul>
+<p>Large Language Diffusion Models (LLaDA) 을 처음 접한 것은 안될공학 유튜브였던 것 같다. 간단하게 설명하면 Image Diffusion 기술을 응용하여 언어 모델을 diffusion 방식으로 생성하는 아이디어이다.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=s2bTE1FPb50">한 단어씩 생성하는 트랜스포머 LLM… 정말 곧 대체되겠네요. 지금 바로 사용 가능 | 10배 빠르고 10배 싸다. 텍스트-이미지 생성처럼 한 방에 텍스트 생성하는 LLM 출시 - YouTube</a></li>
+</ul>
+<p>당시 이미 상용화 수준으로 서비스를 하는 회사도 있었다. 그 후 불과 3개월만에 Google 에서도 diffusion 모델을 출시 한 것이다.</p>
+<p>기술 산업은 정말 경쟁이 치열하다는 생각도 들고, 순다 피차이가 말했던 2등 전략이 어쩌면 이런 치열한 경쟁에서 살아남는 현명한 전략일지도 모른다는 생각이 든다.</p>
+<h4 id="paper-review">Paper Review</h4>
+<hr>
+<blockquote>
+<p>What is now proved was once only imagined. —William Blake</p>
+</blockquote>
+<p>재미있게도 논문은 위의 인용구로부터 시작된다.</p>
+<p>기존에는 언어 모델이 단어를 생성하는데는 Auto-Regressive Modeling (ARM) 방법을 이용한다. 이는 이전까지의 생성된 출력을 다시 입력에 넣고 다음 단어를 만들어 내는 방식이다. 지금까지 많은 모델들이 이런 방식으로 동작하고 있다.</p>
+<p>이런 방식에는 문제점이 있다. 한번에 처리할 수 있는 문장은 제한이 되어 있다. 따라서 출력해야 하는 문장이 길어질 경우 맨 처음 출력했던 단어를 비효율적으로 사용해야 하거나 문장길이의 제한으로 꼭 필요한 내용인데 입력으로 들어가지 못하는 경우가 생긴다.</p>
+<p>저자는 이러한 ARM 의 단점을 보고, 다른 방법을 써도 괜찮은지 고민한 것 같다. Large language model 은 출력된 언어의 distribution 을 모델링 하는 것이기 때문에, distribution 을 잘 생성하는 검증된 방법인 diffusion 방법을 적용한다. LLM 의 여러 특성들은 언어모델 자체의 특성이며, ARM 이 수행하는 무손실 압축 특성은 다른 확률 모델로도 충분히 수행할 수 있다고 말한다.</p>
+<p>Diffusion 방법은 은 노이즈로 부터 이미지를 생성하는 과정을 학습한다. 이를 통해 요청된 쿼리로부터 노이즈를 적당하게 생성하고 이로부터 다양하고 높은 퀄리티의 이미지를 만들어 내는 일을 수행한다. 그 과정은 diffusion 이라는 말이 의미 하듯이 노이즈를 점차 제거해 나가는 과정을 통해서 진행된다. (diffusion 의 forward 과정에서는 학습데이터이에 점차 노이즈를 확산시키며 학습할 데이터를 만들고 reverse 과정을 통해 노이즈로 부터 원래의 학습 데이터를 추정하는 방법을 배운다. 엄밀히 말하면 reverse diffusion 을 통해 노이즈를 제거한다.)</p>
+<p>이미지 생성을 위해 사용되던 Diffusion 방법을 언어모델에 적용한 것이 LLaDA 이다.</p>
+<p>![LLaDA](/images/Large Language Diffusion, Gemini Diffusion.png)</p>
+<p>논문의 그림이 쉽게 잘 그려진 것 같다. (a) Pre-training 과정에서는 LLM 이 하듯이 많은 text 데이터에 masking 을 하고 이를 추론 하도록 학습을 한다. 기존의 LLM 과 동일한 방식이다. 이후에 (b) Supervised Fine-Tuning (SFT) 를 거쳐서 Prompt/Response 를 위한 mask predictor 를 학습 시킨다. 어쩌면 여기까지는 기존의 ARM 과 동일한 과정이라고 볼 수 있다. 큰 차이점은 LLaDA 는 (c) Inference 를 diffusion 과정을 통해서 수행 한다는 것이 큰 차이이다. (c) Inference 를 위해서 (a) Pre-training, (b) SFT 에서 diffusion 과정을 학습하게 된다.</p>
+<h4 id="gemini-diffusion">Gemini Diffusion</h4>
+<p>Gemini Diffusion 은 이를 상용화 한 것으로 보인다.</p>
+<p>Large Language Model, Image Diffusion, Large Language Diffusion 모두 이미 발표되었던 기술이어서 Google DeepMind 가 이를 어떤 수준으로 만들어서 상용화하는지 궁금하다.</p>
+<p>기술적으로 보면 Diffusion 방법은 ARM 방법보다 획기적으로 빠른 방법이다.</p>
+<p>한편으로 개인적으로는 드는 생각은 사용자 인터페이스 측면에서 ARM 방법은 LLM 이 생각을 하는 듯한 인상을 주기 때문에 좀 더 사람에게 친화적일 수 있을 것 같다. Demo 영상을 보면 Diffusion 모델은 그렇지는 않다. 상당히 기계적인 생성 과정으로 보인다. Diffusion 과정 자체가 사람들의 인지하기 좋은 방법은 아니기 때문이다.</p>
+<p>아주 빠른 속도가 공학적으로는 더 좋은 결과일지도 모르지만 수년간 애플은 사용자의 심리적, 인지적 반응이 공학적으로 얼마나 중요한지 보여주었다. 대중이 어떻게 받아들일지가 궁금한 포인트이다.</p>
+<p>Reasoning 을 통한 성능향상이 가능할지도 궁금하다. LLM 이 그랬던 것처럼 Diffusion 모델도 Reasoning 을 통해 성능 향상이 가능할지가 중요한 포인트 일 것 같다. 최근 OpenAI 에서 ChatGPT 의 새버전을 발표했는데 여러 벤치마크에서는 더 좋은 성능을 보여주었지만 환각 현상과 아부하는 현상이 심해서 버전을 roll-back 하는 초유의 사태도 있었다. 학습 과정에서 사용자 응답을 너무 많이 반영한 결과라고 하였지만 나는 개인적으로는 reasoning 과 같은 장치를 통해 이런 문제를 해결 할 것 같다는 생각이 든다.</p>
+<p>발표한 모델의 사이즈도 꽤 작은 편인 것 같다. Diffusion 모델에도 Scaling-Law 가 적용되지 않을 수 도 있다는 가능성이 있어 보인다. Mamba, Jamba 같은 SSM 기반의 모델들이 아직 상용화에서는 많이 두각을 보이지 못하는 것을 보면 LLaDA 도 생각보다는 좀 더 시간이 필요할 수도 있어 보인다.</p>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="../../tags/llada/">LLaDA</a><a class="tag" href="../../tags/gemini/">Gemini</a><a class="tag" href="../../tags/llm/">LLM</a><a class="tag" href="../../tags/diffusion/">Diffusion</a><a class="tag" href="../../tags/ai/">AI</a><a class="tag" href="../../tags/generative-ai/">Generative AI</a></span>
+
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>댓글</h2>
+          <script
+  src="https://utteranc.es/client.js"
+  repo="Kyungpyo-Kim/Kyungpyo-Kim.github.io"
+  issue-term="pathname"
+  theme="preferred-color-scheme"
+  
+  crossorigin="anonymous"
+  async
+></script>
+
+        </div>
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Kyungpyo Kim 2014-2025
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="../../js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
