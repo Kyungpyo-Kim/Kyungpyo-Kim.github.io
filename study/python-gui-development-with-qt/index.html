@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.2.9"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#152028" media="(prefers-color-scheme: dark)"><link rel="icon" href="/favicons/favicon.ico" sizes="any"><meta name="google-site-verification" content="Q4P3G3Girpd3IvxCj-Pwjqw57XwNqKP1Qpu4pWlxa_w"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7791328994969079" crossorigin="anonymous"></script><title>QT 를 이용한 Python GUI 개발 환경 만들기 · 경표의 블로그</title><meta name="description" content="PyGUIDevTemplate GUI development template for python Summary 1. QT Designer 를 이용하여 UI 설계 2. Matplotlib, OpenCV 연동을 위한 custom class 활용 3. PyInstaller 를 이용한 파일…"><meta name="author" content="Kyungpyo Kim"><link rel="canonical" href="https://kyungpyo-kim.github.io/study/python-gui-development-with-qt/"><!-- RSS feed (also served at /rss.xml) --><link rel="alternate" type="application/rss+xml" title="경표의 블로그" href="https://kyungpyo-kim.github.io/index.xml"><!-- hreflang alternates (ko root, en prefix) --><link rel="alternate" hreflang="ko" href="https://kyungpyo-kim.github.io/study/python-gui-development-with-qt/"><link rel="alternate" hreflang="en" href="https://kyungpyo-kim.github.io/en/study/python-gui-development-with-qt/"><link rel="alternate" hreflang="x-default" href="https://kyungpyo-kim.github.io/study/python-gui-development-with-qt/"><!-- Open Graph --><meta property="og:type" content="article"><meta property="og:title" content="QT 를 이용한 Python GUI 개발 환경 만들기 · 경표의 블로그"><meta property="og:description" content="PyGUIDevTemplate GUI development template for python Summary 1. QT Designer 를 이용하여 UI 설계 2. Matplotlib, OpenCV 연동을 위한 custom class 활용 3. PyInstaller 를 이용한 파일…"><meta property="og:url" content="https://kyungpyo-kim.github.io/study/python-gui-development-with-qt/"><meta property="og:site_name" content="경표의 블로그"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="QT 를 이용한 Python GUI 개발 환경 만들기 · 경표의 블로그"><meta property="article:published_time" content="2019-12-15T00:00:00.000Z"><meta property="article:modified_time" content="2019-12-15T00:00:00.000Z"><meta property="article:author" content="Kyungpyo Kim"><meta property="article:section" content="study"><meta property="article:tag" content="PyQt"><meta property="article:tag" content="python"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="QT 를 이용한 Python GUI 개발 환경 만들기 · 경표의 블로그"><meta name="twitter:description" content="PyGUIDevTemplate GUI development template for python Summary 1. QT Designer 를 이용하여 UI 설계 2. Matplotlib, OpenCV 연동을 위한 custom class 활용 3. PyInstaller 를 이용한 파일…"><meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"QT 를 이용한 Python GUI 개발 환경 만들기","description":"PyGUIDevTemplate GUI development template for python Summary 1. QT Designer 를 이용하여 UI 설계 2. Matplotlib, OpenCV 연동을 위한 custom class 활용 3. PyInstaller 를 이용한 파일…","inLanguage":"ko-KR","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyungpyo-kim.github.io/study/python-gui-development-with-qt/"},"author":{"@type":"Person","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/"},"publisher":{"@type":"Organization","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/","logo":{"@type":"ImageObject","url":"https://kyungpyo-kim.github.io/favicons/favicon.ico"}},"image":["https://kyungpyo-kim.github.io/images/og-default.png"],"url":"https://kyungpyo-kim.github.io/study/python-gui-development-with-qt/","datePublished":"2019-12-15T00:00:00.000Z","dateModified":"2019-12-15T00:00:00.000Z","keywords":"PyQt, python"}</script><!-- Apply theme before paint to avoid flash. --><script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.CNMBM8t0.css"></head><body><div class="wrapper"><div class="wrapper__main wrapper__main--fullscreen"><header class="header"><nav class="nav" aria-label="주요 메뉴"><a class="nav__brand" href="/">Kyungpyo Kim</a><button id="nav-burger" class="nav__burger" type="button" aria-label="메뉴" aria-expanded="false" aria-controls="nav-list">☰</button><ul id="nav-list" class="nav__list"><li class="nav__list-item"><a href="/">홈</a></li><li class="nav__list-item"><a href="/study/">스터디</a></li><li class="nav__list-item"><a href="/about/">소개</a></li><li class="nav__list-item"><a class="btn-icon" href="/en/study/python-gui-development-with-qt/" rel="alternate" hreflang="en" aria-label="언어 전환">EN</a></li><li class="nav__list-item"><button id="theme-toggle" class="btn-icon" type="button" aria-label="테마 전환"><span data-theme-icon="light" aria-hidden="true">🌙</span><span data-theme-icon="dark" aria-hidden="true" hidden>☀️</span></button><script type="module">var e=document.getElementById(`theme-toggle`),t=document.documentElement;function n(){let n=t.getAttribute(`data-theme`)===`dark`,r=e?.querySelector(`[data-theme-icon="light"]`),i=e?.querySelector(`[data-theme-icon="dark"]`);r&&(r.hidden=n),i&&(i.hidden=!n)}n(),e?.addEventListener(`click`,()=>{let e=t.getAttribute(`data-theme`)===`dark`?`light`:`dark`;t.setAttribute(`data-theme`,e);try{localStorage.setItem(`theme`,e)}catch{}n()});</script></li></ul></nav></header><script type="module">var e=document.getElementById(`nav-burger`),t=document.getElementById(`nav-list`);e?.addEventListener(`click`,()=>{let n=t?.classList.toggle(`nav__list--active`);e.setAttribute(`aria-expanded`,n?`true`:`false`)});</script><main class="site-main"><div class="post-layout post-layout--with-toc"><aside class="post-layout__toc"><nav class="toc" aria-label="목차"><p class="toc__title">목차</p><ul><li class="toc__item toc__item--depth-0"><a href="#pyguidevtemplate">PyGUIDevTemplate</a></li><li class="toc__item toc__item--depth-0"><a href="#summary">Summary</a></li><li class="toc__item toc__item--depth-0"><a href="#getting-started">Getting Started</a></li><li class="toc__item toc__item--depth-0"><a href="#qt-를-이용한-gui-설계">QT 를 이용한 GUI 설계</a></li><li class="toc__item toc__item--depth-0"><a href="#pyinstaller-를-이용한-실행파일-생성-for-windows">Pyinstaller 를 이용한 실행파일 생성 (for Windows)</a></li><li class="toc__item toc__item--depth-0"><a href="#todo-실행파일-생성-for-linux-ubuntu">TODO! 실행파일 생성 (for Linux Ubuntu)</a></li><li class="toc__item toc__item--depth-0"><a href="#license">License</a></li></ul></nav></aside><article class="post post-article"><header class="post-header"><h1>QT 를 이용한 Python GUI 개발 환경 만들기</h1><p class="post-meta"><time datetime="2019-12-15">2019년 12월 15일</time></p><ul class="tag-list"><li class="tag"><a href="/tags/pyqt/">PyQt</a></li><li class="tag"><a href="/tags/python/">python</a></li></ul></header><details class="toc-mobile"><summary>목차</summary><nav class="toc" aria-label="목차"><p class="toc__title">목차</p><ul><li class="toc__item toc__item--depth-0"><a href="#pyguidevtemplate">PyGUIDevTemplate</a></li><li class="toc__item toc__item--depth-0"><a href="#summary">Summary</a></li><li class="toc__item toc__item--depth-0"><a href="#getting-started">Getting Started</a></li><li class="toc__item toc__item--depth-0"><a href="#qt-를-이용한-gui-설계">QT 를 이용한 GUI 설계</a></li><li class="toc__item toc__item--depth-0"><a href="#pyinstaller-를-이용한-실행파일-생성-for-windows">Pyinstaller 를 이용한 실행파일 생성 (for Windows)</a></li><li class="toc__item toc__item--depth-0"><a href="#todo-실행파일-생성-for-linux-ubuntu">TODO! 실행파일 생성 (for Linux Ubuntu)</a></li><li class="toc__item toc__item--depth-0"><a href="#license">License</a></li></ul></nav></details><div class="post__content prose"><h2 id="pyguidevtemplate"><a href="https://github.com/Kyungpyo-Kim/PyGUIDevTemplate">PyGUIDevTemplate</a></h2>
+<p>GUI development template for python</p>
+<h2 id="summary">Summary</h2>
+<ol>
+<li>QT Designer 를 이용하여 UI 설계</li>
+<li>Matplotlib, OpenCV 연동을 위한 custom class 활용</li>
+<li>PyInstaller 를 이용한 파일 배포</li>
+</ol>
+<h2 id="getting-started">Getting Started</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D">## clonning repository</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/Kyungpyo-Kim/PyGUIDevTemplate.git</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">## change directory</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> PyGUIDevTemplate/PyQT</span><span style="color:#6A737D"> ## for PyQT example</span></span>
+<span class="line"><span style="color:#6A737D"># or</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> PyGUIDevTemplate/PySide</span><span style="color:#6A737D"> ## for PySide example</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">## run program</span></span>
+<span class="line"><span style="color:#B392F0">python</span><span style="color:#9ECBFF"> main.py</span></span></code></pre>
+<h2 id="qt-를-이용한-gui-설계">QT 를 이용한 GUI 설계</h2>
+<ul>
+<li>
+<p>Qt designer 활용
+UI 디자인을 GUI 환경에서 진행가능</p>
+<ul>
+<li>custom widget</li>
+<li>custom label</li>
+<li>배포시 *.ui 파일을 *.py 파일로 변환하여 import 한 후, 배포파일을 생성해야 ui 파일을 포함하여 빌드 가능 (<a href="https://nuovoman1048.tistory.com/entry/QT-Desinger-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%97%B0%EB%8F%99%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95ui%ED%8C%8C%EC%9D%BC-%EC%97%B0%EA%B2%B0">reference</a>)
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pyuic5</span><span style="color:#79B8FF"> -x</span><span style="color:#9ECBFF"> ../qt_designer.ui</span><span style="color:#79B8FF"> -o</span><span style="color:#9ECBFF"> qt_designer.py</span><span style="color:#6A737D"> # for PyQT</span></span>
+<span class="line"><span style="color:#B392F0">pyside2-uic</span><span style="color:#9ECBFF"> ../qt_designer.ui</span><span style="color:#79B8FF"> -o</span><span style="color:#9ECBFF"> qt_designer.py</span><span style="color:#6A737D"> # for PySide</span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Matplotlib 적용</p>
+<ul>
+<li>QWidget 클래스 이용 <a href="https://pythonspot.com/pyqt5-matplotlib/">reference</a></li>
+</ul>
+</li>
+<li>
+<p>Opencv 모듈을 이용한 이미지 생성</p>
+<ul>
+<li>QLabel 클래스 이용</li>
+<li>file 접근시 반드시 영문 path 로 접근해야 함
+<ul>
+<li>예외처리 완료</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>QT dial, slider 이용</p>
+<ul>
+<li><a href="https://wikidocs.net/35495">https://wikidocs.net/35495</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="pyinstaller-를-이용한-실행파일-생성-for-windows">Pyinstaller 를 이용한 실행파일 생성 (for Windows)</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pyinstaller</span><span style="color:#9ECBFF"> main.py</span><span style="color:#79B8FF"> -F</span><span style="color:#79B8FF"> -w</span><span style="color:#79B8FF"> -i</span><span style="color:#9ECBFF"> ../iconsample.ico</span></span></code></pre>
+<p><img src="https://github.com/Kyungpyo-Kim/PyGUIDevTemplate/raw/master/demo.png" alt="demo" loading="lazy" decoding="async"></p>
+<h2 id="todo-실행파일-생성-for-linux-ubuntu">TODO! 실행파일 생성 (for Linux Ubuntu)</h2>
+<h2 id="license">License</h2>
+<ul>
+<li>
+<p>Matplotlib: BSD</p>
+</li>
+<li>
+<p>PyQt: GNU General Public License (GPL) and commercial license</p>
+</li>
+<li>
+<p>PySide: LGPL</p>
+</li>
+<li>
+<p>PyInstaller: GPL with Exception</p>
+<p>PyInstaller is distributed under the GPL license (see the file COPYING.txt in the source code), with a special exception which allows to use PyInstaller to build and distribute non-free programs (including commercial ones). In other words, you have no restrictions in using PyInstaller as-is, but any kind of modifications to it will have to comply with the GPL license. See also our FAQ.</p>
+</li>
+<li>
+<p>Opencv: 3-clause BSD License</p>
+</li>
+<li>
+<p>Numpy: BSD</p>
+</li>
+</ul></div><section class="post-comments"><section class="giscus" aria-label="Comments"><script src="https://giscus.app/client.js" data-repo="REPLACE_WITH_OWNER/REPO" data-repo-id="REPLACE_WITH_REPO_ID" data-category="General" data-category-id="REPLACE_WITH_CATEGORY_ID" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ko" data-loading="lazy" crossorigin="anonymous" async></script></section></section></article></div></main><footer class="site-footer"><ul class="footer__list"><li class="footer__item">© 2026 경표의 블로그</li><li class="footer__item"><a href="https://github.com/Kyungpyo-Kim" rel="me noopener noreferrer" target="_blank">GitHub</a></li><li class="footer__item"><a href="https://www.linkedin.com/in/kyungpyo-kim" rel="me noopener noreferrer" target="_blank">LinkedIn</a></li></ul></footer></div></div></body></html>

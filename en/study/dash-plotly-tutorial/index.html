@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.2.9"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#152028" media="(prefers-color-scheme: dark)"><link rel="icon" href="/favicons/favicon.ico" sizes="any"><meta name="google-site-verification" content="Q4P3G3Girpd3IvxCj-Pwjqw57XwNqKP1Qpu4pWlxa_w"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7791328994969079" crossorigin="anonymous"></script><title>Dash plotly 설치부터 튜토리얼까지 · Kyungpyo&#39;s Blog</title><meta name="description" content="데이터 시각화 및 분석 라이브러리 Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다. dash와 plotly를 이용하여 만든 시뮬레이터 Numpy, dash와 plotly라는 라이브러리만을 이용하여 구현하였다고 설명이 쓰여 있었다. 짧은 GIF에서 확인되는…"><meta name="author" content="Kyungpyo Kim"><link rel="canonical" href="https://kyungpyo-kim.github.io/en/study/dash-plotly-tutorial/"><!-- RSS feed (also served at /rss.xml) --><link rel="alternate" type="application/rss+xml" title="Kyungpyo's Blog" href="https://kyungpyo-kim.github.io/index.xml"><!-- hreflang alternates (ko root, en prefix) --><link rel="alternate" hreflang="ko" href="https://kyungpyo-kim.github.io/study/dash-plotly-tutorial/"><link rel="alternate" hreflang="en" href="https://kyungpyo-kim.github.io/en/study/dash-plotly-tutorial/"><link rel="alternate" hreflang="x-default" href="https://kyungpyo-kim.github.io/study/dash-plotly-tutorial/"><!-- Open Graph --><meta property="og:type" content="article"><meta property="og:title" content="Dash plotly 설치부터 튜토리얼까지 · Kyungpyo's Blog"><meta property="og:description" content="데이터 시각화 및 분석 라이브러리 Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다. dash와 plotly를 이용하여 만든 시뮬레이터 Numpy, dash와 plotly라는 라이브러리만을 이용하여 구현하였다고 설명이 쓰여 있었다. 짧은 GIF에서 확인되는…"><meta property="og:url" content="https://kyungpyo-kim.github.io/en/study/dash-plotly-tutorial/"><meta property="og:site_name" content="Kyungpyo's Blog"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Dash plotly 설치부터 튜토리얼까지 · Kyungpyo's Blog"><meta property="article:published_time" content="2020-04-29T00:00:00.000Z"><meta property="article:modified_time" content="2020-04-29T00:00:00.000Z"><meta property="article:author" content="Kyungpyo Kim"><meta property="article:section" content="study"><meta property="article:tag" content="python"><meta property="article:tag" content="big data"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Dash plotly 설치부터 튜토리얼까지 · Kyungpyo's Blog"><meta name="twitter:description" content="데이터 시각화 및 분석 라이브러리 Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다. dash와 plotly를 이용하여 만든 시뮬레이터 Numpy, dash와 plotly라는 라이브러리만을 이용하여 구현하였다고 설명이 쓰여 있었다. 짧은 GIF에서 확인되는…"><meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Dash plotly 설치부터 튜토리얼까지","description":"데이터 시각화 및 분석 라이브러리 Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다. dash와 plotly를 이용하여 만든 시뮬레이터 Numpy, dash와 plotly라는 라이브러리만을 이용하여 구현하였다고 설명이 쓰여 있었다. 짧은 GIF에서 확인되는…","inLanguage":"en-US","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyungpyo-kim.github.io/en/study/dash-plotly-tutorial/"},"author":{"@type":"Person","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/"},"publisher":{"@type":"Organization","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/","logo":{"@type":"ImageObject","url":"https://kyungpyo-kim.github.io/favicons/favicon.ico"}},"image":["https://kyungpyo-kim.github.io/images/og-default.png"],"url":"https://kyungpyo-kim.github.io/en/study/dash-plotly-tutorial/","datePublished":"2020-04-29T00:00:00.000Z","dateModified":"2020-04-29T00:00:00.000Z","keywords":"python, big data"}</script><!-- Apply theme before paint to avoid flash. --><script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.CNMBM8t0.css"></head><body><div class="wrapper"><div class="wrapper__main wrapper__main--fullscreen"><header class="header"><nav class="nav" aria-label="Main menu"><a class="nav__brand" href="/en/">Kyungpyo Kim</a><button id="nav-burger" class="nav__burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-list">☰</button><ul id="nav-list" class="nav__list"><li class="nav__list-item"><a href="/en/">Home</a></li><li class="nav__list-item"><a href="/en/study/">Study</a></li><li class="nav__list-item"><a href="/en/about/">About</a></li><li class="nav__list-item"><a class="btn-icon" href="/study/dash-plotly-tutorial/" rel="alternate" hreflang="ko" aria-label="Switch language">한국어</a></li><li class="nav__list-item"><button id="theme-toggle" class="btn-icon" type="button" aria-label="Toggle theme"><span data-theme-icon="light" aria-hidden="true">🌙</span><span data-theme-icon="dark" aria-hidden="true" hidden>☀️</span></button><script type="module">var e=document.getElementById(`theme-toggle`),t=document.documentElement;function n(){let n=t.getAttribute(`data-theme`)===`dark`,r=e?.querySelector(`[data-theme-icon="light"]`),i=e?.querySelector(`[data-theme-icon="dark"]`);r&&(r.hidden=n),i&&(i.hidden=!n)}n(),e?.addEventListener(`click`,()=>{let e=t.getAttribute(`data-theme`)===`dark`?`light`:`dark`;t.setAttribute(`data-theme`,e);try{localStorage.setItem(`theme`,e)}catch{}n()});</script></li></ul></nav></header><script type="module">var e=document.getElementById(`nav-burger`),t=document.getElementById(`nav-list`);e?.addEventListener(`click`,()=>{let n=t?.classList.toggle(`nav__list--active`);e.setAttribute(`aria-expanded`,n?`true`:`false`)});</script><main class="site-main"><div class="post-layout post-layout--with-toc"><aside class="post-layout__toc"><nav class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ul><li class="toc__item toc__item--depth-0"><a href="#데이터-시각화-및-분석-라이브러리">데이터 시각화 및 분석 라이브러리</a></li><li class="toc__item toc__item--depth-0"><a href="#설치부터-튜토리얼까지">설치부터 튜토리얼까지</a></li><li class="toc__item toc__item--depth-1"><a href="#설치">설치</a></li><li class="toc__item toc__item--depth-1"><a href="#튜토리얼">튜토리얼</a></li><li class="toc__item toc__item--depth-2"><a href="#layout">Layout</a></li><li class="toc__item toc__item--depth-2"><a href="#callback">Callback</a></li><li class="toc__item toc__item--depth-1"><a href="#마무리">마무리</a></li><li class="toc__item toc__item--depth-0"><a href="#요약">요약</a></li></ul></nav></aside><article class="post post-article"><header class="post-header"><h1>Dash plotly 설치부터 튜토리얼까지</h1><p class="post-meta"><time datetime="2020-04-29">April 29, 2020</time></p><ul class="tag-list"><li class="tag"><a href="/en/tags/python/">python</a></li><li class="tag"><a href="/en/tags/big-data/">big data</a></li></ul></header><details class="toc-mobile"><summary>On this page</summary><nav class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ul><li class="toc__item toc__item--depth-0"><a href="#데이터-시각화-및-분석-라이브러리">데이터 시각화 및 분석 라이브러리</a></li><li class="toc__item toc__item--depth-0"><a href="#설치부터-튜토리얼까지">설치부터 튜토리얼까지</a></li><li class="toc__item toc__item--depth-1"><a href="#설치">설치</a></li><li class="toc__item toc__item--depth-1"><a href="#튜토리얼">튜토리얼</a></li><li class="toc__item toc__item--depth-2"><a href="#layout">Layout</a></li><li class="toc__item toc__item--depth-2"><a href="#callback">Callback</a></li><li class="toc__item toc__item--depth-1"><a href="#마무리">마무리</a></li><li class="toc__item toc__item--depth-0"><a href="#요약">요약</a></li></ul></nav></details><div class="post__content prose"><h2 id="데이터-시각화-및-분석-라이브러리">데이터 시각화 및 분석 라이브러리</h2>
+<p>Python 관련 커뮤니티를 살펴보던 중 기가막힌 예제를 보게 되었다.</p>
+<figure>
+  [![](/assets/images/raddit_plotly_dash.png)](https://www.reddit.com/r/Python/comments/g2njfz/hexapod_robot_simulator_with_only_numpy_and/?utm_source=share&#x26;utm_medium=web2x)
+  <figcaption>dash와 plotly를 이용하여 만든 시뮬레이터</figcaption>
+</figure>
+<p>Numpy, <strong>dash</strong>와 <strong>plotly</strong>라는 라이브러리만을 이용하여 구현하였다고 설명이 쓰여 있었다. 짧은 GIF에서 확인되는 인터랙티브한 인터페이스가 인상적이었다. 이 프로그램을 구현하기 위해 사용된 라이브러리가 궁금해져서 찾아보았고, 짧은 튜토리얼까지 진행해보았다.</p>
+<p>튜토리얼만 진행해보았는데 강력한 인터랙티브 함수와 예쁜 그래프를 통해 <strong>데이터를 시각화하고 분석</strong>하기에 좋은 라이브러리라는 것을 알게되었다.
+또한 대세인 Web 기반의 시각화 라이브러리여서 앞으로 더욱 많이 이용되지 않을까 싶다.</p>
+<blockquote>
+<p>강력한 인터랙티브 함수 + 예쁜 그래프 + Web -> 데이터 시각화, 분석</p>
+</blockquote>
+<h2 id="설치부터-튜토리얼까지">설치부터 튜토리얼까지</h2>
+<ul>
+<li>OS: Linux Ubuntu 18.04</li>
+<li>Python3</li>
+</ul>
+<h3 id="설치">설치</h3>
+<blockquote>
+<p>Reference: <a href="https://dash.plotly.com/installation">https://dash.plotly.com/installation</a></p>
+</blockquote>
+<p>설치 방법</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip3</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> dash</span></span>
+<span class="line"><span style="color:#B392F0">pip3</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> ipywidgets</span></span>
+<span class="line"><span style="color:#B392F0">pip3</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> pandas</span></span></code></pre>
+<p>설치 확인</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> dash_core_components</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(dash_core_components.</span><span style="color:#79B8FF">__version__</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#6A737D">## >> 1.9.0</span></span></code></pre>
+<h3 id="튜토리얼">튜토리얼</h3>
+<p>진행한 튜토리얼은 plotly에 있는 튜토리얼을 기준으로 진행했고 내용은 Layout, Callback 부분을 진행하였다.
+실행 코드는 <a href="https://github.com/Kyungpyo-Kim/PlotlyDashExercise.git">Github</a>에 업로드 하였다.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># 튜토리얼 소스코드</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/Kyungpyo-Kim/PlotlyDashExercise.git</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> PlotlyDashExercise</span></span></code></pre>
+<h4 id="layout">Layout</h4>
+<p>우선 소스코드를 돌려보고 결과를 먼저 본다. 소스코드를 실행하고 정상적으로 실행이 되면 <strong>results</strong>와 같이 결과가 나오게 된다. 그러면 브라우저를 열어 “<a href="http://127.0.0.1:XXXX/">http://127.0.0.1:XXXX/</a>” 주소로 들어가보면 기가막힌 그래프들이 나타난다!</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">python3</span><span style="color:#9ECBFF"> app_layout.py</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># results</span></span>
+<span class="line"><span style="color:#B392F0">Running</span><span style="color:#9ECBFF"> on</span><span style="color:#9ECBFF"> http://127.0.0.1:XXXX/</span></span>
+<span class="line"><span style="color:#B392F0">Debugger</span><span style="color:#9ECBFF"> PIN:</span><span style="color:#9ECBFF"> XXXXXXXXX</span></span>
+<span class="line"><span style="color:#B392F0"> *</span><span style="color:#9ECBFF"> Serving</span><span style="color:#9ECBFF"> Flask</span><span style="color:#9ECBFF"> app</span><span style="color:#9ECBFF"> "app_layout"</span><span style="color:#E1E4E8"> (lazy </span><span style="color:#9ECBFF">loading</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0"> *</span><span style="color:#9ECBFF"> Environment:</span><span style="color:#9ECBFF"> production</span></span>
+<span class="line"><span style="color:#B392F0">   WARNING:</span><span style="color:#9ECBFF"> This</span><span style="color:#9ECBFF"> is</span><span style="color:#9ECBFF"> a</span><span style="color:#9ECBFF"> development</span><span style="color:#9ECBFF"> server.</span><span style="color:#9ECBFF"> Do</span><span style="color:#9ECBFF"> not</span><span style="color:#9ECBFF"> use</span><span style="color:#9ECBFF"> it</span><span style="color:#9ECBFF"> in</span><span style="color:#9ECBFF"> a</span><span style="color:#9ECBFF"> production</span><span style="color:#9ECBFF"> deployment.</span></span>
+<span class="line"><span style="color:#B392F0">   Use</span><span style="color:#9ECBFF"> a</span><span style="color:#9ECBFF"> production</span><span style="color:#9ECBFF"> WSGI</span><span style="color:#9ECBFF"> server</span><span style="color:#9ECBFF"> instead.</span></span>
+<span class="line"><span style="color:#B392F0"> *</span><span style="color:#9ECBFF"> Debug</span><span style="color:#9ECBFF"> mode:</span><span style="color:#9ECBFF"> on</span></span>
+<span class="line"><span style="color:#B392F0">Running</span><span style="color:#9ECBFF"> on</span><span style="color:#9ECBFF"> http://127.0.0.1:XXXX/</span></span>
+<span class="line"><span style="color:#B392F0">Debugger</span><span style="color:#9ECBFF"> PIN:</span><span style="color:#9ECBFF"> XXXXXXXXX</span></span></code></pre>
+<figure>
+  ![](/assets/images/results_layout.png)
+  <figcaption>layout tutorial 실행 결과</figcaption>
+</figure>
+<p>코드를 하나하나 보기보다는 feature 위주로 코드를 살펴보기로 한다.</p>
+<ul>
+<li>
+<p>import</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> dash</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> dash_core_components </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> dcc</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> dash_html_components </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> html</span></span></code></pre>
+<p>import 하는 라이브러리를 살펴보면,</p>
+<ul>
+<li>어플리케이션 레이어인 dash</li>
+<li>그래프 등 plotly 의 다양한 인터랙티브 그래프를 지원하는 dash core components</li>
+<li>html 을 지원하는 dash html components
+를 사용하게 된다.</li>
+</ul>
+</li>
+<li>
+<p>html components
+웹기반 라이브러리이다보니 당연히 html 을 지원한다.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#9ECBFF">"""</span></span>
+<span class="line"><span style="color:#9ECBFF">HTML</span></span>
+<span class="line"><span style="color:#9ECBFF">"""</span></span>
+<span class="line"><span style="color:#6A737D">## HTML H1</span></span>
+<span class="line"><span style="color:#E1E4E8">header </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> html.H1(</span><span style="color:#FFAB70">children</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'Hello Dash'</span><span style="color:#E1E4E8">, </span></span>
+<span class="line"><span style="color:#FFAB70">  style</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#9ECBFF">'textAlign'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'center'</span><span style="color:#E1E4E8">,</span><span style="color:#9ECBFF">'color'</span><span style="color:#E1E4E8">: colors[</span><span style="color:#9ECBFF">'text'</span><span style="color:#E1E4E8">]})</span></span>
+<span class="line"><span style="color:#6A737D">## HTML Div</span></span>
+<span class="line"><span style="color:#E1E4E8">div_description </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> html.Div(</span><span style="color:#FFAB70">children</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'''Dash: A web application framework for Python.'''</span><span style="color:#E1E4E8">, </span></span>
+<span class="line"><span style="color:#FFAB70">  style</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#9ECBFF">'textAlign'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'center'</span><span style="color:#E1E4E8">,</span><span style="color:#9ECBFF">'color'</span><span style="color:#E1E4E8">: colors[</span><span style="color:#9ECBFF">'text'</span><span style="color:#E1E4E8">]})</span></span>
+<span class="line"><span style="color:#6A737D">## HTML Table</span></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> generate_table</span><span style="color:#E1E4E8">(dataframe, max_rows</span><span style="color:#F97583">=</span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> html.Table([</span></span>
+<span class="line"><span style="color:#E1E4E8">        html.Thead(</span></span>
+<span class="line"><span style="color:#E1E4E8">            html.Tr([html.Th(col) </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> col </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> dataframe.columns])</span></span>
+<span class="line"><span style="color:#E1E4E8">        ),</span></span>
+<span class="line"><span style="color:#E1E4E8">        html.Tbody([</span></span>
+<span class="line"><span style="color:#E1E4E8">            html.Tr([</span></span>
+<span class="line"><span style="color:#E1E4E8">                html.Td(dataframe.iloc[i][col]) </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> col </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> dataframe.columns</span></span>
+<span class="line"><span style="color:#E1E4E8">            ]) </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">min</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">len</span><span style="color:#E1E4E8">(dataframe), max_rows))</span></span>
+<span class="line"><span style="color:#E1E4E8">        ])</span></span>
+<span class="line"><span style="color:#E1E4E8">    ])</span></span></code></pre>
+<p>H1, div 등의 태그 외에도 html 의 문법을 다양하게 지원한다.</p>
+</li>
+<li>
+<p>plotly components</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#9ECBFF">""" </span></span>
+<span class="line"><span style="color:#9ECBFF">Dash Core Components</span></span>
+<span class="line"><span style="color:#9ECBFF">"""</span></span>
+<span class="line"><span style="color:#6A737D">## Dash Graph</span></span>
+<span class="line"><span style="color:#E1E4E8">dash_graph_data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> dcc.Graph(</span></span>
+<span class="line"><span style="color:#FFAB70">        id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'example-graph'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">        figure</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#9ECBFF">            'data'</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">                {</span><span style="color:#9ECBFF">'x'</span><span style="color:#E1E4E8">: [</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">], </span></span>
+<span class="line"><span style="color:#9ECBFF">                  'y'</span><span style="color:#E1E4E8">: [</span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">6</span><span style="color:#E1E4E8">], </span></span>
+<span class="line"><span style="color:#9ECBFF">                  'type'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'bar'</span><span style="color:#E1E4E8">, </span></span>
+<span class="line"><span style="color:#9ECBFF">                  'name'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'SF'</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#E1E4E8">                {</span><span style="color:#9ECBFF">'x'</span><span style="color:#E1E4E8">: [</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">], </span></span>
+<span class="line"><span style="color:#9ECBFF">                  'y'</span><span style="color:#E1E4E8">: [</span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">9</span><span style="color:#E1E4E8">], </span></span>
+<span class="line"><span style="color:#9ECBFF">                  'type'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'bar'</span><span style="color:#E1E4E8">, </span></span>
+<span class="line"><span style="color:#9ECBFF">                  'name'</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">u</span><span style="color:#9ECBFF">'Montréal'</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#E1E4E8">            ],</span></span>
+<span class="line"><span style="color:#9ECBFF">            'layout'</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">                'title'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'Dash Data Visualization'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">                'plot_bgcolor'</span><span style="color:#E1E4E8">: colors[</span><span style="color:#9ECBFF">'background'</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#9ECBFF">                'paper_bgcolor'</span><span style="color:#E1E4E8">: colors[</span><span style="color:#9ECBFF">'background'</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#9ECBFF">                'font'</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">                    'color'</span><span style="color:#E1E4E8">: colors[</span><span style="color:#9ECBFF">'text'</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">                }</span></span>
+<span class="line"><span style="color:#E1E4E8">            }</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">    )</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># ...생략...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">## Markdown</span></span>
+<span class="line"><span style="color:#E1E4E8">md </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> dcc.Markdown(</span><span style="color:#FFAB70">children</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">markdown_text)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">## Dropdown</span></span>
+<span class="line"><span style="color:#E1E4E8">dd </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> dcc.Dropdown(</span></span>
+<span class="line"><span style="color:#FFAB70">        options</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[</span></span>
+<span class="line"><span style="color:#E1E4E8">            {</span><span style="color:#9ECBFF">'label'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'New York City'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'value'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'NYC'</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#E1E4E8">            {</span><span style="color:#9ECBFF">'label'</span><span style="color:#E1E4E8">: </span><span style="color:#F97583">u</span><span style="color:#9ECBFF">'Montréal'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'value'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'MTL'</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#E1E4E8">            {</span><span style="color:#9ECBFF">'label'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'San Francisco'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'value'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'SF'</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">        ],</span></span>
+<span class="line"><span style="color:#FFAB70">        value</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'MTL'</span></span>
+<span class="line"><span style="color:#E1E4E8">    )</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># ...생략...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">## Text Input</span></span>
+<span class="line"><span style="color:#E1E4E8">ti </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> dcc.Input(</span><span style="color:#FFAB70">value</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'MTL'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">type</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'text'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#6A737D">## Slider</span></span>
+<span class="line"><span style="color:#E1E4E8">sl </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> dcc.Slider(</span></span>
+<span class="line"><span style="color:#FFAB70">        min</span><span style="color:#F97583">=</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">        max</span><span style="color:#F97583">=</span><span style="color:#79B8FF">9</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">        marks</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{i: </span><span style="color:#9ECBFF">'Label </span><span style="color:#79B8FF">{}</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">.format(i) </span><span style="color:#F97583">if</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">==</span><span style="color:#79B8FF"> 1</span><span style="color:#F97583"> else</span><span style="color:#79B8FF"> str</span><span style="color:#E1E4E8">(i) </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> range</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">6</span><span style="color:#E1E4E8">)},</span></span>
+<span class="line"><span style="color:#FFAB70">        value</span><span style="color:#F97583">=</span><span style="color:#79B8FF">5</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    )</span></span></code></pre>
+<p>plotly dash 코드가 인상적이었던 부분은 위의 코드에서 처럼 graph 뿐만 아니라 dropdown, radio button 등의 다양한 인터페이스를 쉽게 구현할 수 있다는 것이다.
+그리고 스타일 시트를 활용하면 큰 수고없이 예쁜 그래프를 그릴 수 있게 된다.</p>
+</li>
+<li>
+<p>app
+구현한 html, plotly 컴포넌트들은 app에서 쉽게 배치(layout)하여 웹으로 구현이 된다.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#9ECBFF">"""</span></span>
+<span class="line"><span style="color:#9ECBFF">Dash App</span></span>
+<span class="line"><span style="color:#9ECBFF">"""</span></span>
+<span class="line"><span style="color:#6A737D">## App</span></span>
+<span class="line"><span style="color:#E1E4E8">external_stylesheets </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#9ECBFF">'https://codepen.io/chriddyp/pen/bWLwgP.css'</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">app </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> dash.Dash(</span><span style="color:#79B8FF">__name__</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">external_stylesheets</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">external_stylesheets)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">## Layout</span></span>
+<span class="line"><span style="color:#E1E4E8">app.layout </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> html.Div(</span></span>
+<span class="line"><span style="color:#FFAB70">  style</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span><span style="color:#9ECBFF">'backgroundColor'</span><span style="color:#E1E4E8">: colors[</span><span style="color:#9ECBFF">'background'</span><span style="color:#E1E4E8">], </span><span style="color:#9ECBFF">'columnCount'</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">}, </span></span>
+<span class="line"><span style="color:#FFAB70">  children</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#E1E4E8">    header,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    div_description,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    dash_graph_data,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    html.H4(</span><span style="color:#FFAB70">children</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'US Agriculture Exports (2011)'</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">    generate_table(df_agri),</span></span>
+<span class="line"><span style="color:#E1E4E8">    html.H4(</span><span style="color:#FFAB70">children</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'GDP'</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">    dash_graph_gdp,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    # ...생략...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">])</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">if</span><span style="color:#79B8FF"> __name__</span><span style="color:#F97583"> ==</span><span style="color:#9ECBFF"> '__main__'</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    app.run_server(</span><span style="color:#FFAB70">debug</span><span style="color:#F97583">=</span><span style="color:#79B8FF">True</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<p>여기까지만 하면 plotly, dash 를 이용하여 이쁜 그래프를 매우 쉽게 그릴 수 있게 된다. 그것도 웹에다가 말이다. 내가 웹개발 경험이 전무하여 더 신기하게(?) 느껴졌을지도 모르겠다.
+하지만 dash plotly 정말 인상적인 이유는 다음 파트 <strong>Callback</strong>에서 확인할 수 있다.</p>
+</li>
+</ul>
+<h4 id="callback">Callback</h4>
+<p>내가 사용해보았던 거의 모든 GUI의 구현은 대부분 입력에 대한 Callback 형식으로 이루어져있었다. Dash 역시 마찬가 지인데 조금 더 인상적이었던 부분은 callback 처리가 매우 쉽고 직관적이었다는 부분이다. 예제와 코드를 간단히 살펴본다.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">python3</span><span style="color:#9ECBFF"> app_callback.py</span></span></code></pre>
+<figure>
+  ![](/assets/images/results_callback.gif)
+  <figcaption>callback tutorial 실행 결과</figcaption>
+</figure>
+<ul>
+<li>
+<p>id를 이용한 callback 구현</p>
+<p>Dash에서는 인터랙션 기능 지원을 위해 input, output, state 의 callback 메소드를 지원한다. 그리고 이러한 메소드들은 Dash components 의 id를 이용해 바인딩되어 callback 이 호출되는 아주 간단한 구조로 되어 있다.</p>
+<p>코드를 통해 간단히 확인해보면,</p>
+<ul>
+<li>id 등록</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#E1E4E8">dcc.Input(</span><span style="color:#FFAB70">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'input-1-state'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">type</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'text'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">value</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'Montréal'</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">dcc.Input(</span><span style="color:#FFAB70">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'input-2-state'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">type</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'text'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">value</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'Canada'</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">html.Button(</span><span style="color:#FFAB70">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'submit-button-state'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">n_clicks</span><span style="color:#F97583">=</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">children</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'Submit'</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">html.Div(</span><span style="color:#FFAB70">id</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">'output-state'</span><span style="color:#E1E4E8">),</span></span></code></pre>
+<p>위와 같이 input, button, div 컴포넌트들의 id를 지정하고</p>
+<ul>
+<li>callback 등록</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#B392F0">@app.callback</span><span style="color:#E1E4E8">(Output(</span><span style="color:#9ECBFF">'output-state'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'children'</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">            [Input(</span><span style="color:#9ECBFF">'submit-button-state'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'n_clicks'</span><span style="color:#E1E4E8">)],</span></span>
+<span class="line"><span style="color:#E1E4E8">            [State(</span><span style="color:#9ECBFF">'input-1-state'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'value'</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">             State(</span><span style="color:#9ECBFF">'input-2-state'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'value'</span><span style="color:#E1E4E8">)])</span></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> update_output</span><span style="color:#E1E4E8">(n_clicks, input1, input2):</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#F97583"> u</span><span style="color:#9ECBFF">'''</span></span>
+<span class="line"><span style="color:#9ECBFF">        The Button has been pressed </span><span style="color:#79B8FF">{}</span><span style="color:#9ECBFF"> times,</span></span>
+<span class="line"><span style="color:#9ECBFF">        Input 1 is "</span><span style="color:#79B8FF">{}</span><span style="color:#9ECBFF">",</span></span>
+<span class="line"><span style="color:#9ECBFF">        and Input 2 is "</span><span style="color:#79B8FF">{}</span><span style="color:#9ECBFF">"</span></span>
+<span class="line"><span style="color:#9ECBFF">    '''</span><span style="color:#E1E4E8">.format(n_clicks, input1, input2)</span></span></code></pre>
+<p>위와 같이 함수의 데코레이터를 이용하여 Output, Input, State 메소드를 지정한다. 그리고 함수를 통해 해당 액션이나 데이터들을 처리할 수 있게 되어있다. 함수 argument 의 n_clicks, input1, input2 는 각각 input, state 두개의 값이 들어오게 되어있다.
+<strong>너무 쉽다!</strong></p>
+</li>
+</ul>
+<p>여담으로 개발을 하면서 재사용성을 높이기 위한 고민을 많이 하게 되는데, 구현된 코드가 간단하고 쉬울수록 재사용하기가 좋다는 생각이 많이 들었다. 이런 관점에서 이렇게 쉬운 코드는 앞으로도 많이 사용되지 않을까 싶다.</p>
+<h3 id="마무리">마무리</h3>
+<p>튜토리얼 내용을 따라해보면 callback 을 바탕으로 확장할 수 있는 다양한 기능들을 보여준다. 눈에 띄는 점은 이러한 간단한 구현에 따른 유연성이었다. 앞으로 여러가지 데이터 분석을 위해서 활용해 보고자 한다. 뒤에 이어지는 튜토리얼은 web 환경에서의 data sharing을 위한 여러 방법들이 제시되어 있는데 이부분은 web쪽 공부를 같이 진행하면서 보아야 할 것 같다. 앞으로 활용하면서 중요한 기능들이나 특징들은 더 정리해 나가야겠다.</p>
+<h2 id="요약">요약</h2>
+<ul>
+<li>web 기반 데이터 시각화 도구</li>
+<li>강력한 인터랙티브 기능
+<ul>
+<li>구현이 쉽다.</li>
+<li>정말 쉽다.</li>
+</ul>
+</li>
+<li>layout, callback 만으로 쉽게 구현됨</li>
+</ul></div><section class="post-comments"><section class="giscus" aria-label="Comments"><script src="https://giscus.app/client.js" data-repo="REPLACE_WITH_OWNER/REPO" data-repo-id="REPLACE_WITH_REPO_ID" data-category="General" data-category-id="REPLACE_WITH_CATEGORY_ID" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ko" data-loading="lazy" crossorigin="anonymous" async></script></section></section></article></div></main><footer class="site-footer"><ul class="footer__list"><li class="footer__item">© 2026 Kyungpyo&#39;s Blog</li><li class="footer__item"><a href="https://github.com/Kyungpyo-Kim" rel="me noopener noreferrer" target="_blank">GitHub</a></li><li class="footer__item"><a href="https://www.linkedin.com/in/kyungpyo-kim" rel="me noopener noreferrer" target="_blank">LinkedIn</a></li></ul></footer></div></div></body></html>

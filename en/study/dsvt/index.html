@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.2.9"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#152028" media="(prefers-color-scheme: dark)"><link rel="icon" href="/favicons/favicon.ico" sizes="any"><meta name="google-site-verification" content="Q4P3G3Girpd3IvxCj-Pwjqw57XwNqKP1Qpu4pWlxa_w"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7791328994969079" crossorigin="anonymous"></script><title>[SOTA] DSVT LiDAR 3D Object Detection · Kyungpyo&#39;s Blog</title><meta name="description" content="DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다. 이런 부분이 향후에…"><meta name="author" content="Kyungpyo Kim"><link rel="canonical" href="https://kyungpyo-kim.github.io/en/study/dsvt/"><!-- RSS feed (also served at /rss.xml) --><link rel="alternate" type="application/rss+xml" title="Kyungpyo's Blog" href="https://kyungpyo-kim.github.io/index.xml"><!-- hreflang alternates (ko root, en prefix) --><link rel="alternate" hreflang="ko" href="https://kyungpyo-kim.github.io/study/dsvt/"><link rel="alternate" hreflang="en" href="https://kyungpyo-kim.github.io/en/study/dsvt/"><link rel="alternate" hreflang="x-default" href="https://kyungpyo-kim.github.io/study/dsvt/"><!-- Open Graph --><meta property="og:type" content="article"><meta property="og:title" content="[SOTA] DSVT LiDAR 3D Object Detection · Kyungpyo's Blog"><meta property="og:description" content="DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다. 이런 부분이 향후에…"><meta property="og:url" content="https://kyungpyo-kim.github.io/en/study/dsvt/"><meta property="og:site_name" content="Kyungpyo's Blog"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="[SOTA] DSVT LiDAR 3D Object Detection · Kyungpyo's Blog"><meta property="article:published_time" content="2023-07-26T00:00:00.000Z"><meta property="article:modified_time" content="2023-07-26T00:00:00.000Z"><meta property="article:author" content="Kyungpyo Kim"><meta property="article:section" content="study"><meta property="article:tag" content="AI"><meta property="article:tag" content="3D Object Detection"><meta property="article:tag" content="LiDAR"><meta property="article:tag" content="SOTA"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="[SOTA] DSVT LiDAR 3D Object Detection · Kyungpyo's Blog"><meta name="twitter:description" content="DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다. 이런 부분이 향후에…"><meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"[SOTA] DSVT LiDAR 3D Object Detection","description":"DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다. 이런 부분이 향후에…","inLanguage":"en-US","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyungpyo-kim.github.io/en/study/dsvt/"},"author":{"@type":"Person","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/"},"publisher":{"@type":"Organization","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/","logo":{"@type":"ImageObject","url":"https://kyungpyo-kim.github.io/favicons/favicon.ico"}},"image":["https://kyungpyo-kim.github.io/images/og-default.png"],"url":"https://kyungpyo-kim.github.io/en/study/dsvt/","datePublished":"2023-07-26T00:00:00.000Z","dateModified":"2023-07-26T00:00:00.000Z","keywords":"AI, 3D Object Detection, LiDAR, SOTA"}</script><!-- Apply theme before paint to avoid flash. --><script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.CNMBM8t0.css"></head><body><div class="wrapper"><div class="wrapper__main wrapper__main--fullscreen"><header class="header"><nav class="nav" aria-label="Main menu"><a class="nav__brand" href="/en/">Kyungpyo Kim</a><button id="nav-burger" class="nav__burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-list">☰</button><ul id="nav-list" class="nav__list"><li class="nav__list-item"><a href="/en/">Home</a></li><li class="nav__list-item"><a href="/en/study/">Study</a></li><li class="nav__list-item"><a href="/en/about/">About</a></li><li class="nav__list-item"><a class="btn-icon" href="/study/dsvt/" rel="alternate" hreflang="ko" aria-label="Switch language">한국어</a></li><li class="nav__list-item"><button id="theme-toggle" class="btn-icon" type="button" aria-label="Toggle theme"><span data-theme-icon="light" aria-hidden="true">🌙</span><span data-theme-icon="dark" aria-hidden="true" hidden>☀️</span></button><script type="module">var e=document.getElementById(`theme-toggle`),t=document.documentElement;function n(){let n=t.getAttribute(`data-theme`)===`dark`,r=e?.querySelector(`[data-theme-icon="light"]`),i=e?.querySelector(`[data-theme-icon="dark"]`);r&&(r.hidden=n),i&&(i.hidden=!n)}n(),e?.addEventListener(`click`,()=>{let e=t.getAttribute(`data-theme`)===`dark`?`light`:`dark`;t.setAttribute(`data-theme`,e);try{localStorage.setItem(`theme`,e)}catch{}n()});</script></li></ul></nav></header><script type="module">var e=document.getElementById(`nav-burger`),t=document.getElementById(`nav-list`);e?.addEventListener(`click`,()=>{let n=t?.classList.toggle(`nav__list--active`);e.setAttribute(`aria-expanded`,n?`true`:`false`)});</script><main class="site-main"><div class="post-layout post-layout--with-toc"><aside class="post-layout__toc"><nav class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ul><li class="toc__item toc__item--depth-0"><a href="#abstraction">Abstraction</a></li><li class="toc__item toc__item--depth-0"><a href="#introduction">Introduction</a></li><li class="toc__item toc__item--depth-0"><a href="#methodology">Methodology</a></li><li class="toc__item toc__item--depth-0"><a href="#reference">Reference</a></li></ul></nav></aside><article class="post post-article"><header class="post-header"><h1>[SOTA] DSVT LiDAR 3D Object Detection</h1><p class="post-meta"><time datetime="2023-07-26">July 26, 2023</time></p><ul class="tag-list"><li class="tag"><a href="/en/tags/ai/">AI</a></li><li class="tag"><a href="/en/tags/3d-object-detection/">3D Object Detection</a></li><li class="tag"><a href="/en/tags/lidar/">LiDAR</a></li><li class="tag"><a href="/en/tags/sota/">SOTA</a></li></ul></header><details class="toc-mobile"><summary>On this page</summary><nav class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ul><li class="toc__item toc__item--depth-0"><a href="#abstraction">Abstraction</a></li><li class="toc__item toc__item--depth-0"><a href="#introduction">Introduction</a></li><li class="toc__item toc__item--depth-0"><a href="#methodology">Methodology</a></li><li class="toc__item toc__item--depth-0"><a href="#reference">Reference</a></li></ul></nav></details><div class="post__content prose"><p>DSVT 모델은 MMDetection3D, OpenPCDet 등 다양한 open-source 로도 제공되고 있고, Transformer 를 이용하되, 별도의 custom operation 없이 구현하므로써 다른 모델에 비해 쉽게 배포가 가능하다는 장점이 있습니다. 이런 부분이 향후에 많은 어플리케이션에서 사용될 수 있는 여지가 많다고 생각하여 정리해 보았습니다.</p>
+<h2 id="abstraction">Abstraction</h2>
+<ul>
+<li>single-stride window-based voxel transformer backbone 제안
+<ul>
+<li>dynamic sparse window attention → fully pallelization</li>
+<li>rotated set partitioning strategy → allow cross-set connection</li>
+<li>attention style 3D pooling → deploy friendly</li>
+</ul>
+</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li>Related Works
+<ul>
+<li>
+<p>To efficiently process the attention on sparse data, many approaches rebalance the token number by random sampling [25,49]</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>[25] Pointformer CVPR2021</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[49] Point transformer ICCV2021</span></span></code></pre>
+</li>
+<li>
+<p>group local regions with similar number of tokens together [10, 37]</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>[10] SST CVPR2022</span></span></code></pre>
+<ul>
+<li>
+<p>Attention token 생성을 위해 Bucketing 방법 사용</p>
+</li>
+<li>
+<p>batch regions with similar number of tokens together and pads them separately to implement parallel computation.</p>
+<p>[37] SWFormer ECCV2022</p>
+</li>
+<li>
+<p>batch regions with similar number of tokens together and pads them separately to implement parallel computation.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>[15, 24] try to solve these problems by writing customized CUDA operations</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>[15] Voxel Set Transformer CVPR2022</span></span></code></pre>
+<ul>
+<li>
+<p>customized CUDA for scatter function</p>
+<p>[24] VoTr (Voxel Transformer) ICCV2021</p>
+</li>
+<li>
+<p>proposes local attention and dilated attention with a self-designed voxel query to enable attention mechanism on sparse voxels</p>
+</li>
+<li>
+<p>customized CUDA for query function</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Proposed methods
+<ul>
+<li>
+<p>Dynamic sparse window attention → support efficient parallel computation</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>![Untitled](/images/DSVT%2099aee51df0254775853adeddc7d4ee3e/Untitled.png)</span></span></code></pre>
+<ul>
+<li>위와 같이 X 방향, Y 방향 두가지로 window 를 설정 함 (시험적으로 가장 좋은 성능을 보임, table 7 참조)</li>
+<li>X 방향 partition → self-attention → Y 방향 partition → self-attention 구조로 구성됨</li>
+<li>SST, SWFormer, SwinTransformer 보다 빠른 성능을 보여줌</li>
+</ul>
+</li>
+<li>
+<p>Attention-style 3D pooling operation → downsmaple the feature map, generalization 능력 향상</p>
+<ul>
+<li>기존 방법은 CUDA 코드 개발을 요구함, 제안한 방법은 CUDA 개발을 요구하지 않음?
+<ul>
+<li>[11] FSD NIPS2022: custom CUDA kernel for scatter function</li>
+<li>[46] SECOND Sensors2018: custom CUDA kernel for downsampling features</li>
+<li>[50] VoxelNet CVPR2018: custom CUDA kernel for downsampling features</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="methodology">Methodology</h2>
+<ul>
+<li>
+<p><strong>Overview</strong></p>
+<p><img src="/images/DSVT%2099aee51df0254775853adeddc7d4ee3e/Untitled%201.png" alt="Untitled" loading="lazy" decoding="async"></p>
+<ul>
+<li>
+<p>DSVT-P (pillar version, voxel 로 확장 가능)</p>
+</li>
+<li>
+<p>Voxel Feature Encoding (VFE) 으로 sparse 한 voxel feature 를 얻음 → 각각의 voxel 들은 하나의 token 으로 처리함</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>[37] SWFormer ECCV2022</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[45] PointPillars ECCV2020</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>[48] CenterPoint CVPR2021</span></span></code></pre>
+</li>
+<li>
+<p>SST 방식처럼 충분한 receptive field 를 얻고 작은 scale 의 object detection 을 수행하기 위해서 single stride network 적용 → X-axis, Y-axis 로 적용</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Dynamic Sparse Window Attention</strong></p>
+<ul>
+<li><strong>Dynamic set partition</strong>
+<ul>
+<li>window-bounded, size-equivalent subsets → enable parallel computations</li>
+<li>3D Voxels 을 attention 을 위한 sub set 으로 나눈다
+<ul>
+<li>voxel 마다 x, y 를 이용해 sorting 하고,</li>
+<li>x-axis partitioning, y-aixs partitioning을 수행한다.</li>
+</ul>
+</li>
+<li>sub-set 은 voxel, coordinates 두가지로 구성되어 multi-head self-attention 으로 입력됨
+<ul>
+<li>coordinates 은 positional encoding 적용</li>
+</ul>
+</li>
+<li>Hybrid window partition for inter-window feature propagation.
+<ul>
+<li>Swin-Transformer 도 적용</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Attention-style 3D Pooling</strong></p>
+<p><img src="/images/DSVT%2099aee51df0254775853adeddc7d4ee3e/Untitled%202.png" alt="Untitled" loading="lazy" decoding="async"></p>
+</li>
+</ul>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://arxiv.org/pdf/2301.06051.pdf">Paper</a></li>
+<li><a href="https://github.com/Haiyang-W/DSVT">Github</a></li>
+</ul></div><section class="post-comments"><section class="giscus" aria-label="Comments"><script src="https://giscus.app/client.js" data-repo="REPLACE_WITH_OWNER/REPO" data-repo-id="REPLACE_WITH_REPO_ID" data-category="General" data-category-id="REPLACE_WITH_CATEGORY_ID" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ko" data-loading="lazy" crossorigin="anonymous" async></script></section></section></article></div></main><footer class="site-footer"><ul class="footer__list"><li class="footer__item">© 2026 Kyungpyo&#39;s Blog</li><li class="footer__item"><a href="https://github.com/Kyungpyo-Kim" rel="me noopener noreferrer" target="_blank">GitHub</a></li><li class="footer__item"><a href="https://www.linkedin.com/in/kyungpyo-kim" rel="me noopener noreferrer" target="_blank">LinkedIn</a></li></ul></footer></div></div></body></html>

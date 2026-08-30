@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.2.9"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#152028" media="(prefers-color-scheme: dark)"><link rel="icon" href="/favicons/favicon.ico" sizes="any"><meta name="google-site-verification" content="Q4P3G3Girpd3IvxCj-Pwjqw57XwNqKP1Qpu4pWlxa_w"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7791328994969079" crossorigin="anonymous"></script><title>Modern Control Systems 제어공학 · 경표의 블로그</title><meta name="description" content="소개 서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다. 원서는 Modern Control Systems - Richard C. Dorf입니다. Dowonloads 제어공학1.pptx 제어공학2.pptx 제어공학3.pptx…"><meta name="author" content="Kyungpyo Kim"><link rel="canonical" href="https://kyungpyo-kim.github.io/study/modern-control-systems/"><!-- RSS feed (also served at /rss.xml) --><link rel="alternate" type="application/rss+xml" title="경표의 블로그" href="https://kyungpyo-kim.github.io/index.xml"><!-- hreflang alternates (ko root, en prefix) --><link rel="alternate" hreflang="ko" href="https://kyungpyo-kim.github.io/study/modern-control-systems/"><link rel="alternate" hreflang="en" href="https://kyungpyo-kim.github.io/en/study/modern-control-systems/"><link rel="alternate" hreflang="x-default" href="https://kyungpyo-kim.github.io/study/modern-control-systems/"><!-- Open Graph --><meta property="og:type" content="article"><meta property="og:title" content="Modern Control Systems 제어공학 · 경표의 블로그"><meta property="og:description" content="소개 서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다. 원서는 Modern Control Systems - Richard C. Dorf입니다. Dowonloads 제어공학1.pptx 제어공학2.pptx 제어공학3.pptx…"><meta property="og:url" content="https://kyungpyo-kim.github.io/study/modern-control-systems/"><meta property="og:site_name" content="경표의 블로그"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Modern Control Systems 제어공학 · 경표의 블로그"><meta property="article:published_time" content="2020-05-06T00:00:00.000Z"><meta property="article:modified_time" content="2020-05-06T00:00:00.000Z"><meta property="article:author" content="Kyungpyo Kim"><meta property="article:section" content="study"><meta property="article:tag" content="제어"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Modern Control Systems 제어공학 · 경표의 블로그"><meta name="twitter:description" content="소개 서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다. 원서는 Modern Control Systems - Richard C. Dorf입니다. Dowonloads 제어공학1.pptx 제어공학2.pptx 제어공학3.pptx…"><meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Modern Control Systems 제어공학","description":"소개 서울과학기술대학교 전기정보공학과 박영칠 교수님의 명강의 제어공학 수업을 들으며 필기한 내용입니다. 원서는 Modern Control Systems - Richard C. Dorf입니다. Dowonloads 제어공학1.pptx 제어공학2.pptx 제어공학3.pptx…","inLanguage":"ko-KR","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyungpyo-kim.github.io/study/modern-control-systems/"},"author":{"@type":"Person","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/"},"publisher":{"@type":"Organization","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/","logo":{"@type":"ImageObject","url":"https://kyungpyo-kim.github.io/favicons/favicon.ico"}},"image":["https://kyungpyo-kim.github.io/images/og-default.png"],"url":"https://kyungpyo-kim.github.io/study/modern-control-systems/","datePublished":"2020-05-06T00:00:00.000Z","dateModified":"2020-05-06T00:00:00.000Z","keywords":"제어"}</script><!-- Apply theme before paint to avoid flash. --><script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.CNMBM8t0.css"></head><body><div class="wrapper"><div class="wrapper__main wrapper__main--fullscreen"><header class="header"><nav class="nav" aria-label="주요 메뉴"><a class="nav__brand" href="/">Kyungpyo Kim</a><button id="nav-burger" class="nav__burger" type="button" aria-label="메뉴" aria-expanded="false" aria-controls="nav-list">☰</button><ul id="nav-list" class="nav__list"><li class="nav__list-item"><a href="/">홈</a></li><li class="nav__list-item"><a href="/study/">스터디</a></li><li class="nav__list-item"><a href="/about/">소개</a></li><li class="nav__list-item"><a class="btn-icon" href="/en/study/modern-control-systems/" rel="alternate" hreflang="en" aria-label="언어 전환">EN</a></li><li class="nav__list-item"><button id="theme-toggle" class="btn-icon" type="button" aria-label="테마 전환"><span data-theme-icon="light" aria-hidden="true">🌙</span><span data-theme-icon="dark" aria-hidden="true" hidden>☀️</span></button><script type="module">var e=document.getElementById(`theme-toggle`),t=document.documentElement;function n(){let n=t.getAttribute(`data-theme`)===`dark`,r=e?.querySelector(`[data-theme-icon="light"]`),i=e?.querySelector(`[data-theme-icon="dark"]`);r&&(r.hidden=n),i&&(i.hidden=!n)}n(),e?.addEventListener(`click`,()=>{let e=t.getAttribute(`data-theme`)===`dark`?`light`:`dark`;t.setAttribute(`data-theme`,e);try{localStorage.setItem(`theme`,e)}catch{}n()});</script></li></ul></nav></header><script type="module">var e=document.getElementById(`nav-burger`),t=document.getElementById(`nav-list`);e?.addEventListener(`click`,()=>{let n=t?.classList.toggle(`nav__list--active`);e.setAttribute(`aria-expanded`,n?`true`:`false`)});</script><main class="site-main"><div class="post-layout post-layout--with-toc"><aside class="post-layout__toc"><nav class="toc" aria-label="목차"><p class="toc__title">목차</p><ul><li class="toc__item toc__item--depth-0"><a href="#소개">소개</a></li><li class="toc__item toc__item--depth-0"><a href="#dowonloads">Dowonloads</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter1-introduction-to-control-system">Chapter1. Introduction to Control System</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter2-methmatical-models-of-system">Chapter2. Methmatical Models of System</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter3-state-variable-models">Chapter3. State Variable Models</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter4-feedback-control-system-characteristics">Chapter4. Feedback Control System Characteristics</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter5-performance-of-feedback-control-system">Chapter5. Performance of Feedback Control System</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter6-stability-of-linear-feedback-system">Chapter6. Stability of Linear Feedback System</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter7-root-locus-method">Chapter7. Root Locus Method</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter8-frequency-response-methods">Chapter8. Frequency Response Methods</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter9-stability-in-frequency-domain">Chapter9. Stability in Frequency Domain</a></li></ul></nav></aside><article class="post post-article"><header class="post-header"><h1>Modern Control Systems 제어공학</h1><p class="post-meta"><time datetime="2020-05-06">2020년 5월 6일</time></p><ul class="tag-list"><li class="tag"><a href="/tags/제어/">제어</a></li></ul></header><details class="toc-mobile"><summary>목차</summary><nav class="toc" aria-label="목차"><p class="toc__title">목차</p><ul><li class="toc__item toc__item--depth-0"><a href="#소개">소개</a></li><li class="toc__item toc__item--depth-0"><a href="#dowonloads">Dowonloads</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter1-introduction-to-control-system">Chapter1. Introduction to Control System</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter2-methmatical-models-of-system">Chapter2. Methmatical Models of System</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter3-state-variable-models">Chapter3. State Variable Models</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter4-feedback-control-system-characteristics">Chapter4. Feedback Control System Characteristics</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter5-performance-of-feedback-control-system">Chapter5. Performance of Feedback Control System</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter6-stability-of-linear-feedback-system">Chapter6. Stability of Linear Feedback System</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter7-root-locus-method">Chapter7. Root Locus Method</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter8-frequency-response-methods">Chapter8. Frequency Response Methods</a></li><li class="toc__item toc__item--depth-0"><a href="#chapter9-stability-in-frequency-domain">Chapter9. Stability in Frequency Domain</a></li></ul></nav></details><div class="post__content prose"><h2 id="소개">소개</h2>
+<ul>
+<li>서울과학기술대학교 전기정보공학과 <strong>박영칠 교수님</strong>의 명강의 <strong>제어공학</strong> 수업을 들으며 필기한 내용입니다.</li>
+<li>원서는 <strong>Modern Control Systems - Richard C. Dorf</strong>입니다.</li>
+</ul>
+<h2 id="dowonloads">Dowonloads</h2>
+<p><a href="https://www.notion.so/kyungpyokim/Modern-Control-Systems-a2041d53d38c41f4aa2c9d785f71b20f#c1c11c2ee9e7445489ddedf783d7ce01">제어공학1.pptx</a></p>
+<p><a href="https://www.notion.so/kyungpyokim/Modern-Control-Systems-a2041d53d38c41f4aa2c9d785f71b20f#bdf7d39f1e4f44a79d165905623015da">제어공학2.pptx</a></p>
+<p><a href="https://www.notion.so/kyungpyokim/Modern-Control-Systems-a2041d53d38c41f4aa2c9d785f71b20f#bcc21b2fd0044fca975e1296a8d32191">제어공학3.pptx</a></p>
+<p><a href="https://www.notion.so/kyungpyokim/Modern-Control-Systems-a2041d53d38c41f4aa2c9d785f71b20f#c66ed3b130184e469b9bf700b7119505">제어공학4.pptx</a></p>
+<h2 id="chapter1-introduction-to-control-system">Chapter1. Introduction to Control System</h2>
+<ul>
+<li>Classification of Control System</li>
+</ul>
+<h2 id="chapter2-methmatical-models-of-system">Chapter2. Methmatical Models of System</h2>
+<ul>
+<li>Differential Equation of Physical System</li>
+<li>Mechanical System</li>
+<li>2nd Oder Ordinary Differential Equation
+<ul>
+<li>Characteristic Equation</li>
+<li>Overdamping</li>
+<li>Critically Damped System</li>
+<li>Underdamping</li>
+</ul>
+</li>
+<li>Complex Variable</li>
+<li>Laplace Transform</li>
+<li>Transfer Function of Linear System
+<ul>
+<li>Spring-Mass-Damper System</li>
+<li>RC Network</li>
+<li>Electrical Network
+<ul>
+<li>Inverting Amplifier</li>
+<li>Non-Inverting Amplifier</li>
+<li>Summer Operational Amplifier</li>
+<li>Integrator Operational Amplifier</li>
+<li>Differentiator Operational Amplifier</li>
+<li>Lead Network</li>
+<li>Lag Network</li>
+<li>Permanent Magnetic DC Motor</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Block Diagram Model</li>
+<li>Signal Flow Graph Model
+<ul>
+<li>Mason’s Gain Formular</li>
+</ul>
+</li>
+</ul>
+<h2 id="chapter3-state-variable-models">Chapter3. State Variable Models</h2>
+<ul>
+<li>State Differential Equation</li>
+<li>State Variable Model from Transfer Function</li>
+<li>Transfer Function from State Variable Model</li>
+</ul>
+<h2 id="chapter4-feedback-control-system-characteristics">Chapter4. Feedback Control System Characteristics</h2>
+<ul>
+<li>Error Siganl Analysis</li>
+<li>Sensitivity</li>
+<li>Disturbance</li>
+<li>Transient Response</li>
+<li>Steady State Error</li>
+<li>Advantages and Disadavantages of Feedback Control System</li>
+</ul>
+<h2 id="chapter5-performance-of-feedback-control-system">Chapter5. Performance of Feedback Control System</h2>
+<ul>
+<li>Test Input
+<ul>
+<li>Position</li>
+<li>Ramp</li>
+<li>Parabolic</li>
+<li>Unit (Dirac Delta Function)</li>
+</ul>
+</li>
+<li>Standard Performance Index
+<ul>
+<li>Delay Time</li>
+<li>Rising Time</li>
+<li>Peak Time</li>
+<li>Percent Overshoot</li>
+<li>Settling Time</li>
+</ul>
+</li>
+<li>Effect of Added Zero and Pole on the Simple 2nd Order System Response</li>
+<li>Steady State Error of Feedback Control System
+<ul>
+<li>System Type</li>
+</ul>
+</li>
+</ul>
+<h2 id="chapter6-stability-of-linear-feedback-system">Chapter6. Stability of Linear Feedback System</h2>
+<ul>
+<li>Stability</li>
+<li>Routh-Hurwitz Stability Criterion</li>
+<li>Relative Stability</li>
+</ul>
+<h2 id="chapter7-root-locus-method">Chapter7. Root Locus Method</h2>
+<ul>
+<li>Root Locus</li>
+</ul>
+<h2 id="chapter8-frequency-response-methods">Chapter8. Frequency Response Methods</h2>
+<ul>
+<li>Bode Plot</li>
+<li>Asymptotic Curves</li>
+<li>Performance Specification</li>
+<li>Nichols Chart</li>
+<li>Frequency Response</li>
+</ul>
+<h2 id="chapter9-stability-in-frequency-domain">Chapter9. Stability in Frequency Domain</h2>
+<ul>
+<li>Cauchy’s Pinciple of Argument</li>
+<li>Nyquist Stability Criterion</li>
+</ul></div><section class="post-comments"><section class="giscus" aria-label="Comments"><script src="https://giscus.app/client.js" data-repo="REPLACE_WITH_OWNER/REPO" data-repo-id="REPLACE_WITH_REPO_ID" data-category="General" data-category-id="REPLACE_WITH_CATEGORY_ID" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ko" data-loading="lazy" crossorigin="anonymous" async></script></section></section></article></div></main><footer class="site-footer"><ul class="footer__list"><li class="footer__item">© 2026 경표의 블로그</li><li class="footer__item"><a href="https://github.com/Kyungpyo-Kim" rel="me noopener noreferrer" target="_blank">GitHub</a></li><li class="footer__item"><a href="https://www.linkedin.com/in/kyungpyo-kim" rel="me noopener noreferrer" target="_blank">LinkedIn</a></li></ul></footer></div></div></body></html>

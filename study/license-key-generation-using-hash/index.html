@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.2.9"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#152028" media="(prefers-color-scheme: dark)"><link rel="icon" href="/favicons/favicon.ico" sizes="any"><meta name="google-site-verification" content="Q4P3G3Girpd3IvxCj-Pwjqw57XwNqKP1Qpu4pWlxa_w"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7791328994969079" crossorigin="anonymous"></script><title>Hash 를 이용한 라이센스 키 생성 · 경표의 블로그</title><meta name="description" content="Hash 를 이용한 라이센스 키 생성 Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트 MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고, 생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다. Digest 란? 암호화해시를 통해…"><meta name="author" content="Kyungpyo Kim"><link rel="canonical" href="https://kyungpyo-kim.github.io/study/license-key-generation-using-hash/"><!-- RSS feed (also served at /rss.xml) --><link rel="alternate" type="application/rss+xml" title="경표의 블로그" href="https://kyungpyo-kim.github.io/index.xml"><!-- hreflang alternates (ko root, en prefix) --><link rel="alternate" hreflang="ko" href="https://kyungpyo-kim.github.io/study/license-key-generation-using-hash/"><link rel="alternate" hreflang="en" href="https://kyungpyo-kim.github.io/en/study/license-key-generation-using-hash/"><link rel="alternate" hreflang="x-default" href="https://kyungpyo-kim.github.io/study/license-key-generation-using-hash/"><!-- Open Graph --><meta property="og:type" content="article"><meta property="og:title" content="Hash 를 이용한 라이센스 키 생성 · 경표의 블로그"><meta property="og:description" content="Hash 를 이용한 라이센스 키 생성 Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트 MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고, 생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다. Digest 란? 암호화해시를 통해…"><meta property="og:url" content="https://kyungpyo-kim.github.io/study/license-key-generation-using-hash/"><meta property="og:site_name" content="경표의 블로그"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Hash 를 이용한 라이센스 키 생성 · 경표의 블로그"><meta property="article:published_time" content="2019-05-29T00:00:00.000Z"><meta property="article:modified_time" content="2019-05-29T00:00:00.000Z"><meta property="article:author" content="Kyungpyo Kim"><meta property="article:section" content="study"><meta property="article:tag" content="hash"><meta property="article:tag" content="license"><meta property="article:tag" content="key"><meta property="article:tag" content="보안"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Hash 를 이용한 라이센스 키 생성 · 경표의 블로그"><meta name="twitter:description" content="Hash 를 이용한 라이센스 키 생성 Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트 MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고, 생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다. Digest 란? 암호화해시를 통해…"><meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hash 를 이용한 라이센스 키 생성","description":"Hash 를 이용한 라이센스 키 생성 Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트 MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고, 생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다. Digest 란? 암호화해시를 통해…","inLanguage":"ko-KR","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyungpyo-kim.github.io/study/license-key-generation-using-hash/"},"author":{"@type":"Person","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/"},"publisher":{"@type":"Organization","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/","logo":{"@type":"ImageObject","url":"https://kyungpyo-kim.github.io/favicons/favicon.ico"}},"image":["https://kyungpyo-kim.github.io/images/og-default.png"],"url":"https://kyungpyo-kim.github.io/study/license-key-generation-using-hash/","datePublished":"2019-05-29T00:00:00.000Z","dateModified":"2019-05-29T00:00:00.000Z","keywords":"hash, license, key, 보안"}</script><!-- Apply theme before paint to avoid flash. --><script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.CNMBM8t0.css"></head><body><div class="wrapper"><div class="wrapper__main wrapper__main--fullscreen"><header class="header"><nav class="nav" aria-label="주요 메뉴"><a class="nav__brand" href="/">Kyungpyo Kim</a><button id="nav-burger" class="nav__burger" type="button" aria-label="메뉴" aria-expanded="false" aria-controls="nav-list">☰</button><ul id="nav-list" class="nav__list"><li class="nav__list-item"><a href="/">홈</a></li><li class="nav__list-item"><a href="/study/">스터디</a></li><li class="nav__list-item"><a href="/about/">소개</a></li><li class="nav__list-item"><a class="btn-icon" href="/en/study/license-key-generation-using-hash/" rel="alternate" hreflang="en" aria-label="언어 전환">EN</a></li><li class="nav__list-item"><button id="theme-toggle" class="btn-icon" type="button" aria-label="테마 전환"><span data-theme-icon="light" aria-hidden="true">🌙</span><span data-theme-icon="dark" aria-hidden="true" hidden>☀️</span></button><script type="module">var e=document.getElementById(`theme-toggle`),t=document.documentElement;function n(){let n=t.getAttribute(`data-theme`)===`dark`,r=e?.querySelector(`[data-theme-icon="light"]`),i=e?.querySelector(`[data-theme-icon="dark"]`);r&&(r.hidden=n),i&&(i.hidden=!n)}n(),e?.addEventListener(`click`,()=>{let e=t.getAttribute(`data-theme`)===`dark`?`light`:`dark`;t.setAttribute(`data-theme`,e);try{localStorage.setItem(`theme`,e)}catch{}n()});</script></li></ul></nav></header><script type="module">var e=document.getElementById(`nav-burger`),t=document.getElementById(`nav-list`);e?.addEventListener(`click`,()=>{let n=t?.classList.toggle(`nav__list--active`);e.setAttribute(`aria-expanded`,n?`true`:`false`)});</script><main class="site-main"><div class="post-layout post-layout--with-toc"><aside class="post-layout__toc"><nav class="toc" aria-label="목차"><p class="toc__title">목차</p><ul><li class="toc__item toc__item--depth-0"><a href="#digest-란">Digest 란?</a></li><li class="toc__item toc__item--depth-0"><a href="#mac-address-를-이용한-digest-생성">MAC address 를 이용한 digest 생성</a></li><li class="toc__item toc__item--depth-0"><a href="#생성된-결과물">생성된 결과물</a></li><li class="toc__item toc__item--depth-0"><a href="#key-값-을-이용한-어플리케이션의-라이센스-검증-테스트">Key 값 을 이용한 어플리케이션의 라이센스 검증 테스트</a></li><li class="toc__item toc__item--depth-0"><a href="#해쉬">해쉬?</a></li></ul></nav></aside><article class="post post-article"><header class="post-header"><h1>Hash 를 이용한 라이센스 키 생성</h1><p class="post-meta"><time datetime="2019-05-29">2019년 5월 29일</time></p><ul class="tag-list"><li class="tag"><a href="/tags/hash/">hash</a></li><li class="tag"><a href="/tags/license/">license</a></li><li class="tag"><a href="/tags/key/">key</a></li><li class="tag"><a href="/tags/보안/">보안</a></li></ul></header><details class="toc-mobile"><summary>목차</summary><nav class="toc" aria-label="목차"><p class="toc__title">목차</p><ul><li class="toc__item toc__item--depth-0"><a href="#digest-란">Digest 란?</a></li><li class="toc__item toc__item--depth-0"><a href="#mac-address-를-이용한-digest-생성">MAC address 를 이용한 digest 생성</a></li><li class="toc__item toc__item--depth-0"><a href="#생성된-결과물">생성된 결과물</a></li><li class="toc__item toc__item--depth-0"><a href="#key-값-을-이용한-어플리케이션의-라이센스-검증-테스트">Key 값 을 이용한 어플리케이션의 라이센스 검증 테스트</a></li><li class="toc__item toc__item--depth-0"><a href="#해쉬">해쉬?</a></li></ul></nav></details><div class="post__content prose"><h1 id="hash-를-이용한-라이센스-키-생성">Hash 를 이용한 라이센스 키 생성</h1>
+<ul>
+<li>Hash 를 통해 암호화 하고 이를 라이센스 키로 사용하는 방법 테스트</li>
+<li>MAC 주소를 불러와 hash 를 통해서 암호 키를 생성하고,</li>
+<li>생성된 암호키를 어플리케이션 내해서 확인하여 라이센스 검증 테스트를 수행한다.</li>
+</ul>
+<h4 id="digest-란">Digest 란?</h4>
+<p>암호화해시를 통해 얻은 메시지 (여기서는 라이센스 키로 사용)</p>
+<h4 id="mac-address-를-이용한-digest-생성">MAC address 를 이용한 digest 생성</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> hashlib</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> uuid</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># get MAC address</span></span>
+<span class="line"><span style="color:#E1E4E8">myMacAdr </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> hex</span><span style="color:#E1E4E8">(uuid.getnode()) </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> "20190527"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># generate key using hash</span></span>
+<span class="line"><span style="color:#E1E4E8">myHash </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> hashlib.sha512(myMacAdr.encode(</span><span style="color:#9ECBFF">'utf-8'</span><span style="color:#E1E4E8">)).hexdigest()</span></span>
+<span class="line"><span style="color:#E1E4E8">testKey </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> open</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'test.key'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'w'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">testKey.write(myHash)</span></span>
+<span class="line"><span style="color:#E1E4E8">testKey.close()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># test key for fail test</span></span>
+<span class="line"><span style="color:#E1E4E8">testAdr1 </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> hex</span><span style="color:#E1E4E8">(uuid.getnode()) </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> "20190528"</span></span>
+<span class="line"><span style="color:#E1E4E8">testHash1 </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> hashlib.sha512(testAdr1.encode(</span><span style="color:#9ECBFF">'utf-8'</span><span style="color:#E1E4E8">)).hexdigest()</span></span>
+<span class="line"><span style="color:#E1E4E8">testKey1 </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> open</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'test1.key'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'w'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">testKey1.write(testHash1)</span></span>
+<span class="line"><span style="color:#E1E4E8">testKey1.close()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">testAdr2 </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> hex</span><span style="color:#E1E4E8">(uuid.getnode() </span><span style="color:#F97583">+</span><span style="color:#F97583"> 0x</span><span style="color:#79B8FF">000012340000</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> "20190527"</span></span>
+<span class="line"><span style="color:#E1E4E8">testHash2 </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> hashlib.sha512(testAdr2.encode(</span><span style="color:#9ECBFF">'utf-8'</span><span style="color:#E1E4E8">)).hexdigest()</span></span>
+<span class="line"><span style="color:#E1E4E8">testKey2 </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> open</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'test2.key'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'w'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">testKey2.write(testHash1)</span></span>
+<span class="line"><span style="color:#E1E4E8">testKey2.close()</span></span></code></pre>
+<h4 id="생성된-결과물">생성된 결과물</h4>
+<ul>
+<li>test.key # 올바른 라이센스 키</li>
+<li>test1.key # 위조된 라이센스 키</li>
+<li>test2.key # 위조된 라이센스 키</li>
+</ul>
+<h4 id="key-값-을-이용한-어플리케이션의-라이센스-검증-테스트">Key 값 을 이용한 어플리케이션의 라이센스 검증 테스트</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># test application for license key validation</span></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> testApp</span><span style="color:#E1E4E8">():</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#79B8FF"> __init__</span><span style="color:#E1E4E8">(self, key):</span></span>
+<span class="line"><span style="color:#79B8FF">        print</span><span style="color:#E1E4E8"> (</span><span style="color:#9ECBFF">"Initialize testApp using key: </span><span style="color:#79B8FF">{}</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">.format(key))</span></span>
+<span class="line"><span style="color:#6A737D">        # open key</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.license </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'fail'</span></span>
+<span class="line"><span style="color:#E1E4E8">        testKey </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> open</span><span style="color:#E1E4E8">(key, </span><span style="color:#9ECBFF">'r'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # make true key</span></span>
+<span class="line"><span style="color:#6A737D">        # get MAC address</span></span>
+<span class="line"><span style="color:#E1E4E8">        myMacAdr </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> hex</span><span style="color:#E1E4E8">(uuid.getnode()) </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> "20190527"</span></span>
+<span class="line"><span style="color:#6A737D">        # generate key using hash</span></span>
+<span class="line"><span style="color:#E1E4E8">        myHash </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> hashlib.sha512(myMacAdr.encode(</span><span style="color:#9ECBFF">'utf-8'</span><span style="color:#E1E4E8">)).hexdigest()</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> testKey.readline() </span><span style="color:#F97583">==</span><span style="color:#E1E4E8"> myHash:</span></span>
+<span class="line"><span style="color:#79B8FF">            self</span><span style="color:#E1E4E8">.license </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'pass'</span></span>
+<span class="line"><span style="color:#E1E4E8">            </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> runApp</span><span style="color:#E1E4E8">(self):</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.license </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> 'pass'</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">            print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Success certification"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">        else</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#79B8FF">            print</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Fail certification!</span><span style="color:#79B8FF">\n\n</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">            return</span></span>
+<span class="line"><span style="color:#E1E4E8">            </span></span>
+<span class="line"><span style="color:#79B8FF">        print</span><span style="color:#E1E4E8"> (</span><span style="color:#9ECBFF">" ---------------"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">        print</span><span style="color:#E1E4E8"> (</span><span style="color:#9ECBFF">" run application"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">        print</span><span style="color:#E1E4E8"> (</span><span style="color:#9ECBFF">" ---------------</span><span style="color:#79B8FF">\n\n</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># run test</span></span>
+<span class="line"><span style="color:#E1E4E8">test </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> testApp(</span><span style="color:#9ECBFF">'test.key'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">test.runApp()</span></span>
+<span class="line"><span style="color:#E1E4E8">test1 </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> testApp(</span><span style="color:#9ECBFF">'test1.key'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">test1.runApp()</span></span>
+<span class="line"><span style="color:#E1E4E8">test2 </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> testApp(</span><span style="color:#9ECBFF">'test2.key'</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">test2.runApp()</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Initialize testApp using key: test.key</span></span>
+<span class="line"><span>Success certification</span></span>
+<span class="line"><span> ---------------</span></span>
+<span class="line"><span> run application</span></span>
+<span class="line"><span> ---------------</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Initialize testApp using key: test1.key</span></span>
+<span class="line"><span>Fail certification!</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Initialize testApp using key: test2.key</span></span>
+<span class="line"><span>Fail certification!</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>위 결과에서 첫번째 라이센스 키는 올바로 동작하지만,
+두번째, 세번째 결과에서는 라이센스 키 인증이 실패함을 알 수 있다.</p>
+<h4 id="해쉬">해쉬?</h4>
+<p>여기서 사용된 해쉬는 단방향 암호화 방법으로, 복호화가 불가능하다.
+이를 이용해 라이센스 키를 생성하고 인증키를 확인하는데 사용하였다.</p></div><section class="post-comments"><section class="giscus" aria-label="Comments"><script src="https://giscus.app/client.js" data-repo="REPLACE_WITH_OWNER/REPO" data-repo-id="REPLACE_WITH_REPO_ID" data-category="General" data-category-id="REPLACE_WITH_CATEGORY_ID" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ko" data-loading="lazy" crossorigin="anonymous" async></script></section></section></article></div></main><footer class="site-footer"><ul class="footer__list"><li class="footer__item">© 2026 경표의 블로그</li><li class="footer__item"><a href="https://github.com/Kyungpyo-Kim" rel="me noopener noreferrer" target="_blank">GitHub</a></li><li class="footer__item"><a href="https://www.linkedin.com/in/kyungpyo-kim" rel="me noopener noreferrer" target="_blank">LinkedIn</a></li></ul></footer></div></div></body></html>

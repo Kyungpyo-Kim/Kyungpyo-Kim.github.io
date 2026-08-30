@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.2.9"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#152028" media="(prefers-color-scheme: dark)"><link rel="icon" href="/favicons/favicon.ico" sizes="any"><meta name="google-site-verification" content="Q4P3G3Girpd3IvxCj-Pwjqw57XwNqKP1Qpu4pWlxa_w"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7791328994969079" crossorigin="anonymous"></script><title>Kalman Filter (작성중) · Kyungpyo&#39;s Blog</title><meta name="description" content="자율주행 알고리즘 개발을 위한 칼만필터 @Remind 내가 아는 Kalman Filter 개념을 다시 정리하기 위해 다른 사람에게 설명할 때 유용한 자료로 활용하기 위해 수식은 적게 그림은 많게 Prerequisites Least Square Method Bayes theorem…"><meta name="author" content="Kyungpyo Kim"><link rel="canonical" href="https://kyungpyo-kim.github.io/en/study/kalman-filter/"><!-- RSS feed (also served at /rss.xml) --><link rel="alternate" type="application/rss+xml" title="Kyungpyo's Blog" href="https://kyungpyo-kim.github.io/index.xml"><!-- hreflang alternates (ko root, en prefix) --><link rel="alternate" hreflang="ko" href="https://kyungpyo-kim.github.io/study/kalman-filter/"><link rel="alternate" hreflang="en" href="https://kyungpyo-kim.github.io/en/study/kalman-filter/"><link rel="alternate" hreflang="x-default" href="https://kyungpyo-kim.github.io/study/kalman-filter/"><!-- Open Graph --><meta property="og:type" content="article"><meta property="og:title" content="Kalman Filter (작성중) · Kyungpyo's Blog"><meta property="og:description" content="자율주행 알고리즘 개발을 위한 칼만필터 @Remind 내가 아는 Kalman Filter 개념을 다시 정리하기 위해 다른 사람에게 설명할 때 유용한 자료로 활용하기 위해 수식은 적게 그림은 많게 Prerequisites Least Square Method Bayes theorem…"><meta property="og:url" content="https://kyungpyo-kim.github.io/en/study/kalman-filter/"><meta property="og:site_name" content="Kyungpyo's Blog"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Kalman Filter (작성중) · Kyungpyo's Blog"><meta property="article:published_time" content="2021-08-05T00:00:00.000Z"><meta property="article:modified_time" content="2021-08-05T00:00:00.000Z"><meta property="article:author" content="Kyungpyo Kim"><meta property="article:section" content="study"><meta property="article:tag" content="kalman filter"><meta property="article:tag" content="자율주행"><meta property="article:tag" content="optimal state estimation"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Kalman Filter (작성중) · Kyungpyo's Blog"><meta name="twitter:description" content="자율주행 알고리즘 개발을 위한 칼만필터 @Remind 내가 아는 Kalman Filter 개념을 다시 정리하기 위해 다른 사람에게 설명할 때 유용한 자료로 활용하기 위해 수식은 적게 그림은 많게 Prerequisites Least Square Method Bayes theorem…"><meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Kalman Filter (작성중)","description":"자율주행 알고리즘 개발을 위한 칼만필터 @Remind 내가 아는 Kalman Filter 개념을 다시 정리하기 위해 다른 사람에게 설명할 때 유용한 자료로 활용하기 위해 수식은 적게 그림은 많게 Prerequisites Least Square Method Bayes theorem…","inLanguage":"en-US","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyungpyo-kim.github.io/en/study/kalman-filter/"},"author":{"@type":"Person","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/"},"publisher":{"@type":"Organization","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/","logo":{"@type":"ImageObject","url":"https://kyungpyo-kim.github.io/favicons/favicon.ico"}},"image":["https://kyungpyo-kim.github.io/images/og-default.png"],"url":"https://kyungpyo-kim.github.io/en/study/kalman-filter/","datePublished":"2021-08-05T00:00:00.000Z","dateModified":"2021-08-05T00:00:00.000Z","keywords":"kalman filter, 자율주행, optimal state estimation"}</script><!-- Apply theme before paint to avoid flash. --><script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.CNMBM8t0.css"></head><body><div class="wrapper"><div class="wrapper__main wrapper__main--fullscreen"><header class="header"><nav class="nav" aria-label="Main menu"><a class="nav__brand" href="/en/">Kyungpyo Kim</a><button id="nav-burger" class="nav__burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-list">☰</button><ul id="nav-list" class="nav__list"><li class="nav__list-item"><a href="/en/">Home</a></li><li class="nav__list-item"><a href="/en/study/">Study</a></li><li class="nav__list-item"><a href="/en/about/">About</a></li><li class="nav__list-item"><a class="btn-icon" href="/study/kalman-filter/" rel="alternate" hreflang="ko" aria-label="Switch language">한국어</a></li><li class="nav__list-item"><button id="theme-toggle" class="btn-icon" type="button" aria-label="Toggle theme"><span data-theme-icon="light" aria-hidden="true">🌙</span><span data-theme-icon="dark" aria-hidden="true" hidden>☀️</span></button><script type="module">var e=document.getElementById(`theme-toggle`),t=document.documentElement;function n(){let n=t.getAttribute(`data-theme`)===`dark`,r=e?.querySelector(`[data-theme-icon="light"]`),i=e?.querySelector(`[data-theme-icon="dark"]`);r&&(r.hidden=n),i&&(i.hidden=!n)}n(),e?.addEventListener(`click`,()=>{let e=t.getAttribute(`data-theme`)===`dark`?`light`:`dark`;t.setAttribute(`data-theme`,e);try{localStorage.setItem(`theme`,e)}catch{}n()});</script></li></ul></nav></header><script type="module">var e=document.getElementById(`nav-burger`),t=document.getElementById(`nav-list`);e?.addEventListener(`click`,()=>{let n=t?.classList.toggle(`nav__list--active`);e.setAttribute(`aria-expanded`,n?`true`:`false`)});</script><main class="site-main"><div class="post-layout post-layout--with-toc"><aside class="post-layout__toc"><nav class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ul><li class="toc__item toc__item--depth-0"><a href="#prerequisites">Prerequisites</a></li><li class="toc__item toc__item--depth-0"><a href="#objective-optimal-state-estimation">Objective: Optimal state estimation</a></li><li class="toc__item toc__item--depth-1"><a href="#uncertainty-of-">Uncertainty of *</a></li><li class="toc__item toc__item--depth-1"><a href="#advantages-of-kalman-filter">Advantages of Kalman filter</a></li><li class="toc__item toc__item--depth-0"><a href="#assumption">Assumption</a></li><li class="toc__item toc__item--depth-0"><a href="#random-process">Random Process</a></li><li class="toc__item toc__item--depth-0"><a href="#linear-system">Linear System</a></li><li class="toc__item toc__item--depth-0"><a href="#reference">Reference</a></li><li class="toc__item toc__item--depth-0"><a href="#pictures">Pictures</a></li></ul></nav></aside><article class="post post-article"><header class="post-header"><h1>Kalman Filter (작성중)</h1><p class="post-meta"><time datetime="2021-08-05">August 5, 2021</time></p><ul class="tag-list"><li class="tag"><a href="/en/tags/kalman-filter/">kalman filter</a></li><li class="tag"><a href="/en/tags/자율주행/">자율주행</a></li><li class="tag"><a href="/en/tags/optimal-state-estimation/">optimal state estimation</a></li></ul></header><details class="toc-mobile"><summary>On this page</summary><nav class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ul><li class="toc__item toc__item--depth-0"><a href="#prerequisites">Prerequisites</a></li><li class="toc__item toc__item--depth-0"><a href="#objective-optimal-state-estimation">Objective: Optimal state estimation</a></li><li class="toc__item toc__item--depth-1"><a href="#uncertainty-of-">Uncertainty of *</a></li><li class="toc__item toc__item--depth-1"><a href="#advantages-of-kalman-filter">Advantages of Kalman filter</a></li><li class="toc__item toc__item--depth-0"><a href="#assumption">Assumption</a></li><li class="toc__item toc__item--depth-0"><a href="#random-process">Random Process</a></li><li class="toc__item toc__item--depth-0"><a href="#linear-system">Linear System</a></li><li class="toc__item toc__item--depth-0"><a href="#reference">Reference</a></li><li class="toc__item toc__item--depth-0"><a href="#pictures">Pictures</a></li></ul></nav></details><div class="post__content prose"><hr>
+<p>자율주행 알고리즘 개발을 위한 칼만필터</p>
+<hr>
+<hr>
+<p>@Remind</p>
+<ul>
+<li>내가 아는 Kalman Filter 개념을 다시 정리하기 위해</li>
+<li>다른 사람에게 설명할 때 유용한 자료로 활용하기 위해</li>
+<li>수식은 적게 그림은 많게</li>
+</ul>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Least Square Method</li>
+<li>Bayes theorem</li>
+<li>Gaussian distribution</li>
+</ul>
+<h2 id="objective-optimal-state-estimation">Objective: Optimal state estimation</h2>
+<p>칼만 필터는 많은 분야에서 두루 사용되는 효율적이면서 강건한 알고리즘입니다. 센서에서 측정된 결과로 부터 우리가 알고자 하는 정보를 뽑아내기 위해 사용됩니다.</p>
+<p>제가 주로 자율주행 분야의 연구 및 개발을 하면서는 주변 환경 정보를 인식해야 하는 경우가 많습니다. 주변에 있는 물체(차, 사람, 자전거 등)의 위치와 크기, 어떤 방향으로 움직이는지에 대한 정보가 적절하게 주어져야 안전하고 신뢰성 높은 자율주행이 가능합니다.</p>
+<ul>
+<li>위치</li>
+<li>크기</li>
+<li>방향</li>
+</ul>
+<p><img src="/images/kalmanfilter/sensor.png" alt="/images/kalmanfilter/sensor.png" loading="lazy" decoding="async"></p>
+<p>이때 센서를 통해 얻어진 정보는 일시적인(temporary) 정보가 많습니다. 또한 주변 물체의 동특성을 반영하지 않는 경우가 많습니다. 센서의 정보가 직접적으로 우리가 관측하고자 하는 결과를 포함하지 않을때도 있습니다. 센서의 오차 역시 무시할 수 가 없습니다.</p>
+<p>이때 칼만필터는 연속적으로 측정된 <code>센서의 값(measurement)</code>과 우리가 <code>알고자 하는 값(state)</code>이 있을 때 <code>센서 측정값과 우리가 알고자하는 값 사이의 관계(measurement model)</code>, 측정값이 어떤 <code>동특성(transition model)</code>을 가지고 있는지를 정의하고 이 관계속에서 <code>가장 좋은(optimal) 값</code>을 찾는 것을 목표로 합니다.</p>
+<ul>
+<li>measurement</li>
+<li>state</li>
+<li>measurement model</li>
+<li>transition model</li>
+</ul>
+<h3 id="uncertainty-of-">Uncertainty of *</h3>
+<p>칼만필터를 통해 얻어지는 결과를 우리는 최적값(optimal state)이라고 합니다. 이때 간과해서 안되는 부분이 최적값은 정확한 값은 아니라는 것입니다. 칼만필터를 통해 얻어지는 결과는 센서의 불확실성(uncertainty of measurement), 관측하고자 하는 값 사이의 관계들의 불확실성(uncertainty of process)을 고려한 최적값입니다. 이러한 불확실성은 말 그대로 불확실하기 때문에 정확할 수 없고 따라서 얻어지는 최적값도 불확실성을 갖게 됩니다. 이러한 불확실성의 정도를 우리는 임의로 조정하게 되는데 여기서 칼만필터의 결과가 크게 달라지게 됩니다. 그래서 칼만필터를 제대로 활용하기 위해서는 이러한 불확실성이 어떻게 칼만필터에 영향을 주는지, 칼만필터는 이러한 불확실성을 어떻게 다루는지 잘 이해해야 합니다.</p>
+<h3 id="advantages-of-kalman-filter">Advantages of Kalman filter</h3>
+<p>제가 생각하는 칼만필터는 위의 서술한 내용만으로도 충분하며 다라고 해도 부족함이 없다고 생각합니다. 하지만 실무에 사용할 때에는 아래와 같은 장점들도 중요하게 여겨집니다. 본 글에서는 크게 다루지는 않을 예정입니다. 칼만필터를 이해하면 당연한 내용들이기 때문입니다.</p>
+<ul>
+<li>메모리 효율성</li>
+<li>빠른 계산</li>
+</ul>
+<h2 id="assumption">Assumption</h2>
+<p>예를 들어 차량의 속도를 측정하는 센서가 있다고 해봅시다. 센서에서 들어오는 속도는 많은 오차를 포함하고 있습니다. 그런데 우리는 차량의 가속도의 크기의 최대값 혹은 최소값을 알 수 있다면 이 말도 안되는 오차도 어느정도 줄일수 있지 않을까요? 혹은 센서에서 들어오는 속도값이 항상 일정한 비율의 오프셋이 있다거나 크기의 비가 조정되어 있다면 이런 부분을 고려해 좀 더 정확한 측정값을 유추해 볼 수 있겠죠? 문제는 이러한 가속도의 크기의 최대값/최소값, 센서의 속도의 오프셋, 스케일링 등과 같은 우리의 지식이 항상 정확하지 않다는 것입니다. 정확한 수식으로 나타낼 수 없죠. 칼만필터는 이러한 불확실성을 가우시안 분포로 가정을 합니다. 가우시안 분포로 가정하므로서 재귀적으로 보정과 예측의 단계를 통해 최적화된 값을 얻을 수 있게 합니다.</p>
+<ol>
+<li>시스템(model)은 선형이다.</li>
+<li>시스템(model)은 Gaussian distribution이다.</li>
+</ol>
+<h2 id="random-process">Random Process</h2>
+<h2 id="linear-system">Linear System</h2>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Kalman_filter">아직도 코드 짤때 찾아보는 위키백과</a>
+<a href="https://ko.wikipedia.org/wiki/%EC%B9%BC%EB%A7%8C_%ED%95%84%ED%84%B0">https://ko.wikipedia.org/wiki/칼만_필터</a></li>
+<li><a href="https://www.youtube.com/channel/UCa2-fpj6AV8T6JK1uTRuFpw">명강의</a></li>
+<li><a href="https://gaussian37.github.io/ad-ose-lkf_basic/">https://gaussian37.github.io/ad-ose-lkf_basic/</a></li>
+<li><a href="https://medium.com/@celinachild/kalman-filter-%EC%86%8C%EA%B0%9C-395c2016b4d6">https://medium.com/@celinachild/kalman-filter-소개-395c2016b4d6</a></li>
+</ul>
+<h2 id="pictures">Pictures</h2>
+<p><a href="https://docs.google.com/presentation/d/1t-30MNU8Su_qdQ7Sxgb_rgNfZNBcOCe22xZNVyr-9UQ/edit?usp=drivesdk">KalmanFilter</a></p></div><section class="post-comments"><section class="giscus" aria-label="Comments"><script src="https://giscus.app/client.js" data-repo="REPLACE_WITH_OWNER/REPO" data-repo-id="REPLACE_WITH_REPO_ID" data-category="General" data-category-id="REPLACE_WITH_CATEGORY_ID" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ko" data-loading="lazy" crossorigin="anonymous" async></script></section></section></article></div></main><footer class="site-footer"><ul class="footer__list"><li class="footer__item">© 2026 Kyungpyo&#39;s Blog</li><li class="footer__item"><a href="https://github.com/Kyungpyo-Kim" rel="me noopener noreferrer" target="_blank">GitHub</a></li><li class="footer__item"><a href="https://www.linkedin.com/in/kyungpyo-kim" rel="me noopener noreferrer" target="_blank">LinkedIn</a></li></ul></footer></div></div></body></html>

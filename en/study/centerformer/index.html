@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.2.9"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#152028" media="(prefers-color-scheme: dark)"><link rel="icon" href="/favicons/favicon.ico" sizes="any"><meta name="google-site-verification" content="Q4P3G3Girpd3IvxCj-Pwjqw57XwNqKP1Qpu4pWlxa_w"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7791328994969079" crossorigin="anonymous"></script><title>[SOTA] LiDAR 3D Object Detection Model: CenterFormer · Kyungpyo&#39;s Blog</title><meta name="description" content="최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다. Waymo 벤치마크에서 우수항 성능을 보여주며 3D Object Detection…"><meta name="author" content="Kyungpyo Kim"><link rel="canonical" href="https://kyungpyo-kim.github.io/en/study/centerformer/"><!-- RSS feed (also served at /rss.xml) --><link rel="alternate" type="application/rss+xml" title="Kyungpyo's Blog" href="https://kyungpyo-kim.github.io/index.xml"><!-- hreflang alternates (ko root, en prefix) --><link rel="alternate" hreflang="ko" href="https://kyungpyo-kim.github.io/study/centerformer/"><link rel="alternate" hreflang="en" href="https://kyungpyo-kim.github.io/en/study/centerformer/"><link rel="alternate" hreflang="x-default" href="https://kyungpyo-kim.github.io/study/centerformer/"><!-- Open Graph --><meta property="og:type" content="article"><meta property="og:title" content="[SOTA] LiDAR 3D Object Detection Model: CenterFormer · Kyungpyo's Blog"><meta property="og:description" content="최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다. Waymo 벤치마크에서 우수항 성능을 보여주며 3D Object Detection…"><meta property="og:url" content="https://kyungpyo-kim.github.io/en/study/centerformer/"><meta property="og:site_name" content="Kyungpyo's Blog"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="[SOTA] LiDAR 3D Object Detection Model: CenterFormer · Kyungpyo's Blog"><meta property="article:published_time" content="2023-01-14T00:00:00.000Z"><meta property="article:modified_time" content="2023-01-14T00:00:00.000Z"><meta property="article:author" content="Kyungpyo Kim"><meta property="article:section" content="study"><meta property="article:tag" content="AI"><meta property="article:tag" content="LiDAR"><meta property="article:tag" content="3D Object Detection"><meta property="article:tag" content="SOTA"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="[SOTA] LiDAR 3D Object Detection Model: CenterFormer · Kyungpyo's Blog"><meta name="twitter:description" content="최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다. Waymo 벤치마크에서 우수항 성능을 보여주며 3D Object Detection…"><meta name="twitter:image" content="https://kyungpyo-kim.github.io/images/og-default.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"[SOTA] LiDAR 3D Object Detection Model: CenterFormer","description":"최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다. Waymo 벤치마크에서 우수항 성능을 보여주며 3D Object Detection…","inLanguage":"en-US","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyungpyo-kim.github.io/en/study/centerformer/"},"author":{"@type":"Person","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/"},"publisher":{"@type":"Organization","name":"Kyungpyo Kim","url":"https://kyungpyo-kim.github.io/","logo":{"@type":"ImageObject","url":"https://kyungpyo-kim.github.io/favicons/favicon.ico"}},"image":["https://kyungpyo-kim.github.io/images/og-default.png"],"url":"https://kyungpyo-kim.github.io/en/study/centerformer/","datePublished":"2023-01-14T00:00:00.000Z","dateModified":"2023-01-14T00:00:00.000Z","keywords":"AI, LiDAR, 3D Object Detection, SOTA"}</script><!-- Apply theme before paint to avoid flash. --><script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.CNMBM8t0.css"></head><body><div class="wrapper"><div class="wrapper__main wrapper__main--fullscreen"><header class="header"><nav class="nav" aria-label="Main menu"><a class="nav__brand" href="/en/">Kyungpyo Kim</a><button id="nav-burger" class="nav__burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-list">☰</button><ul id="nav-list" class="nav__list"><li class="nav__list-item"><a href="/en/">Home</a></li><li class="nav__list-item"><a href="/en/study/">Study</a></li><li class="nav__list-item"><a href="/en/about/">About</a></li><li class="nav__list-item"><a class="btn-icon" href="/study/centerformer/" rel="alternate" hreflang="ko" aria-label="Switch language">한국어</a></li><li class="nav__list-item"><button id="theme-toggle" class="btn-icon" type="button" aria-label="Toggle theme"><span data-theme-icon="light" aria-hidden="true">🌙</span><span data-theme-icon="dark" aria-hidden="true" hidden>☀️</span></button><script type="module">var e=document.getElementById(`theme-toggle`),t=document.documentElement;function n(){let n=t.getAttribute(`data-theme`)===`dark`,r=e?.querySelector(`[data-theme-icon="light"]`),i=e?.querySelector(`[data-theme-icon="dark"]`);r&&(r.hidden=n),i&&(i.hidden=!n)}n(),e?.addEventListener(`click`,()=>{let e=t.getAttribute(`data-theme`)===`dark`?`light`:`dark`;t.setAttribute(`data-theme`,e);try{localStorage.setItem(`theme`,e)}catch{}n()});</script></li></ul></nav></header><script type="module">var e=document.getElementById(`nav-burger`),t=document.getElementById(`nav-list`);e?.addEventListener(`click`,()=>{let n=t?.classList.toggle(`nav__list--active`);e.setAttribute(`aria-expanded`,n?`true`:`false`)});</script><main class="site-main"><div class="post-layout post-layout--with-toc"><aside class="post-layout__toc"><nav class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ul><li class="toc__item toc__item--depth-0"><a href="#overview">Overview</a></li><li class="toc__item toc__item--depth-0"><a href="#detailed-method">Detailed Method</a></li><li class="toc__item toc__item--depth-0"><a href="#key-ideas">Key Ideas</a></li><li class="toc__item toc__item--depth-0"><a href="#on-a-lighter-note">On a Lighter Note…</a></li></ul></nav></aside><article class="post post-article"><header class="post-header"><h1>[SOTA] LiDAR 3D Object Detection Model: CenterFormer</h1><p class="post-meta"><time datetime="2023-01-14">January 14, 2023</time></p><ul class="tag-list"><li class="tag"><a href="/en/tags/ai/">AI</a></li><li class="tag"><a href="/en/tags/lidar/">LiDAR</a></li><li class="tag"><a href="/en/tags/3d-object-detection/">3D Object Detection</a></li><li class="tag"><a href="/en/tags/sota/">SOTA</a></li></ul></header><details class="toc-mobile"><summary>On this page</summary><nav class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ul><li class="toc__item toc__item--depth-0"><a href="#overview">Overview</a></li><li class="toc__item toc__item--depth-0"><a href="#detailed-method">Detailed Method</a></li><li class="toc__item toc__item--depth-0"><a href="#key-ideas">Key Ideas</a></li><li class="toc__item toc__item--depth-0"><a href="#on-a-lighter-note">On a Lighter Note…</a></li></ul></nav></details><div class="post__content prose"><p>최근 새로운 LiDAR 3D Object Detection Model 이 발표되었다. 기존의 CenterPoint 모델에 효과적으로 Transformer 구조를 적용한 CenterFormer 이다. Waymo 벤치마크에서 우수항 성능을 보여주며 3D Object Detection 분야에서 새로운 SOTA 모델이 되었다.</p>
+<h1 id="1-centerpoint">1. CenterPoint</h1>
+<p>CenterPoint는 효율적으로 center를 추출하고 이를 바탕으로 object detection 을 수행하는 네트워크이다. CenterNet이라는 이미지 object detection 네트워크의 아이디어를 포인트 클라우드 object detection 네트워크에 적용한 것이다.</p>
+<p>CenterNet은 anchor-free 방식으로 heatmap 을 추출하고 heatmap의 peak 를 key-point로 사용하여 object detection 을 수행한다. CenterPoint역시 마찬가지로 포인트 클라우드로부터 heatmap 을 추출하고 이를 활용하여 object detection을 수행하는 구조를 제안하였다. 이때 VoxelNet 또는 PointPillars 모델과 같이 voxel 또는 pillar 형태로 encoding 및 feature들을 생성해 내고 이로부터 Bird-Eye-View (BEV) heatmap feature prediction을 수행하게 된다.</p>
+<p>CenterNet의 경우 bounding box ground truth로 부터 Gaussian 분포로 encoding 된 heatmap 을 생성해 내어 이를 학습에 이용하였는데 CenterPoint도 동일한 방법을 사용하였다. Bounding box regression은 CenterPoint의 경우 object의 크기 위치 및 사이즈, 방향 등 3차원 object 정보를 추출해낸다.</p>
+<h1 id="2-transformer">2. Transformer</h1>
+<p>트랜스포머(Transformer)는 2017년 구글이 발표한 논문인 “Attention is all you need”에서 나온 모델로 기존의 seq2seq의 구조인 인코더-디코더를 따르면서도, 논문의 이름처럼 어텐션(Attention)만으로 구현한 모델이다. 이 모델은 RNN을 사용하지 않고, 인코더-디코더 구조를 설계하였음에도 번역 성능에서도 RNN보다 우수한 성능을 보여주었고, 최근에는 CNN이 수행하던 object detection 에도 적용되며 우수한 성능을 보여주고 있다.</p>
+<h1 id="3-centerformer">3. CenterFormer</h1>
+<h2 id="overview">Overview</h2>
+<p>Transformer가 이미지 object detection에서 좋은 성능을 보이고 있지만, 상대적으로 포인트 클라우드 object detection에 Transformer를 적용하는 사례가 드물었다. CenterFormer는 포인트 클라우드에 Transformer를 적용하여 높은 성능을 달성했을 뿐만 아니라, 학습 속도를 향상시키고 네트워크의 크기를 줄일 수 있는 구조를 제안한다.</p>
+<p>CenterFormer는 CenterPoint 와 마찬가지로 center feature 를 사용하며, 이러한 center feature들을 Transformer의 입력으로 사용된다. 또한 ‘multi-scale cross-attention layer’를 적용하여 neighboring features를 종합적으로 고려할 수 있게 하였는데, 즉 CNN과 같이 Convolution을 하는 것처럼 하나의 feature를 연산할때 그 주변의 feature들을 함께 연산하는 효과를 낸다고 볼 수 있다. 또한 이러한 aggregation 과정에서 큰 연산의 증가가 없어 효율적으로 모델 구성이 가능하다. 뿐만 아니라 CenterPoint와 같이 여러 프레임의 입력을 종합하기 위해 ‘cross-attention transformer’를 제안하여 CenterFormer에 적용하였다.</p>
+<h2 id="detailed-method">Detailed Method</h2>
+<p><img src="https://raw.githubusercontent.com/Kyungpyo-Kim/Kyungpyo-Kim.github.io/master/images/centerformer/Untitled.png" alt="Untitled" loading="lazy" decoding="async"></p>
+<ul>
+<li>포인트 클라우드를 voxel 형태로 인코딩하여 사용하였으며, CenterPoint와 마찬가지로 sparse voxel-based backbone network 를 적용하였다. 이러한 네트워크를 통해 BEV features를 생성해낸다. CenterPoint의 경우 pillar 형태의 backbone 사용 결과도 나와있었지만 CenterFormer에는 해당 내용은 없었다.</li>
+<li>CenterPoint와 달리 multi-scale BEV features를 사용하여 center proposals를 prediction한다. 이를 Transformer의 decoder의 입력으로 사용하며, 마지막 regression head를 이용하여 object의 정보들을 prediction 하는 task를 수행한다.</li>
+</ul>
+<h2 id="key-ideas">Key Ideas</h2>
+<p><img src="https://raw.githubusercontent.com/Kyungpyo-Kim/Kyungpyo-Kim.github.io/master/images/centerformer/Untitled%201.png" alt="Untitled" loading="lazy" decoding="async"></p>
+<ul>
+<li>Multi-scale Center Proposal Network
+<ul>
+<li>DETR-style의 Transformer encoder는 feature bottleneck으로 fine-grained feature를 생성하는데 어려움이 있다고 한다. 이러한 문제를 해결하고자 feature pyramid network를 사용하고 여기에 Convolutional Block Attention Module (CBAM)을 적용하여 Transformer encoder를 대체하였다.</li>
+</ul>
+</li>
+<li>Multi-scale Center Transformer Decoder
+<ul>
+<li>Decoder의 경우 좀더 효율적인 연산을 위해 attending keypoints를 BEV전체에 적용하는 것이 아닌 center proposals 을 근처로 한 작은 크기의 window를 만들어 적용하였고 이를 통해 효율적인 Multi-scale cross-attention을 주행할 수 있게 하였다.</li>
+</ul>
+</li>
+<li>Multi-scale Deformable Cross-attention Layer
+<ul>
+<li>Deformable DETR에서 제안된 방법처럼 attending keypoints 를 sampling하여 학습에 적용하여 학습 결과가 좀 더 빠르게 수렴할 수 있도록 하였다.</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Kyungpyo-Kim/Kyungpyo-Kim.github.io/master/images/centerformer/Untitled%202.png" alt="Untitled" loading="lazy" decoding="async"></p>
+<ul>
+<li>Multi-frame CenterFormer
+<ul>
+<li>Transformer의 장점은 attention 구조를 통해 과거의 데이터를 효과적으로 활용할 수 있다는 점이로 이러한 장점으로 인해 자연어 처리에 있어 우수한 성능을 낼 수 있었다.</li>
+<li>이러한 장점을 활용할 수 있는 Multi-frame CenterFormer를 제안하였는데 BEV features와 CBAM 과 같은 attention 구조를 적용하여 효과적으로 과거의 frame들을 fusion할 수 있게 하였다.</li>
+<li>테스트 결과를 보면 fusion하는 frame이 많아질수록 정확도가 향상되는 것을 볼 수 있다.</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Kyungpyo-Kim/Kyungpyo-Kim.github.io/master/images/centerformer/Untitled%203.png" alt="Untitled" loading="lazy" decoding="async"></p>
+<hr>
+<h2 id="on-a-lighter-note">On a Lighter Note…</h2>
+<p>저자를 보면 TuSimple 이라는 회사와 University of Centeral Florida 의 Computational Image Lab. 이 함께 연구한 모델인 것 같다. 저자의 LinkedIn을 보면 TuSimple 에서 인턴도 하는 등 두 회사와 연구실이 긴밀이 협업을 수행하는 것 같다.</p>
+<p>실행 속도에 대한 결과가 없어 공식 Github를 찾아보니 single frame 에 80msec 정도 소요된다고 하니 실행속도도 그렇게 나쁘지 않은 것 같다. CenterPoint 모델의 경우 Python 모델의 경우 20FPS, TensorRT 모델의 경우 60FPS 까지 나온다고 하니 속도 착이가 크지 않아보인다. 그럼에도 불구하고 여러 벤치마크에서 우수한 성능을 보여주는 것으로 보아 Transformer를 적용한 3D object detection 도 향후 널리 이용될 것으로 보인다.</p>
+<h1 id="reference">Reference</h1>
+<ol>
+<li>CenterPoint
+<ul>
+<li><a href="https://arxiv.org/abs/1904.07850">CenterNet Paper</a></li>
+<li><a href="https://arxiv.org/abs/2006.11275">CenterPoint Paper</a></li>
+</ul>
+</li>
+<li>Transformer
+<ul>
+<li><a href="https://wikidocs.net/31379">Transformer wikidocs</a></li>
+</ul>
+</li>
+<li>CenterFormer
+<ul>
+<li><a href="https://arxiv.org/abs/2209.05588">CenterFormer Paper</a></li>
+<li><a href="https://paperswithcode.com/dataset/waymo-open-dataset">Papers with Code</a></li>
+</ul>
+</li>
+</ol></div><section class="post-comments"><section class="giscus" aria-label="Comments"><script src="https://giscus.app/client.js" data-repo="REPLACE_WITH_OWNER/REPO" data-repo-id="REPLACE_WITH_REPO_ID" data-category="General" data-category-id="REPLACE_WITH_CATEGORY_ID" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ko" data-loading="lazy" crossorigin="anonymous" async></script></section></section></article></div></main><footer class="site-footer"><ul class="footer__list"><li class="footer__item">© 2026 Kyungpyo&#39;s Blog</li><li class="footer__item"><a href="https://github.com/Kyungpyo-Kim" rel="me noopener noreferrer" target="_blank">GitHub</a></li><li class="footer__item"><a href="https://www.linkedin.com/in/kyungpyo-kim" rel="me noopener noreferrer" target="_blank">LinkedIn</a></li></ul></footer></div></div></body></html>
