@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /private
 
-Sitemap: https://kyungpyo-kim.github.io/sitemap-index.xml
+Sitemap: https://kyungpyo-kim.github.io/sitemap.xml
